@@ -1,0 +1,19 @@
+@media only screen and (min-width: 480px) {
+  .row-two-columns,
+  .row-three-columns {
+    column-count: 2;
+    column-gap: 0;
+
+    > div {
+      display: inline-block;
+      float: none;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .row-three-columns {
+    column-count: 3;
+  }
+}

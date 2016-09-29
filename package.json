@@ -1,0 +1,41 @@
+{
+  "name": "usr",
+  "version": "1.0.0",
+  "description": "Începe curățenia Parlamentului cu o semnătură!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "usr"
+  ],
+  "author": "USR",
+  "license": "MIT",
+  "dependencies": {
+    "countdown": "^2.6.0",
+    "ion-rangeslider": "^2.1.4",
+    "jquery": "^1.12.4",
+    "jvectormap": "^2.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "babel-eslint": "^6.1.2",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-csslint": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-csscomb": "^3.1.1",
+    "grunt-eslint": "^19.0.0",
+    "grunt-jscs": "^3.0.1",
+    "grunt-postcss": "^0.8.0",
+    "jit-grunt": "^0.10.0",
+    "time-grunt": "^1.4.0"
+  }
+}

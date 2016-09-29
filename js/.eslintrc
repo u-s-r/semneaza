@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "countdown": false,
+    "USR": true
+  },
+  "parser": "babel-eslint",
+  "root": true
+}

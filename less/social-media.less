@@ -1,0 +1,36 @@
+.social-media {
+  color: #fff;
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 10px 15px;
+    transition: padding .2s ease;
+
+    &:hover,
+    &:focus {
+      padding-left: 20px;
+      padding-right: 20px;
+      text-decoration: none;
+    }
+  }
+
+  img {
+    max-width: 28px;
+  }
+
+  .facebook {
+    background-color: #3664a2;
+  }
+}
+
+@media (min-width: 992px) {
+  .social-media {
+    display: block;
+  }
+}

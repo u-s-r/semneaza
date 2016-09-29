@@ -1,0 +1,14 @@
+{
+  "disallowSpacesInAnonymousFunctionExpression": null,
+  "disallowSpacesInFunctionExpression": null,
+  "maximumLineLength": null,
+  "preset": "google",
+  "requireCamelCaseOrUpperCaseIdentifiers": {
+    "allExcept": [
+      'force_edges',
+      'from_fixed',
+      'hide_from_to',
+      'hide_min_max'
+    ]
+  }
+}

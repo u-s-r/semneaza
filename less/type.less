@@ -1,0 +1,110 @@
+/* Lists */
+
+.list {
+  list-style: none;
+
+  li {
+    padding-left: 1.5em;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.list-bulleted {
+  li {
+    &:before {
+      color: @red;
+      content: "\25cf";
+    }
+  }
+}
+
+.list-checkbox {
+  padding-left: 0;
+
+  li {
+    margin-bottom: 10px;
+    padding-left: 2em;
+
+    &:before {
+      background-image: url('../img/sprite-checkbox.png');
+      background-repeat: none;
+      background-size: 1em auto;
+      height: 1em;
+      top: 1px;
+      width: 1em;
+    }
+
+    &.checked:before {
+      background-position: left bottom;
+    }
+  }
+}
+
+/* Labels */
+
+.label {
+  color: @blue;
+  font-size: 75%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Statistics */
+
+.statistic {
+  display: inline-block;
+  text-align: center;
+
+  .value {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    .value {
+      font-size: 63px;
+    }
+  }
+}
+
+.statistic-primary {
+  .value {
+    color: @red;
+  }
+}
+
+.statistic-secondary {
+  .value {
+    color: @blue-light;
+  }
+}
+
+.statistic-separator {
+  vertical-align: top;
+
+  .value {
+    color: @blue-lighter;
+  }
+}
+
+/* Tags */
+
+.tag {
+  border: 1px solid #333;
+  display: inline-block;
+  padding: 10px 15px;
+
+  .value {
+    font-size: 63px;
+    line-height: 1;
+  }
+}

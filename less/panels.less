@@ -1,0 +1,91 @@
+.panel {
+  border: 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.panel-footer {
+  border-top: 0;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.panel-primary {
+  background-color: @blue;
+  background-image: url('../img/overlay-panel.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+
+  b,
+  strong {
+    font-weight: 500;
+  }
+
+  .media {
+    text-align: center;
+  }
+
+  .media-body {
+    width: auto;
+  }
+
+  .media-body,
+  .media-right {
+    display: block;
+  }
+
+  .media-right {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  @media (min-width: 480px) and (max-width: 1199px) {
+    .panel-body {
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .panel-body {
+      padding-top: 40px;
+    }
+
+    .media {
+      text-align: left;
+    }
+
+    .media-body {
+      width: 10000px;
+    }
+
+    .media-body,
+    .media-right {
+      display: table-cell;
+    }
+
+    .media-right {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .media-right {
+      padding-left: 30px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .panel-body {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    .media-right {
+      padding-left: 90px;
+    }
+  }
+}

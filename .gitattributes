@@ -1,0 +1,18 @@
+# Normalize line endings for all text files
+* text=auto
+
+# Enforce Unix line endings
+*.css   text eol=lf
+*.html  text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.less  text eol=lf
+*.md    text eol=lf
+*.svg   text eol=lf
+*.yml   text eol=lf
+
+# Treat as binary data
+*.map   binary
+*.min.* binary
+
+/assets/vendor linguist-vendored
