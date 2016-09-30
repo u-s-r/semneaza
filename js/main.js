@@ -27,7 +27,7 @@
           USR.data.semnaturi[code];
 
         for (var i = 0; i < USR.data.contacte[code].length; i++) {
-          contacte += '<dt>' + USR.data.contacte[code][i].oras + '</dt><dd><ul class="list-unstyled">';
+          contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
 
           for (var j = 0; j < USR.data.contacte[code][i].persoane.length; j++) {
             contacte += '<li>' + USR.data.contacte[code][i].persoane[j].nume + ', ' + USR.data.contacte[code][i].persoane[j].telefon + '</li>';
