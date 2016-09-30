@@ -366,6 +366,7 @@
   color: #fff;
   display: none;
   font-size: 75%;
+  font-weight: 500;
   position: fixed;
   right: 0;
   text-align: center;
@@ -399,6 +400,27 @@
   .social-media {
     display: block;
   }
+}
+.follow-us {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.follow-us .list-inline {
+  font-size: 75%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.follow-us a {
+  color: inherit;
+}
+.follow-us a:hover,
+.follow-us a:focus {
+  text-decoration: none;
+}
+.follow-us img {
+  display: block;
+  margin: 0 auto 5px;
+  max-width: 28px;
 }
 .irs-line-mid,
 .irs-line-left,

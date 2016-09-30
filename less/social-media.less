@@ -2,6 +2,7 @@
   color: #fff;
   display: none;
   font-size: 75%;
+  font-weight: 500;
   position: fixed;
   right: 0;
   text-align: center;
@@ -37,5 +38,31 @@
 @media (min-width: 992px) {
   .social-media {
     display: block;
+  }
+}
+
+.follow-us {
+  margin-bottom: 30px;
+  text-align: center;
+
+  .list-inline {
+    font-size: 75%;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 5px;
+    max-width: 28px;
   }
 }
