@@ -133,6 +133,7 @@ if ('undefined' === typeof window.USR) {
       'DIASPORA': 0
     },
     'contact': 'diaspora@usr.ro',
+    'info': 'Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!',
     'contacte': [
       {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]}
     ]
@@ -249,10 +250,25 @@ jQuery.fn.vectorMap('addMap', 'diaspora', {"width":89,"height":89,"paths":{"DIAS
       bindTouchEvents: false,
       map: 'diaspora',
       onRegionTipShow: function (event, element, code) {
+        var contacte = '';
         var html = '<strong>' + element.html() + '</strong><br>Semnături strânse: ' +
           USR.data.diaspora.semnaturi[code];
 
-        html += '<br>Contact: ' + USR.data.diaspora.contact + '<p>Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!</p><dl><dt>Italia</dt><dd><ul class="list-unstyled"><li>Cerasella Ponta, +393280947327</li></ul></dd>';
+        for (var i = 0; i < USR.data.diaspora.contacte.length; i++) {
+          contacte += '<dt>' + USR.data.diaspora.contacte[i].locatie + '</dt><dd><ul class="list-unstyled">';
+
+          for (var j = 0; j < USR.data.diaspora.contacte[i].persoane.length; j++) {
+            contacte += '<li>' + USR.data.diaspora.contacte[i].persoane[j].join(', ') + '</li>';
+          }
+
+          contacte += '</ul></dd>';
+        }
+
+        html += '<br>Contact: ' + USR.data.diaspora.contact + '<p>' + USR.data.diaspora.info + '</p>';
+
+        if ('' !== contacte) {
+          html += '<dl>' + contacte + '</dl>';
+        }
 
         element.html(html);
       },

@@ -133,6 +133,7 @@ if ('undefined' === typeof window.USR) {
       'DIASPORA': 0
     },
     'contact': 'diaspora@usr.ro',
+    'info': 'Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!',
     'contacte': [
       {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]}
     ]
