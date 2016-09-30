@@ -30,7 +30,7 @@
           contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
 
           for (var j = 0; j < USR.data.contacte[code][i].persoane.length; j++) {
-            contacte += '<li>' + USR.data.contacte[code][i].persoane[j].nume + ', ' + USR.data.contacte[code][i].persoane[j].telefon + '</li>';
+            contacte += '<li>' + USR.data.contacte[code][i].persoane[j].join(', ') + '</li>';
           }
 
           contacte += '</ul></dd>';
@@ -41,7 +41,7 @@
         if ('' !== contacte) {
           html += '<dl>' + contacte + '</dl>';
         } else {
-          html += '0726701994';
+          html += USR.data.contact;
         }
 
         element.html(html);
@@ -68,7 +68,7 @@
         var html = '<strong>' + element.html() + '</strong><br>Semnături strânse: ' +
           USR.data.diaspora.semnaturi[code];
 
-        html += '<br>Contact: diaspora@usr.ro<p>Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!</p><dl><dt>Italia</dt><dd><ul class="list-unstyled"><li>Cerasella Ponta, +393280947327</li></ul></dd>';
+        html += '<br>Contact: ' + USR.data.diaspora.contact + '<p>Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!</p><dl><dt>Italia</dt><dd><ul class="list-unstyled"><li>Cerasella Ponta, +393280947327</li></ul></dd>';
 
         element.html(html);
       },
