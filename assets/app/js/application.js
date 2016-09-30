@@ -246,7 +246,7 @@ jQuery.fn.vectorMap('addMap', 'diaspora', {"width":89,"height":89,"paths":{"DIAS
         var html = '<strong>' + element.html() + '</strong><br>Semnături strânse: ' +
           USR.data.diaspora.semnaturi[code];
 
-        html += '<br>Contact: diaspora@usr.ro<dl><dt>Italia</dt><dd><ul class="list-unstyled"><li>Cerasella Ponta, +393280947327</li></ul></dd><p>Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!</p>';
+        html += '<br>Contact: diaspora@usr.ro<p>Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!</p><dl><dt>Italia</dt><dd><ul class="list-unstyled"><li>Cerasella Ponta, +393280947327</li></ul></dd>';
 
         element.html(html);
       },
