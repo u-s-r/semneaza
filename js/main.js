@@ -82,7 +82,7 @@
         html += '<br>Contact: ' + USR.data.diaspora.contact + '<p>' + USR.data.diaspora.info + '</p>';
 
         if ('' !== contacte) {
-          html += '<dl>' + contacte + '</dl>';
+          html += '<dl class="dl-two-columns">' + contacte + '</dl>';
         }
 
         element.html(html);
