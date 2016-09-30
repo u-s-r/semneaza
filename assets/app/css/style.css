@@ -365,8 +365,11 @@
 .social-media {
   color: #fff;
   display: none;
+  font-size: 75%;
   position: fixed;
   right: 0;
+  text-align: center;
+  text-transform: uppercase;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -385,6 +388,8 @@
   text-decoration: none;
 }
 .social-media img {
+  display: block;
+  margin: 0 auto 5px;
   max-width: 28px;
 }
 .social-media .facebook {
