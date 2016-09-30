@@ -1,7 +1,7 @@
-#
+# Configuration files
 config.php
 
-#
+# Cached files
 cache
 
 # OS generated files
