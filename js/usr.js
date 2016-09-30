@@ -133,6 +133,7 @@ if ('undefined' === typeof window.USR) {
       'DIASPORA': 0
     },
     'contact': 'diaspora@usr.ro',
+    'info': 'Citiţi cu atenţie <em>instrucţiunile pentru diaspora</em> de completare a formularului!',
     'contacte': [
       {'locatie': 'Republica Moldova', 'persoane': [['Gheorghe Viță', '37369926687']]},
       {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]},
