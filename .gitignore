@@ -1,4 +1,5 @@
 # Configuration files
+.htaccess
 config.php
 
 # Cached files
