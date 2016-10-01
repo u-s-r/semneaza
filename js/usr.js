@@ -137,7 +137,7 @@ if ('undefined' === typeof window.USR) {
     'contacte': [
       {'locatie': 'Republica Moldova', 'persoane': [['Gheorghe Viță', '37369926687']]},
       {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]},
-      {'locatie': 'Spania', 'persoane': [['Iulian Lorincz', '34605363124'], ['Anca Boldeanu (Barcelona)', '+34689070453', 'ancaboldeanu@yahoo.com']]}
+      {'locatie': 'Spania', 'persoane': [['Iulian Lorincz', '34605363124'], ['Anca Boldeanu (Barcelona)', '+34689070453', 'ancaboldeanu@yahoo.com']]},
       {'locatie': 'Marea Britanie', 'persoane': [['Radu Mircea', '+447860162346'], ['Carmel Ciurdas', '+447538776519']]},
       {'locatie': 'Germania', 'persoane': [['Eliza Marin', '+4915201363721'], ['Crina Petec Călin', '+4901724005476']]},
       {'locatie': 'Franța', 'persoane': [['Emanuel Stoica (Paris)', '+33782746399'], ['Andrei Corbu (Paris)', '+33675335422'], ['Iulian Rotaru (Lyon)', '+33612922890']]},

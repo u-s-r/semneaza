@@ -133,20 +133,21 @@ if ('undefined' === typeof window.USR) {
       'DIASPORA': 0
     },
     'contact': 'diaspora@usr.ro',
-    'info': 'Ghidul de completare corectă al formularelor pentru diaspora îl găsiți la secțiunea <em>Trimite</em> mai jos!',
+    'info': 'Citiţi cu atenţie <em>instrucţiunile pentru diaspora</em> de completare a formularului!',
     'contacte': [
-      {'locatie': 'Austria', 'persoane': [['Leonard Stoica', '43-676-4938714']]},
-      {'locatie': 'Belgia', 'persoane': [['Mardale Cintzia-Angelina', '33(0)652675438'], ['Luana Bidașcă', '32498785021']]},
-      {'locatie': 'Elveția', 'persoane': [['Annamaria Kozma (Zürich)', '41762174816'], ['Codrin Alexandru (Zürich)', '+41795304999', 'grcodal@gmail.com'], ['Dan Enache (Geneva)', '+33670177504']]},
-      {'locatie': 'Franța', 'persoane': [['Emanuel Stoica (Paris)', '+33(0)782746399'], ['Andrei Corbu (Paris)', '+33(0)675335422'], ['Iulian Rotaru (Lyon)', '+33(0)612922890']]},
-      {'locatie': 'Germania', 'persoane': [['Eliza Marin', '49(0)15201363721'], ['Crina Petec Călin', '4901724005-476']]},
-      {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]},
-      {'locatie': 'Luxemburg', 'persoane': [['Adrian Bardan', '+352661223183', 'bardan.adrian@yahoo.com']]},
-      {'locatie': 'Marea Britanie', 'persoane': [['Radu Mircea', '447860162346'], ['Carmel Ciurdas', '4407538776519']]},
-      {'locatie': 'Olanda', 'persoane': [['Virgil Petre', '31628217749']]},
       {'locatie': 'Republica Moldova', 'persoane': [['Gheorghe Viță', '37369926687']]},
-      {'locatie': 'S.U.A', 'persoane': [['Camil Golub (NY)', '13472396714'], ['Mircea Alex (NY)', '9149604179'], ['Matei Ioniță (Philadephia)', '12154597574'], ['Ioana Slăniceanu (LA)', '13109277195']]},
-      {'locatie': 'Spania', 'persoane': [['Iulian Lorincz', '34605363124'], ['Anca Boldeanu (Barcelona)', '+34689070453', 'ancaboldeanu@yahoo.com']]}
+      {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]},
+      {'locatie': 'Spania', 'persoane': [['Iulian Lorincz', '34605363124'], ['Anca Boldeanu (Barcelona)', '+34689070453', 'ancaboldeanu@yahoo.com']]},
+      {'locatie': 'Marea Britanie', 'persoane': [['Radu Mircea', '+447860162346'], ['Carmel Ciurdas', '+447538776519']]},
+      {'locatie': 'Germania', 'persoane': [['Eliza Marin', '+4915201363721'], ['Crina Petec Călin', '+4901724005476']]},
+      {'locatie': 'Franța', 'persoane': [['Emanuel Stoica (Paris)', '+33782746399'], ['Andrei Corbu (Paris)', '+33675335422'], ['Iulian Rotaru (Lyon)', '+33612922890']]},
+      {'locatie': 'S.U.A', 'persoane': [['Camil Golub (NY)', '+13472396714'], ['Mircea Alex (NY)', '+19149604179'], ['Matei Ioniță (Philadephia)', '+12154597574'], ['Ioana Slăniceanu (LA)', '+13109277195']]},
+      {'locatie': 'Canada', 'persoane': [['Doina Simion (Montreal)', '+15148569114']]},
+      {'locatie': 'Belgia', 'persoane': [['Mardale Cintzia-Angelina', '+33652675438'], ['Luana Bidașcă', '+32498785021']]},
+      {'locatie': 'Austria', 'persoane': [['Leonard Stoica', '+436764938714']]},
+      {'locatie': 'Elveția', 'persoane': [['Annamaria Kozma (Zürich)', '+41762174816'], ['Codrin Alexandru (Zürich)', '+41795304999', 'grcodal@gmail.com'], ['Dan Enache (Geneva)', '+33670177504']]},
+      {'locatie': 'Luxemburg', 'persoane': [['Adrian Bardan', '+352661223183', 'bardan.adrian@yahoo.com']]},
+      {'locatie': 'Olanda', 'persoane': [['Virgil Petre', '+31628217749']]},
     ]
   };
 
