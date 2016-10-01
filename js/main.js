@@ -70,19 +70,19 @@
           USR.data.diaspora.semnaturi[code];
 
         for (var i = 0; i < USR.data.diaspora.contacte.length; i++) {
-          contacte += '<dt>' + USR.data.diaspora.contacte[i].locatie + '</dt><dd><ul class="list-unstyled">';
+          contacte += '<dl><dt>' + USR.data.diaspora.contacte[i].locatie + '</dt><dd><ul class="list-unstyled">';
 
           for (var j = 0; j < USR.data.diaspora.contacte[i].persoane.length; j++) {
             contacte += '<li>' + USR.data.diaspora.contacte[i].persoane[j].join(', ') + '</li>';
           }
 
-          contacte += '</ul></dd>';
+          contacte += '</ul></dd></dl>';
         }
 
         html += '<br>Contact: ' + USR.data.diaspora.contact + '<p>' + USR.data.diaspora.info + '</p>';
 
         if ('' !== contacte) {
-          html += '<dl class="dl-two-columns">' + contacte + '</dl>';
+          html += '<div class="dl-two-columns">' + contacte + '</div>';
         }
 
         element.html(html);

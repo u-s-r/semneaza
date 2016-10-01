@@ -7,8 +7,7 @@
        -moz-column-gap: 0;
             column-gap: 0;
   }
-  .dl-two-columns > dt,
-  .dl-two-columns > dd {
+  .dl-two-columns > dl {
     display: inline-block;
     width: 100%;
   }
