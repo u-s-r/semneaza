@@ -71,6 +71,9 @@
 .list-checkbox li.checked:before {
   background-position: left bottom;
 }
+.list-relaxed > li {
+  margin-bottom: 10px;
+}
 /* Labels */
 .label {
   color: #148bff;
