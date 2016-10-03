@@ -105,7 +105,7 @@ if ('undefined' === typeof window.USR) {
     ],
     'OT': [{'locatie': 'Slatina', 'persoane': [['Silviu Anton', '0765558019']]}],
     'PH': [{'locatie': 'Ploiești', 'persoane': [['Dan Rădulescu', '0743323448']]}],
-    'SJ': [{'locatie': 'Zalău', 'persoane': [['Stelian Ene', '0728052499']]}],
+    'SJ': [{'locatie': 'Zalău', 'persoane': [['Cosmin-Vasile Ardelean', '0747696764']]}],
     'SM': [{'locatie': 'Satu Mare', 'persoane': [['Anca Sabou', '0745350977']]}],
     'SB': [{'locatie': 'Sibiu', 'persoane': [['Dan Adrian Ghiță', '0752177272'], ['Raluca Amariei', '0721554693']]}],
     'SV': [{'locatie': 'Suceava', 'persoane': [['Ovidiu Ghiuţă', '0742128883']]}],
