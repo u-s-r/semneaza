@@ -91,7 +91,7 @@ if ('undefined' === typeof window.USR) {
     'IL': [],
     'IF': [
       {'locatie': 'Bragadiru', 'persoane': [['Marius Călinescu', '0723762921']]},
-      {'locatie': 'Chiajna', 'persoane': [['George Dircă', '0722305017']]},
+      {'locatie': 'Chiajna', 'persoane': [['Cornel Zainea', '0740022873']]},
       {'locatie': 'Corbeanca', 'persoane': [['Jan Cardon', '0722437937']]},
       {'locatie': 'Pantelimon', 'persoane': [['Lucian Zelincă', '0747070970']]},
       {'locatie': 'Popești-Leordeni', 'persoane': [['Ciprian Necula', '0749123413']]}
