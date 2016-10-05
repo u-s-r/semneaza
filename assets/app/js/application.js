@@ -64,7 +64,7 @@ if ('undefined' === typeof window.USR) {
     'BC': [{'locatie': 'Bacău', 'persoane': [['Liviu Rusu', '0744123914'], ['Mihai Gârba', '0744498055']]}],
     'BH': [{'locatie': 'Oradea', 'persoane': [['Alexandru Flora', '0723582129'], ['Silviu Dehelean', '0744225391']]}],
     'BN': [{'locatie': 'Bistrița', 'persoane': [['Lorand Toth', '0744579499']]}],
-    'BT': [],
+    'BT': [{'locatie': 'Botoşani', 'persoane': [['Marcel Gheorghiţă', '0745824469']]}],
     'BV': [
       {'locatie': 'Brașov', 'persoane': [['Cornel Sculean', '0741171780']]},
       {'locatie': 'Făgăraș', 'persoane': [['Alexandru Ţarczali', '0765138353']]}
@@ -108,7 +108,9 @@ if ('undefined' === typeof window.USR) {
     'SJ': [{'locatie': 'Zalău', 'persoane': [['Cosmin-Vasile Ardelean', '0747696764']]}],
     'SM': [{'locatie': 'Satu Mare', 'persoane': [['Anca Sabou', '0745350977']]}],
     'SB': [{'locatie': 'Sibiu', 'persoane': [['Dan Adrian Ghiță', '0752177272'], ['Raluca Amariei', '0721554693']]}],
-    'SV': [{'locatie': 'Suceava', 'persoane': [['Ovidiu Ghiuţă', '0742128883']]}],
+    'SV': [
+      {'locatie': 'Suceava', 'persoane': [['Radu Ciornei', '0732914661'], ['Mihai Maierean', '0745823960'], ['Teodora Munteanu', '0744799646']]},
+      {'locatie': 'Rădăuţi', 'persoane': [['Dan Vatra', '0745140276']]}],
     'TR': [
       {'locatie': 'Alexandria', 'persoane': [['Constanţa Duminică', '0769410020'], ['Nicuşor Lina', '0768334501']]},
       {'locatie': 'Turnu Măgurele', 'persoane': [['Sergiu Iordan', '0723211595']]}
@@ -116,7 +118,7 @@ if ('undefined' === typeof window.USR) {
     'TM': [{'locatie': 'Timișoara', 'persoane': [['Luminița Dolângă', '0754097620'], ['Sorin Şipoş', '0722469508']]}],
     'TL': [],
     'VL': [{'locatie': 'Râmnicu Vâlcea', 'persoane': [['Lucian Constantin Mîrzoiu', '0771441467'], ['Eduard Rădulescu', '0752310000']]}],
-    'VS': [],
+    'VS': [{'locatie': 'Bârlad ', 'persoane': [['Mihai Bolea', '0741933502']]}],
     'VN': [{'locatie': 'Focșani', 'persoane': [['Cristian Ionascu', '0741157931']]}],
     'B': [
       {'locatie': 'Sectorul 1', 'persoane': [['Cristian Bulfon', '0724534435']]},
