@@ -72,7 +72,7 @@ if ('undefined' === typeof window.USR) {
     'BR': [{'locatie': 'Brăila', 'persoane': [['Radu-Octavian Englezu', '0746834419']]}],
     'BZ': [{'locatie': 'Buzău', 'persoane': [['Valeriu Mocanu', '0733517127']]}],
     'CL': [{'locatie': 'Călărași', 'persoane': [['Verman Daniela', '0766678626']]}],
-    'CS': [{'locatie': 'Caraș-Severin', 'persoane': [['Ionuț Voinea', '0771550615'], ['Felix Velimirovici', '0744998973']]}],
+    'CS': [{'locatie': 'Caraș-Severin', 'persoane': [['Ionuț Voinea', '0771550615']}],
     'CJ': [{'locatie': 'Cluj-Napoca', 'persoane': [['Radu Boloveschi', '0723324617'], ['Ovidiu Nistor', '0757988180']]}],
     'CT': [{'locatie': 'Constanţa', 'persoane': [['Răzvan Andrei', '0770475808']]}],
     'CV': [],
