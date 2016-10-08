@@ -137,7 +137,7 @@ if ('undefined' === typeof window.USR) {
     'contact': 'diaspora@usr.ro',
     'info': 'Citiţi cu atenţie <em>instrucţiunile pentru diaspora</em> de completare a formularului!',
     'contacte': [
-      {'locatie': 'Republica Moldova', 'persoane': [['Maricica Ciubară', '+37367145220']]},
+      {'locatie': 'Republica Moldova', 'persoane': [['Alexandru Gâdiuţă', '+37368792566']]},
       {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]},
       {'locatie': 'Spania', 'persoane': [['Iulian Lorincz', '34605363124'], ['Anca Boldeanu (Barcelona)', '+34689070453', 'ancaboldeanu@yahoo.com']]},
       {'locatie': 'Marea Britanie', 'persoane': [['Radu Mircea', '+447860162346'], ['Carmel Ciurdas', '+447538776519']]},
