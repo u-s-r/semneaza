@@ -76,7 +76,7 @@ if ('undefined' === typeof window.USR) {
     'CJ': [{'locatie': 'Cluj-Napoca', 'persoane': [['Radu Boloveschi', '0723324617'], ['Ovidiu Nistor', '0757988180']]}],
     'CT': [{'locatie': 'Constanţa', 'persoane': [['Răzvan Andrei', '0770475808']]}],
     'CV': [],
-    'DB': [],
+    'DB': [{'locatie': 'Târgovişte', 'persoane': [['Adrian Iordănescu', '0728003259']]}],
     'DJ': [{'locatie': 'Craiova', 'persoane': [['Adrian Prisnel', '0723250885'], ['Cosmin Stăicuţ', '0740279090']]}],
     'GL': [{'locatie': 'Galați', 'persoane': [['Radu Oprea', '0723342410']]}],
     'GR': [{'locatie': 'Giurgiu', 'persoane': [['Raluca Duţu', '0734969744']]}],
