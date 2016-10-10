@@ -98,7 +98,7 @@ if ('undefined' === typeof window.USR) {
     ],
     'MM': [{'locatie': 'Baia Mare', 'persoane': [['Dan Ivan', '0745398368'], ['Iulian Mariş', '0722984841'], ['Simona Petruț', '0744643348']]}],
     'MH': [{'locatie': 'Drobeta-Turnu Severin', 'persoane': [['Ştefania Ramona Homeag', '0753192547'], ['Ilie Scarlat', '0754674783']]}],
-    'MS': [],
+    'MS': [{'locatie': 'Târgu-Mureş', 'persoane': [['Alex Ciobotar', '0757329889']]}],
     'NT': [
       {'locatie': 'Piatra Neamț', 'persoane': [['Ioan Ploşcaru', '0747437300']]},
       {'locatie': 'Roman', 'persoane': [['Iulian Bulai', '0721389605']]}
