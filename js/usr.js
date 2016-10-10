@@ -116,7 +116,7 @@ if ('undefined' === typeof window.USR) {
       {'locatie': 'Turnu Măgurele', 'persoane': [['Sergiu Iordan', '0723211595']]}
     ],
     'TM': [{'locatie': 'Timișoara', 'persoane': [['Luminița Dolângă', '0754097620'], ['Sorin Şipoş', '0722469508']]}],
-    'TL': [],
+    'TL': [{'locatie': 'Tulcea', 'persoane': [['Marian Zamfir', '0749075888']]}],
     'VL': [{'locatie': 'Râmnicu Vâlcea', 'persoane': [['Lucian Constantin Mîrzoiu', '0771441467'], ['Eduard Rădulescu', '0752310000']]}],
     'VS': [{'locatie': 'Bârlad ', 'persoane': [['Mihai Bolea', '0741933502']]}],
     'VN': [{'locatie': 'Focșani', 'persoane': [['Cristian Ionascu', '0741157931']]}],
