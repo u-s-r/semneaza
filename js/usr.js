@@ -121,7 +121,7 @@ if ('undefined' === typeof window.USR) {
     'VS': [{'locatie': 'Bârlad ', 'persoane': [['Mihai Bolea', '0741933502']]}],
     'VN': [{'locatie': 'Focșani', 'persoane': [['Cristian Ionascu', '0741157931']]}],
     'B': [
-      {'locatie': 'Sectorul 1', 'persoane': [['Cristian Bulfon', '0724534435']]},
+      {'locatie': 'Sectorul 1', 'persoane': [['Manuel Vieru', '0722233867']]},
       {'locatie': 'Sectorul 2', 'persoane': [['Alin Arsu', '0727046890'], ['Cristina Neagu', '0722286142']]},
       {'locatie': 'Sectorul 3', 'persoane': [['Alexandru Vesa', '0756312238']]},
       {'locatie': 'Sectorul 4', 'persoane': [['Cristian Matache', '0785810915'], ['Sorin Ceacar', '0766751943']]},
