@@ -88,7 +88,7 @@ if ('undefined' === typeof window.USR) {
     'HR': [],
     'HD': [{'locatie': 'Hunedoara', 'persoane': [['Camelia Măhălean', '0733317010']]}],
     'IS': [{'locatie': 'Iași', 'persoane': [['Mihai Lupu', '0742056155']]}],
-    'IL': [],
+    'IL': [{'locatie': 'Slobozia', 'persoane': [['Cristina Iosif', '0730701141']]}],
     'IF': [
       {'locatie': 'Bragadiru', 'persoane': [['Marius Călinescu', '0723762921']]},
       {'locatie': 'Chiajna', 'persoane': [['Cornel Zainea', '0740022873']]},
