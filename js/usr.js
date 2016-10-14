@@ -135,7 +135,7 @@ if ('undefined' === typeof window.USR) {
       'DIASPORA': 0
     },
     'contact': 'diaspora@usr.ro',
-    'info': 'Citiţi cu atenţie <em>instrucţiunile pentru diaspora</em> de completare a formularului!',
+    'info': 'Am strâns cu success semnăturile pentru a candida în diaspora! Trimiteţi-ne însă în continuare semnăturile voastre pentru a candida şi în ţară pe buletinul de vot. Dacă aveţi domiciliu/rezidenţa în străinătate, urmaţi instrucţiunile din ghidul pentru diaspora. Dacă nu, urmaţi instrucţiunile ghidului pentru România!',
     'contacte': [
       {'locatie': 'Republica Moldova', 'persoane': [['Alexandru Gâdiuţă', '+37368792566']]},
       {'locatie': 'Italia', 'persoane': [['Cerasella Ponta (Roma)', '+393280947327'], ['Corina Cristina Velniciuc (Roma)', '+393285521723']]},
