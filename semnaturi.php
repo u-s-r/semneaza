@@ -11,6 +11,10 @@ function parse_entry_content($str) {
   foreach ($props as $prop) {
     $prop = explode(': ', $prop);
 
+    foreach ($prop as &$value) {
+      $value = trim($value);
+    }
+
     if (2 === count($prop)) {
       $content[$prop[0]] = 'nrsemnăturistrânselazi' === $prop[0] ? intval($prop[1]) : $prop[1];
     }
