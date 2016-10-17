@@ -170,7 +170,7 @@ if ('undefined' === typeof window.USR) {
   }
 
   function step() {
-    var timespan = countdown(null, new Date(2016, 9, 25));
+    var timespan = countdown(null, new Date(2016, 9, 21));
 
     if (0 >= timespan.value) {
       $('#countdown-days').html('00');
