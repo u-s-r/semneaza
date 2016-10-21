@@ -8,7 +8,7 @@ if ('undefined' === typeof window.USR) {
   USR.data = {};
 
   USR.data.semnaturiStranse = 20659;
-  USR.data.targetSemnaturi = 250000;
+  USR.data.targetSemnaturi = 350000;
 
   USR.data.semnaturi = {
     'AB': 250,
