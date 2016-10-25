@@ -12,9 +12,10 @@
       from_fixed: true,
       grid: true,
       hide_min_max: true,
-      max: USR.data.targetSemnaturi,
+      max: USR.data.maxSemnaturi,
       min: 0,
-      postfix: ' semnături strânse'
+      postfix: ' semnături strânse',
+      prettify_separator: '.'
     });
 
     $('#map-ro').vectorMap({

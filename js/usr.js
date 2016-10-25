@@ -7,52 +7,53 @@ if ('undefined' === typeof window.USR) {
 
   USR.data = {};
 
-  USR.data.semnaturiStranse = 20659;
-  USR.data.targetSemnaturi = 350781;
+  USR.data.semnaturiStranse = 350781;
+  USR.data.targetSemnaturi = 200000;
+  USR.data.maxSemnaturi = 400000;
 
   USR.data.semnaturi = {
-    'AB': 250,
-    'AR': 550,
-    'AG': 1218,
-    'BC': 403,
-    'BH': 510,
-    'BN': 583,
-    'BT': 0,
-    'BV': 871,
-    'BR': 300,
-    'BZ': 304,
-    'CL': 200,
-    'CS': 200,
-    'CJ': 667,
-    'CT': 462,
-    'CV': 0,
-    'DB': 320,
-    'DJ': 430,
-    'GL': 446,
-    'GR': 320,
-    'GJ': 800,
-    'HR': 0,
-    'HD': 790,
-    'IS': 0,
-    'IL': 0,
-    'IF': 622,
-    'MM': 827,
-    'MH': 515,
-    'MS': 0,
-    'NT': 200,
-    'OT': 404,
-    'PH': 800,
-    'SJ': 0,
-    'SM': 66,
-    'SB': 800,
-    'SV': 711,
-    'TR': 45,
-    'TM': 1750,
-    'TL': 0,
-    'VL': 600,
-    'VS': 0,
-    'VN': 200,
-    'B': 3495
+    'AB': 3160,
+    'AR': 7397,
+    'AG': 4681,
+    'BC': 5259,
+    'BH': 4312,
+    'BN': 1498,
+    'BT': 682,
+    'BR': 2702,
+    'BV': 17253,
+    'BZ': 2539,
+    'CL': 288,
+    'CS': 725,
+    'CJ': 26178,
+    'CT': 8403,
+    'CV': 135,
+    'DB': 3213,
+    'DJ': 3871,
+    'GL': 5020,
+    'GR': 1489,
+    'GJ': 3877,
+    'HR': 149,
+    'HD': 2123,
+    'IL': 240,
+    'IS': 10862,
+    'IF': 4847,
+    'MM': 5450,
+    'MH': 3213,
+    'MS': 1309,
+    'NT': 2973,
+    'OT': 1168,
+    'PH': 11473,
+    'SM': 1396,
+    'SJ': 731,
+    'SB': 8013,
+    'SV': 6864,
+    'TR': 1050,
+    'TM': 14779,
+    'TL': 390,
+    'VS': 2043,
+    'VL': 1591,
+    'VN': 810,
+    'B': 159095
   };
 
   USR.data.contact = '0726701994';
@@ -132,7 +133,7 @@ if ('undefined' === typeof window.USR) {
 
   USR.data.diaspora = {
     'semnaturi': {
-      'DIASPORA': 0
+      'DIASPORA': 7530
     },
     'contact': 'diaspora@usr.ro',
     'info': 'Am strâns cu success semnăturile pentru a candida în diaspora! Trimiteţi-ne însă în continuare semnăturile voastre pentru a candida şi în ţară pe buletinul de vot. Dacă aveţi domiciliu/rezidenţa în străinătate, urmaţi instrucţiunile din ghidul pentru diaspora. Dacă nu, urmaţi instrucţiunile ghidului pentru România!',
@@ -155,5 +156,5 @@ if ('undefined' === typeof window.USR) {
   };
 
   USR.data.min = 0;
-  USR.data.max = 3495;
+  USR.data.max = 159095;
 })(USR);

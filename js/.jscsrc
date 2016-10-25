@@ -8,7 +8,8 @@
       'force_edges',
       'from_fixed',
       'hide_from_to',
-      'hide_min_max'
+      'hide_min_max',
+      'prettify_separator'
     ]
   }
 }
