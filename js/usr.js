@@ -7,9 +7,9 @@ if ('undefined' === typeof window.USR) {
 
   USR.data = {};
 
-  USR.data.semnaturiStranse = 350781;
   USR.data.targetSemnaturi = 200000;
-  USR.data.maxSemnaturi = 400000;
+  USR.data.semnaturiStranse = 350781;
+  USR.data.intervalSemnaturi = [0, 400000];
 
   USR.data.semnaturi = {
     'AB': 3160,

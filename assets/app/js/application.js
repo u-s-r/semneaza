@@ -7,9 +7,9 @@ if ('undefined' === typeof window.USR) {
 
   USR.data = {};
 
-  USR.data.semnaturiStranse = 350781;
   USR.data.targetSemnaturi = 200000;
-  USR.data.maxSemnaturi = 400000;
+  USR.data.semnaturiStranse = 350781;
+  USR.data.intervalSemnaturi = [0, 400000];
 
   USR.data.semnaturi = {
     'AB': 3160,
@@ -213,8 +213,8 @@ jQuery.fn.vectorMap('addMap', 'diaspora', {"width":89,"height":89,"paths":{"DIAS
       from_fixed: true,
       grid: true,
       hide_min_max: true,
-      max: USR.data.maxSemnaturi,
-      min: 0,
+      max: USR.data.intervalSemnaturi[1],
+      min: USR.data.intervalSemnaturi[0],
       postfix: ' semnături strânse',
       prettify_separator: '.'
     });
