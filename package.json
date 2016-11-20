@@ -6,11 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u-s-r/semneaza.git"
+  },
   "keywords": [
+    "semneaza",
     "usr"
   ],
   "author": "USR",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/u-s-r/semneaza/issues"
+  },
+  "homepage": "https://semneaza.usr.ro/",
   "dependencies": {
     "countdown": "^2.6.0",
     "ion-rangeslider": "^2.1.4",
@@ -37,5 +46,6 @@
     "grunt-postcss": "^0.8.0",
     "jit-grunt": "^0.10.0",
     "time-grunt": "^1.4.0"
-  }
+  },
+  "private": true
 }
