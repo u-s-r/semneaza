@@ -545,6 +545,9 @@
 .jumbotron-primary {
   margin-bottom: 30px;
 }
+.jumbotron-primary .panel {
+  text-align: center;
+}
 @media (min-width: 1200px) {
   .jumbotron-primary .panel {
     margin-top: 30px;
