@@ -28,19 +28,23 @@ function get_data() {
 
   $data = array();
 
-  $cache = new Gilbitron\Util\SimpleCache();
+  $cache     = new Gilbitron\Util\SimpleCache();
   $semnaturi = $cache->get_data('semnaturi', $url);
   $semnaturi = json_decode($semnaturi);
 
   $total = 0;
-  $min = 0;
-  $max = 0;
+  $min   = 0;
+  $max   = 0;
 
   foreach ($semnaturi->feed->entry as $entry) {
     $content = parse_entry_content($entry->content->{'$t'});
 
     if (!isset($content['prescurtarejudet'])) {
       continue;
+    }
+
+    if (!isset($content['nrsemnăturistrânselazi'])) {
+      $content['nrsemnăturistrânselazi'] = 0;
     }
 
     $total += $content['nrsemnăturistrânselazi'];
@@ -59,8 +63,8 @@ function get_data() {
   }
 
   $data['semnaturiStranse'] = $total;
-  $data['min'] = $min;
-  $data['max'] = $max;
+  $data['min']              = $min;
+  $data['max']              = $max;
 
   return $data;
 }
