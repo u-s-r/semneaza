@@ -39,7 +39,7 @@ function get_data() {
   foreach ($semnaturi->feed->entry as $entry) {
     $content = parse_entry_content($entry->content->{'$t'});
 
-    if (!isset($content['_chk2m'])) {
+    if (!isset($content['prescurtarejudet'])) {
       continue;
     }
 
@@ -49,13 +49,13 @@ function get_data() {
       $max = $content['nrsemnăturistrânselazi'];
     }
 
-    if ('DIASPORA' === $content['_chk2m']) {
-      $data['diaspora']['semnaturi'][$content['_chk2m']] = $content['nrsemnăturistrânselazi'];
+    if ('DIASPORA' === $content['prescurtarejudet']) {
+      $data['diaspora']['semnaturi'][$content['prescurtarejudet']] = $content['nrsemnăturistrânselazi'];
 
       continue;
     }
 
-    $data['semnaturi'][$content['_chk2m']] = $content['nrsemnăturistrânselazi'];
+    $data['semnaturi'][$content['prescurtarejudet']] = $content['nrsemnăturistrânselazi'];
   }
 
   $data['semnaturiStranse'] = $total;
