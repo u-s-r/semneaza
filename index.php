@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+require 'functions.php';
+
+$data = get_data();
+?><!DOCTYPE html>
 <html lang="ro">
   <head>
     <meta charset="utf-8">
@@ -675,6 +679,7 @@
         </div>
       </div>
     </div>
+    <script><?php printf('remoteData = %s;', json_encode($data)); ?></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/vendor/jquery/jquery.min.js"><\/script>')</script>
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>

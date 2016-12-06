@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 $url = sprintf('https://spreadsheets.google.com/feeds/list/%s/%s/public/basic?alt=json', SPREADSHEETS_KEY, SPREADSHEETS_WORKSHEET);
 
 function parse_entry_content($str) {
-  $props = explode(', ', $str);
+  $props   = explode(', ', $str);
   $content = array();
 
   foreach ($props as $prop) {
@@ -68,13 +68,3 @@ function get_data() {
 
   return $data;
 }
-
-function send_data() {
-  $data = get_data();
-
-  header('Content-Type: application/json');
-
-  print json_encode($data);
-}
-
-send_data();
