@@ -129,6 +129,12 @@ $data = get_data();
               <div class="media-body">
                 <h3 class="media-heading">Spune-le familiei și prietenilor!</h3>
                 <p>Ne trebuie cât mai multe semnături, aşa că te rugăm să vorbeşti cu prietenii, familia şi vecinii tăi să completeze şi ei formularul. Semnăturile lor trebuie să fie originale; nu semnaţi în locul altei persoane.</p>
+                <p>
+                  <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=https://semneaza.usr.ro/" target="_blank">
+                    <img src="assets/app/img/logo-facebook-inverted.png" alt="Facebook">
+                    Distribuie
+                  </a>
+                </p>
               </div>
             </li>
             <li class="media">
