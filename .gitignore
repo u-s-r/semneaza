@@ -26,3 +26,7 @@ node_modules
 
 vendor
 assets/vendor
+
+# Build output files
+assets/app/css/**
+assets/app/js/**
