@@ -10,9 +10,10 @@
   }
 
   function step() {
-    var timespan = countdown(null, new Date(2016, 9, 21));
+    var timespan = countdown(null, new Date(USR.data.deadlineSemnaturi * 1000), countdown.MONTHS | countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
 
     if (0 >= timespan.value) {
+      $('#countdown-months').html('00');
       $('#countdown-days').html('00');
       $('#countdown-hours').html('00');
       $('#countdown-minutes').html('00');
@@ -21,6 +22,7 @@
       return;
     }
 
+    $('#countdown-months').html(format(timespan.months));
     $('#countdown-days').html(format(timespan.days));
     $('#countdown-hours').html(format(timespan.hours));
     $('#countdown-minutes').html(format(timespan.minutes));

@@ -81,6 +81,13 @@ $data = get_data();
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <div class="statistics">
+	    <div class="statistic statistic-primary">
+              <div class="value" id="countdown-months">00</div>
+              <div class="label">Luni</div>
+            </div>
+            <div class="statistic statistic-separator">
+              <div class="value">:</div>
+            </div>
             <div class="statistic statistic-primary">
               <div class="value" id="countdown-days">00</div>
               <div class="label">Zile</div>

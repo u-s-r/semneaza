@@ -8,3 +8,4 @@ define('CONTACTE_COLUMN_KEY', 'Date contact');
 define('NUME_JUDET_COLUMN_KEY', 'Nume complet');
 define('CORTURI_COLUMN_KEY', 'Adrese corturi');
 define('TARGET_SEMNATURI', 600000);
+define('DEADLINE_SEMNATURI', 1539554400);
