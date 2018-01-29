@@ -2,69 +2,99 @@
 require 'config.php';
 require 'vendor/autoload.php';
 
-$url = sprintf('https://spreadsheets.google.com/feeds/list/%s/%s/public/basic?alt=json', SPREADSHEETS_KEY, SPREADSHEETS_WORKSHEET);
+function get_locatii($data) {
+  $linii = explode("\n", $data);
+  $locatii_judet = [];
+  $ultima_localitate = null;
 
-function parse_entry_content($str) {
-  $props   = explode(', ', $str);
-  $content = array();
+  foreach ($linii as $linie) {
+    $linie = trim($linie);
 
-  foreach ($props as $prop) {
-    $prop = explode(': ', $prop);
+    if ($linie[0] == '-') {
+      if ($ultima_localitate == null) {
+        // Malformed field
+        continue;
+      }
 
-    foreach ($prop as &$value) {
-      $value = trim($value);
-    }
+      $ultima_localitate['intrari'][] = ltrim($linie, ' -');
+    } else {
+      if ($ultima_localitate != null) {
+        $locatii_judet[] = $ultima_localitate;
+      }
 
-    if (2 === count($prop)) {
-      $content[$prop[0]] = 'nrsemnăturistrânselazi' === $prop[0] ? intval($prop[1]) : $prop[1];
+      $ultima_localitate = ['locatie'=>$linie, 'intrari'=>[]];
     }
   }
 
-  return $content;
+  if ($ultima_localitate != null) {
+    $locatii_judet[] = $ultima_localitate;
+  }
+
+  return $locatii_judet;
 }
 
 function get_data() {
-  global $url;
+  $url = sprintf('https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s?key=%s', SPREADSHEETS_KEY, urlencode(SPREADSHEETS_RANGE), GOOGLE_SHEETS_API_KEY);
 
   $data = array();
 
   $cache     = new Gilbitron\Util\SimpleCache();
-  $semnaturi = $cache->get_data('semnaturi', $url);
-  $semnaturi = json_decode($semnaturi);
+  $tabel = $cache->get_data('semnaturi', $url);
+  $tabel = json_decode($tabel);
 
   $total = 0;
   $min   = 0;
   $max   = 0;
 
-  foreach ($semnaturi->feed->entry as $entry) {
-    $content = parse_entry_content($entry->content->{'$t'});
+  $nume_coloane = [
+    'semnaturi' => SEMNATURI_COLUMN_KEY,
+    'judet' => JUDET_COLUMN_KEY,
+    'contacte' => CONTACTE_COLUMN_KEY,
+    'corturi' => CORTURI_COLUMN_KEY,
+    'nume_judet' => NUME_JUDET_COLUMN_KEY
+  ];
+  $indici_coloane = [];
 
-    if (!isset($content['prescurtarejudet'])) {
+  foreach ($nume_coloane as $cheie => $nume_coloana) {
+    for ($i = 0; $i < sizeof($tabel->values[0]); $i++) {
+      if ($tabel->values[0][$i] === $nume_coloana) {
+        $indici_coloane[$cheie] = $i;
+      }
+    }
+  }
+
+  // Sarim peste primul rand deoarece e randul cu headerele coloanelor
+  for ($i = 1; $i < sizeof($tabel->values); $i++) {
+    $semnaturi_judet = $tabel->values[$i][$indici_coloane['semnaturi']];
+    $judet = $tabel->values[$i][$indici_coloane['judet']];
+
+    $data['numeJudet'][$judet] = $tabel->values[$i][$indici_coloane['nume_judet']];
+    $data['contacte'][$judet] = get_locatii($tabel->values[$i][$indici_coloane['contacte']]);
+    $data['corturi'][$judet] = get_locatii($tabel->values[$i][$indici_coloane['corturi']]);
+
+    // Parseaza campul de semnaturi
+    if (!isset($judet)) {
       continue;
     }
 
-    if (!isset($content['nrsemnăturistrânselazi'])) {
-      $content['nrsemnăturistrânselazi'] = 0;
+    if (!isset($semnaturi_judet)) {
+      $semnaturi_judet = 0;
     }
 
-    $total += $content['nrsemnăturistrânselazi'];
+    $total += $semnaturi_judet;
 
-    if ($max < $content['nrsemnăturistrânselazi']) {
-      $max = $content['nrsemnăturistrânselazi'];
+    if ($max < $semnaturi_judet) {
+      $max = $semnaturi_judet;
     }
 
-    if ('DIASPORA' === $content['prescurtarejudet']) {
-      $data['diaspora']['semnaturi'][$content['prescurtarejudet']] = $content['nrsemnăturistrânselazi'];
-
-      continue;
-    }
-
-    $data['semnaturi'][$content['prescurtarejudet']] = $content['nrsemnăturistrânselazi'];
+    $data['semnaturi'][$judet] = $semnaturi_judet;
   }
 
   $data['semnaturiStranse'] = $total;
   $data['min']              = $min;
   $data['max']              = $max;
+  $data['targetSemnaturi']  = TARGET_SEMNATURI;
+  $data['deadlineSemnaturi'] = DEADLINE_SEMNATURI;
 
   return $data;
 }
