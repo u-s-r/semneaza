@@ -11,8 +11,8 @@
     from_fixed: true,
     grid: true,
     hide_min_max: true,
-    max: USR.data.intervalSemnaturi[1],
-    min: USR.data.intervalSemnaturi[0],
+    max: USR.data.targetSemnaturi,
+    min: 0,
     postfix: ' semnături strânse',
     prettify_separator: '.'
   });
