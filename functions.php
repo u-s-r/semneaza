@@ -1,6 +1,7 @@
 <?php
-require 'config.php';
-require 'vendor/autoload.php';
+
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 function get_locatii($data) {
   $linii = explode("\n", $data);
@@ -34,7 +35,7 @@ function get_locatii($data) {
 }
 
 function get_data() {
-  $url = sprintf('https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s?key=%s', SPREADSHEETS_KEY, urlencode(SPREADSHEETS_RANGE), GOOGLE_SHEETS_API_KEY);
+  $url = sprintf('https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s?key=%s', SPREADSHEET_ID, urlencode(SPREADSHEET_RANGE_FOR_DISPLAY), GOOGLE_API_KEY);
 
   $data = array();
 
@@ -48,7 +49,7 @@ function get_data() {
 
   $nume_coloane = [
     'semnaturi' => SEMNATURI_COLUMN_KEY,
-    'judet' => JUDET_COLUMN_KEY,
+    'prescurtare_judet' => PRESCURTARE_JUDET_COLUMN_KEY,
     'contacte' => CONTACTE_COLUMN_KEY,
     'corturi' => CORTURI_COLUMN_KEY,
     'nume_judet' => NUME_JUDET_COLUMN_KEY
@@ -66,14 +67,14 @@ function get_data() {
   // Sarim peste primul rand deoarece e randul cu headerele coloanelor
   for ($i = 1; $i < sizeof($tabel->values); $i++) {
     $semnaturi_judet = $tabel->values[$i][$indici_coloane['semnaturi']];
-    $judet = $tabel->values[$i][$indici_coloane['judet']];
+    $prescurtare_judet = $tabel->values[$i][$indici_coloane['prescurtare_judet']];
 
-    $data['numeJudet'][$judet] = $tabel->values[$i][$indici_coloane['nume_judet']];
-    $data['contacte'][$judet] = get_locatii($tabel->values[$i][$indici_coloane['contacte']]);
-    $data['corturi'][$judet] = get_locatii($tabel->values[$i][$indici_coloane['corturi']]);
+    $data['numeJudet'][$prescurtare_judet] = $tabel->values[$i][$indici_coloane['nume_judet']];
+    $data['contacte'][$prescurtare_judet] = get_locatii($tabel->values[$i][$indici_coloane['contacte']]);
+    $data['corturi'][$prescurtare_judet] = get_locatii($tabel->values[$i][$indici_coloane['corturi']]);
 
     // Parseaza campul de semnaturi
-    if (!isset($judet)) {
+    if (!isset($prescurtare_judet)) {
       continue;
     }
 
@@ -87,7 +88,7 @@ function get_data() {
       $max = $semnaturi_judet;
     }
 
-    $data['semnaturi'][$judet] = $semnaturi_judet;
+    $data['semnaturi'][$prescurtare_judet] = $semnaturi_judet;
   }
 
   $data['semnaturiStranse'] = $total;

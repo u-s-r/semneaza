@@ -61,17 +61,29 @@ $data = get_data();
           </div>
           <div class="col-md-5">
             <div class="panel panel-default">
-              <div class="panel-body">
-                <p>Am finalizat strângerea de semnături pentru ca Uniunea Salvați România (USR) să poată candida la <strong>alegerile parlamentare din 11 decembrie 2016.</strong></p>
-                <p>Ne-am fixat ca obiectiv strângerea a 200.000 de semnături şi la început ni s-a părut greu, dar cu ajutorul dumneavoastră ne-am depășit obiectivul şi am ajuns la <strong>350.781 de semnături!</strong></p>
-                <p>Mulţumim tuturor celor care au semnat și mai ales tuturor celor care au strâns semnături pentru noi!</p>
-              </div>
-              <div class="panel-footer">
-                <a class="btn btn-default" href="https://usr.ro/" target="_blank" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'continuam_usr')">
-                  <span class="glyphicon glyphicon-menu-right"></span>
-                  Continuăm mai departe împreună!
-                </a>
-              </div>
+              <form id="date-contact" method="post" action="date-contact.php">
+                <div class="panel-body">
+                  <p>
+                    Campania de strangere de semnaturi va incepe dupa ce initiativa va fi aprobata de Consiliul Legislativ.
+                    Introduceti datele dumneavoastra de contact in formularul de mai jos si veti fi contactat/a cand procesul de strangere de semnaturi va incepe.
+                  </p>
+                  <div>
+                    <input type="text" name="nume" placeholder="Numele dumneavoastra">
+                  </div>
+                  <div>
+                    <input type="text" name="telefon" placeholder="Telefonul dumneavoastra">
+                  </div>
+                  <div>
+                    <input type="text" name="email" placeholder="Emailul dumneavoastra">
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+                    <span class="glyphicon glyphicon-menu-right"></span>
+                    Trimite
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -258,6 +270,7 @@ modal_locatii('corturi', 'Corturile de campanie ale USR', $data['corturi']);
     <script src="assets/vendor/countdown/countdown.js"></script>
     <script src="assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
     <script src="assets/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="assets/vendor/jquery-form/jquery.form.js"></script>
     <script src="assets/app/js/application.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
