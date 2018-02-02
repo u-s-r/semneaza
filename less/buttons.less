@@ -1,8 +1,9 @@
 .btn {
-  border-radius: 20px;
+  border-radius: 0;
   border: 0;
-  font-weight: 500;
-  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
 
   &:active,
   &.active {
@@ -23,11 +24,14 @@
 .btn-default {
   background-color: @red;
   color: #fff;
+  padding: 15px 30px;
 }
 
 .btn-inverted {
   background-color: #fff;
-  color: @red;
+  color: @blue-lighter;
+  border: 2px solid @blue-lighter;
+  padding: 13px 28px;
 }
 
 .btn-facebook {

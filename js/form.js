@@ -15,7 +15,7 @@ function showRequest() {
 function showResponse(responseText, statusText)  {
   var response = {}
   try {
-    response = JSON.parse(responseText)
+    response = JSON.parse(responseText);
   } catch(e) {}
 
   if (statusText != 'success' || !('success' in response) || !response['success']) {
@@ -26,7 +26,7 @@ function showResponse(responseText, statusText)  {
 
       if (response['message'] == 'both_empty') {
         //@TODO print message that not both the email and the phone number can be mepty
-      } elseif (response['message'] == 'sending_failure') {
+      } else if (response['message'] == 'sending_failure') {
         //@TODO print message that there was a failure saving the data
       }
     }

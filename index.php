@@ -28,60 +28,88 @@ $data = get_data();
     <![endif]-->
   </head>
   <body>
+    <nav class="container">
+      <div class=" nav-brand">
+        <a href="https://<?= $_SERVER['SERVER_NAME'] ?>">
+          <img src="assets/app/img/logo.png" alt="USR">
+        </a>
+      </div>
+      <ul class="nav-body">
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#semneaza">Semnează inițativa</a></li>
+        <li><a href="#situatia">Situația pe regiuni</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#comunicate">Comunicate de presă</a></li>
+      </ul>
+    </nav>
     <div class="jumbotron jumbotron-primary">
       <div class="container">
-        <div class="media media-brand">
-          <div class="media-left">
-            <a href="https://semneaza.usr.ro/">
-              <img class="media-object" src="assets/app/img/logo.png" alt="USR">
-            </a>
-          </div>
-          <div class="media-body">
-            <h1>Începe curățenia Parlamentului cu o semnătură!</h1>
-          </div>
-          <div class="media-right">
-            <a class="btn btn-inverted" href="https://www.nicusordan.ro/doneaza/" target="_blank" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">Donează</a>
-          </div>
-        </div>
         <div class="row">
-          <div class="col-md-7">
-            <div class="maps">
-              <div class="map map-ro">
-                <div class="label">Click pentru situația pe regiuni</div>
-                <div class="embed-responsive embed-responsive-4by3">
-                  <div id="map-ro"></div>
-                </div>
-                <div class="label">În țară</div>
+          <div class="col-md-6 banner">
+            <h1>Fără penali in funcții publice!</h1>
+            <h2>Nu sta deoparte!</h2>
+            <div class="countdown">
+              <h3>Numărul de zile până la strângerea semnăturilor:</h3>
+              <div class="countdown-primary">
+                <div class="value" id="countdown-months">00</div>
+                <div class="label">Luni</div>
               </div>
-              <div class="map map-diaspora">
-                <div id="map-diaspora"></div>
-                <div class="label">În diaspora</div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-primary">
+                <div class="value" id="countdown-days">00</div>
+                <div class="label">Zile</div>
+              </div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-secondary">
+                <div class="value" id="countdown-hours">00</div>
+                <div class="label">Ore</div>
+              </div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-secondary">
+                <div class="value" id="countdown-minutes">00</div>
+                <div class="label">Minute</div>
+              </div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-secondary">
+                <div class="value" id="countdown-seconds">00</div>
+                <div class="label">Secunde</div>
               </div>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6 panel-host">
             <div class="panel panel-default">
               <form id="date-contact" method="post" action="date-contact.php">
                 <div class="panel-body">
-                  <p>
-                    Campania de strangere de semnaturi va incepe dupa ce initiativa va fi aprobata de Consiliul Legislativ.
-                    Introduceti datele dumneavoastra de contact in formularul de mai jos si veti fi contactat/a cand procesul de strangere de semnaturi va incepe.
-                  </p>
+                  <h1>Alătură-te inițiativei</h1>
+                  <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
                   <div>
-                    <input type="text" name="nume" placeholder="Numele dumneavoastra">
+                    <h4>Numele și prenume</h4>
+                    <input type="text" name="nume">
                   </div>
                   <div>
-                    <input type="text" name="telefon" placeholder="Telefonul dumneavoastra">
+                    <h4>Telefon</h4>
+                    <input type="text" name="telefon">
                   </div>
                   <div>
-                    <input type="text" name="email" placeholder="Emailul dumneavoastra">
+                    <h4>Email</h4>
+                    <input type="text" name="email">
                   </div>
-                </div>
-                <div class="panel-footer">
-                  <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
-                    <span class="glyphicon glyphicon-menu-right"></span>
-                    Trimite
+
+                  <button type="submit" class="btn btn-default col-md-6" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+                    Înscrie-te acum!
                   </button>
+
+                  <a href="https://www.usr.ro/doneaza/" class="btn btn-inverted col-md-5 col-md-push-1" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
+                    Donează!
+                  </a>
                 </div>
               </form>
             </div>
@@ -92,43 +120,10 @@ $data = get_data();
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="statistics">
-	    <div class="statistic statistic-primary">
-              <div class="value" id="countdown-months">00</div>
-              <div class="label">Luni</div>
-            </div>
-            <div class="statistic statistic-separator">
-              <div class="value">:</div>
-            </div>
-            <div class="statistic statistic-primary">
-              <div class="value" id="countdown-days">00</div>
-              <div class="label">Zile</div>
-            </div>
-            <div class="statistic statistic-separator">
-              <div class="value">:</div>
-            </div>
-            <div class="statistic statistic-secondary">
-              <div class="value" id="countdown-hours">00</div>
-              <div class="label">Ore</div>
-            </div>
-            <div class="statistic statistic-separator">
-              <div class="value">:</div>
-            </div>
-            <div class="statistic statistic-secondary">
-              <div class="value" id="countdown-minutes">00</div>
-              <div class="label">Minute</div>
-            </div>
-            <div class="statistic statistic-separator">
-              <div class="value">:</div>
-            </div>
-            <div class="statistic statistic-secondary">
-              <div class="value" id="countdown-seconds">00</div>
-              <div class="label">Secunde</div>
-            </div>
-          </div>
           <div id="progres-semnaturi"></div>
         </div>
       </div>
+      <a name="despre"></a>
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <ul class="media-list">
@@ -179,6 +174,23 @@ $data = get_data();
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-md-7">
+          <div class="maps">
+            <div class="map map-ro">
+              <div class="label">Click pentru situația pe regiuni</div>
+              <div class="embed-responsive embed-responsive-4by3">
+                <div id="map-ro"></div>
+              </div>
+              <div class="label">În țară</div>
+            </div>
+            <div class="map map-diaspora">
+              <div id="map-diaspora"></div>
+              <div class="label">În diaspora</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
