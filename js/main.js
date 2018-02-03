@@ -5,7 +5,7 @@
 
   $.extend(true, USR.data, remoteData);
 
-  $(".descriere .detalii .slick-slider").slick({
+  $('.descriere .detalii .slick-slider').slick({
     dots: true,
     arrows: false,
     autoplay: true,
