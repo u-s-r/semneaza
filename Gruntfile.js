@@ -89,6 +89,10 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
+          'node_modules/countdown/*.js',
+          'node_modules/ion-rangeslider/js/*.min.js',
+          'node_modules/jquery/*.min.js',
+          'node_modules/jvectormap/*.min.js',
           'assets/vendor/debounce/jquery.ba-throttle-debounce.min.js',
           'js/usr.js',
           'js/countdown.js',
@@ -96,18 +100,9 @@ module.exports = function (grunt) {
           'js/map-diaspora.js',
           'js/form.js',
           'js/main.js',
-          'js/scroll.js'
+          'js/scroll.js',
         ],
-        dest: 'assets/app/js/application.js'
-      },
-      vendor: {
-        src: [
-          'node_modules/countdown/*.js',
-          'node_modules/ion-rangeslider/js/*.min.js',
-          'node_modules/jquery/*.min.js',
-          'node_modules/jvectormap/*.min.js'
-        ],
-        dest: '.tmp/vendor.js'
+        dest: '.tmp/application.js'
       }
     },
     uglify: {
@@ -123,10 +118,6 @@ module.exports = function (grunt) {
         src: '<%= concat.core.dest %>',
         dest: 'assets/app/js/application.min.js'
       },
-      vendor: {
-        src: '<%= concat.vendor.dest %>',
-        dest: 'assets/vendor/vendor.min.js'
-      }
     },
     copy: {
       packages: {
