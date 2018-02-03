@@ -7,8 +7,20 @@ body {
   margin: 60px 0;
 }
 
-.descriere {
+a {
+  color: @blue;
+
+  &:focus, &:hover {
+    text-decoration: underline;
+    color: @blue-lighter;
+  }
+}
+
+.comunicate, .descriere {
   background-color: #d7e6f2;
+}
+
+.descriere {
   padding: 60px 0;
 
   .container {
@@ -86,8 +98,8 @@ body {
 }
 
 .harta {
-  margin: 20px 0 20px 0;
-  padding: 20px 0 20px 0;
+  margin: 20px 0;
+  padding: 20px 0;
   background-image: url('../img/overlay-harta.png');
   background-position: center center;
   background-color: @blue;
@@ -194,9 +206,122 @@ body {
   }
 }
 
+.comunicate {
+  padding: 20px 0;
 
-.panel-primary {
-  margin-bottom: 30px;
+  h2 {
+    color: @blue;
+  }
+
+  .comunicat {
+    background-color: #fff;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+
+    a {
+      display: block;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 200px;
+    }
+
+    .corp {
+      padding: 20px;
+      height: 250px;
+      position: relative;
+
+      h3, > span {
+        color: @blue;
+      }
+
+      h3 {
+        font-size: 1.1em;
+        line-height: 1.4em;
+      }
+
+      span {
+        font-size: 0.9em;
+      }
+
+      > a {
+        position: absolute;
+        bottom: 20px;
+        color: @red;
+        font-weight: 500;
+      }
+
+      p {
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 15px;
+    text-align: center;
+
+    .mai-multe {
+
+    }
+  }
+}
+
+.doneaza {
+  padding: 100px 0;
+  background-color: @blue;
+  background-image: url('../img/overlay-doneaza.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: none;
+  color: #fff;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.social-media {
+  color: #fff;
+  display: none;
+  font-size: 75%;
+  font-weight: 500;
+  line-height: 1;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 10px 15px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 28px;
+  }
+
+  .facebook {
+    background-color: #3664a2;
+  }
+}
+
+@media (min-width: 992px) {
+  .social-media {
+    display: block;
+  }
 }
 
 .media-list {
