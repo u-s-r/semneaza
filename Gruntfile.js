@@ -164,10 +164,7 @@ module.exports = function (grunt) {
         '.tmp'
       ],
       assets: [
-        'assets/vendor/countdown',
         'assets/vendor/ion-rangeslider',
-        'assets/vendor/jquery',
-        'assets/vendor/jvectormap'
       ],
       css: 'assets/app/css',
       js: 'assets/app/js'
