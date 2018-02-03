@@ -57,7 +57,11 @@ module.exports = function (grunt) {
       core: {
         expand: true,
         cwd: 'assets/app/css',
-        src: ['*.css', '!*.min.css'],
+        src: [
+          '*.css',
+          '!*.min.css',
+          'node_modules/ion-rangeslider/css/*.css'
+        ],
         dest: 'assets/app/css',
         ext: '.min.css'
       }
@@ -85,6 +89,12 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
+          'node_modules/jquery/*.min.js',
+          'node_modules/countdown/*.js',
+          'node_modules/ion-rangeslider/js/*.min.js',
+          'node_modules/jvectormap/*.min.js',
+          'node_modules/jquery-form/dist/*.min.js',
+          'node_modules/slick-carousel/slick/*.min.js',
           'assets/vendor/debounce/jquery.ba-throttle-debounce.min.js',
           'js/usr.js',
           'js/countdown.js',
@@ -92,9 +102,9 @@ module.exports = function (grunt) {
           'js/map-diaspora.js',
           'js/form.js',
           'js/main.js',
-          'js/scroll.js'
+          'js/scroll.js',
         ],
-        dest: 'assets/app/js/application.js'
+        dest: '.tmp/application.js'
       }
     },
     uglify: {
@@ -109,34 +119,16 @@ module.exports = function (grunt) {
       core: {
         src: '<%= concat.core.dest %>',
         dest: 'assets/app/js/application.min.js'
-      }
+      },
     },
     copy: {
       packages: {
         files: [
           {
             expand: true,
-            cwd: 'node_modules/countdown',
-            src: '*.js',
-            dest: 'assets/vendor/countdown'
-          },
-          {
-            expand: true,
             cwd: 'node_modules/ion-rangeslider',
-            src: ['css/*', 'img/*', 'js/*'],
+            src: ['img/*'],
             dest: 'assets/vendor/ion-rangeslider'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/jquery/dist',
-            src: '*',
-            dest: 'assets/vendor/jquery'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/jvectormap',
-            src: ['*.css', '*.js'],
-            dest: 'assets/vendor/jvectormap'
           }
         ]
       }
@@ -161,14 +153,23 @@ module.exports = function (grunt) {
       options: {
         force: true
       },
+      build: [
+        '.tmp'
+      ],
       assets: [
-        'assets/vendor/countdown',
         'assets/vendor/ion-rangeslider',
-        'assets/vendor/jquery',
-        'assets/vendor/jvectormap'
       ],
       css: 'assets/app/css',
       js: 'assets/app/js'
+    },
+    php: {
+      dist: {
+        options: {
+          keepalive: true,
+          open: true,
+          port: 5000
+        }
+      }
     }
   });
 
@@ -176,6 +177,7 @@ module.exports = function (grunt) {
   grunt.registerTask('css', ['less', 'postcss', 'csscomb', 'csslint', 'cssmin']);
   grunt.registerTask('js', ['eslint', 'jscs', 'concat', 'uglify']);
 
+  grunt.registerTask('serve', ['build', 'php']);
   grunt.registerTask('build', ['assets', 'css', 'js']);
   grunt.registerTask('test', ['clean', 'build']);
   grunt.registerTask('default', 'build');

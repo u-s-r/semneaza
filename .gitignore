@@ -33,3 +33,7 @@ assets/vendor/jvectormap
 # Build output files
 assets/app/css/**
 assets/app/js/**
+
+.tmp
+assets/vendor/vendor.min.js
+assets/vendor/vendor.min.js.map
