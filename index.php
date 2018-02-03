@@ -119,7 +119,7 @@ $data = get_data();
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
           <h1>Ajută și tu la strângerea semnăturilor</h1>
           <div id="progres-semnaturi"></div>
         </div>
