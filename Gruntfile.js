@@ -94,8 +94,6 @@ module.exports = function (grunt) {
           'node_modules/ion-rangeslider/js/*.min.js',
           'node_modules/jvectormap/*.min.js',
           'node_modules/jquery-form/dist/*.min.js',
-          //'node_modules/popper.js/dist/min.js',
-          //'node_modules/bootstrap/dist/js/*.min.js',
           'node_modules/slick-carousel/slick/*.min.js',
           'assets/vendor/debounce/jquery.ba-throttle-debounce.min.js',
           'js/usr.js',
