@@ -95,6 +95,13 @@ module.exports = function (grunt) {
           'js/scroll.js'
         ],
         dest: 'assets/app/js/application.js'
+      },
+      vendor: {
+        src: [
+          'node_modules/*.js',
+          'node_modules/*.min.js'
+        ],
+        dest: '.tmp/vendor.js'
       }
     },
     uglify: {
@@ -109,6 +116,10 @@ module.exports = function (grunt) {
       core: {
         src: '<%= concat.core.dest %>',
         dest: 'assets/app/js/application.min.js'
+      },
+      vendor: {
+        src: '<%= concat.vendor.dest %>',
+        dest: 'assets/vendor/vendor.min.js'
       }
     },
     copy: {
@@ -161,6 +172,9 @@ module.exports = function (grunt) {
       options: {
         force: true
       },
+      build: [
+        '.tmp'
+      ],
       assets: [
         'assets/vendor/countdown',
         'assets/vendor/ion-rangeslider',
@@ -169,6 +183,15 @@ module.exports = function (grunt) {
       ],
       css: 'assets/app/css',
       js: 'assets/app/js'
+    },
+    php: {
+      dist: {
+        options: {
+          keepalive: true,
+          open: true,
+          port: 5000
+        }
+      }
     }
   });
 
@@ -176,6 +199,7 @@ module.exports = function (grunt) {
   grunt.registerTask('css', ['less', 'postcss', 'csscomb', 'csslint', 'cssmin']);
   grunt.registerTask('js', ['eslint', 'jscs', 'concat', 'uglify']);
 
+  grunt.registerTask('serve', ['build', 'php']);
   grunt.registerTask('build', ['assets', 'css', 'js']);
   grunt.registerTask('test', ['clean', 'build']);
   grunt.registerTask('default', 'build');
