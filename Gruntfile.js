@@ -103,7 +103,7 @@ module.exports = function (grunt) {
           warnings: false
         },
         sourceMap: true,
-        sourceMapIncludeSources : true,
+        sourceMapIncludeSources: true,
         preserveComments: 'some'
       },
       core: {
