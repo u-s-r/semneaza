@@ -170,15 +170,6 @@ module.exports = function (grunt) {
       ],
       css: 'assets/app/css',
       js: 'assets/app/js'
-    },
-    php: {
-      dist: {
-        options: {
-          keepalive: true,
-          open: true,
-          port: 5000
-        }
-      }
     }
   });
 
@@ -188,6 +179,5 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', ['assets', 'css', 'js']);
   grunt.registerTask('test', ['clean', 'build']);
-  grunt.registerTask('serve', ['build', 'php']);
   grunt.registerTask('default', 'build');
 };
