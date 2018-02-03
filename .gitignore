@@ -24,8 +24,11 @@ Thumbs.db
 bower_components
 node_modules
 
-vendor
-assets/vendor
+vendor/**
+assets/vendor/countdown
+assets/vendor/ion-rangeslider
+assets/vendor/jquery
+assets/vendor/jvectormap
 
 # Build output files
 assets/app/css/**
