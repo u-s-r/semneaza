@@ -5,6 +5,13 @@
 
   $.extend(true, USR.data, remoteData);
 
+  $(".descriere .detalii .slick-slider").slick({
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000
+  });
+
   $('#progres-semnaturi').ionRangeSlider({
     force_edges: true,
     from: USR.data.semnaturiStranse,

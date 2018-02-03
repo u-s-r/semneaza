@@ -8,15 +8,15 @@ $data = get_data();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Strângem semnături pentru ca Uniunea Salvați România (USR) să candideze la alegerile parlamentare din 11 decembrie 2016. Ne vei găsi pe buletinul de vot doar dacă semnezi pentru noi!">
+    <meta name="description" content="Inițiativa cetățenească de modificare a Constituției">
     <meta name="author" content="USR">
-    <meta property="og:url" content="https://semneaza.usr.ro/">
-    <meta property="og:title" content="Începe curățenia Parlamentului cu o semnătură!">
-    <meta property="og:description" content="Strângem semnături pentru ca Uniunea Salvați România (USR) să candideze la alegerile parlamentare din 11 decembrie 2016. Ne vei găsi pe buletinul de vot doar dacă semnezi pentru noi!">
-    <meta property="og:image" content="https://semneaza.usr.ro/assets/app/img/semneaza.jpg">
+    <meta property="og:url" content="https://farapenali.usr.ro/">
+    <meta property="og:title" content="Fără penali în funcții publice">
+    <meta property="og:description" content="Inițiativa cetățenească de modificare a Constituției">
+    <meta property="og:image" content="https://farapenali.usr.ro/assets/app/img/semneaza.jpg">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="favicon.ico" rel="icon">
-    <title>USR &middot; Începe curățenia Parlamentului cu o semnătură!</title>
+    <title>Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției</title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
@@ -37,7 +37,7 @@ $data = get_data();
       <ul class="nav-body">
         <li><a href="#despre">Despre</a></li>
         <li><a href="#semneaza">Semnează inițativa</a></li>
-        <li><a href="#situatia">Situația pe regiuni</a></li>
+        <li><a href="#harta">Situația pe regiuni</a></li>
         <li><a href="#media">Media</a></li>
         <li><a href="#comunicate">Comunicate de presă</a></li>
       </ul>
@@ -120,10 +120,99 @@ $data = get_data();
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
+          <h1>Ajută și tu la strângerea semnăturilor</h1>
           <div id="progres-semnaturi"></div>
         </div>
       </div>
-      <a name="despre"></a>
+    </div>
+    <a name="despre"></a>
+    <div class="row descriere">
+      <div class="container">
+        <div class="col-md-6 detalii">
+          <h1>Despre</h1>
+          <div class="slick-slider">
+            <div>
+              <p>
+                Corupția înseamnă sărăcie. Ea apare când cei din societatea civilă sunt într-o stare de letargie din
+                cauza repetatelor dezamăgiri venite din partea politicienilor. Dacă ne uităm la cum arată România astăzi,
+                în raport cu celelalte țări europene, o găsim la coada clasamentelor la toate cele trei sectoare
+                primordiale: educație, sănătate și dezvoltarea infrastructurii.
+              </p>
+              <p>
+                România are cel mai slab sistem de sănătate din Uniunea Europeană. Lipsa medicilor și a medicamentelor,
+                corupția managementului și infrastructura șubredă, plasează România pe primul loc în UE la mortalitatea
+                în spitale.
+              </p>
+              <p>
+                Nici în privința educației nu stăm mai bine, peste 40% dintre elevii români de gimnaziu sunt analfabeți
+                funcționali, ceea ce ne duce tot pe primul loc în UE.
+              </p>
+              <p>
+                Tot pe ultimul loc suntem și în privința kilometrilor de autostradă construiți.
+              </p>
+              <p>
+                Din cauza corupției, 2 din 5 români trăiesc în sărăcie sau la un pas să ajungă în această situație, județele
+                cele mai mai sărace din țară sunt și cele conduse de baronii locali ai PSD: Teleorman, Buzău, Vaslui.
+              </p>
+            </div>
+            <div>
+              <p>
+                Fără penali în funcții publice ar însemna o Românie fără Liviu Dragnea, care dat jos două guverne într-un an
+                ca să schimbe legile justiției în interes propriu, fără mărturiile mincinoase pentru care este anchetat Călin
+                Popescu Tăriceanu, fără deputatul mitralieră Cătălin Rădulescu, fără Viorel Ilie (ALDE) care a trucat
+                concursurile de angajare din ministerul pentru Relația cu Parlamentul.
+              </p>
+              <p>
+                Realitatea din România anului 2018 înseamnă toate cele de mai sus. Numai societatea civilă poate determina o
+                schimbare. Căci nu este de ajuns să-i schimbăm pe cei de la putere, ci trebuie schimbat modul în care acționează
+                poporul român. Urgența situației vine din schimbarea modului de a face politică cu unul moral și îndreptat către
+                realitatea pe care o vedem zilnic în jurul nostru. Propunerea de schimbare a Constituției este una care are la
+                bază inițiativa cetățenească mult strigată de românii care au ieșit în stradă în 2017 și 2018.
+              </p>
+              <p>
+                Demersul are nevoie de 500.000 de semnături strânse în 6 luni. Semnătura ta poate schimba modul în care funcționează și arată România.
+              </p>
+              <p>
+                Alătură-te inițiativei!
+              </p>
+            </div>
+          </div>
+        </div>
+        <?php
+          $lista_pasi = [];
+
+          $lista_pasi[] = "Se formează un grup de inițiativă din cel puțin zece cetățeni";
+          $lista_pasi[] = "Proiectul de modificare a Constituției este trimis pentru aviz la Consiliul Legislativ";
+          $lista_pasi[] = "Proiectul și avizul consultativ sunt publicate în Monitorul Oficial";
+          $lista_pasi[] = "Începe strângerea de 600.000 de semnături în 3 luni, din cel puțin 20 de județe";
+          $lista_pasi[] = "Listele de semnături împreună cu proiectul și expunerea de motive se înregistrează la Parlament";
+          $lista_pasi[] = "Parlamentul înaintează propunerea către CCR pentru controlul de constituționalitate";
+          $lista_pasi[] = "Începe procedura parlamentară, cu dezbateri în comisii și vot în plenul Camerei Deputaților și Senat";
+          $lista_pasi[] = "Se organizează un referendum decizional care trebuie să aibă cvorum și vot majoritar";
+        ?>
+        <div class="col-md-6 pasi">
+            <h1>Etapele proiectului</h1>
+            <ul>
+              <?php
+                foreach ($lista_pasi as $numar => $descriere) {
+
+                  if ($numar+1 <= PASI_COMPLETATI) {
+              ?>
+                <li><div class="bifa"></div><?= $descriere ?></li>
+              <?php
+                } else {
+              ?>
+                <li><div class="numar"><?= $numar+1 ?></div><?= $descriere ?></li>
+              <?php
+                  }
+                }
+              ?>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <a name="semneaza"></a>
+    <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <ul class="media-list">
@@ -176,22 +265,33 @@ $data = get_data();
           </ul>
         </div>
       </div>
-      <div class="container">
-        <div class="col-md-7">
-          <div class="maps">
-            <div class="map map-ro">
-              <div class="label">Click pentru situația pe regiuni</div>
-              <div class="embed-responsive embed-responsive-4by3">
-                <div id="map-ro"></div>
+    </div>
+      <a name="harta"></a>
+      <div class="row harta">
+        <div class="container">
+          <div class="col-md-7">
+            <div class="maps">
+              <div class="map map-ro">
+                <div class="label">Click pentru situația pe regiuni</div>
+                <div class="embed-responsive embed-responsive-4by3">
+                  <div id="map-ro"></div>
+                </div>
+                <div class="label">În țară</div>
               </div>
-              <div class="label">În țară</div>
-            </div>
-            <div class="map map-diaspora">
-              <div id="map-diaspora"></div>
-              <div class="label">În diaspora</div>
+              <div class="map map-diaspora">
+                <div id="map-diaspora"></div>
+                <div class="label">În diaspora</div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    <div class="container">
+      <a name="media"></a>
+      <div class="row">
+      </div>
+      <a name="comunicate"></a>
+      <div class="row">
       </div>
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -226,7 +326,7 @@ $data = get_data();
       </div>
     </div>
     <div class="social-media">
-      <a class="facebook" href="https://www.facebook.com/sharer.php?u=https://semneaza.usr.ro/" target="_blank">
+      <a class="facebook" href="https://www.facebook.com/sharer.php?u=https://farapenali.usr.ro/" target="_blank">
         <img src="assets/app/img/logo-facebook-inverted.png" alt="Facebook">
         Distribuie
       </a>
@@ -283,6 +383,7 @@ modal_locatii('corturi', 'Corturile de campanie ale USR', $data['corturi']);
     <script src="assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
     <script src="assets/vendor/jvectormap/jquery-jvectormap.min.js"></script>
     <script src="assets/vendor/jquery-form/jquery.form.js"></script>
+    <script src="assets/vendor/slick/slick.min.js"></script>
     <script src="assets/app/js/application.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

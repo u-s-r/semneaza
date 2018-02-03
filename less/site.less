@@ -2,6 +2,94 @@ body {
   line-height: 1.5;
 }
 
+.irs {
+  margin: 60px 0;
+}
+
+.descriere {
+  background-color: #d7e6f2;
+  padding: 60px 0;
+
+  .container {
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .detalii, .pasi {
+    padding: 30px 60px;
+  }
+
+  .detalii {
+    h1 {
+      color: @blue;
+    }
+
+    p {
+        margin: 20px 0;
+    }
+
+    .slick-dots {
+      text-align: right;
+
+      li button::before {
+        background-color: #000;
+        border-radius: 10px;
+        content: "";
+      }
+
+      li.slick-active button::before {
+        background-color: @blue;
+      }
+    }
+  }
+
+  .pasi {
+    background-image: url('../img/background-pasi.png');
+    background-size: cover;
+    color: #fff;
+    font-size: 16px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 20px 0;
+
+        .bifa, .numar {
+          float: left;
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          margin: 5px 10px 0 0;
+
+        }
+
+        .bifa {
+          background-image: url('../img/bifa.png');
+          background-repeat: no-repeat;
+          background-position: middle middle;
+        }
+
+        .numar {
+          font-size: 30px;
+          font-weight: 700;
+          border-radius: 20px;
+          text-align: center;
+          color: @blue-even-lighter;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.harta {
+  background-image: url('../img/overlay-harta.png');
+  background-size: cover;
+  background-color: @blue;
+}
+
 .map-ro {
   @media (min-width: 992px) {
     margin-bottom: 0;
