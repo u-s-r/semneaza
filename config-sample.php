@@ -13,3 +13,4 @@ define('CONTACTE_COLUMN_KEY', 'Date contact');
 define('CORTURI_COLUMN_KEY', 'Adrese corturi');
 define('TARGET_SEMNATURI', 600000);
 define('DEADLINE_SEMNATURI', 1539554400);
+define('PASI_COMPLETATI', 0);
