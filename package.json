@@ -27,7 +27,7 @@
     "jquery": "^1.12.4",
     "jquery-form": "^4.2.2",
     "jvectormap": "^2.0.4",
-    "slick": "^1.12.2"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
