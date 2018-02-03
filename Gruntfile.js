@@ -57,7 +57,11 @@ module.exports = function (grunt) {
       core: {
         expand: true,
         cwd: 'assets/app/css',
-        src: ['*.css', '!*.min.css'],
+        src: [
+          '*.css',
+          '!*.min.css',
+          'node_modules/ion-rangeslider/css/*.css'
+        ],
         dest: 'assets/app/css',
         ext: '.min.css'
       }
@@ -98,8 +102,10 @@ module.exports = function (grunt) {
       },
       vendor: {
         src: [
-          'node_modules/*.js',
-          'node_modules/*.min.js'
+          'node_modules/countdown/*.js',
+          'node_modules/ion-rangeslider/js/*.min.js',
+          'node_modules/jquery/*.min.js',
+          'node_modules/jvectormap/*.min.js'
         ],
         dest: '.tmp/vendor.js'
       }
@@ -127,27 +133,9 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: 'node_modules/countdown',
-            src: '*.js',
-            dest: 'assets/vendor/countdown'
-          },
-          {
-            expand: true,
             cwd: 'node_modules/ion-rangeslider',
-            src: ['css/*', 'img/*', 'js/*'],
+            src: ['img/*'],
             dest: 'assets/vendor/ion-rangeslider'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/jquery/dist',
-            src: '*',
-            dest: 'assets/vendor/jquery'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/jvectormap',
-            src: ['*.css', '*.js'],
-            dest: 'assets/vendor/jvectormap'
           }
         ]
       }
