@@ -25,7 +25,9 @@
     "grunt-php": "^1.5.1",
     "ion-rangeslider": "^2.1.4",
     "jquery": "^1.12.4",
-    "jvectormap": "^2.0.4"
+    "jquery-form": "^4.2.2",
+    "jvectormap": "^2.0.4",
+    "slick": "^1.12.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
