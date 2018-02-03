@@ -182,6 +182,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', ['assets', 'css', 'js']);
   grunt.registerTask('test', ['clean', 'build']);
-
-  grunt.registerTask('default', ['build', 'php']);
+  grunt.registerTask('serve', ['build', 'php']);
+  grunt.registerTask('default', 'build');
 };
