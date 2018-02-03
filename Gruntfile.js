@@ -3,6 +3,7 @@ module.exports = function (grunt) {
 
   require('jit-grunt')(grunt);
   require('time-grunt')(grunt);
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -163,6 +164,15 @@ module.exports = function (grunt) {
       ],
       css: 'assets/app/css',
       js: 'assets/app/js'
+    },
+    php: {
+      dist: {
+        options: {
+          keepalive: true,
+          open: true,
+          port: 5000
+        }
+      }
     }
   });
 
@@ -173,5 +183,5 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['assets', 'css', 'js']);
   grunt.registerTask('test', ['clean', 'build']);
 
-  grunt.registerTask('default', 'build');
+  grunt.registerTask('default', ['build', 'php']);
 };
