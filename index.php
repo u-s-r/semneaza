@@ -11,10 +11,10 @@ $data = get_data();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Inițiativa cetățenească de modificare a Constituției">
     <meta name="author" content="USR">
-    <meta property="og:url" content="https://farapenali.usr.ro/">
+    <meta property="og:url" content="<?= SITE_URL ?>">
     <meta property="og:title" content="Fără penali în funcții publice">
     <meta property="og:description" content="Inițiativa cetățenească de modificare a Constituției">
-    <meta property="og:image" content="https://farapenali.usr.ro/assets/app/img/semneaza.jpg">
+    <meta property="og:image" content="<?= SITE_URL ?>assets/app/img/semneaza.jpg">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="favicon.ico" rel="icon">
     <title>Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției</title>
@@ -31,7 +31,7 @@ $data = get_data();
   <body>
     <nav class="container">
       <div class=" nav-brand">
-        <a href="https://<?= $_SERVER['SERVER_NAME'] ?>">
+        <a href="<?= SITE_URL ?>">
           <img src="assets/app/img/logo.png" alt="USR">
         </a>
       </div>
@@ -334,7 +334,7 @@ $data = get_data();
     </div>
     Blabla footer here
     <div class="social-media">
-      <a class="facebook" href="https://www.facebook.com/sharer.php?u=https://farapenali.usr.ro/" target="_blank">
+      <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
         <img src="assets/app/img/logo-facebook-inverted.png" alt="Facebook">
         Distribuie
       </a>
