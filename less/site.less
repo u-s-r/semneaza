@@ -1,5 +1,6 @@
 body {
   line-height: 1.5;
+  color: @dark-text;
 }
 
 .irs {
@@ -85,74 +86,114 @@ body {
 }
 
 .harta {
+  margin: 20px 0 20px 0;
+  padding: 20px 0 20px 0;
   background-image: url('../img/overlay-harta.png');
-  background-size: cover;
+  background-position: center center;
   background-color: @blue;
+  color: #fff;
+
+  h1 {
+    margin-top: 100px;
+  }
+
+  .maps {
+    position: relative;
+  }
+
+  .map {
+    margin-bottom: 30px;
+
+    .label {
+      text-align: center;
+    }
+  }
+
+  .map-ro {
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      margin-top: 25px;
+      padding-right: 90px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-right: 120px;
+    }
+  }
+
+  #map-ro {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .map-diaspora {
+    position: absolute;
+    right: 0;
+    top: 15px;
+
+    @media (min-width: 480px) {
+      top: 60px;
+    }
+
+    @media (min-width: 992px) {
+      right: 60px;
+    }
+  }
+
+  #map-diaspora {
+    height: 30px;
+    margin: 0 auto 10px;
+    width: 30px;
+
+    @media (min-width: 480px) and (max-width: 767px) {
+      height: 60px;
+      width: 60px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      height: 90px;
+      width: 90px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      height: 60px;
+      width: 60px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 90px;
+      width: 90px;
+    }
+  }
 }
 
-.map-ro {
-  @media (min-width: 992px) {
+.tooltip-harta {
+  position: absolute;
+  padding: 20px;
+  max-width: 42em;
+  z-index: 10;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  color: @dark-text;
+
+  p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  dl,
+  ul {
     margin-bottom: 0;
-    padding-left: 60px;
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    margin-top: 25px;
-    padding-right: 90px;
-  }
-
-  @media (min-width: 1200px) {
-    padding-right: 120px;
   }
 }
 
-#map-ro {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.map-diaspora {
-  position: absolute;
-  right: 0;
-  top: 15px;
-
-  @media (min-width: 480px) {
-    top: 60px;
-  }
-
-  @media (min-width: 992px) {
-    right: 60px;
-  }
-}
-
-#map-diaspora {
-  height: 30px;
-  margin: 0 auto 10px;
-  width: 30px;
-
-  @media (min-width: 480px) and (max-width: 767px) {
-    height: 60px;
-    width: 60px;
-  }
-
-  @media (min-width: 768px) and (max-width: 991px) {
-    height: 90px;
-    width: 90px;
-  }
-
-  @media (min-width: 992px) and (max-width: 1199px) {
-    height: 60px;
-    width: 60px;
-  }
-
-  @media (min-width: 1200px) {
-    height: 90px;
-    width: 90px;
-  }
-}
 
 .panel-primary {
   margin-bottom: 30px;

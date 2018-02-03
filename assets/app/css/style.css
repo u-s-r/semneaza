@@ -54,9 +54,6 @@
 }
 /* Labels */
 .label {
-  color: #00aae7;
-  font-size: 75%;
-  font-weight: bold;
   text-transform: uppercase;
 }
 /* Tags */
@@ -149,9 +146,6 @@
   font-size: 36px;
   font-weight: 600;
   margin-top: 5px;
-}
-.jumbotron-primary .banner .label {
-  color: #fff;
 }
 .jumbotron-primary .panel {
   border-bottom: 3px solid #e0e0e0;
@@ -256,15 +250,6 @@
   .panel-primary .media-right {
     padding-left: 90px;
   }
-}
-.maps {
-  position: relative;
-}
-.map {
-  margin-bottom: 30px;
-}
-.map .label {
-  text-align: center;
 }
 nav {
   position: relative;
@@ -466,20 +451,9 @@ nav .nav-body li a {
 .irs-grid-text {
   color: #00aae7;
 }
-.jvectormap-tip {
-  max-width: 42em;
-  z-index: 10;
-}
-.jvectormap-tip p {
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-.jvectormap-tip dl,
-.jvectormap-tip ul {
-  margin-bottom: 0;
-}
 body {
   line-height: 1.5;
+  color: #4c4c4c;
 }
 .irs {
   margin: 60px 0;
@@ -548,77 +522,109 @@ body {
   background-color: #fff;
 }
 .harta {
+  margin: 20px 0 20px 0;
+  padding: 20px 0 20px 0;
   background-image: url("../img/overlay-harta.png");
-  background-size: cover;
+  background-position: center center;
   background-color: #00aae7;
+  color: #fff;
+}
+.harta h1 {
+  margin-top: 100px;
+}
+.harta .maps {
+  position: relative;
+}
+.harta .map {
+  margin-bottom: 30px;
+}
+.harta .map .label {
+  text-align: center;
 }
 @media (min-width: 992px) {
-  .map-ro {
+  .harta .map-ro {
     margin-bottom: 0;
-    padding-left: 60px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .map-ro {
+  .harta .map-ro {
     margin-top: 25px;
     padding-right: 90px;
   }
 }
 @media (min-width: 1200px) {
-  .map-ro {
+  .harta .map-ro {
     padding-right: 120px;
   }
 }
-#map-ro {
+.harta #map-ro {
   bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
 }
-.map-diaspora {
+.harta .map-diaspora {
   position: absolute;
   right: 0;
   top: 15px;
 }
 @media (min-width: 480px) {
-  .map-diaspora {
+  .harta .map-diaspora {
     top: 60px;
   }
 }
 @media (min-width: 992px) {
-  .map-diaspora {
+  .harta .map-diaspora {
     right: 60px;
   }
 }
-#map-diaspora {
+.harta #map-diaspora {
   height: 30px;
   margin: 0 auto 10px;
   width: 30px;
 }
 @media (min-width: 480px) and (max-width: 767px) {
-  #map-diaspora {
+  .harta #map-diaspora {
     height: 60px;
     width: 60px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  #map-diaspora {
+  .harta #map-diaspora {
     height: 90px;
     width: 90px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  #map-diaspora {
+  .harta #map-diaspora {
     height: 60px;
     width: 60px;
   }
 }
 @media (min-width: 1200px) {
-  #map-diaspora {
+  .harta #map-diaspora {
     height: 90px;
     width: 90px;
   }
+}
+.tooltip-harta {
+  position: absolute;
+  padding: 20px;
+  max-width: 42em;
+  z-index: 10;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  color: #4c4c4c;
+}
+.tooltip-harta p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.tooltip-harta dl,
+.tooltip-harta ul {
+  margin-bottom: 0;
 }
 .panel-primary {
   margin-bottom: 30px;

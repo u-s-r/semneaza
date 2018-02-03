@@ -81,8 +81,12 @@ module.exports = function (grunt) {
       }
     },
     concat: {
+      options: {
+        sourceMap: true
+      },
       core: {
         src: [
+          'assets/vendor/debounce/jquery.ba-throttle-debounce.min.js',
           'js/usr.js',
           'js/countdown.js',
           'js/map-ro.js',
@@ -99,6 +103,8 @@ module.exports = function (grunt) {
         compress: {
           warnings: false
         },
+        sourceMap: true,
+        sourceMapIncludeSources : true,
         preserveComments: 'some'
       },
       core: {
