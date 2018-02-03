@@ -8,15 +8,15 @@ $data = get_data();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Strângem semnături pentru ca Uniunea Salvați România (USR) să candideze la alegerile parlamentare din 11 decembrie 2016. Ne vei găsi pe buletinul de vot doar dacă semnezi pentru noi!">
+    <meta name="description" content="Inițiativa cetățenească de modificare a Constituției">
     <meta name="author" content="USR">
-    <meta property="og:url" content="https://semneaza.usr.ro/">
-    <meta property="og:title" content="Începe curățenia Parlamentului cu o semnătură!">
-    <meta property="og:description" content="Strângem semnături pentru ca Uniunea Salvați România (USR) să candideze la alegerile parlamentare din 11 decembrie 2016. Ne vei găsi pe buletinul de vot doar dacă semnezi pentru noi!">
-    <meta property="og:image" content="https://semneaza.usr.ro/assets/app/img/semneaza.jpg">
+    <meta property="og:url" content="https://farapenali.usr.ro/">
+    <meta property="og:title" content="Fără penali în funcții publice">
+    <meta property="og:description" content="Inițiativa cetățenească de modificare a Constituției">
+    <meta property="og:image" content="https://farapenali.usr.ro/assets/app/img/semneaza.jpg">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="favicon.ico" rel="icon">
-    <title>USR &middot; Începe curățenia Parlamentului cu o semnătură!</title>
+    <title>Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției</title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
@@ -28,50 +28,90 @@ $data = get_data();
     <![endif]-->
   </head>
   <body>
+    <nav class="container">
+      <div class=" nav-brand">
+        <a href="https://<?= $_SERVER['SERVER_NAME'] ?>">
+          <img src="assets/app/img/logo.png" alt="USR">
+        </a>
+      </div>
+      <ul class="nav-body">
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#semneaza">Semnează inițativa</a></li>
+        <li><a href="#harta">Situația pe regiuni</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#comunicate">Comunicate de presă</a></li>
+      </ul>
+    </nav>
     <div class="jumbotron jumbotron-primary">
       <div class="container">
-        <div class="media media-brand">
-          <div class="media-left">
-            <a href="https://semneaza.usr.ro/">
-              <img class="media-object" src="assets/app/img/logo.png" alt="USR">
-            </a>
-          </div>
-          <div class="media-body">
-            <h1>Începe curățenia Parlamentului cu o semnătură!</h1>
-          </div>
-          <div class="media-right">
-            <a class="btn btn-inverted" href="https://www.nicusordan.ro/doneaza/" target="_blank" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">Donează</a>
-          </div>
-        </div>
         <div class="row">
-          <div class="col-md-7">
-            <div class="maps">
-              <div class="map map-ro">
-                <div class="label">Click pentru situația pe regiuni</div>
-                <div class="embed-responsive embed-responsive-4by3">
-                  <div id="map-ro"></div>
-                </div>
-                <div class="label">În țară</div>
+          <div class="col-md-6 banner">
+            <h1>Fără penali in funcții publice!</h1>
+            <h2>Nu sta deoparte!</h2>
+            <div class="countdown">
+              <h3>Numărul de zile până la strângerea semnăturilor:</h3>
+              <div class="countdown-primary">
+                <div class="value" id="countdown-months">00</div>
+                <div class="label">Luni</div>
               </div>
-              <div class="map map-diaspora">
-                <div id="map-diaspora"></div>
-                <div class="label">În diaspora</div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-primary">
+                <div class="value" id="countdown-days">00</div>
+                <div class="label">Zile</div>
+              </div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-secondary">
+                <div class="value" id="countdown-hours">00</div>
+                <div class="label">Ore</div>
+              </div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-secondary">
+                <div class="value" id="countdown-minutes">00</div>
+                <div class="label">Minute</div>
+              </div>
+              <div class="countdown-separator">
+                <div class="value">:</div>
+              </div>
+              <div class="countdown-secondary">
+                <div class="value" id="countdown-seconds">00</div>
+                <div class="label">Secunde</div>
               </div>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6 panel-host">
             <div class="panel panel-default">
-              <div class="panel-body">
-                <p>Am finalizat strângerea de semnături pentru ca Uniunea Salvați România (USR) să poată candida la <strong>alegerile parlamentare din 11 decembrie 2016.</strong></p>
-                <p>Ne-am fixat ca obiectiv strângerea a 200.000 de semnături şi la început ni s-a părut greu, dar cu ajutorul dumneavoastră ne-am depășit obiectivul şi am ajuns la <strong>350.781 de semnături!</strong></p>
-                <p>Mulţumim tuturor celor care au semnat și mai ales tuturor celor care au strâns semnături pentru noi!</p>
-              </div>
-              <div class="panel-footer">
-                <a class="btn btn-default" href="https://usr.ro/" target="_blank" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'continuam_usr')">
-                  <span class="glyphicon glyphicon-menu-right"></span>
-                  Continuăm mai departe împreună!
-                </a>
-              </div>
+              <form id="date-contact" method="post" action="date-contact.php">
+                <div class="panel-body">
+                  <h1>Alătură-te inițiativei</h1>
+                  <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
+                  <div>
+                    <h4>Numele și prenume</h4>
+                    <input type="text" name="nume">
+                  </div>
+                  <div>
+                    <h4>Telefon</h4>
+                    <input type="text" name="telefon">
+                  </div>
+                  <div>
+                    <h4>Email</h4>
+                    <input type="text" name="email">
+                  </div>
+
+                  <button type="submit" class="btn btn-default col-md-6" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+                    Înscrie-te acum!
+                  </button>
+
+                  <a href="https://www.usr.ro/doneaza/" class="btn btn-inverted col-md-5 col-md-push-1" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
+                    Donează!
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -80,36 +120,99 @@ $data = get_data();
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="statistics">
-            <div class="statistic statistic-primary">
-              <div class="value" id="countdown-days">00</div>
-              <div class="label">Zile</div>
-            </div>
-            <div class="statistic statistic-separator">
-              <div class="value">:</div>
-            </div>
-            <div class="statistic statistic-secondary">
-              <div class="value" id="countdown-hours">00</div>
-              <div class="label">Ore</div>
-            </div>
-            <div class="statistic statistic-separator">
-              <div class="value">:</div>
-            </div>
-            <div class="statistic statistic-secondary">
-              <div class="value" id="countdown-minutes">00</div>
-              <div class="label">Minute</div>
-            </div>
-            <div class="statistic statistic-separator">
-              <div class="value">:</div>
-            </div>
-            <div class="statistic statistic-secondary">
-              <div class="value" id="countdown-seconds">00</div>
-              <div class="label">Secunde</div>
-            </div>
-          </div>
+          <h1>Ajută și tu la strângerea semnăturilor</h1>
           <div id="progres-semnaturi"></div>
         </div>
       </div>
+    </div>
+    <a name="despre"></a>
+    <div class="row descriere">
+      <div class="container">
+        <div class="col-md-6 detalii">
+          <h1>Despre</h1>
+          <div class="slick-slider">
+            <div>
+              <p>
+                Corupția înseamnă sărăcie. Ea apare când cei din societatea civilă sunt într-o stare de letargie din
+                cauza repetatelor dezamăgiri venite din partea politicienilor. Dacă ne uităm la cum arată România astăzi,
+                în raport cu celelalte țări europene, o găsim la coada clasamentelor la toate cele trei sectoare
+                primordiale: educație, sănătate și dezvoltarea infrastructurii.
+              </p>
+              <p>
+                România are cel mai slab sistem de sănătate din Uniunea Europeană. Lipsa medicilor și a medicamentelor,
+                corupția managementului și infrastructura șubredă, plasează România pe primul loc în UE la mortalitatea
+                în spitale.
+              </p>
+              <p>
+                Nici în privința educației nu stăm mai bine, peste 40% dintre elevii români de gimnaziu sunt analfabeți
+                funcționali, ceea ce ne duce tot pe primul loc în UE.
+              </p>
+              <p>
+                Tot pe ultimul loc suntem și în privința kilometrilor de autostradă construiți.
+              </p>
+              <p>
+                Din cauza corupției, 2 din 5 români trăiesc în sărăcie sau la un pas să ajungă în această situație, județele
+                cele mai mai sărace din țară sunt și cele conduse de baronii locali ai PSD: Teleorman, Buzău, Vaslui.
+              </p>
+            </div>
+            <div>
+              <p>
+                Fără penali în funcții publice ar însemna o Românie fără Liviu Dragnea, care dat jos două guverne într-un an
+                ca să schimbe legile justiției în interes propriu, fără mărturiile mincinoase pentru care este anchetat Călin
+                Popescu Tăriceanu, fără deputatul mitralieră Cătălin Rădulescu, fără Viorel Ilie (ALDE) care a trucat
+                concursurile de angajare din ministerul pentru Relația cu Parlamentul.
+              </p>
+              <p>
+                Realitatea din România anului 2018 înseamnă toate cele de mai sus. Numai societatea civilă poate determina o
+                schimbare. Căci nu este de ajuns să-i schimbăm pe cei de la putere, ci trebuie schimbat modul în care acționează
+                poporul român. Urgența situației vine din schimbarea modului de a face politică cu unul moral și îndreptat către
+                realitatea pe care o vedem zilnic în jurul nostru. Propunerea de schimbare a Constituției este una care are la
+                bază inițiativa cetățenească mult strigată de românii care au ieșit în stradă în 2017 și 2018.
+              </p>
+              <p>
+                Demersul are nevoie de 500.000 de semnături strânse în 6 luni. Semnătura ta poate schimba modul în care funcționează și arată România.
+              </p>
+              <p>
+                Alătură-te inițiativei!
+              </p>
+            </div>
+          </div>
+        </div>
+        <?php
+          $lista_pasi = [];
+
+          $lista_pasi[] = "Se formează un grup de inițiativă din cel puțin zece cetățeni";
+          $lista_pasi[] = "Proiectul de modificare a Constituției este trimis pentru aviz la Consiliul Legislativ";
+          $lista_pasi[] = "Proiectul și avizul consultativ sunt publicate în Monitorul Oficial";
+          $lista_pasi[] = "Începe strângerea de 600.000 de semnături în 3 luni, din cel puțin 20 de județe";
+          $lista_pasi[] = "Listele de semnături împreună cu proiectul și expunerea de motive se înregistrează la Parlament";
+          $lista_pasi[] = "Parlamentul înaintează propunerea către CCR pentru controlul de constituționalitate";
+          $lista_pasi[] = "Începe procedura parlamentară, cu dezbateri în comisii și vot în plenul Camerei Deputaților și Senat";
+          $lista_pasi[] = "Se organizează un referendum decizional care trebuie să aibă cvorum și vot majoritar";
+        ?>
+        <div class="col-md-6 pasi">
+            <h1>Etapele proiectului</h1>
+            <ul>
+              <?php
+                foreach ($lista_pasi as $numar => $descriere) {
+
+                  if ($numar+1 <= PASI_COMPLETATI) {
+              ?>
+                <li><div class="bifa"></div><?= $descriere ?></li>
+              <?php
+                } else {
+              ?>
+                <li><div class="numar"><?= $numar+1 ?></div><?= $descriere ?></li>
+              <?php
+                  }
+                }
+              ?>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <a name="semneaza"></a>
+    <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <ul class="media-list">
@@ -162,6 +265,34 @@ $data = get_data();
           </ul>
         </div>
       </div>
+    </div>
+      <a name="harta"></a>
+      <div class="row harta">
+        <div class="container">
+          <div class="col-md-7">
+            <div class="maps">
+              <div class="map map-ro">
+                <div class="label">Click pentru situația pe regiuni</div>
+                <div class="embed-responsive embed-responsive-4by3">
+                  <div id="map-ro"></div>
+                </div>
+                <div class="label">În țară</div>
+              </div>
+              <div class="map map-diaspora">
+                <div id="map-diaspora"></div>
+                <div class="label">În diaspora</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+      <a name="media"></a>
+      <div class="row">
+      </div>
+      <a name="comunicate"></a>
+      <div class="row">
+      </div>
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <div class="panel panel-primary">
@@ -195,496 +326,55 @@ $data = get_data();
       </div>
     </div>
     <div class="social-media">
-      <a class="facebook" href="https://www.facebook.com/sharer.php?u=https://semneaza.usr.ro/" target="_blank">
+      <a class="facebook" href="https://www.facebook.com/sharer.php?u=https://farapenali.usr.ro/" target="_blank">
         <img src="assets/app/img/logo-facebook-inverted.png" alt="Facebook">
         Distribuie
       </a>
     </div>
-    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contact-label">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="contact-label">Persoane de contact</h4>
+<?php
+function modal_locatii($id, $title, $data_modal) {
+  global $data;
+?>
+  <div class="modal fade" id="<?= $id ?>" tabindex="-1" role="dialog" aria-labelledby="<?= $id ?>-label">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="<?= $id ?>-label"><?= $title ?></h4>
+        </div>
+        <div class="modal-body">
+          <div class="row row-three-columns">
+            <?php foreach ($data_modal as $judet => $locatii) { ?>
+              <div class="col-sm-6 col-md-4">
+                <h4><?= $data['numeJudet'][$judet] ?></h4>
+                <?php foreach ($locatii as $locatie) { ?>
+                  <dl>
+                    <dt><?= $locatie['locatie'] ?></dt>
+                    <dd>
+                      <ul class="list-unstyled">
+                        <?php foreach ($locatie['intrari'] as $intrare) { ?>
+                          <li><?= $intrare ?>
+                        <?php } ?>
+                      </ul>
+                    </dd>
+                  </dl>
+                <?php } ?>
+              </div>
+            <?php } ?>
           </div>
-          <div class="modal-body">
-            <div class="row row-three-columns">
-              <div class="col-sm-6 col-md-4">
-                <h4>Alba</h4>
-                <dl><dt>Alba Iulia</dt><dd><ul class="list-unstyled"><li>Emil Comşa, 0724078129</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Arad</h4>
-                <dl><dt>Arad</dt><dd><ul class="list-unstyled"><li>Vlad Cherchezan, 0728280286</li><li>Botoș Vlad, 0745339339</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Argeș</h4>
-                <dl><dt>Pitești</dt><dd><ul class="list-unstyled"><li>Cosmin Mihăescu, 0723256244</li><li>Ion Mircescu, 0729426682</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Bacău</h4>
-                <dl><dt>Bacău</dt><dd><ul class="list-unstyled"><li>Liviu Rusu, 0744123914</li><li>Mihai Gârba, 0744498055</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Bihor</h4>
-                <dl><dt>Oradea</dt><dd><ul class="list-unstyled"><li>Alexandru Flora, 0723582129</li><li>Silviu Dehelean, 0744225391</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Bistrița-Năsăud</h4>
-                <dl><dt>Bistrița</dt><dd><ul class="list-unstyled"><li>Lorand Toth, 0744579499</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Botoșani</h4>
-                <p>Marcel Gheorghiţă, 0745824469, mgheorghita@gmail.com</p>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Brașov</h4>
-                <dl><dt>Brașov</dt><dd><ul class="list-unstyled"><li>Cornel Sculean, 0741171780</li></ul></dd><dt>Făgăraș</dt><dd><ul class="list-unstyled"><li>Alexandru Ţarczali, 0765138353</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Brăila</h4>
-                <dl><dt>Brăila</dt><dd><ul class="list-unstyled"><li>Radu-Octavian Englezu, 0746834419</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>București</h4>
-                <dl><dt>Sectorul 1</dt><dd><ul class="list-unstyled"><li>Manuel Vieru, 0722233867</li></ul></dd><dt>Sectorul 2</dt><dd><ul class="list-unstyled"><li>Alin Arsu, 0727046890</li><li>Cristina Neagu, 0722286142</li></ul></dd><dt>Sectorul 3</dt><dd><ul class="list-unstyled"><li>Alexandru Vesa, 0756312238</li></ul></dd><dt>Sectorul 4</dt><dd><ul class="list-unstyled"><li>Cristian Matache, 0785810915</li><li>Sorin Ceacar, 0766751943</li></ul></dd><dt>Sectorul 5</dt><dd><ul class="list-unstyled"><li>Dragos Geamană, 0722609530</li></ul></dd><dt>Sectorul 6</dt><dd><ul class="list-unstyled"><li>Mihai Botez, 0763829093</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Buzău</h4>
-                <dl><dt>Buzău</dt><dd><ul class="list-unstyled"><li>Valeriu Mocanu, 0733517127</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Caraș-Severin</h4>
-                <dl><dt>Reșița</dt><dd><ul class="list-unstyled"><li>Ionuț Voinea, 0771550615</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Călărași</h4>
-                <dl><dt>Călărași</dt><dd><ul class="list-unstyled"><li>Verman Daniela, 0766678626</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Cluj</h4>
-                <dl><dt>Cluj-Napoca</dt><dd><ul class="list-unstyled"><li>Radu Boloveschi, 0723324617</li><li>Ovidiu Nistor, 0757988180</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Constanța</h4>
-                <dl><dt>Constanţa</dt><dd><ul class="list-unstyled"><li>Răzvan Andrei, 0770475808</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Covasna</h4>
-                <p>0726701994</p>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Dâmbovița</h4>
-                <dl><dt>Târgovişte</dt><dd><ul class="list-unstyled"><li>Adrian Iordănescu, 0728003259</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Dolj</h4>
-                <dl><dt>Craiova</dt><dd><ul class="list-unstyled"><li>Adrian Prisnel, 0723250885</li><li>Cosmin Stăicuţ, 0740279090</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Galați</h4>
-                <dl><dt>Galați</dt><dd><ul class="list-unstyled"><li>Radu Oprea, 0723342410</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Giurgiu</h4>
-                <dl><dt>Giurgiu</dt><dd><ul class="list-unstyled"><li>Raluca Duţu, 0734969744</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Gorj</h4>
-                <dl><dt>Târgu Jiu</dt><dd><ul class="list-unstyled"><li>Marius Stroie, 0741156512</li><li>Nicolae Chilea, 0744696328</li></ul></dd><dt>Motru</dt><dd><ul class="list-unstyled"><li>George Vintilescu, 0722275005</li></ul></dd><dt>Bumbești-Jiu</dt><dd><ul class="list-unstyled"><li>Ioan Bucălae, 0761951986</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Harghita</h4>
-                <p>0726701994</p>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Hunedoara</h4>
-                <dl><dt>Hunedoara</dt><dd><ul class="list-unstyled"><li>Camelia Măhălean, 0733317010</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Ialomița</h4>
-                <dl><dt>Slobozia</dt><dd><ul class="list-unstyled"><li>Cristina Iosif, 0730701141</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Iași</h4>
-                <dl><dt>Iași</dt><dd><ul class="list-unstyled"><li>Mihai Lupu, 0742056155</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Ilfov</h4>
-                <dl><dt>Bragadiru</dt><dd><ul class="list-unstyled"><li>Marius Călinescu, 0723762921</li></ul></dd><dt>Chiajna</dt><dd><ul class="list-unstyled"><li>Cornel Zainea, 0740022873</li></ul></dd><dt>Corbeanca</dt><dd><ul class="list-unstyled"><li>Jan Cardon, 0722437937</li></ul></dd><dt>Pantelimon</dt><dd><ul class="list-unstyled"><li>Lucian Zelincă, 0747070970</li></ul></dd><dt>Popești-Leordeni</dt><dd><ul class="list-unstyled"><li>Ciprian Necula, 0749123413</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Maramureș</h4>
-                <dl><dt>Baia Mare</dt><dd><ul class="list-unstyled"><li>Dan Ivan, 0745398368</li><li>Iulian Mariş, 0722984841</li><li>Simona Petruț, 0744643348</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Mehedinți</h4>
-                <dl><dt>Drobeta-Turnu Severin</dt><dd><ul class="list-unstyled"><li>Ştefania Ramona Homeag, 0753192547</li><li>Ilie Scarlat, 0754674783</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Mureș</h4>
-                <dl><dt>Târgu-Mureş</dt><dd><ul class="list-unstyled"><li>Alex Ciobotar, +40757329889</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Neamț</h4>
-                <dl><dt>Piatra Neamț</dt><dd><ul class="list-unstyled"><li>Ioan Ploşcaru, 0747437300</li></ul></dd><dt>Roman</dt><dd><ul class="list-unstyled"><li>Iulian Bulai, 0721389605</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Olt</h4>
-                <dl><dt>Slatina</dt><dd><ul class="list-unstyled"><li>Silviu Anton, 0765558019</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Prahova</h4>
-                <dl><dt>Ploiești</dt><dd><ul class="list-unstyled"><li>Dan Rădulescu, 0743323448</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Satu Mare</h4>
-                <dl><dt>Satu Mare</dt><dd><ul class="list-unstyled"><li>Anca Sabou, 0745350977</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Sălaj</h4>
-                <dl><dt>Zalău</dt><dd><ul class="list-unstyled"><li>Cosmin-Vasile Ardelean, 0747696764 coco_ancada@yahoo.com</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Sibiu</h4>
-                <dl><dt>Sibiu</dt><dd><ul class="list-unstyled"><li>Dan Adrian Ghiță, 0752177272</li><li>Raluca Amariei, 0721554693</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Suceava</h4>
-                <dl><dt>Suceava</dt><dd><ul class="list-unstyled"><li>Radu Ciornei 0732914661 radutudorciornei@gmail.com</li><li>Mihai Maierean 0745823960 maiereanmihai@yahoo.com</li><li>Teodora Munteanu 0744799646 teom62@yahoo.com</li></ul></dd></dl>
-                <dl><dt>Rădăuţi</dt><dd><ul class="list-unstyled"><li>Dan Vatra 0745140276 danvatra@gmail.com</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Teleorman</h4>
-                <dl><dt>Alexandria</dt><dd><ul class="list-unstyled"><li>Constanţa Duminică, 0769410020</li><li>Nicuşor Lina, 0768334501</li></ul></dd><dt>Turnu Măgurele</dt><dd><ul class="list-unstyled"><li>Sergiu Iordan, 0723211595</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Timiș</h4>
-                <dl><dt>Timișoara</dt><dd><ul class="list-unstyled"><li>Luminița Dolângă, 0754097620</li><li>Sorin Şipoş, 0722469508</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Tulcea</h4>
-                <dl><dt>Tulcea</dt><dd><ul class="list-unstyled"><li>Marian Zamfir, 0749075888</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Vaslui</h4>
-                <dl><dt>Bârlad</dt><dd><ul class="list-unstyled"><li>Mihai Bolea 0741933502 mihaibolea49@yahoo.com</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Vâlcea</h4>
-                <dl><dt>Râmnicu Vâlcea</dt><dd><ul class="list-unstyled"><li>Lucian Constantin Mîrzoiu, 0771441467</li><li>Eduard Rădulescu, 0752310000</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Vrancea</h4>
-                <dl><dt>Focșani</dt><dd><ul class="list-unstyled"><li>Cristian Ionascu, 0741157931</li></ul></dd></dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <hr>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Diaspora</h4>
-                <p><a href="mailto:diaspora@usr.ro">diaspora@usr.ro</a></p>
-                <p><a href="http://www.facebook.com/USR-Diaspora-1793510380925494/">Facebook: USR Diaspora</a></p>
-                <p>Citiţi <a href="http://usb.ro/wp-content/uploads/2016/10/Ghid-strangere-semnaturi-diaspora.pdf" target="_blank">ghidul de completare corectă</a> al formularelor pentru diaspora!</p>
-                <dl><dt>Republica Moldova</dt><dd><ul class="list-unstyled"><li>Alexandru Gâdiuţă, +37368792566</li></ul></dd></dl>
-                <dl><dt>Italia</dt><dd><ul class="list-unstyled"><li>Cerasella Ponta (Roma), +393280947327</li><li>Corina Cristina Velniciuc (Roma), +393285521723</li></ul></dd></dl>
-                <dl><dt>Spania</dt><dd><ul class="list-unstyled"><li>Iulian Lorincz, +34605363124</li><li>Anca Boldeanu (Barcelona), +34689070453, <a href="mailto:ancaboldeanu@yahoo.com">ancaboldeanu@yahoo.com</a></li></ul></dd></dl>
-                <dl><dt>Marea Britanie</dt><dd><ul class="list-unstyled"><li>Radu Mircea, +447860162346</li><li>Carmel Ciurdas, +447538776519</li></ul></dd></dl>
-                <dl><dt>Scoţia</dt><dd><ul class="list-unstyled"><li>Adela Miron, +447796990302</li></ul></dd></dl>
-                <dl><dt>Germania</dt><dd><ul class="list-unstyled"><li>Eliza Marin, +4915201363721</li><li>Crina Petec Călin, +4901724005476</li></ul></dd></dl>
-                <dl><dt>Franța</dt><dd><ul class="list-unstyled"><li>Emanuel Stoica (Paris), +33782746399</li><li>Andrei Corbu (Paris), +33675335422</li><li>Iulian Rotaru (Lyon), +33612922890</li></ul></dd></dl>
-                <dl><dt>S.U.A</dt><dd><ul class="list-unstyled"><li>Camil Golub (NY), +13472396714</li><li>Mircea Alex (NY), +19149604179</li><li>Matei Ioniță (Philadephia), +12154597574</li><li>Ioana Slăniceanu (LA), +13109277195</li></ul></dd></dl>
-                <dl><dt>Canada</dt><dd><ul class="list-unstyled"><li>Doina Simion (Montreal), +15148569114</li></ul></dd></dl>
-                <dl><dt>Belgia</dt><dd><ul class="list-unstyled"><li>Mardale Cintzia-Angelina, +33652675438</li><li>Luana Bidașcă, +32498785021</li></ul></dd></dl>
-                <dl><dt>Austria</dt><dd><ul class="list-unstyled"><li>Leonard Stoica, +436764938714</li></ul></dd></dl>
-                <dl><dt>Elveția</dt><dd><ul class="list-unstyled"><li>Annamaria Kozma (Zürich), +41762174816</li><li>Codrin Alexandru (Zürich), +41795304999, <a href="mailto:grcodal@gmail.com">grcodal@gmail.com</a></li><li>Dan Enache (Geneva), +33670177504</li></ul></dd></dl>
-                <dl><dt>Luxemburg</dt><dd><ul class="list-unstyled"><li>Adrian Bardan, +352661223183, <a href="mailto:bardan.adrian@yahoo.com">bardan.adrian@yahoo.com</a></li></ul></dd></dl>
-                <dl><dt>Olanda</dt><dd><ul class="list-unstyled"><li>Virgil Petre, +31628217749</li></ul></dd></dl>
-                </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Închide</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Închide</button>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="corturi" tabindex="-1" role="dialog" aria-labelledby="corturi-label">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="corturi-label">Corturile de campanie ale USR</h4>
-          </div>
-          <div class="modal-body">
-            <div class="row row-two-columns">
-              <div class="col-sm-6 col-md-4">
-                <h4>Arad</h4>
-                <dl>
-                  <dt>Arad</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Str. D. Bolintineanu nr. 5 parter (ARBIT AXC), Razvan Anghel, 0722343781, interval 9-17</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>București</h4>
-                <dl>
-                  <dt>Sector 1</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Metrou Piața Victoriei (intrarea pe Calea Victoriei, colţ cu Lascăr Catargiu) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                      <li>Metrou Aurel Vlaicu (ieşire pasaj metrou) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                      <li>Piaţa Domenii (în faţa Mega Image)</li>
-                      <li>Metrou Pipera</li>
-                      <li>Metrou Piaţa Romană - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                    </ul>
-                  </dd>
-                  <dt>Sector 2</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Piaţa Universităţii (pe partea cu Universitatea, staţia de troleibuz) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                      <li>Metrou Piaţa Iancului (intersectie Iancului cu Mihai Bravu, partea cu Raiffeisen Bank) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                      <li>Metrou Ştefan cel Mare (intersecţia cu Barbu Vacarescu)</li>
-                      <li>Lacul Tei (intersecţia Blvd. Lacul Tei cu Maica Domnului, pe partea cu magazinul Domino)</li>
-                    </ul>
-                  </dd>
-                  <dt>Sector 3</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Piaţa Unirii (Magazin Unirea, H&amp;M) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                      <li>Metrou Titan (ieşire Poşta Titan) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                    </ul>
-                  </dd>
-                  <dt>Sector 4</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Metrou Tineretului - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                      <li>Piaţa Sudului (ieşire metrou, lângă magazinul Big Berceni) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                    </ul>
-                  </dd>
-                  <dt>Sector 5</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Piaţa Unirii (Capăt tramvai 32) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                    </ul>
-                  </dd>
-                  <dt>Sector 6</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Metrou Lujerului (ieşire supermarket Cora) - Luni-Vineri 8-12, 16-20, Sâmbătă-Duminică 9-17</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Dâmbovița</h4>
-                <dl>
-                  <dt>Târgovişte</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Piaţa Tricolorului (platoul prefecturii, către Magazinul Muntenia) - zilnic 9-20</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-               <div class="col-sm-6 col-md-4">
-                <h4>Constanţa</h4>
-                <dl>
-                  <dt>Constanţa</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Casa de Cultură, intrarea din Bulevardul Alexandru Lăpuşneanu - zilnic 12-20</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Vâlcea</h4>
-                <dl>
-                  <dt>Râmnicu Vâlcea</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Bulevardul Tineretului 6-8 (Complex Hermes - Cartierul Ostroveni) - Luni-Vineri 17-19, Sambata-Duminica 12-16</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Cluj</h4>
-                <dl>
-                  <dt>Cluj-Napoca</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Bulevardul Erorilor nr. 2 (vis-a-vis de clopot) - zilnic 8-19</li>
-                      <li>Piaţa Mărăşti- Blvd. 21 Decembrie 1989 Nr. 133, vis-a-vis de cofetăria Nicola - zilnic 8-19</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Brașov</h4>
-                <dl>
-                  <dt>Brașov</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Livada Poștei, în față la Rectorat - zilnic 10:30-20</li>
-                      <li>Modarom, la începutul străzii Republicii - zilnic 10:30-20</li>
-                    </ul>
-                  </dd>
-                  <dt>Făgăraş</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>B-dul Unirii, în zona Magazinului Universal Negoiu - zilnic 10-16</li>
-                      <li>B-dul Unirii, în faţa magazinului Germanos</li>
-                      <li>Cartierul Tudor Vladimirescu, în faţa magazinului Flora</li>
-                    </ul>
-                  </dd>
-                  <dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Sibiu</h4>
-                <dl>
-                  <dt>Sibiu</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Blvd. Mihai Viteazul, între fosta clădire Romtelecom şi magazinul Trans Agape - Luni - Vineri 17-20, Sâmbătă 8-14</li>
-                      <li>Piaţa Unirii în faţa magazinului Dumbrava - Luni - Vineri (8-14, 17-20), Sâmbătă (14-20), Duminică (17-20)</li>
-                      <li>Cartier Ştrand - Str. Bihorului în faţa magazinului Profi - Luni - Vineri (17-20), Sâmbătă (11-14)</li>
-                      <li>Cartier Vasile Aaron - Str. Semaforului în faţa pieţei agroalimentare - Luni - Vineri (17-20), Sâmbătă (8-11)</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Teleorman</h4>
-                <dl>
-                  <dt>Turnu Măgurele</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Str. Mihai Bravu, nr 30, în fața magazinului Pentru</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Satu Mare</h4>
-                <dl>
-                  <dt>Satu Mare</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Str. Corneliu Coposu, Centrul Nou, în faţă la Centrul Comercial Someşul - zilnic 11-19</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Timiș</h4>
-                <dl>
-                  <dt>Timișoara</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Complex (Str. Socrates 2A) - zilnic între 10-19 </li>
-                      <li>Restaurant Boema (Str. Florimund Mercy 1) - zilnic între 16-20</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Giurgiu</h4>
-                <dl>
-                  <dt>Giurgiu</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Str. Prof. Droc Barcian, lângă magazinul Orange</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Ilfov</h4>
-                <dl>
-                  <dt>Chiajna</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Intersecția dintre strada Tineretului și strada Rezervelor, vis a vis de Style Residence 2016.</li>
-                    </ul>
-                  </dd>
-                  <dt>Popeşti Leordeni</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Soşeaua Berceni, Metrou Dimitrie Leonida.</li>
-                    </ul>
-                  </dd>
-                  <dt>Bragadiru</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Soşeaua Alexandriei, rond Cristalului în faţa Magazinului Penny, staţia de autobuz Smârdan.</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Galaţi</h4>
-                <dl>
-                  <dt>Galaţi</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>La Potcoavă</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Bacău</h4>
-                <dl>
-                  <dt>Bacău</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Piaţa Tricolorului</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Hunedoara</h4>
-                <dl>
-                  <dt>Deva</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Casa de cultură - zilnic 10-12, 16-19</li>
-                    </ul>
-                  </dd>
-                  <dt>Hunedoara</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>În faţa Cofetăriei Jasmin - zilnic 17:30-20</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <h4>Caraş-Severin</h4>
-                <dl>
-                  <dt>Reşiţa</dt>
-                  <dd>
-                    <ul class="list-unstyled list-relaxed">
-                      <li>Parcul Tricolorul, la trecerea de pietoni din faţa liceului de Arta, pe partea cu parcul</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Închide</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+<?php
+}
+
+modal_locatii('contact', 'Persoane de contact', $data['contacte']);
+modal_locatii('corturi', 'Corturile de campanie ale USR', $data['corturi']);
+?>
     <script><?php printf('remoteData = %s;', json_encode($data)); ?></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/vendor/jquery/jquery.min.js"><\/script>')</script>
@@ -692,6 +382,8 @@ $data = get_data();
     <script src="assets/vendor/countdown/countdown.js"></script>
     <script src="assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
     <script src="assets/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="assets/vendor/jquery-form/jquery.form.js"></script>
+    <script src="assets/vendor/slick/slick.min.js"></script>
     <script src="assets/app/js/application.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

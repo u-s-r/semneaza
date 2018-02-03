@@ -23,3 +23,10 @@ Thumbs.db
 # Folders to ignore
 bower_components
 node_modules
+
+vendor
+assets/vendor
+
+# Build output files
+assets/app/css/**
+assets/app/js/**

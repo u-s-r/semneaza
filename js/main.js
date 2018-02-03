@@ -5,14 +5,21 @@
 
   $.extend(true, USR.data, remoteData);
 
+  $(".descriere .detalii .slick-slider").slick({
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000
+  });
+
   $('#progres-semnaturi').ionRangeSlider({
     force_edges: true,
     from: USR.data.semnaturiStranse,
     from_fixed: true,
     grid: true,
     hide_min_max: true,
-    max: USR.data.intervalSemnaturi[1],
-    min: USR.data.intervalSemnaturi[0],
+    max: USR.data.targetSemnaturi,
+    min: 0,
     postfix: ' semnături strânse',
     prettify_separator: '.'
   });
@@ -23,14 +30,14 @@
     map: 'ro_merc',
     onRegionTipShow: function (event, element, code) {
       var contacte = '';
-      var html = '<strong>' + element.html() + '</strong><br>Semnături strânse: ' +
-        USR.data.semnaturi[code];
+      var html = '<strong>' + USR.data.numeJudet[code] + '</strong><br>Semnături strânse: ' +
+        USR.data.semnaturi[code].toString();
 
       for (var i = 0; i < USR.data.contacte[code].length; i++) {
         contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
 
-        for (var j = 0; j < USR.data.contacte[code][i].persoane.length; j++) {
-          contacte += '<li>' + USR.data.contacte[code][i].persoane[j].join(', ') + '</li>';
+        for (var j = 0; j < USR.data.contacte[code][i].intrari.length; j++) {
+          contacte += '<li>' + USR.data.contacte[code][i].intrari[j] + '</li>';
         }
 
         contacte += '</ul></dd>';
@@ -64,22 +71,20 @@
     backgroundColor: 'transparent',
     bindTouchEvents: false,
     map: 'diaspora',
-    onRegionTipShow: function (event, element, code) {
+    onRegionTipShow: function (event, element) {
       var contacte = '';
-      var html = '<strong>' + element.html() + '</strong><br>Semnături strânse: ' +
-        USR.data.diaspora.semnaturi[code];
+      var html = '<strong>' + USR.data.numeJudet.DIASPORA + '</strong><br>Semnături strânse: ' +
+        USR.data.semnaturi.DIASPORA;
 
-      for (var i = 0; i < USR.data.diaspora.contacte.length; i++) {
-        contacte += '<dl><dt>' + USR.data.diaspora.contacte[i].locatie + '</dt><dd><ul class="list-unstyled">';
+      for (var i = 0; i < USR.data.contacte.DIASPORA.length; i++) {
+        contacte += '<dl><dt>' + USR.data.contacte.DIASPORA[i].locatie + '</dt><dd><ul class="list-unstyled">';
 
-        for (var j = 0; j < USR.data.diaspora.contacte[i].persoane.length; j++) {
-          contacte += '<li>' + USR.data.diaspora.contacte[i].persoane[j].join(', ') + '</li>';
+        for (var j = 0; j < USR.data.contacte.DIASPORA[i].intrari.length; j++) {
+          contacte += '<li>' + USR.data.contacte.DIASPORA[i].intrari[j] + '</li>';
         }
 
         contacte += '</ul></dd></dl>';
       }
-
-      html += '<br>Contact: ' + USR.data.diaspora.contact + '<p>' + USR.data.diaspora.info + '</p>';
 
       if ('' !== contacte) {
         html += '<div class="dl-two-columns">' + contacte + '</div>';
@@ -94,7 +99,7 @@
         min: USR.data.min,
         normalizeFunction: 'polynomial',
         scale: ['#7fc1ff', '#ffffff'],
-        values: USR.data.diaspora.semnaturi
+        values: USR.data.semnaturi.DIASPORA
       }]
     },
     zoomButtons: false,

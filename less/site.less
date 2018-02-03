@@ -1,15 +1,93 @@
-.jumbotron-primary {
-  margin-bottom: 30px;
+body {
+  line-height: 1.5;
+}
 
-  .panel {
-    text-align: center;
+.irs {
+  margin: 60px 0;
+}
+
+.descriere {
+  background-color: #d7e6f2;
+  padding: 60px 0;
+
+  .container {
+    background-color: #fff;
+    padding: 0;
   }
 
-  @media (min-width: 1200px) {
-    .panel {
-      margin-top: 30px;
+  .detalii, .pasi {
+    padding: 30px 60px;
+  }
+
+  .detalii {
+    h1 {
+      color: @blue;
+    }
+
+    p {
+        margin: 20px 0;
+    }
+
+    .slick-dots {
+      text-align: right;
+
+      li button::before {
+        background-color: #000;
+        border-radius: 10px;
+        content: "";
+      }
+
+      li.slick-active button::before {
+        background-color: @blue;
+      }
     }
   }
+
+  .pasi {
+    background-image: url('../img/background-pasi.png');
+    background-size: cover;
+    color: #fff;
+    font-size: 16px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 20px 0;
+
+        .bifa, .numar {
+          float: left;
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          margin: 5px 10px 0 0;
+
+        }
+
+        .bifa {
+          background-image: url('../img/bifa.png');
+          background-repeat: no-repeat;
+          background-position: middle middle;
+        }
+
+        .numar {
+          font-size: 30px;
+          font-weight: 700;
+          border-radius: 20px;
+          text-align: center;
+          color: @blue-even-lighter;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.harta {
+  background-image: url('../img/overlay-harta.png');
+  background-size: cover;
+  background-color: @blue;
 }
 
 .map-ro {
@@ -80,17 +158,60 @@
   margin-bottom: 30px;
 }
 
-.statistics {
+.countdown {
+  margin-top: 80px;
   margin-bottom: 5px;
   text-align: center;
+
+  h3 {
+    color: #fff;
+    font-weight: 200;
+  }
+
+  .countdown-primary, .countdown-secondary, .countdown-separator {
+    display: inline-block;
+    text-align: center;
+
+    .value {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    @media (min-width: 768px) {
+      .value {
+        font-size: 63px;
+      }
+    }
+  }
 }
 
-.statistic-primary,
-.statistic-secondary {
+.countdown-primary,
+.countdown-secondary {
   width: 4em;
 
   @media (min-width: 768px) {
     width: 6em;
+  }
+}
+
+.countdown-primary {
+  .value {
+    color: #fff;
+  }
+}
+
+.countdown-secondary {
+  .value {
+    color: #fff;
+  }
+}
+
+.countdown-separator {
+  vertical-align: top;
+
+  .value {
+    color: #fff;
   }
 }
 

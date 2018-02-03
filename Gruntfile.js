@@ -86,7 +86,9 @@ module.exports = function (grunt) {
           'js/countdown.js',
           'js/map-ro.js',
           'js/map-diaspora.js',
-          'js/main.js'
+          'js/form.js',
+          'js/main.js',
+          'js/scroll.js'
         ],
         dest: 'assets/app/js/application.js'
       }
