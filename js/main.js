@@ -5,7 +5,7 @@
 
   $.extend(true, USR.data, remoteData);
 
-  $(".descriere .detalii .slick-slider").slick({
+  $('.descriere .detalii .slick-slider').slick({
     dots: true,
     arrows: false,
     autoplay: true,
@@ -24,18 +24,18 @@
     prettify_separator: '.'
   });
 
-  var tooltip = $("<div class='tooltip-harta'></div>").appendTo(document.body);
+  var tooltip = $('<div class="tooltip-harta"></div>').appendTo(document.body);
 
   var tooltipHandler = function (event, code, mouseFollower) {
     var mouseX;
     var mouseY;
 
     mouseFollower.mousemove($.debounce(5, function(e) {
-        var offset = $('#map-ro').offset();
+        //var offset = $('#map-ro').offset();
         mouseX = e.pageX - tooltip.width() - 60;
         mouseY = e.pageY - tooltip.height() - 60;
         tooltip.css({'top': mouseY, 'left': mouseX});
-    }));
+      }));
 
     tooltip.hide();
     tooltip.css({'top': mouseY, 'left': mouseX}).show();
@@ -73,7 +73,7 @@
     bindTouchEvents: false,
     map: 'ro_merc',
     onRegionOver: function (event, code) {
-      tooltipHandler (event, code, $('path.jvectormap-region.jvectormap-element'));
+      tooltipHandler(event, code, $('path.jvectormap-region.jvectormap-element'));
     },
     onRegionTipShow: function (e) {
       e.preventDefault();
@@ -91,8 +91,8 @@
     zoomButtons: false,
     zoomOnScroll: false
   });
-  $("#map-diaspora").hover(function (event) {
-    tooltipHandler (event, "DIASPORA", $("#map-diaspora"));
+  $('#map-diaspora').hover(function (event) {
+    tooltipHandler(event, 'DIASPORA', $('#map-diaspora'));
   }, function () {
     tooltip.hide();
   });
