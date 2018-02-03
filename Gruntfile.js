@@ -161,15 +161,6 @@ module.exports = function (grunt) {
       ],
       css: 'assets/app/css',
       js: 'assets/app/js'
-    },
-    php: {
-      dist: {
-        options: {
-          keepalive: true,
-          open: true,
-          port: 5000
-        }
-      }
     }
   });
 
