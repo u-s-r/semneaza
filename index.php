@@ -29,20 +29,30 @@ $data = get_data();
     <![endif]-->
   </head>
   <body>
-    <nav class="container">
-      <div class=" nav-brand">
-        <a href="<?= SITE_URL ?>">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="href="https://<?= $_SERVER['SERVER_NAME'] ?>"">
           <img src="assets/app/img/logo.png" alt="USR">
         </a>
       </div>
-      <ul class="nav-body">
-        <li><a href="#despre">Despre</a></li>
-        <li><a href="#semneaza">Semnează inițativa</a></li>
-        <li><a href="#harta">Situația pe regiuni</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#comunicate">Comunicate de presă</a></li>
-      </ul>
-    </nav>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#despre">Despre</a></li>
+            <li><a href="#semneaza">Semnează inițativa</a></li>
+            <li><a href="#harta">Situația pe regiuni</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#comunicate">Comunicate de presă</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <div class="jumbotron jumbotron-primary">
       <div class="container">
         <div class="row">
