@@ -29,20 +29,30 @@ $data = get_data();
     <![endif]-->
   </head>
   <body>
-    <nav class="container">
-      <div class=" nav-brand">
-        <a href="<?= SITE_URL ?>">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="href="https://<?= $_SERVER['SERVER_NAME'] ?>"">
           <img src="assets/app/img/logo.png" alt="USR">
         </a>
       </div>
-      <ul class="nav-body">
-        <li><a href="#despre">Despre</a></li>
-        <li><a href="#semneaza">Semnează inițativa</a></li>
-        <li><a href="#harta">Situația pe regiuni</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#comunicate">Comunicate de presă</a></li>
-      </ul>
-    </nav>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#despre">Despre</a></li>
+            <li><a href="#semneaza">Semnează inițativa</a></li>
+            <li><a href="#harta">Situația pe regiuni</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#comunicate">Comunicate de presă</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <div class="jumbotron jumbotron-primary">
       <div class="container">
         <div class="row">
@@ -116,7 +126,7 @@ $data = get_data();
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
           <h1>Ajută și tu la strângerea semnăturilor</h1>
           <div id="progres-semnaturi"></div>
         </div>
@@ -195,11 +205,11 @@ $data = get_data();
 
                   if ($numar+1 <= PASI_COMPLETATI) {
               ?>
-                <li><div class="bifa"></div><?= $descriere ?></li>
+                <li><div class="bifa"></div><span class="descriere-etapa"><?= $descriere ?></span></li>
               <?php
                 } else {
               ?>
-                <li><div class="numar"><?= $numar+1 ?></div><?= $descriere ?></li>
+                <li><div class="numar"><?= $numar+1 ?></div><span class="descriere-etapa"><?= $descriere ?></span></li>
               <?php
                   }
                 }
@@ -210,23 +220,23 @@ $data = get_data();
     </div>
     <a name="semneaza"></a>
     <div class="container">
-      <div class="col-md-10 col-md-offset-1">
-        <ul class="media-list">
-          <li class="media">
-            <div class="media-left">
+      <div class="col-md-12">
+        <ul class="container-media">
+          <li class="media-element">
+            <div class="media-element__left">
               <img class="media-object" src="assets/app/img/icon-semneaza.png" alt="Semnează">
             </div>
-            <div class="media-body">
-              <h3 class="media-heading">Semnează</h3>
+            <div class="media-element__right">
+              <h3>Semnează</h3>
               <p>Imprimă formularul folosind butonul de mai sus şi completează-l conform instrucțiunilor, folosind date din cartea ta de identitate. La final semnează formularul, doar aşa este considerată validă intrarea.</p>
             </div>
           </li>
-          <li class="media">
-            <div class="media-left">
-              <img class="media-object" src="assets/app/img/icon-spune-prietenilor.png" alt="Spune-le prietenilor">
+          <li class="media-element">
+            <div class="media-element__left">
+              <img class="media-object" src="assets/app/img/icon-spune-prietenilor.png" alt="Semnează">
             </div>
-            <div class="media-body">
-              <h3 class="media-heading">Spune-le familiei și prietenilor!</h3>
+            <div class="media-element__right">
+              <h3>Spune-le familiei și prietenilor!</h3>
               <p>Ne trebuie cât mai multe semnături, aşa că te rugăm să vorbeşti cu prietenii, familia şi vecinii tăi să completeze şi ei formularul. Semnăturile lor trebuie să fie originale; nu semnaţi în locul altei persoane.</p>
               <p>
                 <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=https://semneaza.usr.ro/" target="_blank">
@@ -236,18 +246,20 @@ $data = get_data();
               </p>
             </div>
           </li>
-          <li class="media">
-            <div class="media-left">
-              <img class="media-object" src="assets/app/img/icon-trimite.png" alt="Trimite">
+          <li class="media-element">
+            <div class="media-element__left">
+              <img class="media-object" src="assets/app/img/icon-trimite.png" alt="Semnează">
             </div>
-            <div class="media-body text-left">
+            <div class="media-element__right">
               <h3 class="media-heading">Trimite</h3>
               <p>Formularele completate trebuie să ajungă în posesia noastră <strong>până pe 20 octombrie </strong> (ghidul pentru <a href="http://usb.ro/wp-content/uploads/2016/10/Ghid-strangere-semnaturi-diaspora.pdf" target="_blank">diaspora aici</a>). Poţi face asta în două feluri:</p>
               <ul class="list list-checkbox">
                 <li class="checked">
-                 Adu personal petiția la unul din corturile de campanie ale USR (<a href="#corturi" data-toggle="modal" role="button">vezi locațiile noastre</a>) sau contactează un reprezentat al USR din țară pentru a le prelua (<a href="#contact" data-toggle="modal" role="button">vezi persoanele de contact</a>).
+                  <span class="glyphicon glyphicon-check"></span>
+                Adu personal petiția la unul din corturile de campanie ale USR (<a href="#corturi" data-toggle="modal" role="button">vezi locațiile noastre</a>) sau contactează un reprezentat al USR din țară pentru a le prelua (<a href="#contact" data-toggle="modal" role="button">vezi persoanele de contact</a>).
                 </li>
                 <li class="checked">
+                <span class="glyphicon glyphicon-check"></span>
                   Trimite GRATUIT formularul/formularele în original prin Poșta Română, serviciul de corespondenţă cu taxe preplătite (<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-container="body" data-placement="auto" data-html="true" data-content="&lt;p&gt;Atunci când sigilati plicul poştal, pe partea unde aţi trecut ca destinatar sediul central al USR, puneţi în dreapta sus o mică etichetă (un sticker sau o foaie mică printată şi lipită) cu:&lt;/p&gt;&lt;div class=&quot;tag&quot;&gt;&lt;div class=&quot;value&quot;&gt;CR&lt;/div&gt; Taxe poștale preplătite&lt;/div&gt;">vezi detalii</a>) la sediul central al USR (<strong>Str. Carol Davila, Nr. 91, Parter, Ap. 1, Sector 5, 050453, București</strong>), sau adu-le personal în intervalul 10-20.
                 </li>
               </ul>
@@ -378,6 +390,22 @@ modal_locatii('contact', 'Persoane de contact', $data['contacte']);
 modal_locatii('corturi', 'Corturile de campanie ale USR', $data['corturi']);
 ?>
     <script><?php printf('remoteData = %s;', json_encode($data)); ?></script>
+<<<<<<< HEAD
     <script src="assets/app/js/application.min.js"></script>
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/vendor/jquery/jquery.min.js"><\/script>')</script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src=".tmp/application.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-30235099-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+>>>>>>> e9d1b67f5231f3185eb004d13261a8045c559b12
   </body>
 </html>

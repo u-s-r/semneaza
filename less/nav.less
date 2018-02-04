@@ -1,33 +1,23 @@
-nav {
-  position: relative;
-  height: 120px;
 
-  .nav-brand {
-    display: inline-block;
-    margin-top: 20px;
-
-    a {
-      display: block;
-      height: 100%;
-    }
+.navbar-brand {
+  display: inline-block;
+  padding:1rem;
+  img {
+    display: block;
+    height: 100%;
   }
+}
 
-  .nav-body {
-    position: absolute;
-    right: 10px;
-    top: 55px;
-    list-style: none;
-
-    li {
-      font-size: 1em;
-      margin-right: 18px;
-      text-transform: uppercase;
-      font-weight: 600;
-      display: inline-block;
-
-      a {
-        color: @dark-text;
-      }
+.navbar-default .navbar-nav {
+  li {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    :last-child {
+      margin-right:0;
+    }
+    a {
+      color: @dark-text;
     }
   }
 }

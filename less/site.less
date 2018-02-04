@@ -3,6 +3,10 @@ body {
   color: @dark-text;
 }
 
+input {
+  border: 1px solid @light-grey;
+}
+
 .irs {
   margin: 60px 0;
 }
@@ -33,10 +37,14 @@ h3 {
   }
 
   .detalii, .pasi {
-    padding: 30px 60px;
+    padding: 15px 20px;
+    @media only screen and (min-device-width : 480px) {
+      padding: 30px 65px;
+    }
   }
 
   .detalii {
+    padding-bottom:40px;
     h1 {
       color: @blue;
     }
@@ -72,14 +80,12 @@ h3 {
 
       li {
         margin: 20px 0;
+        display:flex;
+        align-items: center;
 
         .bifa, .numar {
-          float: left;
-          display: inline-block;
+          flex-basis: 40px; 
           height: 40px;
-          width: 40px;
-          margin: 5px 10px 0 0;
-
         }
 
         .bifa {
@@ -89,12 +95,20 @@ h3 {
         }
 
         .numar {
+          line-height:1.4;
           font-size: 30px;
           font-weight: 700;
-          border-radius: 20px;
+          border-radius: 50%;
           text-align: center;
           color: @blue-even-lighter;
           background-color: #fff;
+        }
+        .descriere-etapa {
+          flex-basis:calc(100% - 50px);
+          flex-shrink: 2;
+          padding-left:10px;
+          display:inline;
+          vertical-align:middle;
         }
       }
     }
@@ -219,9 +233,8 @@ h3 {
 
   .comunicat {
     background-color: #fff;
-    height: 450px;
     margin: 0;
-    padding: 0;
+    padding: 0 0 40px 0;
 
     a {
       display: block;
@@ -234,7 +247,6 @@ h3 {
 
     .corp {
       padding: 20px;
-      height: 250px;
       position: relative;
 
       h3, > span {
@@ -251,10 +263,10 @@ h3 {
       }
 
       > a {
-        position: absolute;
-        bottom: 20px;
+        display:block;
         color: @red;
         font-weight: 500;
+        margin-right:20px;
       }
 
       p {
@@ -264,7 +276,7 @@ h3 {
   }
 
   .footer {
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: center;
 
     .mai-multe {
@@ -327,21 +339,39 @@ h3 {
     display: block;
   }
 }
+ 
+ul.container-media {
+  padding:0;
+  list-style-type: none;
 
-.media-list {
-  margin-top: 60px;
-
-  .media-heading {
-    text-align: center;
-  }
-
-  @media (min-width: 992px) {
-    .media-heading {
-      text-align: left;
+  .media-element {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 0;
+    text-decoration:none;
+    &__left{
+      flex-basis: 25%;
+      flex-shrink:2;
+      .media-object {
+        width:100%;
+        max-width:130px;
+      }
+    }
+    &__right{
+      flex-basis: 70%;
     }
   }
 }
 
 .list-checkbox {
   margin-bottom: 20px;
+  @media all and (max-device-width : 420px) {
+      padding:0;
+      margin:0;
+    }
+  li {
+    padding-left:0;
+    margin-bottom:10px;
+  }
 }
