@@ -76,11 +76,12 @@
 
 
   .countdown {
-    @media (min-width: 768px) {
-      margin-top: 80px;
-    }
-    margin: 20px 0;
+    margin: 80px 0 20px 0;
     text-align: left;
+
+    @media (max-width: 767px) {
+        margin-top: 20px;
+    }
 
     h3 {
       text-align:left;
@@ -91,27 +92,38 @@
     .countdown-primary, .countdown-secondary, .countdown-separator {
       display: inline-block;
       text-align: center;
+    }
 
-      .value {
-        font-size: 36px;
-        font-weight: 300;
-        line-height: 1;
+    .countdown-primary, .countdown-secondary {
+      width: 6em;
+
+      @media (max-width: 767px) {
+        width: 4em;
       }
 
-      @media (min-width: 768px) {
-        .value {
-          font-size: 63px;
-        }
+      @media (max-width: 372px) {
+        width: 2em;
       }
     }
-  }
 
-  .countdown-primary,
-  .countdown-secondary {
-    width: 4em;
+    .value {
+      font-size: 63px;
+      font-weight: 300;
+      line-height: 1;
 
-    @media (min-width: 768px) {
-      width: 6em;
+      @media (max-width: 767px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 372px) {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 372px) {
+        .label {
+            font-size: 9px;
+        }
     }
   }
 
