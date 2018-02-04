@@ -208,11 +208,11 @@ $data = get_data();
 
                   if ($numar+1 <= PASI_COMPLETATI) {
               ?>
-                <li><div class="bifa"></div><?= $descriere ?></li>
+                <li><div class="bifa"></div><span class="descriere-etapa"><?= $descriere ?></span></li>
               <?php
                 } else {
               ?>
-                <li><div class="numar"><?= $numar+1 ?></div><?= $descriere ?></li>
+                <li><div class="numar"><?= $numar+1 ?></div><span class="descriere-etapa"><?= $descriere ?></span></li>
               <?php
                   }
                 }
