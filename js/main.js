@@ -5,6 +5,9 @@
 
   $.extend(true, USR.data, remoteData);
 
+
+  $('.media-section').slick();
+
   $('.descriere .detalii .slick-slider').slick({
     dots: true,
     arrows: false,
