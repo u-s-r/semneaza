@@ -8,13 +8,22 @@
 }
 
 .jumbotron-primary {
-  margin-bottom: 150px;
   background-color: @blue-jumbotron;
   background-image: url('../img/overlay-jumbotron.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+
+  @media (max-width: @screen-md) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    margin-bottom: 120px;
+  }
+
+  margin-bottom: 100px;
 
   h1 {
     color: @blue;
@@ -46,10 +55,6 @@
     border-bottom: 3px solid #e0e0e0;
     border-radius: 0;
     color: @dark-text;
-
-    @media (min-width: 1200px) {
-      margin-top: 20px;
-    }
 
     h1 {
       margin-top: 0;
