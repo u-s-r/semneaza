@@ -50,7 +50,7 @@ $data = get_data();
             <h1>Fără penali in funcții publice!</h1>
             <h2>Nu sta deoparte!</h2>
             <div class="countdown">
-              <h3>Numărul de zile până la strângerea semnăturilor:</h3>
+              <h3><?= DESCRIERE_DEADLINE ?>:</h3>
               <div class="countdown-primary">
                 <div class="value" id="countdown-months">00</div>
                 <div class="label">Luni</div>
@@ -107,10 +107,6 @@ $data = get_data();
                   <button type="submit" class="btn btn-default col-md-6" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
                     Înscrie-te acum!
                   </button>
-
-                  <a href="https://www.usr.ro/doneaza/" title="Doneaza" class="btn btn-inverted col-md-5 col-md-push-1" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
-                    Donează!
-                  </a>
                 </div>
               </form>
             </div>
@@ -185,7 +181,7 @@ $data = get_data();
           $lista_pasi[] = "Se formează un grup de inițiativă din cel puțin zece cetățeni";
           $lista_pasi[] = "Proiectul de modificare a Constituției este trimis pentru aviz la Consiliul Legislativ";
           $lista_pasi[] = "Proiectul și avizul consultativ sunt publicate în Monitorul Oficial";
-          $lista_pasi[] = "Începe strângerea de 600.000 de semnături în 3 luni, din cel puțin 20 de județe";
+          $lista_pasi[] = "Începe strângerea a 1.000.000 de semnături în 6 luni, din cel puțin 21 de județe";
           $lista_pasi[] = "Listele de semnături împreună cu proiectul și expunerea de motive se înregistrează la Parlament";
           $lista_pasi[] = "Parlamentul înaintează propunerea către CCR pentru controlul de constituționalitate";
           $lista_pasi[] = "Începe procedura parlamentară, cu dezbateri în comisii și vot în plenul Camerei Deputaților și Senat";
@@ -324,12 +320,10 @@ $data = get_data();
         </div>
       </div>
     </div>
-    <div class="doneaza">
+    <div class="implica-te">
       <div class="container">
           <h1>Implică-te și tu!</h1>
-          <p>Donează pentru a susține campania USR și a scăpa de penalii din funcții publice.</p>
           <p>Mulțumim!</p>
-          <a href="https://www.usr.ro/doneaza/" class="btn btn-inverted-dark-bg" title="Donează!">Donează!</a>
       </div>
     </div>
     Blabla footer here
@@ -372,7 +366,7 @@ function modal_locatii($id, $title, $data_modal) {
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">Închide</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Închide</button>
         </div>
       </div>
     </div>

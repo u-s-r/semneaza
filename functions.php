@@ -95,7 +95,7 @@ function get_data() {
   $data['min']              = $min;
   $data['max']              = $max;
   $data['targetSemnaturi']  = TARGET_SEMNATURI;
-  $data['deadlineSemnaturi'] = DEADLINE_SEMNATURI;
+  $data['deadlineSemnaturi'] = DEADLINE;
 
   return $data;
 }
