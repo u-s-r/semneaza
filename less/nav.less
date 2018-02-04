@@ -1,7 +1,11 @@
 
 .navbar-brand {
   display: inline-block;
-  padding:1rem;
+  padding: 1rem;
+  @media (min-width: 768px) {
+    height: 100%;
+  }
+
   img {
     display: block;
     height: 100%;
@@ -13,10 +17,15 @@
     font-size: 1em;
     text-transform: uppercase;
     font-weight: 600;
+
     :last-child {
       margin-right:0;
     }
+
     a {
+      @media (min-width: 768px) {
+        padding-top: 40px;
+      }
       color: @dark-text;
     }
   }
