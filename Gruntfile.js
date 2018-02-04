@@ -89,7 +89,8 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
-          'node_modules/jquery/*.min.js',
+          'node_modules/jquery/dist/*.min.js',
+          'assets/vendor/bootstrap/js/bootstrap.min.js',
           'node_modules/countdown/*.js',
           'node_modules/ion-rangeslider/js/*.min.js',
           'node_modules/jvectormap/*.min.js',
@@ -103,6 +104,7 @@ module.exports = function (grunt) {
           'js/form.js',
           'js/main.js',
           'js/scroll.js',
+          'js/google-analytics.js',
         ],
         dest: '.tmp/application.js'
       }
