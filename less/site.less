@@ -34,10 +34,14 @@ a {
   }
 
   .detalii, .pasi {
-    padding: 30px 60px;
+    padding: 15px 20px;
+    @media only screen and (min-device-width : 480px) {
+      padding: 30px 65px;
+    }
   }
 
   .detalii {
+    padding-bottom:40px;
     h1 {
       color: @blue;
     }
@@ -226,9 +230,8 @@ a {
 
   .comunicat {
     background-color: #fff;
-    height: 450px;
     margin: 0;
-    padding: 0;
+    padding: 0 0 40px 0;
 
     a {
       display: block;
@@ -241,7 +244,6 @@ a {
 
     .corp {
       padding: 20px;
-      height: 250px;
       position: relative;
 
       h3, > span {
@@ -258,10 +260,10 @@ a {
       }
 
       > a {
-        position: absolute;
-        bottom: 20px;
+        display:block;
         color: @red;
         font-weight: 500;
+        margin-right:20px;
       }
 
       p {
@@ -271,7 +273,7 @@ a {
   }
 
   .footer {
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: center;
 
     .mai-multe {
@@ -334,21 +336,35 @@ a {
     display: block;
   }
 }
+ 
+ul.container-media {
+  padding:0;
+  list-style-type: none;
 
-.media-list {
-  margin-top: 60px;
-
-  .media-heading {
-    text-align: center;
-  }
-
-  @media (min-width: 992px) {
-    .media-heading {
-      text-align: left;
+  .media-element {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 0;
+    text-decoration:none;
+    &__left{
+      flex-basis: 25%;
+      flex-shrink:2;
+    }
+    &__right{
+      flex-basis: 70%;
     }
   }
 }
 
 .list-checkbox {
   margin-bottom: 20px;
+  @media all and (max-device-width : 420px) {
+      padding:0;
+      margin:0;
+    }
+  li {
+    padding-left:0;
+    margin-bottom:10px;
+  }
 }
