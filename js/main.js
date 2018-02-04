@@ -26,11 +26,11 @@
 
   var tooltip = $('<div class="tooltip-harta"></div>').appendTo(document.body);
 
-  var tooltipHandler = function (event, code, mouseFollower) {
+  var tooltipHandler = function (event, code) {
     var mouseX;
     var mouseY;
 
-    mouseFollower.mousemove($.debounce(5, function(e) {
+    $('path.jvectormap-region.jvectormap-element').mousemove($.debounce(5, function(e) {
         //var offset = $('#map-ro').offset();
         mouseX = e.pageX - tooltip.width() - 60;
         mouseY = e.pageY - tooltip.height() - 60;
@@ -72,9 +72,7 @@
     backgroundColor: 'transparent',
     bindTouchEvents: false,
     map: 'ro_merc',
-    onRegionOver: function (event, code) {
-      tooltipHandler(event, code, $('path.jvectormap-region.jvectormap-element'));
-    },
+    onRegionOver: tooltipHandler,
     onRegionTipShow: function (e) {
       e.preventDefault();
     },
@@ -86,32 +84,6 @@
         normalizeFunction: 'polynomial',
         scale: ['#9fd0ff', '#d1e9ff'],
         values: USR.data.semnaturi
-      }]
-    },
-    zoomButtons: false,
-    zoomOnScroll: false
-  });
-  $('#map-diaspora').hover(function (event) {
-    tooltipHandler(event, 'DIASPORA', $('#map-diaspora'));
-  }, function () {
-    tooltip.hide();
-  });
-
-  $('#map-diaspora').vectorMap({
-    backgroundColor: 'transparent',
-    bindTouchEvents: false,
-    map: 'diaspora',
-    onRegionTipShow: function (e) {
-      e.preventDefault();
-    },
-    panOnDrag: false,
-    series: {
-      regions: [{
-        max: USR.data.max,
-        min: USR.data.min,
-        normalizeFunction: 'polynomial',
-        scale: ['#9fd0ff', '#d1e9ff'],
-        values: USR.data.semnaturi.DIASPORA
       }]
     },
     zoomButtons: false,

@@ -280,16 +280,11 @@ $data = get_data();
           <h1>Situația semnăturilor pe regiuni</h1>
           <span>Mergi cu mouse-ul peste pentru a vizualiza situația semnăturilor pe regiuni.</span>
         </div>
-        <div class="col-md-6 maps">
+        <div class="col-md-5 col-md-push-1 maps">
           <div class="map map-ro">
             <div class="embed-responsive embed-responsive-4by3">
               <div id="map-ro"></div>
             </div>
-            <div class="label">În țară</div>
-          </div>
-          <div class="map map-diaspora">
-            <div id="map-diaspora"></div>
-            <div class="label">În diaspora</div>
           </div>
         </div>
       </div>

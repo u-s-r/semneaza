@@ -100,7 +100,6 @@ module.exports = function (grunt) {
           'js/usr.js',
           'js/countdown.js',
           'js/map-ro.js',
-          'js/map-diaspora.js',
           'js/form.js',
           'js/main.js',
           'js/scroll.js',
