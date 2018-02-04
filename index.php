@@ -14,15 +14,12 @@ $data = get_data();
     <meta property="og:url" content="<?= SITE_URL ?>">
     <meta property="og:title" content="Fără penali în funcții publice">
     <meta property="og:description" content="Inițiativa cetățenească de modificare a Constituției">
-    <meta property="og:image" content="<?= SITE_URL ?>assets/app/img/semneaza.jpg">
+    <meta property="og:image" content="<?= SITE_URL ?>build/img/semneaza.jpg">
     <link href="apple-touch-icon.png" rel="apple-touch-icon">
     <link href="favicon.ico" rel="icon">
     <title>Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției</title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
-    <link href="assets/vendor/jvectormap/jquery-jvectormap.css" rel="stylesheet">
-    <link href="assets/app/css/style.min.css" rel="stylesheet">
+    <link href="build/css/style.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -39,7 +36,7 @@ $data = get_data();
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="href="https://<?= $_SERVER['SERVER_NAME'] ?>"">
-          <img src="assets/app/img/logo.png" alt="USR">
+          <img src="build/img/logo.png" alt="USR">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -224,7 +221,7 @@ $data = get_data();
         <ul class="container-media">
           <li class="media-element">
             <div class="media-element__left">
-              <img class="media-object" src="assets/app/img/icon-semneaza.png" alt="Semnează">
+              <img class="media-object" src="build/img/icon-semneaza.png" alt="Semnează">
             </div>
             <div class="media-element__right">
               <h3>Semnează</h3>
@@ -233,14 +230,14 @@ $data = get_data();
           </li>
           <li class="media-element">
             <div class="media-element__left">
-              <img class="media-object" src="assets/app/img/icon-spune-prietenilor.png" alt="Semnează">
+              <img class="media-object" src="build/img/icon-spune-prietenilor.png" alt="Semnează">
             </div>
             <div class="media-element__right">
               <h3>Spune-le familiei și prietenilor!</h3>
               <p>Ne trebuie cât mai multe semnături, aşa că te rugăm să vorbeşti cu prietenii, familia şi vecinii tăi să completeze şi ei formularul. Semnăturile lor trebuie să fie originale; nu semnaţi în locul altei persoane.</p>
               <p>
                 <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=https://semneaza.usr.ro/" target="_blank">
-                  <img src="assets/app/img/logo-facebook-inverted.png" alt="Facebook">
+                  <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
                   Distribuie
                 </a>
               </p>
@@ -248,7 +245,7 @@ $data = get_data();
           </li>
           <li class="media-element">
             <div class="media-element__left">
-              <img class="media-object" src="assets/app/img/icon-trimite.png" alt="Semnează">
+              <img class="media-object" src="build/img/icon-trimite.png" alt="Semnează">
             </div>
             <div class="media-element__right">
               <h3 class="media-heading">Trimite</h3>
@@ -288,19 +285,18 @@ $data = get_data();
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="media-section col-md-offset-3 col-md-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-          </div>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+
     </div>
     <a name="media"></a>
     <div class="row">
+      <div class="media col-md-offset-3 col-md-6">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
+        </div>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
     <a name="comunicate"></a>
     <div class="comunicate">
@@ -346,7 +342,7 @@ $data = get_data();
     Blabla footer here
     <div class="social-media">
       <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
-        <img src="assets/app/img/logo-facebook-inverted.png" alt="Facebook">
+        <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
         Distribuie
       </a>
     </div>
@@ -395,6 +391,6 @@ modal_locatii('contact', 'Persoane de contact', $data['contacte']);
 modal_locatii('corturi', 'Corturile de campanie ale USR', $data['corturi']);
 ?>
     <script><?php printf('remoteData = %s;', json_encode($data)); ?></script>
-    <script src="assets/app/js/application.min.js"></script>
+    <script src="build/js/application.min.js"></script>
   </body>
 </html>

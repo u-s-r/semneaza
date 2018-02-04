@@ -21,19 +21,7 @@ Thumbs.db
 .ftpquota
 
 # Folders to ignore
-bower_components
 node_modules
-
-vendor/**
-assets/vendor/countdown
-assets/vendor/ion-rangeslider
-assets/vendor/jquery
-assets/vendor/jvectormap
-
-# Build output files
-assets/app/css/**
-assets/app/js/**
-
+vendor/*
+build
 .tmp
-assets/vendor/vendor.min.js
-assets/vendor/vendor.min.js.map

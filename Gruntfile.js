@@ -11,12 +11,21 @@ module.exports = function (grunt) {
         options: {
           outputSourceFiles: true,
           sourceMap: true,
-          sourceMapFilename: 'assets/app/css/style.css.map',
+          sourceMapFilename: 'build/css/style.css.map',
           sourceMapURL: 'style.css.map',
-          strictMath: true
+          strictMath: true,
+          paths: [
+              'node_modules/bootstrap-less/'
+          ]
         },
         files: {
-          'assets/app/css/style.css': 'less/style.less'
+          'build/css/style.css': [
+              'node_modules/slick-carousel/slick/slick.less',
+              'node_modules/slick-carousel/slick/slick-themes.less',
+              'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+              'node_modules/jvectormap/jquery-jvectormap.css',
+              'src/less/style.less',
+          ]
         }
       }
     },
@@ -28,24 +37,24 @@ module.exports = function (grunt) {
         ]
       },
       core: {
-        src: 'assets/app/css/*.css'
+        src: 'build/css/*.css'
       }
     },
     csscomb: {
       options: {
-        config: 'less/.csscomb.json'
+        config: 'src/less/.csscomb.json'
       },
       core: {
-        src: 'assets/app/css/style.css',
-        dest: 'assets/app/css/style.css'
+        src: 'build/css/style.css',
+        dest: 'build/css/style.css'
       }
     },
     csslint: {
       options: {
-        csslintrc: 'less/.csslintrc'
+        csslintrc: 'src/less/.csslintrc'
       },
       core: {
-        src: 'assets/app/css/style.css'
+        src: 'build/css/style.css'
       }
     },
     cssmin: {
@@ -56,31 +65,33 @@ module.exports = function (grunt) {
       },
       core: {
         expand: true,
-        cwd: 'assets/app/css',
+        cwd: 'build/css',
         src: [
           '*.css',
           '!*.min.css',
-          'node_modules/ion-rangeslider/css/*.css'
         ],
-        dest: 'assets/app/css',
+        options: {
+          root: 'build/css'
+        },
+        dest: 'build/css',
         ext: '.min.css'
       }
     },
     eslint: {
       options: {
-        configFile: 'js/.eslintrc'
+        configFile: 'src/js/.eslintrc'
       },
-      target: 'js/*.js'
+      target: 'src/js/*.js'
     },
     jscs: {
       options: {
-        config: 'js/.jscsrc'
+        config: 'src/js/.jscsrc'
       },
       grunt: {
         src: 'Gruntfile.js'
       },
       core: {
-        src: 'js/*.js'
+        src: 'src/js/*.js'
       }
     },
     concat: {
@@ -89,21 +100,21 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
-          'node_modules/jquery/dist/*.min.js',
-          'assets/vendor/bootstrap/js/bootstrap.min.js',
-          'node_modules/countdown/*.js',
-          'node_modules/ion-rangeslider/js/*.min.js',
-          'node_modules/jvectormap/*.min.js',
-          'node_modules/jquery-form/dist/*.min.js',
-          'node_modules/slick-carousel/slick/*.min.js',
-          'assets/vendor/debounce/jquery.ba-throttle-debounce.min.js',
-          'js/usr.js',
-          'js/countdown.js',
-          'js/map-ro.js',
-          'js/form.js',
-          'js/main.js',
-          'js/scroll.js',
-          'js/google-analytics.js',
+          'node_modules/jquery/dist/jquery.min.js',
+          'node_modules/bootstrap-less/js/bootstrap.min.js',
+          'node_modules/countdown/countdown.js',
+          'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+          'node_modules/jvectormap/jquery-jvectormap.min.js',
+          'node_modules/jquery-form/dist/jquery.form.min.js',
+          'node_modules/slick-carousel/slick/slick.min.js',
+          'src/vendor/debounce/jquery.ba-throttle-debounce.min.js',
+          'src/js/usr.js',
+          'src/js/countdown.js',
+          'src/js/map-ro.js',
+          'src/js/form.js',
+          'src/js/main.js',
+          'src/js/scroll.js',
+          'src/js/google-analytics.js',
         ],
         dest: '.tmp/application.js'
       }
@@ -115,11 +126,12 @@ module.exports = function (grunt) {
         },
         sourceMap: true,
         sourceMapIncludeSources: true,
+        sourceMapIn: '<%= concat.core.dest %>.map',
         preserveComments: 'some'
       },
       core: {
         src: '<%= concat.core.dest %>',
-        dest: 'assets/app/js/application.min.js'
+        dest: 'build/js/application.min.js'
       },
     },
     copy: {
@@ -127,9 +139,15 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: 'node_modules/ion-rangeslider',
-            src: ['img/*'],
-            dest: 'assets/vendor/ion-rangeslider'
+            cwd: 'src/img',
+            src: ['*'],
+            dest: 'build/img'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/bootstrap-less/fonts',
+            src: ['*'],
+            dest: 'build/fonts'
           }
         ]
       }
@@ -142,11 +160,11 @@ module.exports = function (grunt) {
         files: ['Gruntfile.js', 'package.json']
       },
       js: {
-        files: 'js/*.js',
+        files: 'src/js/*.js',
         tasks: 'js'
       },
       less: {
-        files: 'less/**/*.less',
+        files: 'src/less/**/*.less',
         tasks: 'css'
       }
     },
@@ -157,11 +175,8 @@ module.exports = function (grunt) {
       build: [
         '.tmp'
       ],
-      assets: [
-        'assets/vendor/ion-rangeslider',
-      ],
-      css: 'assets/app/css',
-      js: 'assets/app/js'
+      css: 'build/css',
+      js: 'build/js'
     },
     php: {
       dist: {

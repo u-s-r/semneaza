@@ -1,0 +1,136 @@
+.jumbotron {
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  p {
+    font-weight: inherit;
+  }
+}
+
+.jumbotron-primary {
+  margin-bottom: 150px;
+  background-color: @blue-jumbotron;
+  background-image: url('../img/overlay-jumbotron.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  h1 {
+    color: @blue;
+    font-size: @font-size-h1;
+    margin-top: 0;
+  }
+
+  .banner {
+    h1, h2 {
+      display: inline-block;
+      padding: 13px 25px 8px 25px;
+    }
+
+    h1 {
+      background: #fff;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      background: @red;
+      font-size: 36px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+  }
+
+  .panel {
+    border-bottom: 3px solid #e0e0e0;
+    border-radius: 0;
+    color: @dark-text;
+
+    @media (min-width: 1200px) {
+      margin-top: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    h4 {
+      font-size: 15px;
+      margin: 25px 0 5px 0;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      width: 100%;
+      margin: 0 0 5px 0;
+    }
+
+    button, a {
+      margin-top: 25px;
+      margin-right:10px;
+    }
+  }
+
+  .panel-host {
+    margin-bottom: -150px;
+  }
+
+
+
+  .countdown {
+    margin: 80px 0 20px 0;
+    text-align: left;
+
+    @media (max-width: 767px) {
+        margin-top: 20px;
+    }
+
+    h3 {
+      text-align:left;
+      color: #fff;
+      font-weight: 200;
+    }
+
+    .countdown-primary, .countdown-secondary, .countdown-separator {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .countdown-primary, .countdown-secondary {
+      width: 6em;
+
+      @media (max-width: 767px) {
+        width: 4em;
+      }
+
+      @media (max-width: 372px) {
+        width: 2em;
+      }
+    }
+
+    .value {
+      font-size: 63px;
+      font-weight: 300;
+      line-height: 1;
+
+      @media (max-width: 767px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 372px) {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 372px) {
+        .label {
+            font-size: 9px;
+        }
+    }
+  }
+
+  .countdown-separator {
+    vertical-align: top;
+  }
+}
