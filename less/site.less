@@ -3,6 +3,11 @@ body {
   color: @dark-text;
 }
 
+input {
+  border-width: 1px;
+  border-color: @light-grey;
+}
+
 .irs {
   margin: 60px 0;
 }
@@ -56,14 +61,12 @@ body {
 
       li {
         margin: 20px 0;
+        display:flex;
+        align-items: center;
 
         .bifa, .numar {
-          float: left;
-          display: inline-block;
+          flex-basis: 40px; 
           height: 40px;
-          width: 40px;
-          margin: 5px 10px 0 0;
-
         }
 
         .bifa {
@@ -76,10 +79,17 @@ body {
           line-height:1.4;
           font-size: 30px;
           font-weight: 700;
-          border-radius: 20px;
+          border-radius: 50%;
           text-align: center;
           color: @blue-even-lighter;
           background-color: #fff;
+        }
+        .descriere-etapa {
+          flex-basis:calc(100% - 50px);
+          flex-shrink: 2;
+          padding-left:10px;
+          display:inline;
+          vertical-align:middle;
         }
       }
     }
