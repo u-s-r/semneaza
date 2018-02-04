@@ -1,33 +1,22 @@
-nav {
-  position: relative;
-  height: 120px;
 
-  .nav-brand {
-    display: inline-block;
-    margin-top: 20px;
+.navbar-brand {
+  display: inline-block;
+  padding:1rem;
+  img {
+    display: block;
+    height: 100%;
+  }
+}
+
+.navbar-default .navbar-nav {
+  li {
+    font-size: 1em;
+    margin-right: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
 
     a {
-      display: block;
-      height: 100%;
-    }
-  }
-
-  .nav-body {
-    position: absolute;
-    right: 10px;
-    top: 55px;
-    list-style: none;
-
-    li {
-      font-size: 1em;
-      margin-right: 18px;
-      text-transform: uppercase;
-      font-weight: 600;
-      display: inline-block;
-
-      a {
-        color: @dark-text;
-      }
+      color: @dark-text;
     }
   }
 }
