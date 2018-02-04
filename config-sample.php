@@ -1,4 +1,5 @@
 <?php
+define('SITE_URL', '');
 define('SPREADSHEET_ID', '');
 define('SPREADSHEET_RANGE_FOR_DISPLAY', 'Afisare Site');
 define('SPREADSHEET_RANGE_FOR_FORM', 'Date Formular Contact');
@@ -11,6 +12,7 @@ define('PRESCURTARE_JUDET_COLUMN_KEY', 'Prescurtare judet');
 define('NUME_JUDET_COLUMN_KEY', 'Nume complet');
 define('CONTACTE_COLUMN_KEY', 'Date contact');
 define('CORTURI_COLUMN_KEY', 'Adrese corturi');
-define('TARGET_SEMNATURI', 600000);
-define('DEADLINE_SEMNATURI', 1539554400);
+define('TARGET_SEMNATURI', 1000000);
+define('DEADLINE', 1518429600);
+define('DESCRIERE_DEADLINE', 'Numărul de zile până la formarea grupului de inițiativă');
 define('PASI_COMPLETATI', 0);

@@ -1,7 +1,7 @@
 .btn {
   border-radius: 0;
   border: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
 
@@ -32,11 +32,26 @@
   }
 }
 
-.btn-inverted {
-  background-color: #fff;
-  color: @blue;
-  border: 2px solid @blue;
+
+.btn-inverted, .btn-inverted-dark-bg {
+  background-color: none;
+  border: 2px solid;
   padding: 13px 28px;
+}
+
+.btn-inverted-dark-bg {
+  color: #fff;
+  border-color: #fff;
+
+  &:hover {
+    color: @blue;
+    background-color: #fff;
+  }
+}
+
+.btn-inverted {
+  color: @blue;
+  border-color: @blue;
 
   &:hover {
     color: #fff;

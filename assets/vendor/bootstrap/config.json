@@ -385,10 +385,12 @@
     "print.less",
     "type.less",
     "grid.less",
+    "forms.less",
     "buttons.less",
     "responsive-utilities.less",
     "glyphicons.less",
-    "jumbotron.less",
+    "navs.less",
+    "navbar.less",
     "media.less",
     "panels.less",
     "responsive-embed.less",
@@ -403,5 +405,5 @@
     "popover.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=49da27022ae6b711c4d6668dc6b0b304"
+  "customizerUrl": "http://getbootstrap.com/docs/3.3/customize/?id=00ec8f88fad5c2a54c058f3f2a9afd56"
 }

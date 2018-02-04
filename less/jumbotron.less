@@ -8,12 +8,13 @@
 }
 
 .jumbotron-primary {
+  margin-bottom: 150px;
   background-color: @blue-jumbotron;
   background-image: url('../img/overlay-jumbotron.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 150px;
+  color: #fff;
 
   h1 {
     color: @blue;
@@ -32,20 +33,16 @@
     }
 
     h2 {
-      color: #fff;
       background: @red;
       font-size: 36px;
       font-weight: 600;
       margin-top: 5px;
     }
-
-    .label {
-      color: #fff;
-    }
   }
 
   .panel {
     border-bottom: 3px solid #e0e0e0;
+    color: @dark-text;
 
     @media (min-width: 1200px) {
       margin-top: 20px;
@@ -68,10 +65,57 @@
 
     button, a {
       margin-top: 25px;
+      margin-right:10px;
     }
   }
 
   .panel-host {
     margin-bottom: -150px;
+  }
+
+
+
+  .countdown {
+    @media (min-width: 768px) {
+      margin-top: 80px;
+    }
+    margin: 20px 0;
+    text-align: left;
+
+    h3 {
+      text-align:left;
+      color: #fff;
+      font-weight: 200;
+    }
+
+    .countdown-primary, .countdown-secondary, .countdown-separator {
+      display: inline-block;
+      text-align: center;
+
+      .value {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1;
+      }
+
+      @media (min-width: 768px) {
+        .value {
+          font-size: 63px;
+        }
+      }
+    }
+  }
+
+  .countdown-primary,
+  .countdown-secondary {
+    width: 4em;
+
+    @media (min-width: 768px) {
+      width: 6em;
+    }
+  }
+
+  .countdown-separator {
+    vertical-align: top;
   }
 }
