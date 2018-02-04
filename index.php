@@ -35,7 +35,7 @@ $data = get_data();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="href="https://<?= $_SERVER['SERVER_NAME'] ?>"">
+        <a class="navbar-brand" href="<?= SITE_URL ?>">
           <img src="build/img/logo.png" alt="USR">
         </a>
       </div>
@@ -111,7 +111,7 @@ $data = get_data();
                     <input type="text" name="email">
                   </div>
 
-                  <button type="submit" class="btn btn-default col-md-6" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+                  <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
                     Înscrie-te acum!
                   </button>
                 </div>
@@ -124,7 +124,7 @@ $data = get_data();
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Ajută și tu la strângerea semnăturilor</h1>
+          <h2>Ajută și tu la strângerea semnăturilor</h2>
           <div id="progres-semnaturi"></div>
         </div>
       </div>
@@ -288,7 +288,7 @@ $data = get_data();
 
     </div>
     <a name="media"></a>
-    <div class="row">
+    <div class="container">
       <div class="media col-md-offset-3 col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
