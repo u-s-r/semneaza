@@ -19,7 +19,7 @@ $data = get_data();
     <link href="favicon.ico" rel="icon">
     <title>Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției</title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
-    <link href="build/css/style.css" rel="stylesheet">
+    <link href="build/css/style.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -217,22 +217,17 @@ $data = get_data();
     </div>
     <a name="semneaza"></a>
     <div class="container">
-      <div class="col-md-12">
         <ul class="container-media">
           <li class="media-element">
-            <div class="media-element__left">
-              <img class="media-object" src="build/img/icon-semneaza.png" alt="Semnează">
-            </div>
-            <div class="media-element__right">
-              <h3>Semnează</h3>
-              <p>Imprimă formularul folosind butonul de mai sus şi completează-l conform instrucțiunilor, folosind date din cartea ta de identitate. La final semnează formularul, doar aşa este considerată validă intrarea.</p>
+            <img src="build/img/icon-semneaza.png" alt="Semnează">
+            <div>
+                <h3>Semnează</h3>
+                <p>Imprimă formularul folosind butonul de mai sus şi completează-l conform instrucțiunilor, folosind date din cartea ta de identitate. La final semnează formularul, doar aşa este considerată validă intrarea.</p>
             </div>
           </li>
           <li class="media-element">
-            <div class="media-element__left">
-              <img class="media-object" src="build/img/icon-spune-prietenilor.png" alt="Semnează">
-            </div>
-            <div class="media-element__right">
+            <img src="build/img/icon-spune-prietenilor.png" alt="Semnează">
+            <div>
               <h3>Spune-le familiei și prietenilor!</h3>
               <p>Ne trebuie cât mai multe semnături, aşa că te rugăm să vorbeşti cu prietenii, familia şi vecinii tăi să completeze şi ei formularul. Semnăturile lor trebuie să fie originale; nu semnaţi în locul altei persoane.</p>
               <p>
@@ -244,10 +239,8 @@ $data = get_data();
             </div>
           </li>
           <li class="media-element">
-            <div class="media-element__left">
-              <img class="media-object" src="build/img/icon-trimite.png" alt="Semnează">
-            </div>
-            <div class="media-element__right">
+            <img src="build/img/icon-trimite.png" alt="Semnează">
+            <div>
               <h3 class="media-heading">Trimite</h3>
               <p>Formularele completate trebuie să ajungă în posesia noastră <strong>până pe 20 octombrie </strong> (ghidul pentru <a href="http://usb.ro/wp-content/uploads/2016/10/Ghid-strangere-semnaturi-diaspora.pdf" target="_blank">diaspora aici</a>). Poţi face asta în două feluri:</p>
               <ul class="list list-checkbox">
@@ -268,7 +261,6 @@ $data = get_data();
             </div>
           </li>
         </ul>
-      </div>
     </div>
     <a name="harta"></a>
     <div class="harta">
@@ -277,12 +269,10 @@ $data = get_data();
           <h1>Situația semnăturilor pe regiuni</h1>
           <span>Mergi cu mouse-ul peste pentru a vizualiza situația semnăturilor pe regiuni.</span>
         </div>
-        <div class="col-md-5 col-md-push-1 maps">
-          <div class="map map-ro">
-            <div class="embed-responsive embed-responsive-4by3">
-              <div id="map-ro"></div>
-            </div>
-          </div>
+        <div class="col-md-5 col-md-push-1 map map-ro">
+          <div class="embed-responsive embed-responsive-4by3">
+            <div id="map-ro"></div>
+           </div>
         </div>
       </div>
 

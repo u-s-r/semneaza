@@ -32,6 +32,10 @@ input {
 .descriere {
   padding: 60px 0;
 
+  @media (max-width: @screen-xs-max) {
+      padding-bottom: 0;
+  }
+
   .container {
     background-color: #fff;
     padding: 0;
@@ -124,16 +128,27 @@ input {
   background-color: @blue;
   color: #fff;
 
-  h1 {
-    margin-top: 100px;
-  }
-
-  .maps {
-    position: relative;
+  @media (min-width: @screen-md) {
+    h1 {
+      margin-top: 100px;
+    }
   }
 
   .map {
     margin-bottom: 30px;
+    padding: 0 10px;
+
+    @media (min-width: @screen-sm) {
+      padding: 0 100px;
+    }
+
+    @media (min-width: 660px) {
+      padding: 0 100px;
+    }
+
+    @media (min-width: @screen-md) {
+      padding: 0;
+    }
 
     .label {
       text-align: center;
@@ -299,23 +314,25 @@ input {
 ul.container-media {
   padding:0;
   list-style-type: none;
+  clear: both;
 
   .media-element {
-    display:flex;
-    align-items: center;
-    justify-content:space-between;
-    padding:20px 0;
-    text-decoration:none;
-    &__left{
-      flex-basis: 25%;
-      flex-shrink:2;
-      .media-object {
-        width:100%;
-        max-width:130px;
-      }
+    padding: 20px 0;
+
+    > img {
+        float: left;
     }
-    &__right{
-      flex-basis: 70%;
+    div {
+        padding-left: 150px;
+    }
+
+    @media (max-width: @screen-xs-max) {
+      > img {
+        width: 60px;
+      }
+      div {
+        padding-left: 75px;
+      }
     }
   }
 }
@@ -344,8 +361,12 @@ ul.container-media {
 
 .panel-body {
   padding: 15px 20px;
-  @media only screen and (min-device-width : 480px) {
+
+  @media (min-width: @screen-lg) {
     padding: 30px 65px;
   }
 
+  @media (min-width: @screen-sm) {
+    padding: 20px 40px;
+  }
 }
