@@ -10,21 +10,20 @@ module.exports = function (grunt) {
       core: {
         options: {
           outputSourceFiles: true,
-          sourceMap: true,
+          sourceMap: false,
           sourceMapFilename: 'build/css/style.css.map',
           sourceMapURL: 'style.css.map',
           strictMath: true,
           paths: [
-              'node_modules/bootstrap-less/'
+              'node_modules/bootstrap-less/',
+              'node_modules/slick-carousel/slick/'
           ]
         },
         files: {
           'build/css/style.css': [
-              'node_modules/slick-carousel/slick/slick.less',
-              'node_modules/slick-carousel/slick/slick-themes.less',
               'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
               'node_modules/jvectormap/jquery-jvectormap.css',
-              'src/less/style.less',
+              'src/less/style.less'
           ]
         }
       }
@@ -61,7 +60,7 @@ module.exports = function (grunt) {
       options: {
         advanced: false,
         keepSpecialComments: '*',
-        sourceMap: true
+        sourceMap: false
       },
       core: {
         expand: true,
@@ -96,7 +95,7 @@ module.exports = function (grunt) {
     },
     concat: {
       options: {
-        sourceMap: true
+        sourceMap: false
       },
       core: {
         src: [
@@ -124,7 +123,7 @@ module.exports = function (grunt) {
         compress: {
           warnings: false
         },
-        sourceMap: true,
+        sourceMap: false,
         sourceMapIncludeSources: true,
         sourceMapIn: '<%= concat.core.dest %>.map',
         preserveComments: 'some'
