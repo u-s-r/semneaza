@@ -8,11 +8,12 @@ $(function($) {
   });
 
 function showRequest() {
-  //@TODO show a loading spinner
+  $('.form-loading-circle-container').removeClass('hidden');
   return true;
 }
 
 function showResponse(responseText, statusText)  {
+  $('.form-loading-circle-container').addClass('hidden');
   var response = {};
   try {
     response = JSON.parse(responseText);

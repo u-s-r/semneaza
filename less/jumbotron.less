@@ -41,9 +41,28 @@
   }
 
   .panel {
+    position:relative;
     border-bottom: 3px solid #e0e0e0;
     color: @dark-text;
-
+    .form-loading-circle-container {
+      z-index:1;
+      width:100%;
+      height: 100%;
+      position: absolute;
+      background-color:rgba(255, 255, 255, 0.7);
+      //reusable 
+      .loading-circle {
+        position:absolute; 
+        left:50%; 
+        top:50%; 
+        transform:translate(-50%, -50%); 
+        text-align:center;
+        .outer-circle { width:5rem; height:5rem; } 
+          .inner-circle { box-sizing:border-box; border:0 solid #1E88E5; width:100%; height:100%; border-radius:50%; will-change:opacity, border; animation:loading-circle-anim 1s infinite ease-in-out; }
+            .loading-text { color:@blue; font-size:1.2rem; }
+      }
+    }
+ 
     @media (min-width: 1200px) {
       margin-top: 20px;
     }
@@ -57,16 +76,35 @@
       margin: 25px 0 5px 0;
     }
 
-    input[type="text"] {
+    input {
+      &:focus {
+        outline-color:@blue;
+        &:invalid {
+          outline-color:@red;
+        }
+      }
+      
       padding: 5px;
       width: 100%;
       margin: 0 0 5px 0;
     }
+    .bottom-buttons {
+      margin-top:20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      button, a {
+        flex-basis: 40%;
+        line-height: 1.4;
+        @media all and (max-width:480px){
+          font-size:14px;
+          padding:10px;
 
-    button, a {
-      margin-top: 25px;
-      margin-right:10px;
+        }
+      }
     }
+    
   }
 
   .panel-host {
@@ -118,4 +156,10 @@
   .countdown-separator {
     vertical-align: top;
   }
+}
+
+@keyframes loading-circle-anim {
+	0% { border-width:0; }
+	50% { border-width:2.5rem; opacity:0.5; }
+	100% { border-width:0; opacity:1; }
 }

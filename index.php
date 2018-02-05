@@ -97,30 +97,40 @@ $data = get_data();
           </div>
           <div class="col-md-6 panel-host">
             <div class="panel panel-default">
-              <form id="date-contact" method="post" action="date-contact.php">
+              <div class="form-loading-circle-container hidden">
+                <div class="loading-circle">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="loading-text">Se încarcă...</div>
+                </div>
+              </div>
+              <form id="date-contact" method="post" action="date-contact.php" autocomplete="on">
                 <div class="panel-body">
                   <h1>Alătură-te inițiativei</h1>
                   <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
+                 
                   <div>
-                    <h4>Numele și prenume</h4>
-                    <input type="text" name="nume">
+                    <label for="name"><h4>Numele și prenume</h4></label>
+                    <input type="text" name="name" required autocomplete="name"/>
                   </div>
                   <div>
-                    <h4>Telefon</h4>
-                    <input type="text" name="telefon">
+                    <label for="tel"><h4>Telefon</h4></label>
+                    <input type="tel" name="tel" autocomplete="tel"/>
                   </div>
                   <div>
-                    <h4>Email</h4>
-                    <input type="text" name="email">
+                  <label for="email"><h4>Email</h4></label>
+                    <input type="email" name="email" autocomplete="email"/>
                   </div>
+                  <div class="bottom-buttons">
+                    <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+                      Înscrie-te acum!
+                    </button>
 
-                  <button type="submit" class="btn btn-default col-md-6" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
-                    Înscrie-te acum!
-                  </button>
-
-                  <a href="https://www.usr.ro/doneaza/" title="Doneaza" class="btn btn-inverted col-md-5 col-md-push-1" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
-                    Donează!
-                  </a>
+                    <a href="https://www.usr.ro/doneaza/" title="Doneaza" class="btn btn-inverted col-md-5" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
+                      Donează!
+                    </a>
+                  </div>
                 </div>
               </form>
             </div>

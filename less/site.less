@@ -3,8 +3,11 @@ body {
   color: @dark-text;
 }
 
-input {
+textarea, input {
   border: 1px solid @light-grey;
+  -webkit-appearance: none;
+  background-color:#fff;
+  box-shadow:none;
 }
 
 .irs {
@@ -370,4 +373,7 @@ ul.container-media {
     padding-left:0;
     margin-bottom:10px;
   }
+}
+.hidden {
+  display: none !important;
 }
