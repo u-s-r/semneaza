@@ -162,6 +162,10 @@ module.exports = function (grunt) {
         files: 'src/js/*.js',
         tasks: 'js'
       },
+      img: {
+        files: 'src/img/*',
+        tasks: 'copy'
+      },
       less: {
         files: 'src/less/**/*.less',
         tasks: 'css'
