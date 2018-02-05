@@ -25,12 +25,6 @@
 
   margin-bottom: 100px;
 
-  h1 {
-    color: @blue;
-    font-size: @font-size-h1;
-    margin-top: 0;
-  }
-
   .banner {
     h1, h2 {
       display: inline-block;
@@ -38,16 +32,27 @@
     }
 
     h1 {
+      margin-top: 0;
+      margin-bottom: 0;
       background: #fff;
       font-weight: 600;
-      margin-bottom: 0;
+      font-size: @font-size-h1;
+      color: @blue;
+
+      @media (max-width: @screen-md-max) {
+          font-size: 2em;
+      }
     }
 
     h2 {
       background: @red;
-      font-size: 36px;
       font-weight: 600;
       margin-top: 5px;
+      font-size: @font-size-h1;
+
+      @media (max-width: @screen-md-max) {
+          font-size: 2em;
+      }
     }
   }
 
@@ -58,6 +63,12 @@
 
     h1 {
       margin-top: 0;
+      font-size: @font-size-h1;
+      color: @blue;
+
+      @media (max-width: @screen-md-max) {
+          font-size: 2em;
+      }
     }
 
     h4 {
@@ -87,14 +98,19 @@
     margin: 80px 0 20px 0;
     text-align: left;
 
-    @media (max-width: 767px) {
+    @media (max-width: @screen-md-max) {
         margin-top: 20px;
     }
 
     h3 {
       text-align:left;
       color: #fff;
-      font-weight: 200;
+      font-weight: 300;
+
+      @media (max-width: @screen-md-max) {
+          font-size: 15px;
+          font-weight: 400;
+      }
     }
 
     .countdown-primary, .countdown-secondary, .countdown-separator {
@@ -103,9 +119,13 @@
     }
 
     .countdown-primary, .countdown-secondary {
-      width: 6em;
+      width: 5em;
 
-      @media (max-width: 767px) {
+      @media (min-width: @screen-lg-min) {
+        width: 6em;
+      }
+
+      @media (max-width: @screen-md-max) {
         width: 4em;
       }
 
@@ -115,11 +135,16 @@
     }
 
     .value {
-      font-size: 63px;
+      font-size: 50px;
+
       font-weight: 300;
       line-height: 1;
 
-      @media (max-width: 767px) {
+      @media (min-width: @screen-lg-min) {
+          font-size: 63px;
+      }
+
+      @media (max-width: @screen-md-max) {
         font-size: 36px;
       }
 
