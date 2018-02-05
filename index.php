@@ -216,7 +216,7 @@ $data = get_data();
       </div>
     </div>
     <a name="semneaza"></a>
-    <div class="container">
+    <div class="container semneaza">
         <ul class="container-media">
           <li class="media-element">
             <img src="build/img/icon-semneaza.png" alt="Semnează">

@@ -311,31 +311,40 @@ input {
   }
 }
 
-ul.container-media {
-  padding:0;
-  list-style-type: none;
-  clear: both;
+.semneaza {
+  h3 {
+    color: @blue;
+  }
 
-  .media-element {
-    padding: 20px 0;
+  ul.container-media {
+    padding:0;
+    list-style-type: none;
+    clear: both;
 
-    > img {
-        float: left;
-    }
-    div {
-        padding-left: 150px;
-    }
+    .media-element {
+      padding: 20px 0;
 
-    @media (max-width: @screen-xs-max) {
       > img {
-        width: 60px;
+        float: left;
+        margin-top: 10px;
       }
       div {
-        padding-left: 75px;
+        padding-left: 150px;
+      }
+
+      @media (max-width: @screen-xs-max) {
+        > img {
+          width: 60px;
+        }
+        div {
+          padding-left: 75px;
+        }
       }
     }
   }
 }
+
+
 
 .list-checkbox {
   margin-bottom: 20px;
