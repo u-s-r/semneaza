@@ -231,7 +231,7 @@ $data = get_data();
     </div>
     <a name="semneaza"></a>
     <div class="container semneaza">
-        <ul class="container-media">
+        <ul class="container-media col-md-10 col-md-push-1">
           <li class="media-element">
             <img src="build/img/icon-semneaza.png" alt="Semnează">
             <div>
@@ -284,7 +284,7 @@ $data = get_data();
       <div class="container">
         <div class="col-md-6">
           <h1>Situația semnăturilor pe regiuni</h1>
-          <span>Mergi cu mouse-ul peste pentru a vizualiza situația semnăturilor pe regiuni.</span>
+          <span>Click în ȚARĂ pentru a vizualiza situația semnăturilor pe regiuni.</span>
         </div>
         <div class="col-md-5 col-md-push-1 map map-ro">
           <div class="embed-responsive embed-responsive-4by3">
@@ -295,11 +295,11 @@ $data = get_data();
     <?php } ?>
     </div>
     <a name="media"></a>
-    <div class="container">
-      <div class="media row">
+    <div class="media container">
+      <div class="row">
         <ul class="col-md-3" role="tablist" aria-orientation="vertical">
           <li class="active"><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12" id="media-tabs-video-tab" href="#media-tabs-video" role="pill" data-toggle="pill" aria-controls="media-tabs-video" aria-selected="true">Video</a></li>
-          <li><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12" id="media-tabs-photo-tab" href="#media-tabs-photo" role="pill" data-toggle="pill" aria-controls="media-tabs-photo" aria-selected="false">Foto</a></li>
+          <li><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12" id="media-tabs-photo-tab" href="#media-tabs-photo" role="pill" data-toggle="pill" disabled aria-controls="media-tabs-photo" aria-selected="false">Foto</a></li>
         </ul>
         <div class="col-md-9">
           <div class="tab-content">

@@ -34,7 +34,7 @@
 
 
 .btn-inverted, .btn-inverted-dark-bg {
-  background-color: none;
+  background-color: transparent;
   border: 2px solid;
   padding: 13px 28px;
 }
@@ -42,6 +42,10 @@
 .btn-inverted-dark-bg {
   color: #fff;
   border-color: #fff;
+
+  &:focus {
+    color: darken(#fff, 10%);
+  }
 
   &:hover, &:active {
     color: @blue;

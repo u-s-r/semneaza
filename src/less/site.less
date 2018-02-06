@@ -6,13 +6,15 @@ input {
   margin-top: 50px;
   margin-bottom: 50px;
 
-  > ul {
+  .row > ul {
     list-style: none;
+    overflow: hidden;
   }
 }
 
 .comunicate, .descriere {
   background-color: #d7e6f2;
+  font-size: 14px;
 }
 
 .descriere {
@@ -47,14 +49,21 @@ input {
     .slick-dots {
       text-align: right;
 
-      li button::before {
-        background-color: #000;
-        border-radius: 10px;
-        content: "";
-      }
+      li {
+        height: 10px;
+        width: 10px;
 
-      li.slick-active button::before {
-        background-color: @blue;
+        button::before {
+          height: 10px;
+          width: 10px;
+          background-color: #000;
+          border-radius: 10px;
+          content: "";
+        }
+
+        &.slick-active button::before {
+          background-color: @blue;
+        }
       }
     }
   }
@@ -63,7 +72,6 @@ input {
     background-image: url('../img/background-pasi.png');
     background-size: cover;
     color: #fff;
-    font-size: 16px;
 
     ul {
       list-style: none;
@@ -391,19 +399,28 @@ footer {
   }
 
   .final {
-      margin-top: 30px;
+      border-top: 1px solid #d7e6f2;
+      margin-top: 20px;
+      padding-top: 20px;
       display: table;
       color: #a5a5a5;
       text-transform: uppercase;
       font-weight: 500;
 
       .usr, .rezistenta {
-          display: table-cell;
-          vertical-align: middle;
+        display: table-cell;
       }
 
       .rezistenta {
-          text-align: right;
+        text-align: right;
+
+        a {
+            display: inline-block;
+
+            img {
+                vertical-align: middle;
+            }
+        }
       }
   }
 }
