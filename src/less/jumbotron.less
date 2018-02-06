@@ -38,7 +38,7 @@
 
     h1 {
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 5px;
       background: #fff;
       font-weight: 600;
       font-size: @font-size-h1;
@@ -50,9 +50,11 @@
     }
 
     h2 {
+      display: inline;
+      box-decoration-break: clone;
+      line-height: 1.5em;
       background: @red;
       font-weight: 600;
-      margin-top: 5px;
       font-size: @font-size-h1;
 
       @media (max-width: @screen-md-max) {
