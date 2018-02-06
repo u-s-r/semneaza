@@ -107,6 +107,7 @@ $data = get_data();
             <div class="panel panel-default">
               <form id="date-contact" method="post" action="date-contact.php">
                 <div class="panel-body">
+                  <a name="formular"></a>
                   <h1>Alătură-te inițiativei</h1>
                   <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
                   <div>
@@ -235,7 +236,7 @@ $data = get_data();
             <img src="build/img/icon-semneaza.png" alt="Semnează">
             <div>
                 <h3>Semnează</h3>
-                <p>Imprimă formularul folosind butonul de mai sus şi completează-l conform instrucțiunilor, folosind date din cartea ta de identitate. La final semnează formularul, doar aşa este considerată validă intrarea.</p>
+                <p>Încă nu am început strângerea de semnături, inițiativa așteaptă avizul legislativ. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
             </div>
           </li>
           <?php if (CAMPANIE_DE_SEMNATURI) { ?>
@@ -362,7 +363,7 @@ $data = get_data();
     <div class="implica-te">
       <div class="container">
           <h1>Implică-te și tu!</h1>
-          <p>Mulțumim!</p>
+          <a href="#formular" class="btn btn-inverted-dark-bg">Alătură-te inițiativei</a>
       </div>
     </div>
     <footer class="container">
