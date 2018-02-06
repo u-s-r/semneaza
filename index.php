@@ -54,10 +54,12 @@ $data = get_data();
       <div class="container">
         <div class="row">
           <div class="col-md-6 banner">
-            <h1>Fără penali in funcții publice!</h1>
+            <div>
+                <h1>Fără penali în funcții publice!</h1>
+            </div>
             <h2>Inițiativa cetățenească de modificare a Constituției</h2>
             <div class="countdown">
-              <h3><?= DESCRIERE_DEADLINE ?>:</h3>
+              <h3>Numărul de zile până la strângerea semnăturilor:</h3>
               <div class="countdown-primary">
                 <div class="value" id="countdown-months">00</div>
                 <div class="label">Luni</div>

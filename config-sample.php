@@ -14,5 +14,4 @@ define('CONTACTE_COLUMN_KEY', 'Date contact');
 define('CORTURI_COLUMN_KEY', 'Adrese corturi');
 define('TARGET_SEMNATURI', 1000000);
 define('DEADLINE', 1518429600);
-define('DESCRIERE_DEADLINE', 'Numărul de zile până la formarea grupului de inițiativă');
 define('PASI_COMPLETATI', 0);
