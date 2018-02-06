@@ -42,8 +42,10 @@ $data = get_data();
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#despre">Despre</a></li>
-          <li><a href="#semneaza">Semnează inițativa</a></li>
-          <li><a href="#harta">Situația pe regiuni</a></li>
+          <?php if (CAMPANIE_DE_SEMNATURI) { ?>
+            <li><a href="#semneaza">Semnează inițativa</a></li>
+            <li><a href="#harta">Situația pe regiuni</a></li>
+          <?php } ?>
           <li><a href="#media">Media</a></li>
           <li><a href="#comunicate">Comunicate de presă</a></li>
         </ul>
@@ -58,41 +60,48 @@ $data = get_data();
                 <h1>Fără penali în funcții publice!</h1>
             </div>
             <h2>Inițiativa cetățenească de modificare a Constituției</h2>
-            <div class="countdown">
-              <h3>Numărul de zile până la strângerea semnăturilor:</h3>
-              <div class="countdown-primary">
-                <div class="value" id="countdown-months">00</div>
-                <div class="label">Luni</div>
-              </div>
-              <div class="countdown-separator">
-                <div class="value">:</div>
-              </div>
-              <div class="countdown-primary">
-                <div class="value" id="countdown-days">00</div>
-                <div class="label">Zile</div>
-              </div>
-              <div class="countdown-separator">
-                <div class="value">:</div>
-              </div>
-              <div class="countdown-secondary">
-                <div class="value" id="countdown-hours">00</div>
-                <div class="label">Ore</div>
-              </div>
-              <div class="countdown-separator">
-                <div class="value">:</div>
-              </div>
-              <div class="countdown-secondary">
-                <div class="value" id="countdown-minutes">00</div>
-                <div class="label">Minute</div>
-              </div>
-              <div class="countdown-separator">
-                <div class="value">:</div>
-              </div>
-              <div class="countdown-secondary">
-                <div class="value" id="countdown-seconds">00</div>
-                <div class="label">Secunde</div>
-              </div>
-            </div>
+            <?php if(CAMPANIE_DE_SEMNATURI) { ?>
+                <div class="countdown">
+                  <h3>Numărul de zile până la strângerea semnăturilor:</h3>
+                  <div class="countdown-primary">
+                    <div class="value" id="countdown-months">00</div>
+                    <div class="label">Luni</div>
+                  </div>
+                  <div class="countdown-separator">
+                    <div class="value">:</div>
+                  </div>
+                  <div class="countdown-primary">
+                    <div class="value" id="countdown-days">00</div>
+                    <div class="label">Zile</div>
+                  </div>
+                  <div class="countdown-separator">
+                    <div class="value">:</div>
+                  </div>
+                  <div class="countdown-secondary">
+                    <div class="value" id="countdown-hours">00</div>
+                    <div class="label">Ore</div>
+                  </div>
+                  <div class="countdown-separator">
+                    <div class="value">:</div>
+                  </div>
+                  <div class="countdown-secondary">
+                    <div class="value" id="countdown-minutes">00</div>
+                    <div class="label">Minute</div>
+                  </div>
+                  <div class="countdown-separator">
+                    <div class="value">:</div>
+                  </div>
+                  <div class="countdown-secondary">
+                    <div class="value" id="countdown-seconds">00</div>
+                    <div class="label">Secunde</div>
+                  </div>
+                </div>
+            <?php } else { ?>
+              <p>
+                <img src="build/img/bec-creion.png" alt="">
+                “Nu pot fi aleși în organele administrației publice locale, în Camera Deputaților, în Senat și în funcția de Președinte al României cetățenii condamnați definitiv la pedepse privative de libertate pentru infracțiuni săvârșite cu intenție, până la intervenirea unei situații care înlătură consecințele condamnării."
+              </p>
+            <?php } ?>
           </div>
           <div class="col-md-6 panel-host">
             <div class="panel panel-default">
@@ -123,14 +132,16 @@ $data = get_data();
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Ajută și tu la strângerea semnăturilor</h2>
-          <div id="progres-semnaturi"></div>
+    <?php if(CAMPANIE_DE_SEMNATURI) { ?>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Ajută și tu la strângerea semnăturilor</h2>
+            <div id="progres-semnaturi"></div>
+          </div>
         </div>
       </div>
-    </div>
+    <?php } ?>
     <a name="despre"></a>
     <div class="descriere">
       <div class="container">
@@ -227,43 +238,46 @@ $data = get_data();
                 <p>Imprimă formularul folosind butonul de mai sus şi completează-l conform instrucțiunilor, folosind date din cartea ta de identitate. La final semnează formularul, doar aşa este considerată validă intrarea.</p>
             </div>
           </li>
-          <li class="media-element">
-            <img src="build/img/icon-spune-prietenilor.png" alt="Semnează">
-            <div>
-              <h3>Spune-le familiei și prietenilor!</h3>
-              <p>Ne trebuie cât mai multe semnături, aşa că te rugăm să vorbeşti cu prietenii, familia şi vecinii tăi să completeze şi ei formularul. Semnăturile lor trebuie să fie originale; nu semnaţi în locul altei persoane.</p>
-              <p>
-                <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
-                  <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
-                  Distribuie
-                </a>
-              </p>
-            </div>
-          </li>
-          <li class="media-element">
-            <img src="build/img/icon-trimite.png" alt="Semnează">
-            <div>
-              <h3 class="media-heading">Trimite</h3>
-              <p>Formularele completate trebuie să ajungă în posesia noastră <strong>până pe 20 octombrie </strong> (ghidul pentru <a href="http://usb.ro/wp-content/uploads/2016/10/Ghid-strangere-semnaturi-diaspora.pdf" target="_blank">diaspora aici</a>). Poţi face asta în două feluri:</p>
-              <ul class="list list-checkbox">
-                <li class="checked">
+          <?php if (CAMPANIE_DE_SEMNATURI) { ?>
+            <li class="media-element">
+              <img src="build/img/icon-spune-prietenilor.png" alt="Semnează">
+              <div>
+                <h3>Spune-le familiei și prietenilor!</h3>
+                <p>Ne trebuie cât mai multe semnături, aşa că te rugăm să vorbeşti cu prietenii, familia şi vecinii tăi să completeze şi ei formularul. Semnăturile lor trebuie să fie originale; nu semnaţi în locul altei persoane.</p>
+                <p>
+                  <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
+                    <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
+                    Distribuie
+                  </a>
+                </p>
+              </div>
+            </li>
+            <li class="media-element">
+              <img src="build/img/icon-trimite.png" alt="Semnează">
+              <div>
+                <h3 class="media-heading">Trimite</h3>
+                <p>Formularele completate trebuie să ajungă în posesia noastră <strong>până pe 20 octombrie </strong> (ghidul pentru <a href="http://usb.ro/wp-content/uploads/2016/10/Ghid-strangere-semnaturi-diaspora.pdf" target="_blank">diaspora aici</a>). Poţi face asta în două feluri:</p>
+                <ul class="list list-checkbox">
+                  <li class="checked">
+                    <span class="glyphicon glyphicon-check"></span>
+                  Adu personal petiția la unul din corturile de campanie ale USR (<a href="#corturi" data-toggle="modal" role="button">vezi locațiile noastre</a>) sau contactează un reprezentat al USR din țară pentru a le prelua (<a href="#contact" data-toggle="modal" role="button">vezi persoanele de contact</a>).
+                  </li>
+                  <li class="checked">
                   <span class="glyphicon glyphicon-check"></span>
-                Adu personal petiția la unul din corturile de campanie ale USR (<a href="#corturi" data-toggle="modal" role="button">vezi locațiile noastre</a>) sau contactează un reprezentat al USR din țară pentru a le prelua (<a href="#contact" data-toggle="modal" role="button">vezi persoanele de contact</a>).
-                </li>
-                <li class="checked">
-                <span class="glyphicon glyphicon-check"></span>
-                  Trimite GRATUIT formularul/formularele în original prin Poșta Română, serviciul de corespondenţă cu taxe preplătite (<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-container="body" data-placement="auto" data-html="true" data-content="&lt;p&gt;Atunci când sigilati plicul poştal, pe partea unde aţi trecut ca destinatar sediul central al USR, puneţi în dreapta sus o mică etichetă (un sticker sau o foaie mică printată şi lipită) cu:&lt;/p&gt;&lt;div class=&quot;tag&quot;&gt;&lt;div class=&quot;value&quot;&gt;CR&lt;/div&gt; Taxe poștale preplătite&lt;/div&gt;">vezi detalii</a>) la sediul central al USR (<strong>Str. Carol Davila, Nr. 91, Parter, Ap. 1, Sector 5, 050453, București</strong>), sau adu-le personal în intervalul 10-20.
-                </li>
-              </ul>
-              <p>Atenție:</p>
-              <ul class="list list-bulleted">
-                <li>Listele de semnături nu pot fi trimise prin poșta electronică;</li>
-                <li>Nu trimiteți copii ale listelor de semnături.</li>
-              </ul>
-            </div>
-          </li>
+                    Trimite GRATUIT formularul/formularele în original prin Poșta Română, serviciul de corespondenţă cu taxe preplătite (<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-container="body" data-placement="auto" data-html="true" data-content="&lt;p&gt;Atunci când sigilati plicul poştal, pe partea unde aţi trecut ca destinatar sediul central al USR, puneţi în dreapta sus o mică etichetă (un sticker sau o foaie mică printată şi lipită) cu:&lt;/p&gt;&lt;div class=&quot;tag&quot;&gt;&lt;div class=&quot;value&quot;&gt;CR&lt;/div&gt; Taxe poștale preplătite&lt;/div&gt;">vezi detalii</a>) la sediul central al USR (<strong>Str. Carol Davila, Nr. 91, Parter, Ap. 1, Sector 5, 050453, București</strong>), sau adu-le personal în intervalul 10-20.
+                  </li>
+                </ul>
+                <p>Atenție:</p>
+                <ul class="list list-bulleted">
+                  <li>Listele de semnături nu pot fi trimise prin poșta electronică;</li>
+                  <li>Nu trimiteți copii ale listelor de semnături.</li>
+                </ul>
+              </div>
+            </li>
+          <?php } ?>
         </ul>
     </div>
+    <?php if (CAMPANIE_DE_SEMNATURI) { ?>
     <a name="harta"></a>
     <div class="harta">
       <div class="container">
@@ -277,7 +291,7 @@ $data = get_data();
            </div>
         </div>
       </div>
-
+    <?php } ?>
     </div>
     <a name="media"></a>
     <div class="container">

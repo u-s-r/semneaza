@@ -12,6 +12,7 @@ define('PRESCURTARE_JUDET_COLUMN_KEY', 'Prescurtare judet');
 define('NUME_JUDET_COLUMN_KEY', 'Nume complet');
 define('CONTACTE_COLUMN_KEY', 'Date contact');
 define('CORTURI_COLUMN_KEY', 'Adrese corturi');
+define('CAMPANIE_DE_SEMNATURI', false);
 define('TARGET_SEMNATURI', 1000000);
 define('DEADLINE', 1518429600);
 define('PASI_COMPLETATI', 0);
