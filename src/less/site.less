@@ -6,22 +6,8 @@ input {
   margin-top: 50px;
   margin-bottom: 50px;
 
-  .slick-arrow {
-    &.slick-prev:before {
-      color: @blue;
-    }
-
-    &.slick-next:before {
-      color: @blue;
-    }
-  }
-
-  .embed-responsive-item {
-    height: 500px !important;
-  }
-
-  .embed-responsive-16by9 {
-    padding-bottom: 500px;
+  > ul {
+    list-style: none;
   }
 }
 
@@ -377,5 +363,47 @@ input {
 
   @media (min-width: @screen-sm) {
     padding: 20px 40px;
+  }
+}
+
+footer {
+  padding: 40px 0;
+
+  h4 {
+    color: @blue;
+    text-transform: uppercase;
+  }
+
+  .contact div {
+    padding-left: 25px;
+    background: url('../img/pin.png') no-repeat top left;
+  }
+
+  .navigare {
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      a {
+        color: @dark-text;
+      }
+    }
+  }
+
+  .final {
+      margin-top: 30px;
+      display: table;
+      color: #a5a5a5;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      .usr, .rezistenta {
+          display: table-cell;
+          vertical-align: middle;
+      }
+
+      .rezistenta {
+          text-align: right;
+      }
   }
 }

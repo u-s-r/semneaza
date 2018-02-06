@@ -26,7 +26,7 @@
   color: #fff;
   padding: 15px 30px;
 
-  &:hover, &:focus {
+  &:hover, &:focus   {
     background-color: @burgundy;
     color: #fff;
   }
@@ -43,7 +43,7 @@
   color: #fff;
   border-color: #fff;
 
-  &:hover {
+  &:hover, &:active {
     color: @blue;
     background-color: #fff;
   }
@@ -53,10 +53,15 @@
   color: @blue;
   border-color: @blue;
 
-  &:hover {
+  &:hover, &:active {
     color: #fff;
     background-color: @blue;
   }
+}
+
+.active .btn-inverted, .active .btn-inverted:active  {
+    color: #fff;
+    background-color: @blue;
 }
 
 .btn-facebook {

@@ -14,9 +14,9 @@ $data = get_data();
     <meta property="og:url" content="<?= SITE_URL ?>">
     <meta property="og:title" content="Fără penali în funcții publice">
     <meta property="og:description" content="Inițiativa cetățenească de modificare a Constituției">
-    <meta property="og:image" content="<?= SITE_URL ?>build/img/semneaza.jpg">
-    <link href="apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="favicon.ico" rel="icon">
+    <meta property="og:image" content="<?= SITE_URL ?>build/img/facebook.png">
+    <link href="build/img/favicon.ico" rel="apple-touch-icon">
+    <link href="build/img/favicon.ico" rel="icon">
     <title>Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției</title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
     <link href="build/css/style.min.css" rel="stylesheet">
@@ -42,10 +42,10 @@ $data = get_data();
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#despre">Despre</a></li>
-            <li><a href="#semneaza">Semnează inițativa</a></li>
-            <li><a href="#harta">Situația pe regiuni</a></li>
-            <li><a href="#media">Media</a></li>
-            <li><a href="#comunicate">Comunicate de presă</a></li>
+          <li><a href="#semneaza">Semnează inițativa</a></li>
+          <li><a href="#harta">Situația pe regiuni</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#comunicate">Comunicate de presă</a></li>
         </ul>
       </div>
     </div>
@@ -55,7 +55,7 @@ $data = get_data();
         <div class="row">
           <div class="col-md-6 banner">
             <h1>Fără penali in funcții publice!</h1>
-            <h2>Nu sta deoparte!</h2>
+            <h2>Inițiativa cetățenească de modificare a Constituției</h2>
             <div class="countdown">
               <h3><?= DESCRIERE_DEADLINE ?>:</h3>
               <div class="countdown-primary">
@@ -279,12 +279,43 @@ $data = get_data();
     </div>
     <a name="media"></a>
     <div class="container">
-      <div class="media col-md-offset-3 col-md-6">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
-        </div>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
+      <div class="media row">
+        <ul class="col-md-3" role="tablist" aria-orientation="vertical">
+          <li class="active"><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12" id="media-tabs-video-tab" href="#media-tabs-video" role="pill" data-toggle="pill" aria-controls="media-tabs-video" aria-selected="true">Video</a></li>
+          <li><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12" id="media-tabs-photo-tab" href="#media-tabs-photo" role="pill" data-toggle="pill" aria-controls="media-tabs-photo" aria-selected="false">Foto</a></li>
+        </ul>
+        <div class="col-md-9">
+          <div class="tab-content">
+            <div class="tab-pane fade show active in" id="media-tabs-video" role="tabpanel" aria-labelledby="media-tabs-video-tab">
+                <div class="carousel slide" id="carousel-videos" data-ride="carousel" data-interval="false">
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="media-tabs-photo" role="tabpanel" aria-labelledby="media-tabs-photo-tab">
+                <div class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-videos" data-slide-to="0" class="active"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                    <img data-lazy="bla">
+                    <img data-lazy="bla">
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Precedent</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Urmator</span>
+                </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -305,19 +336,8 @@ $data = get_data();
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="comunicat">
-                <a href=""><img src="http://lorempixel.com/370/200/business/" title="Titlu comunicat"></a>
-                <div class="corp">
-                  <span>28 Ianuarie 2018</span>
-                  <h3><a href="">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
-                  <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
-                  <a href="">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
-                </div>
-              </div>
-            </div>
           </div>
-          <div class="footer">
+          <div class="footer hidden">
             <a href="" class="btn btn-default mai-multe">Vezi mai multe</a>
           </div>
         </div>
@@ -329,7 +349,37 @@ $data = get_data();
           <p>Mulțumim!</p>
       </div>
     </div>
-    Blabla footer here
+    <footer class="container">
+      <div class="col-md-3 contact">
+          <h4>Contact</h4>
+          <div>Bulevardul Aviatorilor Nr. 9,<br>Sector 1, Bucureşti</div>
+      </div>
+      <div class="col-md-2 col-md-push-2 navigare">
+          <h4>Navigare</h4>
+          <ul>
+            <li><a href="#despre">Despre</a></li>
+            <li><a href="#semneaza">Semnează inițativa</a></li>
+            <li><a href="#harta">Situația pe regiuni</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#comunicate">Comunicate de presă</a></li>
+          </ul>
+      </div>
+      <div class="col-md-3 col-md-push-4 distribuie">
+          <h4>Distribuie</h4>
+          <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
+            <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
+            Distribuie
+          </a>
+      </div>
+      <div class="col-md-12 final">
+          <div class="usr">
+            Uniunea Salvați România &copy; 2018
+          </div>
+          <div class="rezistenta">
+            În parteneriat cu <a href="https://www.rezist.ro/" title="Rezistența"><img src="build/img/rezistenta.png" alt="Rezistența"></a>
+          </div>
+      </div>
+    </footer>
     <div class="social-media">
       <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
         <img src="build/img/logo-facebook-inverted.png" alt="Facebook">

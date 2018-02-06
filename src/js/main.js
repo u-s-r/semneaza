@@ -5,8 +5,6 @@
 
   $.extend(true, USR.data, remoteData);
 
-  $('.media').slick();
-
   $('.descriere .detalii .slick-slider').slick({
     dots: true,
     arrows: false,
