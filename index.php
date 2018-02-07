@@ -110,14 +110,6 @@ $data = get_data();
                     <h1>Whoops!</h1>
                     <p>Ceva nu a mers cum trebuie. Te rugam reincarca pagina si mai incearca o data, sau trimite un e-mail la contact@usr.ro </p>
                     <div class="svg-error-wrapper">
-                      <!-- <svg id="errorAnimation" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
-                      <path d="M35.3,8.9c-13.2,0-24,10.8-24,24s10.8,24,24,24s24-10.8,24-24S48.6,8.9,35.3,8.9z M47,43.2l-1.4,1.4L35.3,34.3L25,44.6l-1.4-1.4l10.3-10.3L23.6,22.6l1.4-1.4l10.3,10.3l10.3-10.3l1.4,1.4L36.7,32.9L47,43.2z"/>
-                        <circle id="errorAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
-                        <g id="errorAnimationX" stroke="#979797" stroke-width="2" >
-                          <line class="st1" x1="24.1" y1="24" x2="46.1" y2="46"/>
-                          <line class="st1" x1="46.1" y1="24" x2="24.1" y2="46"/>
-                        </g>
-                      </svg> -->
                       <svg id="successAnimation" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
                         <path id="successAnimationResult" fill="#D8D8D8" d="M35.3,8.9c-13.2,0-24,10.8-24,24s10.8,24,24,24s24-10.8,24-24S48.6,8.9,35.3,8.9z M47,43.2l-1.4,1.4L35.3,34.3L25,44.6l-1.4-1.4l10.3-10.3L23.6,22.6l1.4-1.4l10.3,10.3l10.3-10.3l1.4,1.4L36.7,32.9L47,43.2z"/>
                         <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
@@ -154,12 +146,15 @@ $data = get_data();
                   <label for="email"><h4>Email</h4></label>
                     <input type="email" name="email" autocomplete="email"/>
                   </div>
+                  <div class="validation-error-message hidden">
+                    <p>Te rugam completeaza cel putin unul din campurile Telefon sau E-mail</p>
+                  </div>
                   <div class="bottom-buttons">
                     <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
                       Înscrie-te acum!
                     </button>
 
-                    <a href="https://www.usr.ro/doneaza/" title="Doneaza" class="btn btn-inverted col-md-5" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
+                    <a href="https://www.usr.ro/doneaza/" title="Doneaza" class="btn btn-inverted" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
                       Donează!
                     </a>
                   </div>

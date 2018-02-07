@@ -7,9 +7,16 @@ $(function($) {
     $('#date-contact').ajaxForm(options);
   });
 
-function showRequest() {
-  $('.form-loading-circle-container').removeClass('hidden');
-  return true;
+function showRequest(arr, $form, opts) {
+  console.log(opts);
+  if (($form.find('input[type="email"]').val() != null && $form.find('input[type="email"]').val() != '') || ($form.find('input[type="tel"]').val() != null && $form.find('input[type="tel"]').val() != '')) {
+    $('.form-loading-circle-container').removeClass('hidden');
+    $('.validation-error-message').addClass('hidden');
+    return true;
+  } else {
+    $('.validation-error-message').removeClass('hidden');
+    return false;
+  }
 }
 
 function showResponse(responseText, statusText)  {

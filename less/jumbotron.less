@@ -174,12 +174,18 @@
       width: 100%;
       margin: 0 0 5px 0;
     }
+
+    .validation-error-message p {
+      color:@red;
+    }
+
     .bottom-buttons {
       margin-top:20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
+      position: relative;
+
       button, a {
         flex-basis: 40%;
         line-height: 1.4;
@@ -188,6 +194,9 @@
           padding:10px;
 
         }
+      }
+      a {
+        padding:13px 25px;
       }
     }
     
