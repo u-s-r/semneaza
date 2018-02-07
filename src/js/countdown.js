@@ -1,6 +1,10 @@
 (function ($) {
   'use strict';
 
+  var USR = {
+    'data': window.remoteData
+  };
+
   function format(value) {
     if (10 > value) {
       return '0' + value;

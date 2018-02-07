@@ -3,7 +3,9 @@
 
   $('[data-toggle="popover"]').popover();
 
-  $.extend(true, USR.data, remoteData);
+  var USR = {
+    'data': window.remoteData
+  };
 
   $('.descriere .detalii .slick-slider').slick({
     dots: true,
@@ -41,8 +43,11 @@
     tooltip.css({'top': mouseY, 'left': mouseX}).show();
 
     var contacte = '';
-    var html = '<strong>' + USR.data.numeJudet[code] + '</strong><br>Semnături strânse: ' +
-      USR.data.semnaturi[code].toString();
+    var html = '';
+    if (USR.data.campanieSemnaturi) {
+      html += '<strong>' + USR.data.numeJudet[code] + '</strong><br>Semnături strânse: ' +
+        USR.data.semnaturi[code].toString() + '<br>';
+    }
 
     for (var i = 0; i < USR.data.contacte[code].length; i++) {
       contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
@@ -54,7 +59,7 @@
       contacte += '</ul></dd>';
     }
 
-    html += '<br>Contact: ';
+    html += 'Contact: ';
 
     if ('' !== contacte) {
       html += '<dl>' + contacte + '</dl>';

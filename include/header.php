@@ -42,15 +42,13 @@ $data = get_data();
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Despre  <span class="glyphicon glyphicon-menu-down"></span></a>
+            <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down"></span></a>
             <ul class="dropdown-menu">
               <li><a href="<?= $page != "grupul-de-initiativa" ? SITE_URL . "/grupul-de-initiativa.php" : "" ?>">Grupul de initiativa</a></li>
             </ul>
           </li>
-          <?php if (CAMPANIE_DE_SEMNATURI) { ?>
-            <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițativa</a></li>
-            <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta">Situația pe regiuni</a></li>
-          <?php } ?>
+          <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițativa</a></li>
+          <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta"><?= CAMPANIE_DE_SEMNATURI ? "Situația pe regiuni" : "Puncte de contact" ?></a></li>
           <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#media">Media</a></li>
           <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#comunicate">Comunicate de presă</a></li>
         </ul>

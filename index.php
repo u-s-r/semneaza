@@ -50,7 +50,7 @@ require 'include/header.php';
             <?php } else { ?>
               <p>
                 <img src="build/img/bec-creion.png" alt="">
-                “Nu pot fi aleși în organele administrației publice locale, în Camera Deputaților, în Senat și în funcția de Președinte al României cetățenii condamnați definitiv la pedepse privative de libertate pentru infracțiuni săvârșite cu intenție, până la intervenirea unei situații care înlătură consecințele condamnării."
+                “Nu pot fi aleși în organele administrației publice locale, în Camera Deputaților, în Senat și în funcția de Președinte al României <strong>cetățenii condamnați definitiv la pedepse privative de libertate</strong> pentru infracțiuni săvârșite cu intenție, până la intervenirea unei situații care înlătură consecințele condamnării."
               </p>
             <?php } ?>
           </div>
@@ -84,17 +84,33 @@ require 'include/header.php';
         </div>
       </div>
     </div>
-    <?php if(CAMPANIE_DE_SEMNATURI) { ?>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2>Ajută și tu la strângerea semnăturilor</h2>
-            <div id="progres-semnaturi"></div>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Ajută și tu la strângerea semnăturilor</h2>
+          <div id="progres-semnaturi"></div>
         </div>
       </div>
-    <?php } ?>
+    </div>
     <a name="despre"></a>
+    <div class="initiativa">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Inițiativa</h1>
+            <h3>Expunere de motive</h3>
+            <p>
+            Lege de revizuire a Constituției României<br>
+Importanța deosebit de mare a relațiilor sociale care privesc alegerea prin vot a
+autorităților locale, deputaților, senatorilor, Președintelui României și
+europarlamentarilor, precum și incidența lor în procesul de instaurare, menținere și exercitare a puterii de stat, reprezintă principalele motive pentru care acestea sunt reglementate atât prin Constituție, legea fundamentală a statului român, cât și prin legile electorale, în număr de patru.
+             </p>
+             <a href="expunere-de-motive.php">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
+           </div>
+           <img src="build/img/expunere-de-motive.png" alt="" class="col-md-6">
+        </div>
+      </div>
+    </div>
     <div class="descriere">
       <div class="container">
         <div class="col-md-6 detalii">
@@ -150,14 +166,14 @@ require 'include/header.php';
         <?php
           $lista_pasi = [];
 
-          $lista_pasi[] = "Se formează un grup de inițiativă din cel puțin zece cetățeni";
-          $lista_pasi[] = "Proiectul de modificare a Constituției este trimis pentru aviz la Consiliul Legislativ";
-          $lista_pasi[] = "Proiectul și avizul consultativ sunt publicate în Monitorul Oficial";
-          $lista_pasi[] = "Începe strângerea a 1.000.000 de semnături în 6 luni, din cel puțin 21 de județe";
-          $lista_pasi[] = "Listele de semnături împreună cu proiectul și expunerea de motive se înregistrează la Parlament";
-          $lista_pasi[] = "Parlamentul înaintează propunerea către CCR pentru controlul de constituționalitate";
-          $lista_pasi[] = "Începe procedura parlamentară, cu dezbateri în comisii și vot în plenul Camerei Deputaților și Senat";
-          $lista_pasi[] = "Se organizează un referendum decizional care trebuie să aibă cvorum și vot majoritar";
+          $lista_pasi[] = "Se formează un grup de inițiativă din <strong>cel puțin zece cetățeni</strong>";
+          $lista_pasi[] = "Proiectul de modificare a Constituției este trimis pentru <strong>aviz</strong> la Consiliul Legislativ";
+          $lista_pasi[] = "Proiectul și avizul consultativ sunt publicate în <strong>Monitorul Oficial</strong>";
+          $lista_pasi[] = "Începe strângerea a <strong>1.000.000</strong> de semnături în <strong>6 luni</strong>, din cel puțin 21 de județe";
+          $lista_pasi[] = "Listele de semnături împreună cu proiectul și expunerea de motive <strong>se înregistrează la Parlament</strong>";
+          $lista_pasi[] = "Parlamentul înaintează propunerea către <strong>CCR</strong> pentru controlul de constituționalitate";
+          $lista_pasi[] = "Începe <strong>procedura parlamentară</strong>, cu dezbateri în comisii și vot în plenul Camerei Deputaților și Senat";
+          $lista_pasi[] = "Se organizează un <strong>referendum decizional</strong> care trebuie să aibă cvorum și vot majoritar";
         ?>
         <div class="col-md-6 pasi">
             <h1>Etapele proiectului</h1>
@@ -229,13 +245,12 @@ require 'include/header.php';
           <?php } ?>
         </ul>
     </div>
-    <?php if (CAMPANIE_DE_SEMNATURI) { ?>
     <a name="harta"></a>
     <div class="harta">
       <div class="container">
         <div class="col-md-6">
-          <h1>Situația semnăturilor pe regiuni</h1>
-          <span>Click în ȚARĂ pentru a vizualiza situația semnăturilor pe regiuni.</span>
+          <h1><?= CAMPANIE_DE_SEMNATURI ? "Situația semnăturilor pe regiuni" : "Puncte de contact" ?></h1>
+          <span>Click în ȚARĂ pentru a vizualiza <?= CAMPANIE_DE_SEMNATURI ? "situația semnăturilor pe regiuni" : "punctele de contact" ?>.</span>
         </div>
         <div class="col-md-5 col-md-push-1 map map-ro">
           <div class="embed-responsive embed-responsive-4by3">
@@ -243,7 +258,6 @@ require 'include/header.php';
            </div>
         </div>
       </div>
-    <?php } ?>
     </div>
     <a name="media"></a>
     <div class="media container">
@@ -293,10 +307,10 @@ require 'include/header.php';
         <div class="col-md-12">
           <h2>Comunicate de presă</h2>
           <div class="row">
-            <div class="col-md-4">
-              <div class="comunicat">
-                <a href=""><img src="http://lorempixel.com/370/200/business/" title="Titlu comunicat"></a>
-                <div class="corp">
+            <div class="col-md-12">
+              <div class="comunicat row">
+                <a href="" class="col-md-4" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
+                <div class="corp col-md-8">
                   <span>28 Ianuarie 2018</span>
                   <h3><a href="">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
                   <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
