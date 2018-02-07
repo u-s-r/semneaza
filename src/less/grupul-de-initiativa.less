@@ -16,14 +16,28 @@
         li {
           width: 100%;
           overflow: hidden;
+          border-bottom: 1px solid @blue-dull;
+
+          &:last-child, &:first-child {
+            border-bottom: none;
+          }
 
           a {
             text-align: left;
             color: @dark-text;
+
+            span {
+              display: none;
+            }
           }
 
           &.active a {
-              color: @blue;
+            color: @blue;
+            font-weight: 700;
+
+            span {
+              display: inline-block;
+            }
           }
 
           img {
@@ -38,6 +52,11 @@
             margin-top: 11px;
           }
         }
+    }
+
+    .tab-content {
+      padding-left: 15px;
+      border-left: 1px solid @blue-dull;
     }
   }
 
