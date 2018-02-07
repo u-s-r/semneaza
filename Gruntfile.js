@@ -139,7 +139,7 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'src/img',
-            src: ['*'],
+            src: ['**'],
             dest: 'build/img'
           },
           {
@@ -163,7 +163,7 @@ module.exports = function (grunt) {
         tasks: 'js'
       },
       img: {
-        files: 'src/img/*',
+        files: 'src/img/**',
         tasks: 'copy'
       },
       less: {
