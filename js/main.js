@@ -34,6 +34,9 @@
         //var offset = $('#map-ro').offset();
         mouseX = e.pageX - tooltip.width() - 60;
         mouseY = e.pageY - tooltip.height() - 60;
+        if (mouseX < 0) {
+          mouseX = 0;
+        }
         tooltip.css({'top': mouseY, 'left': mouseX});
       }));
 
@@ -44,16 +47,17 @@
     var html = '<strong>' + USR.data.numeJudet[code] + '</strong><br>Semnături strânse: ' +
       USR.data.semnaturi[code].toString();
 
-    for (var i = 0; i < USR.data.contacte[code].length; i++) {
-      contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
-
-      for (var j = 0; j < USR.data.contacte[code][i].intrari.length; j++) {
-        contacte += '<li>' + USR.data.contacte[code][i].intrari[j] + '</li>';
+    if (USR.data.contacte[code] != null) {
+      for (var i = 0; i < USR.data.contacte[code].length; i++) {
+        if (USR.data.contacte[code][i] != null) {
+          contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
+          for (var j = 0; j < USR.data.contacte[code][i].intrari.length; j++) {
+            contacte += '<li>' + USR.data.contacte[code][i].intrari[j] + '</li>';
+          }
+          contacte += '</ul></dd>';
+        }
       }
-
-      contacte += '</ul></dd>';
     }
-
     html += '<br>Contact: ';
 
     if ('' !== contacte) {
