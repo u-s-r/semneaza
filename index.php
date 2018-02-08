@@ -100,14 +100,12 @@ require 'include/header.php';
             <h1>Inițiativa</h1>
             <h3>Expunere de motive</h3>
             <p>
-            Lege de revizuire a Constituției României<br>
-Importanța deosebit de mare a relațiilor sociale care privesc alegerea prin vot a
-autorităților locale, deputaților, senatorilor, Președintelui României și
-europarlamentarilor, precum și incidența lor în procesul de instaurare, menținere și exercitare a puterii de stat, reprezintă principalele motive pentru care acestea sunt reglementate atât prin Constituție, legea fundamentală a statului român, cât și prin legile electorale, în număr de patru.
+              Lege de revizuire a Constituției României<br>
+              Importanța deosebit de mare a relațiilor sociale care privesc alegerea prin vot a autorităților locale, deputaților, senatorilor, Președintelui României și europarlamentarilor, precum și incidența lor în procesul de instaurare, menținere și exercitare a puterii de stat, reprezintă principalele motive pentru care acestea sunt reglementate atât prin Constituție, legea fundamentală a statului român, cât și prin legile electorale, în număr de patru.
              </p>
              <a href="expunere-de-motive.php">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
            </div>
-           <img src="build/img/expunere-de-motive.png" alt="" class="col-md-6">
+           <a href="expunere-de-motive.php"><img src="build/img/expunere-de-motive.png" alt="" class="col-md-6"></a>
         </div>
       </div>
     </div>
@@ -275,9 +273,9 @@ europarlamentarilor, precum și incidența lor în procesul de instaurare, menț
           <div class="row">
             <div class="col-md-12">
               <div class="comunicat row">
-                <a href="comunicate-de-motive.php" class="col-md-4" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
+                <a href="comunicate-de-presa.php" class="col-md-4" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
                 <div class="corp col-md-8">
-                  <span>28 Ianuarie 2018</span>
+                  <span>8 Noiembrie 2017</span>
                   <h3><a href="">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
                   <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
                   <a href="comunicate-de-presa.php">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>

@@ -1,4 +1,8 @@
-.page-expunere-de-motive {
+.page-expunere-de-motive, .page-comunicate-de-presa {
+  .container.comunicate-de-presa, .container.expunere-de-motive {
+    padding: 0 15px 30px 15px;
+  }
+
   .main-content {
     line-height: 2em;
 
@@ -46,12 +50,21 @@
       padding-top: 20px;
       font-size: 1.1em;
       font-weight: 500;
+      overflow: hidden;
       border-top: 1px solid @blue-dull;
-      text-align: right;
+      color: @blue;
+
+      .back {
+        float: right;
+      }
+
+      .date {
+        float: left;
+      }
     }
   }
 
-  .comunicate-de-presa {
+  .sidebar-comunicate-de-presa {
     @media(max-width: @screen-sm-max) {
       padding: 10px 0 10px 0;
     }

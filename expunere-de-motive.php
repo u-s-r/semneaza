@@ -19,7 +19,7 @@ require 'include/header.php';
 <div class="col-md-8 main-content">
     <h1>Inițiativa</h1>
     <h4>Ajută la strângerea semnăturilor. Fiecare semnătură contează. <a href="#formular">Înscrie-te aici <span class="glyphicon glyphicon-menu-right"><span></a></h4>
-<img src="build/img/expunere-de-motive.png" alt="">
+<img src="build/img/expunere-de-motive.png" alt="" title="Fără penali în funcții publice! Inițiativa cetățenească de modificare a Constituției">
 <h2>Expunere de motive</h2>
 <h5>Lege de revizuire a Constituției României</h5>
 <p>Importanța deosebit de mare a relațiilor sociale care privesc alegerea prin vot a autorităților locale, deputaților, senatorilor, Președintelui României și europarlamentarilor, precum și incidența lor în procesul de instaurare, menținere și exercitare a puterii de stat, reprezintă principalele motive pentru care acestea sunt reglementate atât prin Constituție, legea fundamentală a statului român, cât și prin legile electorale, în număr de patru. Dintre toate categoriile de norme juridice, trăsătura esențială a normelor electorale este aceea că indică în modul cel mai direct și mai eficient caracterul democratic sau, dimpotrivă, nedemocratic, al unui sistem constituțional.</p>
@@ -76,15 +76,15 @@ require 'include/header.php';
 <li>măsura nu se aplică pentru întreaga durată a vieții condamnaților, fiind în mod expres limitată până la intervenirea unei situații care, potrivit legii organice, înlătură această consecință extrapenală a condamnării; aceste situații sunt în prezent dezincriminarea faptei, amnistia postcondamnatorie și reabilitarea, aceasta din urmă putând fi de drept (care operează în temeiul legii, dacă persoana condamnată la pedeapsa amenzii sau a închisorii de până la 2 ani nu săvârșește o altă infracțiune în decurs de 3 ani de la data executării pedepsei) și judecătorească (care se dispune la cerere, prin hotărâre judecătorească, dacă persoana condamnată la pedeapsa închisorii cuprinse între 2 ani și 25 de ani nu săvârșește o altă infracțiune în decurs de 4 până la 10 ani de la data executării pedepsei).</li>
 </ul>
 <img src="build/img/lege.png" alt="Lege de revizuire">
-<div class="footer"><a href="<?= SITE_URL ?>"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
+<div class="footer"><a href="<?= SITE_URL ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
 </div>
-<div class="col-md-4 comunicate-de-presa">
+<div class="col-md-4 sidebar-comunicate-de-presa">
 <h4>Comunicate de presă</h4>
 <div class="comunicat row">
-  <a href="comunicate-de-motive.php" class="col-md-12" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
+  <a href="comunicate-de-presa.php" class="col-md-12" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
   <div class="corp col-md-12">
-    <span>28 Ianuarie 2018</span>
-    <h4><a href="">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
+    <span>8 Noiembrie 2017</span>
+    <h4><a href="comunicate-de-presa.php">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
     <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
     <a href="comunicate-de-presa.php">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
   </div>
