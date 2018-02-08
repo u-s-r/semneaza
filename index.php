@@ -117,49 +117,15 @@ europarlamentarilor, precum și incidența lor în procesul de instaurare, menț
           <h1>Despre</h1>
           <div class="slick-slider">
             <div>
-              <p>
-                Corupția înseamnă sărăcie. Ea apare când cei din societatea civilă sunt într-o stare de letargie din
-                cauza repetatelor dezamăgiri venite din partea politicienilor. Dacă ne uităm la cum arată România astăzi,
-                în raport cu celelalte țări europene, o găsim la coada clasamentelor la toate cele trei sectoare
-                primordiale: educație, sănătate și dezvoltarea infrastructurii.
-              </p>
-              <p>
-                România are cel mai slab sistem de sănătate din Uniunea Europeană. Lipsa medicilor și a medicamentelor,
-                corupția managementului și infrastructura șubredă, plasează România pe primul loc în UE la mortalitatea
-                în spitale.
-              </p>
-              <p>
-                Nici în privința educației nu stăm mai bine, peste 40% dintre elevii români de gimnaziu sunt analfabeți
-                funcționali, ceea ce ne duce tot pe primul loc în UE.
-              </p>
-              <p>
-                Tot pe ultimul loc suntem și în privința kilometrilor de autostradă construiți.
-              </p>
-              <p>
-                Din cauza corupției, 2 din 5 români trăiesc în sărăcie sau la un pas să ajungă în această situație, județele
-                cele mai mai sărace din țară sunt și cele conduse de baronii locali ai PSD: Teleorman, Buzău, Vaslui.
-              </p>
+              <p>Fără penali în funcții publice are la bază o inițiativă cetățenească ce are ca scop interzicerea cetățenilor condamnați definitiv să mai ocupe funcții publice în instituțiile de stat. Cei mai importanți oameni politici din instituțiile care conduc în prezent România sunt puși sub învinuiri de fapte de corupție, de aceea considerăm că este necesară o curățenie în politica românească.</p>
+              <p>Corupția stă la baza problemelor pe care România le are în cele mai importante domenii: sănătate, educație și dezvoltarea infrastructurii.</p>
+              <p>Țara noastră are cel mai slab sistem de sănătate din Uniunea Europeană. Lipsa medicilor și a medicamentelor, corupția managementului și infrastructura șubredă, plasează România pe primul loc în UE la mortalitatea în spitale. Nici în privința educației nu stăm mai bine, peste 40% dintre elevii români de gimnaziu sunt analfabeți funcționali, ceea ce ne duce tot pe primul loc în UE. România conduce și clasamentul țărilor cu cei mai puțini kilometri de autostradă construiți.</p>
             </div>
             <div>
-              <p>
-                Fără penali în funcții publice ar însemna o Românie fără Liviu Dragnea, care dat jos două guverne într-un an
-                ca să schimbe legile justiției în interes propriu, fără mărturiile mincinoase pentru care este anchetat Călin
-                Popescu Tăriceanu, fără deputatul mitralieră Cătălin Rădulescu, fără Viorel Ilie (ALDE) care a trucat
-                concursurile de angajare din ministerul pentru Relația cu Parlamentul.
-              </p>
-              <p>
-                Realitatea din România anului 2018 înseamnă toate cele de mai sus. Numai societatea civilă poate determina o
-                schimbare. Căci nu este de ajuns să-i schimbăm pe cei de la putere, ci trebuie schimbat modul în care acționează
-                poporul român. Urgența situației vine din schimbarea modului de a face politică cu unul moral și îndreptat către
-                realitatea pe care o vedem zilnic în jurul nostru. Propunerea de schimbare a Constituției este una care are la
-                bază inițiativa cetățenească mult strigată de românii care au ieșit în stradă în 2017 și 2018.
-              </p>
-              <p>
-                Demersul are nevoie de 500.000 de semnături strânse în 6 luni. Semnătura ta poate schimba modul în care funcționează și arată România.
-              </p>
-              <p>
-                Alătură-te inițiativei!
-              </p>
+              <p>Din cauza corupției, 2 din 5 români trăiesc în sărăcie sau la un pas să ajungă în această situație, județele cele mai mai sărace din țară sunt și cele conduse de baronii locali ai PSD: Teleorman, Buzău, Vaslui. Fără penali în funcții publice ar însemna că cei care au condus România în ultimii 29 de ani să se apropie mai greu de funcțiile publice.</p>
+              <p>Realitatea din România anului 2018 înseamnă toate cele de mai sus. Numai societatea civilă poate determina o schimbare. Căci nu este de ajuns să-i schimbăm pe cei de la putere, ci trebuie schimbat modul în care acționează poporul român. Urgența situației vine din schimbarea modului de a face politică cu unul moral și îndreptat către realitatea pe care o vedem zilnic în jurul nostru. Propunerea de schimbare a Constituției este una care are la bază inițiativa cetățenească mult strigată de românii care au ieșit în stradă în 2017 și 2018.</p>
+              <p>Demersul are nevoie de cel puțin 500.000 de semnături strânse în 6 luni. Semnătura ta poate schimba modul în care funcționează și arată România.</p>
+              <p>Alătură-te inițiativei!</p>
             </div>
           </div>
         </div>

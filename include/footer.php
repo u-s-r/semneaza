@@ -1,12 +1,12 @@
 <div class="implica-te">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-8">
         <h1>Implică-te și tu!</h1>
         <a href="#formular" class="btn btn-inverted-dark-bg">Alătură-te inițiativei</a>
       </div>
-      <div class="col-md-6">
-        <img src="build/img/people.png" alt="">
+      <div class="col-md-4">
+        <img src="build/img/balanta.png" alt="">
       </div>
     </div>
   </div>
