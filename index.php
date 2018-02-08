@@ -309,12 +309,12 @@ europarlamentarilor, precum și incidența lor în procesul de instaurare, menț
           <div class="row">
             <div class="col-md-12">
               <div class="comunicat row">
-                <a href="" class="col-md-4" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
+                <a href="comunicate-de-motive.php" class="col-md-4" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
                 <div class="corp col-md-8">
                   <span>28 Ianuarie 2018</span>
                   <h3><a href="">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
                   <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
-                  <a href="">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+                  <a href="comunicate-de-presa.php">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
                 </div>
               </div>
             </div>

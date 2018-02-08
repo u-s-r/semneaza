@@ -17,7 +17,7 @@ require 'include/header.php';
 </div>
 <div class="container grupul-de-initiativa">
     <h1>Grupul de inițiativă</h1>
-    <h4>Ajută la strângerea semnăturilor. Fiecare semnătură contează. Înscrie-te aici</h4>
+    <h4>Ajută la strângerea semnăturilor. Fiecare semnătură contează. <a href="#formular">Înscrie-te aici <span class="glyphicon glyphicon-menu-right"><span></a></h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget tristique massa. Fusce dictum odio a rhoncus scelerisque. Proin rutrum lacus in nisi tempus placerat. Aliquam a cursus nisi, id mollis neque. Duis eu libero euismod, ullamcorper nibh aliquet, tempus erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis molestie rutrum. Duis dignissim, libero non varius mattis, nibh ante egestas tellus, quis semper metus enim eu ligula. Aliquam sed nunc sit amet nisl consectetur placerat.</p>
     <p>Aliquam id ex ac augue lacinia mattis. Nam mollis non arcu sed malesuada. Donec tincidunt mi sed ante bibendum mattis. Vivamus bibendum convallis quam, in suscipit elit cursus et.</p>
     <ul class="col-md-3 membri" role="tablist" aria-orientation="vertical">

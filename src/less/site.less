@@ -21,11 +21,6 @@ input {
   }
 }
 
-.comunicate, .descriere, .page-grupul-de-initiativa .formular {
-  background-color: @blue-dull;
-  font-size: 14px;
-}
-
 .initiativa {
   padding: 20px 0 30px 0;
 
@@ -223,49 +218,13 @@ input {
 .comunicate {
   padding: 20px 0;
 
-  h2 {
-    color: @blue;
-  }
-
   .comunicat {
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-
     > a {
-      display: block;
       height: 230px;
-      background-size: cover;
-      background-position: center center;
     }
 
     .corp {
       padding: 20px;
-      position: relative;
-
-      h3, > span {
-        color: @blue;
-      }
-
-      h3 {
-        font-size: 1.1em;
-        line-height: 1.4em;
-      }
-
-      span {
-        font-size: 0.9em;
-      }
-
-      > a {
-        display: block;
-        color: @red;
-        font-weight: 500;
-        margin-right: 20px;
-      }
-
-      p {
-        text-overflow: ellipsis;
-      }
     }
   }
 
@@ -275,6 +234,46 @@ input {
 
     .mai-multe {
 
+    }
+  }
+}
+
+.comunicat {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+
+  > a {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .corp {
+    position: relative;
+
+    h3, > span {
+      color: @blue;
+    }
+
+    h3 {
+      font-size: 1.1em;
+      line-height: 1.4em;
+    }
+
+    span {
+      font-size: 0.9em;
+    }
+
+    > a {
+      display: block;
+      color: @red;
+      font-weight: 500;
+      margin-right: 20px;
+    }
+
+    p {
+      text-overflow: ellipsis;
     }
   }
 }
@@ -479,5 +478,48 @@ footer {
             }
         }
       }
+  }
+}
+
+.page-grupul-de-initiativa .grupul-de-initiativa,
+.page-expunere-de-motive .main-content,
+.page-comunicate-de-presa .main-content {
+    padding: 20px 0 20px 0;
+
+    h1 {
+      margin-top: 0;
+      color: @blue;
+    }
+
+    h4 a {
+      color: @red;
+      white-space: nowrap;
+    }
+}
+
+.comunicate, .descriere,
+.page-grupul-de-initiativa .formular,
+.page-expunere-de-motive .formular,
+.page-comunicate-de-presa .formular {
+  background-color: @blue-dull;
+  font-size: 14px;
+
+
+  h2 {
+    color: @blue;
+  }
+}
+
+.page-grupul-de-initiativa .formular,
+.page-expunere-de-motive .formular,
+.page-comunicate-de-presa .formular {
+  padding: 30px 0 30px 0;
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 30px;
   }
 }
