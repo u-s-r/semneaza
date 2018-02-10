@@ -1,20 +1,9 @@
 <?php
 $page = "expunere-de-motive";
 
-require 'include/header.php';
+require 'include/header-secundar.php';
 ?>
-<div class="jumbotron jumbotron-primary">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 banner">
-        <div>
-            <h1>Fără Penali în funcții publice!</h1>
-        </div>
-        <h2>Inițiativa cetățenească de modificare a Constituției</h2>
-    </div>
-    </div>
-  </div>
-</div>
+
 <div class="container expunere-de-motive">
 <div class="col-md-8 main-content">
     <h1>Inițiativa</h1>
