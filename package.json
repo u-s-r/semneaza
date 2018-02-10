@@ -21,10 +21,15 @@
   },
   "homepage": "https://semneaza.usr.ro/",
   "dependencies": {
+    "bootstrap-less": "^3.3.8",
     "countdown": "^2.6.0",
-    "ion-rangeslider": "^2.1.4",
+    "grunt-php": "^1.5.1",
+    "ion-rangeslider": "^2.2.0",
     "jquery": "^1.12.4",
-    "jvectormap": "^2.0.4"
+    "jquery-form": "^4.2.2",
+    "jvectormap": "^2.0.4",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
@@ -38,7 +43,7 @@
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-qunit": "^1.2.0",
-    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-csscomb": "^3.1.1",
     "grunt-eslint": "^19.0.0",

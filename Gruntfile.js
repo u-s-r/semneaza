@@ -10,13 +10,23 @@ module.exports = function (grunt) {
       core: {
         options: {
           outputSourceFiles: true,
-          sourceMap: true,
-          sourceMapFilename: 'assets/app/css/style.css.map',
+          sourceMap: false,
+          sourceMapFilename: 'build/css/style.css.map',
           sourceMapURL: 'style.css.map',
-          strictMath: true
+          strictMath: true,
+          paths: [
+              'node_modules/bootstrap-less/',
+              'node_modules/slick-carousel/slick/'
+          ]
         },
         files: {
-          'assets/app/css/style.css': 'less/style.less'
+          'build/css/style.css': [
+              'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+              'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
+              'node_modules/jvectormap/jquery-jvectormap.css',
+              'src/vendor/custom-scrollbar/jquery.custom-scrollbar.css',
+              'src/less/style.less'
+          ]
         }
       }
     },
@@ -28,69 +38,88 @@ module.exports = function (grunt) {
         ]
       },
       core: {
-        src: 'assets/app/css/*.css'
+        src: 'build/css/*.css'
       }
     },
     csscomb: {
       options: {
-        config: 'less/.csscomb.json'
+        config: 'src/less/.csscomb.json'
       },
       core: {
-        src: 'assets/app/css/style.css',
-        dest: 'assets/app/css/style.css'
+        src: 'build/css/style.css',
+        dest: 'build/css/style.css'
       }
     },
     csslint: {
       options: {
-        csslintrc: 'less/.csslintrc'
+        csslintrc: 'src/less/.csslintrc'
       },
       core: {
-        src: 'assets/app/css/style.css'
+        src: 'build/css/style.css'
       }
     },
     cssmin: {
       options: {
         advanced: false,
         keepSpecialComments: '*',
-        sourceMap: true
+        sourceMap: false
       },
       core: {
         expand: true,
-        cwd: 'assets/app/css',
-        src: ['*.css', '!*.min.css'],
-        dest: 'assets/app/css',
+        cwd: 'build/css',
+        src: [
+          '*.css',
+          '!*.min.css',
+        ],
+        options: {
+          root: 'build/css'
+        },
+        dest: 'build/css',
         ext: '.min.css'
       }
     },
     eslint: {
       options: {
-        configFile: 'js/.eslintrc'
+        configFile: 'src/js/.eslintrc'
       },
-      target: 'js/*.js'
+      target: 'src/js/*.js'
     },
     jscs: {
       options: {
-        config: 'js/.jscsrc'
+        config: 'src/js/.jscsrc'
       },
       grunt: {
         src: 'Gruntfile.js'
       },
       core: {
-        src: 'js/*.js'
+        src: 'src/js/*.js'
       }
     },
     concat: {
+      options: {
+        sourceMap: false
+      },
       core: {
         src: [
-          'js/usr.js',
-          'js/countdown.js',
-          'js/map-ro.js',
-          'js/map-diaspora.js',
-          'js/form.js',
-          'js/main.js',
-          'js/scroll.js'
+          'node_modules/jquery/dist/jquery.min.js',
+          'node_modules/bootstrap-less/js/bootstrap.min.js',
+          'node_modules/countdown/countdown.js',
+          'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+          'node_modules/jvectormap/jquery-jvectormap.min.js',
+          'node_modules/jquery-form/dist/jquery.form.min.js',
+          'node_modules/slick-carousel/slick/slick.min.js',
+          'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+          'src/vendor/custom-scrollbar/jquery.custom-scrollbar.js',
+          'src/vendor/debounce/jquery.ba-throttle-debounce.min.js',
+          'src/js/usr.js',
+          'src/js/countdown.js',
+          'src/js/map-ro.js',
+          'src/js/form.js',
+          'src/js/main.js',
+          'src/js/scroll.js',
+          'src/js/google-analytics.js',
         ],
-        dest: 'assets/app/js/application.js'
+        dest: '.tmp/application.js'
       }
     },
     uglify: {
@@ -98,39 +127,30 @@ module.exports = function (grunt) {
         compress: {
           warnings: false
         },
+        sourceMap: false,
+        sourceMapIncludeSources: true,
+        sourceMapIn: '<%= concat.core.dest %>.map',
         preserveComments: 'some'
       },
       core: {
         src: '<%= concat.core.dest %>',
-        dest: 'assets/app/js/application.min.js'
-      }
+        dest: 'build/js/application.min.js'
+      },
     },
     copy: {
       packages: {
         files: [
           {
             expand: true,
-            cwd: 'node_modules/countdown',
-            src: '*.js',
-            dest: 'assets/vendor/countdown'
+            cwd: 'src/img',
+            src: ['**'],
+            dest: 'build/img'
           },
           {
             expand: true,
-            cwd: 'node_modules/ion-rangeslider',
-            src: ['css/*', 'img/*', 'js/*'],
-            dest: 'assets/vendor/ion-rangeslider'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/jquery/dist',
-            src: '*',
-            dest: 'assets/vendor/jquery'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/jvectormap',
-            src: ['*.css', '*.js'],
-            dest: 'assets/vendor/jvectormap'
+            cwd: 'node_modules/bootstrap-less/fonts',
+            src: ['*'],
+            dest: 'build/fonts'
           }
         ]
       }
@@ -143,11 +163,15 @@ module.exports = function (grunt) {
         files: ['Gruntfile.js', 'package.json']
       },
       js: {
-        files: 'js/*.js',
+        files: 'src/js/*.js',
         tasks: 'js'
       },
+      img: {
+        files: 'src/img/**',
+        tasks: 'copy'
+      },
       less: {
-        files: 'less/**/*.less',
+        files: 'src/less/**/*.less',
         tasks: 'css'
       }
     },
@@ -155,14 +179,20 @@ module.exports = function (grunt) {
       options: {
         force: true
       },
-      assets: [
-        'assets/vendor/countdown',
-        'assets/vendor/ion-rangeslider',
-        'assets/vendor/jquery',
-        'assets/vendor/jvectormap'
+      build: [
+        '.tmp'
       ],
-      css: 'assets/app/css',
-      js: 'assets/app/js'
+      css: 'build/css',
+      js: 'build/js'
+    },
+    php: {
+      dist: {
+        options: {
+          keepalive: true,
+          open: true,
+          port: 5000
+        }
+      }
     }
   });
 
@@ -170,8 +200,8 @@ module.exports = function (grunt) {
   grunt.registerTask('css', ['less', 'postcss', 'csscomb', 'csslint', 'cssmin']);
   grunt.registerTask('js', ['eslint', 'jscs', 'concat', 'uglify']);
 
+  grunt.registerTask('serve', ['build', 'php']);
   grunt.registerTask('build', ['assets', 'css', 'js']);
   grunt.registerTask('test', ['clean', 'build']);
-
   grunt.registerTask('default', 'build');
 };

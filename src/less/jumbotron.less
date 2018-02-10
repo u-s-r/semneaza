@@ -1,0 +1,225 @@
+.jumbotron {
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  p {
+    font-weight: inherit;
+  }
+}
+
+.jumbotron-primary {
+  background-color: @blue-jumbotron;
+  background-image: url('../img/overlay-jumbotron.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  @media (max-width: @screen-sm-max) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .banner {
+    margin-bottom: 0;
+
+    h1, h2 {
+      display: inline;
+      box-decoration-break: clone;
+      padding: 10px 25px 10px 25px;
+      line-height: 51px;
+      font-size: 36px;
+      font-weight: 600;
+
+      @media (max-width: @screen-md-max) {
+        padding: 7px 20px 6px 20px;
+        font-size: 25px;
+        line-height: 38px;
+      }
+    }
+
+    h1 {
+      background: #fff;
+      color: @blue;
+    }
+
+    .prima-linie, .a-doua-linie {
+      overflow: hidden;
+    }
+
+    .prima-linie {
+       /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+       padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+       facea horizontal scroll */
+      padding: 2px 5px 0 5px;
+
+      @media (min-width: @screen-lg) {
+        /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+        padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+        facea horizontal scroll */
+        padding: 3px 10px 5px 10px;
+      }
+    }
+
+    .a-doua-linie  {
+      /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+      padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+      facea horizontal scroll */
+      padding: 1px 5px 0 5px;
+
+      @media (min-width: @screen-lg) {
+        /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+        padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+        facea horizontal scroll */
+        padding: 0 10px 0 10px;
+      }
+    }
+
+    h2 {
+      background: @red;
+    }
+
+    p {
+      padding: 20px;
+      margin: 0;
+      font-size: 16px;
+      font-style: oblique;
+      overflow: hidden;
+
+      @media (min-width: @screen-sm) {
+        margin-top: 20px;
+      }
+
+      img {
+        margin: 0 auto 10px auto;
+        display: block;
+
+        @media (min-width: @screen-sm) {
+          display: inline-block;
+          float: right;
+          margin: -20px 0 0 10px;
+        }
+      }
+    }
+  }
+
+  .panel {
+    border-bottom: 3px solid #e0e0e0;
+    border-radius: 0;
+    color: @dark-text;
+
+    h1 {
+      margin-top: 0;
+      font-size: @font-size-h1;
+      color: @blue;
+
+      @media (max-width: @screen-md-max) {
+          font-size: 2em;
+      }
+    }
+
+    h4 {
+      font-size: 15px;
+      margin: 25px 0 5px 0;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      width: 100%;
+      margin: 0 0 5px 0;
+    }
+
+    button, a {
+      margin-top: 25px;
+      margin-right:10px;
+    }
+  }
+
+  .panel-host {
+    margin-bottom: -150px;
+  }
+
+
+
+  .countdown {
+    margin: 80px 0 20px 0;
+    text-align: left;
+
+    @media (max-width: @screen-md-max) {
+        margin-top: 20px;
+    }
+
+    h3 {
+      text-align:left;
+      color: #fff;
+      font-weight: 300;
+
+      @media (max-width: @screen-md-max) {
+          font-size: 15px;
+          font-weight: 400;
+      }
+    }
+
+    .countdown-primary, .countdown-secondary, .countdown-separator {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .countdown-primary, .countdown-secondary {
+      width: 5em;
+
+      @media (min-width: @screen-lg-min) {
+        width: 6em;
+      }
+
+      @media (max-width: @screen-md-max) {
+        width: 4em;
+      }
+
+      @media (max-width: 372px) {
+        width: 2em;
+      }
+    }
+
+    .value {
+      font-size: 50px;
+
+      font-weight: 300;
+      line-height: 1;
+
+      @media (min-width: @screen-lg-min) {
+          font-size: 63px;
+      }
+
+      @media (max-width: @screen-md-max) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 372px) {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 372px) {
+        .label {
+            font-size: 9px;
+        }
+    }
+  }
+
+  .countdown-separator {
+    vertical-align: top;
+  }
+}
+
+.page-acasa .jumbotron-primary {
+  @media (max-width: @screen-md) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    margin-bottom: 120px;
+  }
+
+  margin-bottom: 100px;
+}

@@ -1,0 +1,17 @@
+{
+  "rules":{
+    "no-console":0
+  },
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "countdown": false,
+    "remoteData": false,
+    "USR": true
+  },
+  "parser": "babel-eslint",
+  "root": true
+}

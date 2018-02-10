@@ -1,0 +1,595 @@
+input {
+  border: 1px solid @light-grey;
+}
+
+.media {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .row > ul {
+    list-style: none;
+    overflow: hidden;
+
+    .btn {
+      border: none;
+
+      &[disabled] {
+        color: #ccc;
+      }
+    }
+  }
+
+  .row > div {
+    padding-left: 15px;
+    border-left: 1px solid @blue-dull;
+  }
+}
+
+.initiativa {
+  padding: 20px 0 30px 0;
+
+  h1 {
+    margin-top: 0;
+    color: @blue;
+  }
+
+  a {
+    color: @red;
+    font-weight: 500;
+
+    span {
+      font-size: 10px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+}
+
+.descriere {
+  padding: 60px 15px;
+
+  .container {
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .detalii, .pasi {
+    padding: 15px 20px;
+    @media only screen and (min-device-width : 480px) {
+      padding: 30px 65px;
+    }
+  }
+
+  .detalii {
+    padding-bottom:40px;
+    h1 {
+      color: @blue;
+    }
+
+    p {
+        margin: 20px 0;
+    }
+
+    .slick-dots {
+      text-align: right;
+
+      li {
+        height: 10px;
+        width: 10px;
+
+        button::before {
+          height: 10px;
+          width: 10px;
+          background-color: #000;
+          border-radius: 10px;
+          content: "";
+        }
+
+        &.slick-active button::before {
+          background-color: @blue;
+        }
+      }
+    }
+  }
+
+  .pasi {
+    background-image: url('../img/background-pasi.png');
+    background-size: cover;
+    color: #fff;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 23px 0;
+        display:flex;
+        align-items: center;
+
+        .bifa, .numar {
+          flex-basis: 40px;
+          height: 40px;
+        }
+
+        .bifa {
+          background-image: url('../img/bifa.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+
+        .numar {
+          line-height:1.4;
+          font-size: 30px;
+          font-weight: 700;
+          border-radius: 50%;
+          text-align: center;
+          color: @blue-even-lighter;
+          background-color: #fff;
+        }
+        .descriere-etapa {
+          flex-basis:calc(100% - 50px);
+          flex-shrink: 2;
+          padding-left:10px;
+          display:inline;
+          vertical-align:middle;
+        }
+      }
+    }
+  }
+}
+
+.harta {
+  margin: 0 0 10px 0;
+  padding: 20px 0;
+  background-image: url('../img/overlay-harta.png');
+  background-position: center center;
+  background-color: @blue;
+  color: #fff;
+
+  @media (min-width: @screen-md) {
+    h1 {
+      margin-top: 100px;
+    }
+  }
+
+  .map {
+    margin-bottom: 30px;
+    padding: 0 10px;
+
+    @media (min-width: @screen-sm) {
+      padding: 0 100px;
+    }
+
+    @media (min-width: 660px) {
+      padding: 0 100px;
+    }
+
+    @media (min-width: @screen-md) {
+      padding: 0;
+    }
+
+    .label {
+      text-align: center;
+    }
+  }
+
+  .map-ro {
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      margin-top: 25px;
+    }
+  }
+
+  #map-ro {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.tooltip-harta {
+  position: absolute;
+  padding: 20px;
+  max-width: 42em;
+  z-index: 10;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  color: @dark-text;
+
+  p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  dl,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.comunicate {
+  padding: 40px 0;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .comunicat {
+    > a {
+      height: 230px;
+    }
+
+    .corp {
+      padding: 20px;
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+
+    .mai-multe {
+
+    }
+  }
+}
+
+.comunicat {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+
+  > a {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .corp {
+    position: relative;
+
+    h3, > span {
+      color: @blue;
+    }
+
+    h3 {
+      font-size: 1.1em;
+      line-height: 1.4em;
+    }
+
+    span {
+      font-size: 12px;
+    }
+
+    > a {
+      display: block;
+      color: @red;
+      font-weight: 500;
+      margin-right: 20px;
+    }
+
+    p {
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.implica-te {
+  padding: 50px 0;
+  background-color: @blue;
+  background-image: url('../img/overlay-implica-te.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: none;
+  color: #fff;
+
+  h1 {
+    margin-top: 20px;
+
+    @media (min-width: @screen-sm) {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    .grafica {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-wrap {
+      text-align: center;
+    }
+  }
+
+  p {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  img {
+    margin: 20px 0;
+    max-width: 100%;
+  }
+}
+
+.social-media {
+  color: #fff;
+  display: none;
+  font-size: 75%;
+  font-weight: 500;
+  line-height: 1;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 10px 15px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 28px;
+  }
+
+  .facebook {
+    background-color: #3664a2;
+  }
+}
+
+@media (min-width: 992px) {
+  .social-media {
+    display: block;
+  }
+}
+
+.semneaza {
+  padding: 40px 15px;
+  h3 {
+    color: @blue;
+  }
+
+  ul.container-media {
+    padding: 0;
+    list-style-type: none;
+    clear: both;
+    margin: 0;
+
+    .media-element {
+      padding: 20px 0;
+
+      &:last-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      > img {
+        float: left;
+        margin-top: 10px;
+      }
+      div {
+        padding-top: 10px;
+        padding-left: 150px;
+
+        h3 {
+          margin-top: 0;
+        }
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: @screen-xs-max) {
+        > img {
+          width: 60px;
+        }
+        div {
+          padding-left: 75px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.list-checkbox {
+  margin-bottom: 20px;
+  @media all and (max-device-width: 420px) {
+      padding:0;
+      margin:0;
+    }
+  li {
+    padding-left:0;
+    margin-bottom:10px;
+  }
+}
+
+.panel {
+  border: 0;
+}
+
+.panel-footer {
+  border-top: 0;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.panel-body {
+  padding: 15px 20px;
+
+  @media (min-width: @screen-lg) {
+    padding: 30px 65px;
+  }
+
+  @media (min-width: @screen-sm) {
+    padding: 20px 40px;
+  }
+}
+
+footer {
+  padding: 40px 0 100px 0;
+
+  @media (max-width: @screen-sm-max) {
+    padding-bottom: 50px;   
+  }
+
+  h4 {
+    color: @blue;
+    text-transform: uppercase;
+  }
+
+  .contact div {
+    padding-left: 25px;
+    background: url('../img/pin.png') no-repeat top left;
+  }
+
+  .navigare {
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      a {
+        color: @dark-text;
+      }
+    }
+  }
+
+  .final {
+      border-top: 1px solid @blue-dull;
+      margin-top: 20px;
+      padding-top: 20px;
+      display: table;
+      color: #a5a5a5;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      .rezistenta {
+        @media (min-width: @screen-sm) {
+          text-align: right;
+        }
+
+        a {
+            display: inline-block;
+        }
+      }
+  }
+}
+
+.page-grupul-de-initiativa .grupul-de-initiativa,
+.page-expunere-de-motive .main-content,
+.page-comunicate-de-presa .main-content {
+    margin-top: 20px;
+    padding: 0 15px 20px 15px;
+
+    h1 {
+      margin-top: 0;
+      color: @blue;
+    }
+
+    h4 a {
+      color: @red;
+      white-space: nowrap;
+    }
+}
+
+.comunicate, .descriere,
+.page-grupul-de-initiativa .formular,
+.page-expunere-de-motive .formular,
+.page-comunicate-de-presa .formular {
+  background-color: @blue-dull;
+  font-size: 14px;
+
+
+  h2 {
+    color: @blue;
+  }
+}
+
+.page-grupul-de-initiativa,
+.page-expunere-de-motive,
+.page-comunicate-de-presa {
+  .formular {
+    padding: 30px 0 30px 0;
+
+    input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #cadae7;
+    }
+
+    button {
+      margin-top: 30px;
+    }
+  }
+
+  .footer {
+    padding-top: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    overflow: hidden;
+    border-top: 1px solid @blue-dull;
+    color: @blue;
+
+    .back {
+      float: right;
+    }
+
+    .date {
+      float: left;
+    }
+  }
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+
+  img {
+    height: auto;
+    width: auto;
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    img {
+      height: auto;
+      width: auto;
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+}
+
+
+@media (min-width: @screen-sm-max) {
+  .nav > li > a {
+    display: inline-block;
+  }
+}

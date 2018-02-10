@@ -1,0 +1,85 @@
+.page-expunere-de-motive, .page-comunicate-de-presa {
+  .container.comunicate-de-presa, .container.expunere-de-motive {
+    padding: 0 15px 30px 15px;
+  }
+
+  .main-content {
+    line-height: 2em;
+
+    @media(max-width: @screen-sm-max) {
+      border-bottom: 1px solid @blue-dull;
+    }
+    @media(min-width: @screen-md) {
+      padding-right: 35px;
+      border-right: 1px solid @blue-dull;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 15px 0;
+    }
+
+    p, ul {
+      line-height: 1.4em;
+      font-size: 1.1em;
+    }
+
+    p, li {
+      margin-bottom: 1.5em;
+    }
+
+    p {
+      text-indent: 2em;
+    }
+
+    h2, h5 {
+      text-align: center;
+    }
+
+    h4 a span {
+      font-size: 14px;
+    }
+
+    h2 {
+      margin: 40px 0 20px 0;
+      text-transform: uppercase;
+    }
+
+    h5 {
+      margin: 0 0 40px 0;
+      font-size: 16px;
+    }
+  }
+
+  .sidebar-comunicate-de-presa {
+    @media(max-width: @screen-sm-max) {
+      padding: 10px 0 10px 0;
+    }
+
+    @media(min-width: @screen-md) {
+      padding-left: 35px;
+      margin-top: 15px;
+    }
+
+    .comunicat {
+      > a {
+        height: 170px;
+      }
+
+      .corp {
+        padding: 10px 0 10px 0;
+
+        p {
+          padding: 10px 0 10px 0;
+        }
+      }
+    }
+
+    h4 {
+      font-size: 19px;
+      color: @blue;
+    }
+  }
+
+
+}

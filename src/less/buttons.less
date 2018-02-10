@@ -1,0 +1,79 @@
+.btn {
+  border-radius: 0;
+  border: 0;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
+
+  .glyphicon {
+    top: 2px;
+  }
+
+  > img {
+    margin-right: 5px;
+    max-height: 20px;
+    vertical-align: top;
+  }
+}
+
+.btn-default {
+  background-color: @red;
+  color: #fff;
+  padding: 15px 30px;
+
+  &:hover, &:focus   {
+    background-color: @burgundy;
+    color: #fff;
+  }
+}
+
+
+.btn-inverted, .btn-inverted-dark-bg {
+  background-color: transparent;
+  border: 2px solid;
+  padding: 13px 28px;
+}
+
+.btn-inverted-dark-bg {
+  color: #fff;
+  border-color: #fff;
+
+  &:focus {
+    color: darken(#fff, 10%);
+  }
+
+  &:hover, &:active {
+    color: @blue;
+    background-color: #fff;
+  }
+}
+
+.btn-inverted {
+  color: @blue;
+  border-color: @blue;
+
+  &:hover, &:active {
+    color: #fff;
+    background-color: @blue;
+  }
+}
+
+.active .btn-inverted, .active .btn-inverted:active  {
+    color: #fff;
+    background-color: @blue;
+}
+
+.btn-facebook {
+  background-color: #3664a2;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
