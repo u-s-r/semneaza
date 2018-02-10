@@ -43,7 +43,7 @@
 
     $('path.jvectormap-region.jvectormap-element').mousemove($.debounce(5, function(e) {
         mouseX = e.pageX - tooltip.width() - 60;
-        mouseY = e.pageY - tooltip.height() - 60;
+        mouseY = e.pageY - tooltip.height() - 80;
 
         if (mouseX < 0) {
           mouseX = tooltip.offset().left;
