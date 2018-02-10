@@ -1,6 +1,9 @@
 <?php
 $page = "expunere-de-motive";
 
+$title="Expunere de motive";
+$description="Fără penali în funcții publice";
+
 require 'include/header-secundar.php';
 ?>
 

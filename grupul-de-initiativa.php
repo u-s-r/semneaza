@@ -2,8 +2,7 @@
 $page = "grupul-de-initiativa";
 
 $title="Grupul de inițiativă";
-$description="Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției";
-
+$description="Fără penali în funcții publice";
 
 require 'include/header-secundar.php';
 ?>
