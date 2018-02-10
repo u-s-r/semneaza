@@ -19,10 +19,10 @@
     <h4>Contact</h4>
     <div>Bulevardul Aviatorilor Nr. 9,<br>Sector 1, Bucureşti</div>
   </div>
-  <div class="col-md-6 navigare">
+  <div class="col-md-9 navigare">
       <h4>Navigare</h4>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <ul>
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#initiativa">Inițiativa</a></li>
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a></li>
@@ -30,27 +30,26 @@
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițativa</a></li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <ul>
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta">Situația pe regiuni</a></li>
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#media">Media</a></li>
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#comunicate">Comunicate de presă</a></li>
           </ul>
         </div>
-
+        <div class="col-md-4 distribuie">
+            <a class="social-media-links" href="https://www.facebook.com/USRNational/" target="_blank">
+              <img src="build/img/logo-facebook-small.png" alt="Facebook">
+            </a>
+            <a class="social-media-links" href="https://www.youtube.com/channel/UCe0NmPCTlXzTdAAROfWYBNw" target="_blank">
+              <img src="build/img/logo-youtube-small.png" alt="Youtube">
+            </a>
+            <a class="social-media-links" href="https://twitter.com/usr_romania" target="_blank">
+              <img src="build/img/logo-twitter-small.png" alt="Twitter">
+            </a>
+        </div>
       </div>
 
-  </div>
-  <div class="col-md-3 distribuie">
-      <a class="social-media-links" href="https://www.facebook.com/USRNational/" target="_blank">
-        <img src="build/img/logo-facebook-small.png" alt="Facebook">
-      </a>
-      <a class="social-media-links" href="https://www.youtube.com/channel/UCe0NmPCTlXzTdAAROfWYBNw" target="_blank">
-        <img src="build/img/logo-youtube-small.png" alt="Youtube">
-      </a>
-      <a class="social-media-links" href="https://twitter.com/usr_romania" target="_blank">
-        <img src="build/img/logo-twitter-small.png" alt="Twitter">
-      </a>
   </div>
   <div class="col-xs-12 final row">
       <div class="usr col-sm-6">
