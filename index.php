@@ -113,11 +113,9 @@ require 'include/header.php';
                   <div class="validation-error-message hidden">
                     <p>Te rugam completeaza cel putin unul din campurile Telefon sau E-mail</p>
                   </div>
-                  <div class="bottom-buttons">
-                    <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
-                      Înscrie-te acum!
-                    </button>
-                  </div>
+                  <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+                    Înscrie-te acum!
+                  </button>
                 </div>
               </form>
             </div>
