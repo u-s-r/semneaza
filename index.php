@@ -276,7 +276,7 @@ require 'include/header.php';
                 <a href="comunicate-de-presa.php" class="col-md-4" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
                 <div class="corp col-md-8">
                   <span>8 Noiembrie 2017</span>
-                  <h3><a href="">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
+                  <h3><a href="comunicate-de-presa.php">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
                   <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
                   <a href="comunicate-de-presa.php">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
                 </div>
