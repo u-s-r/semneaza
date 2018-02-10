@@ -7,8 +7,7 @@ $(function($) {
     $('#date-contact').ajaxForm(options);
   });
 
-function showRequest(arr, $form, opts) {
-  console.log(opts);
+function showRequest(arr, $form) {
   if (($form.find('input[type="email"]').val() != null && $form.find('input[type="email"]').val() != '') || ($form.find('input[type="tel"]').val() != null && $form.find('input[type="tel"]').val() != '')) {
     $('.form-loading-circle-container').removeClass('hidden');
     $('.validation-error-message').addClass('hidden');

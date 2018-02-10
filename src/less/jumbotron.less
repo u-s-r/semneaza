@@ -8,7 +8,6 @@
 }
 
 .jumbotron-primary {
-  margin-bottom: 150px;
   background-color: @blue-jumbotron;
   background-image: url('../img/overlay-jumbotron.jpg');
   background-position: center center;
@@ -25,9 +24,9 @@
     margin-bottom: 0;
 
     h1, h2 {
-      display: inline-block;
+      display: inline;
       box-decoration-break: clone;
-      padding: 13px 25px 8px 25px;
+      padding: 10px 25px 10px 25px;
       line-height: 51px;
       font-size: 36px;
       font-weight: 600;
@@ -41,8 +40,6 @@
 
     h1 {
       background: #fff;
-      font-weight: 600;
-      margin-bottom: 0;
       color: @blue;
     }
 
@@ -80,9 +77,6 @@
 
     h2 {
       background: @red;
-      font-size: 36px;
-      font-weight: 600;
-      margin-top: 5px;
     }
 
 
@@ -112,9 +106,6 @@
   }
 
   .panel {
-    @media (min-width: 1200px) {
-      margin-top: 20px;
-    }
     position:relative;
     border-bottom: 3px solid #e0e0e0;
     color: @dark-text;
@@ -254,25 +245,9 @@
       color:@red;
     }
 
-    .bottom-buttons {
-      margin-top:20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-
-      button, a {
-        flex-basis: 40%;
-        line-height: 1.4;
-        @media all and (max-width:480px){
-          font-size:14px;
-          padding:10px;
-
-        }
-      }
-      a {
-        padding:13px 25px;
-      }
+    button, a {
+      margin-top: 25px;
+      margin-right: 10px;
     }
   }
 

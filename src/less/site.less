@@ -1,7 +1,3 @@
-body {
- 	line-height: 1.5;
-  color: @dark-text;
-} 	 
 
 textarea, input {
   border: 1px solid @light-grey;
@@ -10,22 +6,10 @@ textarea, input {
   box-shadow:none;
 }
 
-.irs {
-  margin: 60px 0;
+ul {
+  list-style: none;
 }
 
-a {
-  color: @blue;
-
-  &:focus, &:hover {
-    text-decoration: underline;
-    color: @blue-lighter;
-  }
-}
-
-.comunicate, .descriere {
-  background-color: #d7e6f2;
-}
 
 .media {
   margin-top: 50px;
@@ -131,7 +115,7 @@ a {
       padding: 0;
 
       li {
-        margin: 20px 0;
+        margin: 23px 0;
         display:flex;
         align-items: center;
 
@@ -168,16 +152,12 @@ a {
 }
 
 .harta {
-  margin: 20px 0;
+  margin: 0 0 10px 0;
   padding: 20px 0;
   background-image: url('../img/overlay-harta.png');
   background-position: center center;
   background-color: @blue;
   color: #fff;
-
-  .maps {
-    position:relative;
-  }
 
   @media (min-width: @screen-md) {
     h1 {
@@ -227,46 +207,6 @@ a {
     position: absolute;
     right: 0;
     top: 0;
-  }
-
-  .map-diaspora {
-    position: absolute;
-    right: 0;
-    top: 15px;
-
-    @media (min-width: 480px) {
-      top: 60px;
-    }
-
-    @media (min-width: 992px) {
-      right: 60px;
-    }
-  }
-
-  #map-diaspora {
-    height: 30px;
-    margin: 0 auto 10px;
-    width: 30px;
-
-    @media (min-width: 480px) and (max-width: 767px) {
-      height: 60px;
-      width: 60px;
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-      height: 90px;
-      width: 90px;
-    }
-
-    @media (min-width: 992px) and (max-width: 1199px) {
-      height: 60px;
-      width: 60px;
-    }
-
-    @media (min-width: 1200px) {
-      height: 90px;
-      width: 90px;
-    }
   }
 }
 
@@ -444,41 +384,7 @@ a {
     color: @blue;
   }
 }
-ul.container-media {
-  padding:0;
-  list-style-type: none;
 
-  .media-element {
-    display:flex;
-    align-items: center;
-    justify-content:space-between;
-    padding:20px 0;
-    text-decoration:none;
-    &__left{
-      flex-basis: 25%;
-      flex-shrink:2;
-      .media-object {
-        width:100%;
-        max-width:130px;
-      }
-    }
-    &__right{
-      flex-basis: 70%;
-    }
-  }
-}
-
-.list-checkbox {
-  margin-bottom: 20px;
-  @media all and (max-device-width : 420px) {
-      padding:0;
-      margin:0;
-    }
-  li {
-    padding-left:0;
-    margin-bottom:10px;
-  }
-}
 .hidden {
   display: none !important;
 }
