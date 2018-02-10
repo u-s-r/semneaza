@@ -274,7 +274,6 @@ require 'include/header.php';
     <a name="comunicate"></a>
     <div class="comunicate">
       <div class="container">
-        <div class="col-md-12">
           <h1>Comunicate de presă</h1>
           <div class="row">
             <div class="col-md-12">
@@ -292,7 +291,6 @@ require 'include/header.php';
           <div class="footer hidden">
             <a href="" class="btn btn-default mai-multe">Vezi mai multe</a>
           </div>
-        </div>
       </div>
     </div>
 <?php

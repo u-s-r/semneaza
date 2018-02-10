@@ -37,30 +37,32 @@ $persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "
     <h1>Grupul de inițiativă</h1>
     <h4>Ajută la strângerea semnăturilor. Fiecare semnătură contează. <a href="#formular">Înscrie-te aici <span class="glyphicon glyphicon-menu-right"><span></a></h4>
     <p>Toți membrii Grupului de inițiativă respectă caracteristicile impuse de lege, de a nu fi alese în funcții prin vot universal, nici membri de Guvern, ori persoane numite de primul-ministru și nici persoane care nu pot face parte, potrivit legii, din partide politice.</p>
-    <div class="col-md-4 membri">
-      <h3>Membri</h3>
-      <ul role="tablist" aria-orientation="vertical">
-        <?php foreach($persoane as $index => $persoana) {?>
-          <li class="<?= $index == 0 ? 'active' : '' ?>">
-            <a class="btn col-xs-6 col-sm-6 col-md-12 no-scroll" id="<?= $persoana['key'] ?>-tab" href="#<?= $persoana['key'] ?>" role="pill" data-toggle="pill" aria-controls="media-tabs-<?= $persoana['key'] ?>" <?= $index == 0 ? 'aria-selected="true"' : '' ?>>
-              <div class="imagine" style="background-image: url('build/img/grupul-de-initiativa/<?= $persoana['key'] ?>.jpg')"></div>
-              <?= $persoana['nume'] ?>
-              <span class="glyphicon glyphicon-menu-right"></span>
-            </a>
-          </li>
-        <?php } ?>
-      </ul>
-    </div>
-    <div class="col-md-8">
-      <div class="tab-content">
-        <?php foreach($persoane as $index => $persoana) {?>
-          <div class="tab-pane fade <?= $index == 0 ? 'active in' : '' ?>" id="<?= $persoana['key'] ?>" role="tabpanel" aria-labelledby="<?= $persoana['key'] ?>-tab">
-            <h3><?= $persoana['nume'] ?></h3>
-            <p><?= $persoana['descriere'] ?></p>
+    <div class="wrap">
+        <div class="col-md-4 membri">
+          <h3>Membri</h3>
+          <ul role="tablist" aria-orientation="vertical">
+            <?php foreach($persoane as $index => $persoana) {?>
+              <li class="<?= $index == 0 ? 'active' : '' ?>">
+                <a class="btn col-xs-6 col-sm-6 col-md-12 no-scroll" id="<?= $persoana['key'] ?>-tab" href="#<?= $persoana['key'] ?>" role="pill" data-toggle="pill" aria-controls="media-tabs-<?= $persoana['key'] ?>" <?= $index == 0 ? 'aria-selected="true"' : '' ?>>
+                  <div class="imagine" style="background-image: url('build/img/grupul-de-initiativa/<?= $persoana['key'] ?>.jpg')"></div>
+                  <?= $persoana['nume'] ?>
+                  <span class="glyphicon glyphicon-menu-right"></span>
+                </a>
+              </li>
+            <?php } ?>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <div class="tab-content">
+            <?php foreach($persoane as $index => $persoana) {?>
+              <div class="tab-pane fade <?= $index == 0 ? 'active in' : '' ?>" id="<?= $persoana['key'] ?>" role="tabpanel" aria-labelledby="<?= $persoana['key'] ?>-tab">
+                <h3><?= $persoana['nume'] ?></h3>
+                <p><?= $persoana['descriere'] ?></p>
+                <img src="build/img/cover.png" alt="">
+              </div>
+            <?php } ?>
           </div>
-        <?php } ?>
-      </div>
-
+        </div>
     </div>
     <div class="footer col-xs-12"><a href="<?= SITE_URL ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
 </div>
