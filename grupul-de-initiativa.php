@@ -59,6 +59,7 @@ $persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "
       </div>
 
     </div>
+    <div class="footer col-xs-12"><a href="<?= SITE_URL ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
 </div>
 <?php
 require_once 'include/footer-secundar.php';

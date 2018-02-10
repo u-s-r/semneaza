@@ -311,7 +311,7 @@ input {
       text-align: center;
     }
   }
-  
+
   p {
     margin-top: 40px;
     margin-bottom: 50px;
@@ -452,7 +452,11 @@ input {
 }
 
 footer {
-  padding: 40px 0;
+  padding: 40px 0 100px 0;
+
+  @media (max-width: @screen-sm-max) {
+    padding-bottom: 50px;   
+  }
 
   h4 {
     color: @blue;
@@ -484,19 +488,13 @@ footer {
       text-transform: uppercase;
       font-weight: 500;
 
-      .usr, .rezistenta {
-        display: table-cell;
-      }
-
       .rezistenta {
-        text-align: right;
+        @media (min-width: @screen-sm) {
+          text-align: right;
+        }
 
         a {
             display: inline-block;
-
-            img {
-                vertical-align: middle;
-            }
         }
       }
   }
@@ -532,28 +530,45 @@ footer {
   }
 }
 
-.page-grupul-de-initiativa .formular,
-.page-expunere-de-motive .formular,
-.page-comunicate-de-presa .formular {
-  padding: 30px 0 30px 0;
+.page-grupul-de-initiativa,
+.page-expunere-de-motive,
+.page-comunicate-de-presa {
+  .formular {
+    padding: 30px 0 30px 0;
 
-  input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #cadae7;
+    input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #cadae7;
+    }
+
+    button {
+      margin-top: 30px;
+    }
   }
 
-  button {
-    margin-top: 30px;
+  .footer {
+    padding-top: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    overflow: hidden;
+    border-top: 1px solid @blue-dull;
+    color: @blue;
+
+    .back {
+      float: right;
+    }
+
+    .date {
+      float: left;
+    }
   }
 }
 
-
 .scroll-to-top-button {
   position: fixed;
-
-  top: 75%;
-  right: 10%;
+  bottom: 5%;
+  right: 5%;
 
   img {
     height: auto;
@@ -562,10 +577,7 @@ footer {
     max-height: 80px;
   }
 
-  @media screen and (max-device-width: @screen-md-max) {
-    top: 90%;
-    right: 5%;
-
+  @media (max-width: @screen-sm-max) {
     img {
       height: auto;
       width: auto;

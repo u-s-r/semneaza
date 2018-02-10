@@ -33,11 +33,11 @@
         Distribuie
       </a>
   </div>
-  <div class="col-md-12 final">
-      <div class="usr">
+  <div class="col-xs-12 final row">
+      <div class="usr col-sm-6">
         Uniunea Salvați România &copy; 2018
       </div>
-      <div class="rezistenta">
+      <div class="rezistenta col-sm-6">
         În parteneriat cu <a href="https://www.rezist.ro/" title="Rezistența"><img src="build/img/rezistenta.png" alt="Rezistența"></a>
       </div>
   </div>
