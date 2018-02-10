@@ -569,7 +569,6 @@ footer {
   background-color: @blue-dull;
   font-size: 14px;
 
-
   h2 {
     color: @blue;
   }
@@ -578,6 +577,13 @@ footer {
 .page-grupul-de-initiativa,
 .page-expunere-de-motive,
 .page-comunicate-de-presa {
+
+  @media (max-width: @screen-md-max) {
+    h1 {
+      font-size: 25px;
+    }
+  }
+
   .formular {
     padding: 30px 0 30px 0;
 
