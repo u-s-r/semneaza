@@ -37,6 +37,10 @@ a {
 
     .btn {
       border: none;
+
+      &[disabled] {
+        color: #ccc;
+      }
     }
   }
 
@@ -54,12 +58,13 @@ a {
     color: @blue;
   }
 
-  h3 {
-    text-transform: uppercase;
-  }
-
   a {
     color: @red;
+    font-weight: 500;
+
+    span {
+      font-size: 10px;
+    }
   }
 
   img {
@@ -69,15 +74,11 @@ a {
 }
 
 .descriere {
-  padding: 60px 0;
-
-  @media (max-width: @screen-xs-max) {
-      padding-bottom: 0;
-  }
+  padding: 60px 15px;
 
   .container {
-    background-color: #fff;
     padding: 0;
+    background-color: #fff;
   }
 
   .detalii, .pasi {
@@ -291,7 +292,11 @@ a {
 }
 
 .comunicate {
-  padding: 20px 0;
+  padding: 40px 0;
+
+  h2 {
+    margin-top: 0;
+  }
 
   .comunicat {
     > a {
@@ -337,7 +342,7 @@ a {
     }
 
     span {
-      font-size: 0.9em;
+      font-size: 12px;
     }
 
     > a {
@@ -354,7 +359,7 @@ a {
 }
 
 .implica-te {
-  padding: 20px 0;
+  padding: 50px 0;
   background-color: @blue;
   background-image: url('../img/overlay-implica-te.png');
   background-position: center bottom;
@@ -364,11 +369,27 @@ a {
   color: #fff;
 
   h1 {
-    margin-top: 40px;
+    margin-top: 20px;
 
     @media (min-width: @screen-sm) {
-      margin-top: 80px;
+      margin-top: 0;
     }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    .grafica {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-wrap {
+      text-align: center;
+    }
+  }
+  
+  p {
+    margin-top: 40px;
+    margin-bottom: 50px;
   }
 
   img {
@@ -578,5 +599,32 @@ footer {
 
   button {
     margin-top: 30px;
+  }
+}
+
+
+.scroll-to-top-button {
+  position: fixed;
+
+  top: 75%;
+  right: 10%;
+
+  img {
+    height: auto;
+    width: auto;
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  @media screen and (max-device-width: @screen-md-max) {
+    top: 90%;
+    right: 5%;
+
+    img {
+      height: auto;
+      width: auto;
+      max-width: 40px;
+      max-height: 40px;
+    }
   }
 }

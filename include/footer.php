@@ -3,25 +3,24 @@
     <div class="row">
       <div class="col-md-8 col-sm-8">
         <h1>Implică-te și tu!</h1>
-        <a href="#formular" class="btn btn-inverted-dark-bg">Alătură-te inițiativei</a>
+        <p>Semnătura ta poate face diferența pentru o Românie <strong>"Fără Penali în funcții publice"</strong>.</p>
+        <div class="btn-wrap">
+          <a href="#formular" class="btn btn-inverted-dark-bg">Alătură-te inițiativei</a>
+        </div>
       </div>
-      <div class="col-md-4 col-sm-4">
+      <div class="col-md-4 col-sm-4 grafica">
         <img src="build/img/balanta.png" alt="" title="Implică-te și tu!">
       </div>
     </div>
   </div>
 </div>
 <footer class="container">
-  <div class="col-md-3 contact">
-      <h4>Contact</h4>
-      <div>Bulevardul Aviatorilor Nr. 9,<br>Sector 1, Bucureşti</div>
-  </div>
   <div class="col-md-2 col-md-push-2 navigare">
       <h4>Navigare</h4>
       <ul>
         <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#initiativa">Inițiativa</a></li>
         <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a></li>
-        <li><a href="grupul-de-initiativa.php">Grupul de inițiativă</a></li>
+        <li><a href="<?= SITE_URL . "grupul-de-initiativa.php" ?>">Grupul de inițiativă</a></li>
         <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițativa</a></li>
         <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta">Situația pe regiuni</a></li>
         <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#media">Media</a></li>
@@ -29,7 +28,6 @@
       </ul>
   </div>
   <div class="col-md-3 col-md-push-4 distribuie">
-      <h4>Distribuie</h4>
       <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
         <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
         Distribuie
@@ -43,6 +41,13 @@
         În parteneriat cu <a href="https://www.rezist.ro/" title="Rezistența"><img src="build/img/rezistenta.png" alt="Rezistența"></a>
       </div>
   </div>
+
+  <div class="scroll-to-top-button">
+    <a href="#top">
+    <img src="build/img/button_spring.png" />
+    </a>
+  </div>
+
 </footer>
 <div class="social-media">
   <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">

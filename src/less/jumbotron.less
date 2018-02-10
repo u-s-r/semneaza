@@ -1,6 +1,6 @@
 .jumbotron {
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding-bottom: 60px;
+  padding-top: 60px;
 
   p {
     font-weight: inherit;
@@ -46,8 +46,36 @@
       color: @blue;
     }
 
-    > div {
-        margin-bottom: 5px;
+    .prima-linie, .a-doua-linie {
+      overflow: hidden;
+    }
+
+    .prima-linie {
+       /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+       padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+       facea horizontal scroll */
+      padding: 2px 5px 0 5px;
+
+      @media (min-width: @screen-lg) {
+        /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+        padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+        facea horizontal scroll */
+        padding: 3px 10px 5px 10px;
+      }
+    }
+
+    .a-doua-linie  {
+      /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+      padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+      facea horizontal scroll */
+      padding: 1px 5px 0 5px;
+
+      @media (min-width: @screen-lg) {
+        /* valoarea e calculata din padding-ul orizontal de la h1, h2 minus
+        padding-ul de la column, pentru ca altfel iesea din pagina padding-ul si
+        facea horizontal scroll */
+        padding: 0 10px 0 10px;
+      }
     }
 
     h2 {

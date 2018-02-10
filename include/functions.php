@@ -11,6 +11,10 @@ function get_locatii($data) {
   foreach ($linii as $linie) {
     $linie = trim($linie);
 
+    if (empty($linie)) {
+      continue;
+    }
+
     if ($linie[0] == '-') {
       if ($ultima_localitate == null) {
         // Malformed field

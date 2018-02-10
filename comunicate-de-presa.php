@@ -1,23 +1,12 @@
 <?php
 $page = "comunicate-de-presa";
 
-require 'include/header.php';
+require 'include/header-secundar.php';
 ?>
-<div class="jumbotron jumbotron-primary">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 banner">
-        <div>
-            <h1>Fără penali în funcții publice!</h1>
-        </div>
-        <h2>Inițiativa cetățenească de modificare a Constituției</h2>
-    </div>
-    </div>
-  </div>
-</div>
 <div class="container comunicate-de-presa">
   <div class="col-md-8 main-content">
     <h1>USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</h1>
+    <h4>Ajută la strângerea semnăturilor. Fiecare semnătură contează. <a href="#formular">Înscrie-te aici <span class="glyphicon glyphicon-menu-right"><span></a></h4>
     <img src="build/img/comunicate/conferinta-de-presa.png" alt="" title="USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice">
     <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce  transpune în Constituție cea mai importantă solicitare a românilor care au protestat anul acesta în stradă: fără penali în funcții publice.</p>
     <p>USR consideră că se impune introducerea acestei interdicții în Constituție în contextul asaltului asupra Justiției pe care coaliția PSD-ALDE l-a început imediat după preluarea puterii cu OUG 13 și care a culminat după 9 luni cu proiectul de modificare a legilor justiției ce subminează independența magistraților și anulează reformele pe care România le-a făcut în ultimii ani în acest domeniu.</p>
