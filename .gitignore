@@ -25,4 +25,3 @@ node_modules
 vendor/*
 build
 .tmp
-wget-1.15
