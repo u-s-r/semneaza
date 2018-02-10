@@ -1,7 +1,7 @@
 .page-grupul-de-initiativa {
   .grupul-de-initiativa {
 
-      h4 a   span {
+      h4 a span {
         font-size: 14px;
       }
 
@@ -19,7 +19,7 @@
         }
 
         @media (min-width: @screen-md) {
-          height: 500px;
+          height: 700px;
         }
 
         li {
@@ -34,8 +34,14 @@
           a {
             display: block;
             width: 100%;
+            padding: 10px 12px;
             text-align: left;
             color: @dark-text;
+            text-transform: none;
+
+            div {
+              margin-right: 10px;
+            }
 
             span {
               display: none;
@@ -83,6 +89,10 @@
       padding-left: 15px;
     }
   }
+
+  .footer {
+    margin-top: 50px;
+  }
 }
 
 .mCS-light.mCSB_scrollTools {
@@ -91,6 +101,6 @@
   }
 
   .mCSB_draggerRail {
-    background-color: #ccc;
+    background-color: @blue-dull;
   }
 }
