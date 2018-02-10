@@ -58,11 +58,9 @@ require 'include/header.php';
               </p>
             <?php } ?>
           </div>
+         
           <div class="col-md-6 panel-host">
             <div class="panel panel-default">
-              <form id="date-contact" method="post" action="date-contact.php">
-                <div class="panel-body">
-                  <a name="formular"></a>
               <div class="form-loading-circle-container hidden">
                 <div class="loading-circle">
                   <div class="outer-circle">
@@ -99,7 +97,7 @@ require 'include/header.php';
                 </div>
                 <div class="panel-body info-message">
                   <h1>Alătură-te inițiativei</h1>
-                  <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul de la Consiliul Legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
+                  <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
                   <div>
                     <label for="name"><h4>Numele și prenume</h4></label>
                     <input type="text" name="name" required autocomplete="name"/>
@@ -128,6 +126,7 @@ require 'include/header.php';
               </form>
             </div>
           </div>
+
         </div>
       </div>
     </div>
