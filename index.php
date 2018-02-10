@@ -117,10 +117,6 @@ require 'include/header.php';
                     <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
                       Înscrie-te acum!
                     </button>
-
-                    <a href="https://www.usr.ro/doneaza/" title="Doneaza" class="btn btn-inverted" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'doneaza')">
-                      Donează!
-                    </a>
                   </div>
                 </div>
               </form>
