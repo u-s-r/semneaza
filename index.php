@@ -92,7 +92,7 @@ require 'include/header.php';
         </div>
       </div>
     </div>
-    <a name="despre"></a>
+    <a name="initiativa"></a>
     <div class="initiativa">
       <div class="container">
         <div class="row">
@@ -109,6 +109,7 @@ require 'include/header.php';
         </div>
       </div>
     </div>
+    <a name="despre"></a>
     <div class="descriere">
       <div class="container">
         <div class="col-md-6 detalii">

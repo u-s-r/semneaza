@@ -19,12 +19,13 @@
   <div class="col-md-2 col-md-push-2 navigare">
       <h4>Navigare</h4>
       <ul>
-        <li><a href="#despre">Despre</a></li>
+        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#initiativa">Inițiativa</a></li>
+        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a></li>
         <li><a href="grupul-de-initiativa.php">Grupul de inițiativă</a></li>
-        <li><a href="#semneaza">Semnează inițativa</a></li>
-        <li><a href="#harta">Situația pe regiuni</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#comunicate">Comunicate de presă</a></li>
+        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițativa</a></li>
+        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta">Situația pe regiuni</a></li>
+        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#media">Media</a></li>
+        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#comunicate">Comunicate de presă</a></li>
       </ul>
   </div>
   <div class="col-md-3 col-md-push-4 distribuie">
