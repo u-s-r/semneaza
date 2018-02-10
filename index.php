@@ -1,7 +1,7 @@
 <?php
 $page = "acasa";
 
-ini_set('display_errors', 'On');
+// ini_set('display_errors', 'On');
 
 require 'include/header.php';
 ?>
