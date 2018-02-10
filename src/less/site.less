@@ -1,5 +1,30 @@
-input {
+body {
+ 	line-height: 1.5;
+  color: @dark-text;
+} 	 
+
+textarea, input {
   border: 1px solid @light-grey;
+  -webkit-appearance: none;
+  background-color:#fff;
+  box-shadow:none;
+}
+
+.irs {
+  margin: 60px 0;
+}
+
+a {
+  color: @blue;
+
+  &:focus, &:hover {
+    text-decoration: underline;
+    color: @blue-lighter;
+  }
+}
+
+.comunicate, .descriere {
+  background-color: #d7e6f2;
 }
 
 .media {
@@ -98,13 +123,14 @@ input {
     background-image: url('../img/background-pasi.png');
     background-size: cover;
     color: #fff;
+    font-size:16px;
 
     ul {
       list-style: none;
       padding: 0;
 
       li {
-        margin: 23px 0;
+        margin: 20px 0;
         display:flex;
         align-items: center;
 
@@ -141,12 +167,16 @@ input {
 }
 
 .harta {
-  margin: 0 0 10px 0;
+  margin: 20px 0;
   padding: 20px 0;
   background-image: url('../img/overlay-harta.png');
   background-position: center center;
   background-color: @blue;
   color: #fff;
+
+  .maps {
+    position:relative;
+  }
 
   @media (min-width: @screen-md) {
     h1 {
@@ -182,7 +212,12 @@ input {
 
     @media (min-width: 992px) and (max-width: 1199px) {
       margin-top: 25px;
+      padding-right:90px;
     }
+    @media (min-width:1200px){
+      padding-right:120px;
+    }
+
   }
 
   #map-ro {
@@ -191,6 +226,46 @@ input {
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  .map-diaspora {
+    position: absolute;
+    right: 0;
+    top: 15px;
+
+    @media (min-width: 480px) {
+      top: 60px;
+    }
+
+    @media (min-width: 992px) {
+      right: 60px;
+    }
+  }
+
+  #map-diaspora {
+    height: 30px;
+    margin: 0 auto 10px;
+    width: 30px;
+
+    @media (min-width: 480px) and (max-width: 767px) {
+      height: 60px;
+      width: 60px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      height: 90px;
+      width: 90px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      height: 60px;
+      width: 60px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 90px;
+      width: 90px;
+    }
   }
 }
 
@@ -347,58 +422,34 @@ input {
   h3 {
     color: @blue;
   }
+}
+ul.container-media {
+  padding:0;
+  list-style-type: none;
 
-  ul.container-media {
-    padding: 0;
-    list-style-type: none;
-    clear: both;
-    margin: 0;
-
-    .media-element {
-      padding: 20px 0;
-
-      &:last-child {
-        padding-top: 0;
+  .media-element {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 0;
+    text-decoration:none;
+    &__left{
+      flex-basis: 25%;
+      flex-shrink:2;
+      .media-object {
+        width:100%;
+        max-width:130px;
       }
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-
-      > img {
-        float: left;
-        margin-top: 10px;
-      }
-      div {
-        padding-top: 10px;
-        padding-left: 150px;
-
-        h3 {
-          margin-top: 0;
-        }
-
-        p:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      @media (max-width: @screen-xs-max) {
-        > img {
-          width: 60px;
-        }
-        div {
-          padding-left: 75px;
-        }
-      }
+    }
+    &__right{
+      flex-basis: 70%;
     }
   }
 }
 
-
-
 .list-checkbox {
   margin-bottom: 20px;
-  @media all and (max-device-width: 420px) {
+  @media all and (max-device-width : 420px) {
       padding:0;
       margin:0;
     }
@@ -406,6 +457,9 @@ input {
     padding-left:0;
     margin-bottom:10px;
   }
+}
+.hidden {
+  display: none !important;
 }
 
 .panel {

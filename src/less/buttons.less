@@ -4,6 +4,9 @@
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  height: 50px;
 
   &:active,
   &.active {
@@ -24,9 +27,9 @@
 .btn-default {
   background-color: @red;
   color: #fff;
-  padding: 15px 30px;
+  
 
-  &:hover, &:focus   {
+  &:hover, &:focus {
     background-color: @burgundy;
     color: #fff;
   }
@@ -36,18 +39,14 @@
 .btn-inverted, .btn-inverted-dark-bg {
   background-color: transparent;
   border: 2px solid;
-  padding: 13px 28px;
+
 }
 
 .btn-inverted-dark-bg {
   color: #fff;
   border-color: #fff;
 
-  &:focus {
-    color: darken(#fff, 10%);
-  }
-
-  &:hover, &:active {
+  &:hover, &:focus {
     color: @blue;
     background-color: #fff;
   }

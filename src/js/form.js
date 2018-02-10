@@ -7,9 +7,16 @@ $(function($) {
     $('#date-contact').ajaxForm(options);
   });
 
-function showRequest() {
-  //@TODO show a loading spinner
-  return true;
+function showRequest(arr, $form, opts) {
+  console.log(opts);
+  if (($form.find('input[type="email"]').val() != null && $form.find('input[type="email"]').val() != '') || ($form.find('input[type="tel"]').val() != null && $form.find('input[type="tel"]').val() != '')) {
+    $('.form-loading-circle-container').removeClass('hidden');
+    $('.validation-error-message').addClass('hidden');
+    return true;
+  } else {
+    $('.validation-error-message').removeClass('hidden');
+    return false;
+  }
 }
 
 function showResponse(responseText, statusText)  {
@@ -19,13 +26,14 @@ function showResponse(responseText, statusText)  {
   } catch (e) {
     console.log(e);
   }
-
+  $('.form-loading-circle-container').addClass('hidden');
+  $('.panel-body.info-message').addClass('hidden');
   if (statusText != 'success' || !('success' in response) || !response.success) {
     // Error happened
-
+    $('.panel-body.error-message').removeClass('hidden');
+    $('.svg-error-wrapper').find('#successAnimation').addClass('animated');
     if ('success' in response && !response.success) {
       // The backend is reporting an error
-
       if (response.message == 'both_empty') {
         //@TODO print message that not both the email and the phone number can be mepty
       } else if (response.message == 'sending_failure') {
@@ -34,6 +42,8 @@ function showResponse(responseText, statusText)  {
     }
     //@TODO show message
   } else if (response.success) {
+    $('.panel-body.success-message').removeClass('hidden');
+    $('.svg-success-wrapper').find('#successAnimation').addClass('animated');
     //@TODO show success, perhaps with an animation like this: https://codepen.io/simonwuyts/pen/mmMYzx
   }
 }
