@@ -497,6 +497,12 @@ footer {
     }
   }
 
+  @media (max-width: @screen-sm-max) {
+    .distribuie {
+      margin-top: 10px;
+    }
+  }
+
   .final {
       border-top: 1px solid @blue-dull;
       margin-top: 20px;
@@ -509,10 +515,17 @@ footer {
         margin-top: 5px;
       }
 
-      .usr img {
-        height: 44px;
-        margin-top: -35px;
+      .usr {
 
+        a {
+          display: inline-block;
+
+          img {
+            margin-left: 3px;
+            height: 44px;
+            margin-top: -35px;
+          }
+        }
       }
 
       .rezistenta {
@@ -524,6 +537,7 @@ footer {
           display: inline-block;
 
           img {
+            margin-left: 3px;
             height: 22px;
           }
         }
