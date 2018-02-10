@@ -1,6 +1,10 @@
 <?php
 $page = "comunicate-de-presa";
 
+$title="Comunicate de presă";
+$description="Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției";
+
+
 require 'include/header-secundar.php';
 ?>
 <div class="container comunicate-de-presa">

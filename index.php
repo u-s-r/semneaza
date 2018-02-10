@@ -1,6 +1,9 @@
 <?php
 $page = "acasa";
 
+$title="Fără penali în funcții publice";
+$description="Inițiativa cetățenească de modificare a Constituției";
+
 ini_set('display_errors', 'On');
 
 require 'include/header.php';
