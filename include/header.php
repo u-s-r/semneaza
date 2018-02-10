@@ -16,7 +16,7 @@ $data = get_data();
     <meta property="og:url" content="<?= $PAGE_URL ?>">
     <meta property="og:title" content="<?= $title ?>">
     <meta property="og:description" content="<?= $description ?>">
-    <meta property="og:image" content="<?= SITE_URL ?>build/img/facebook.png">
+    <meta property="og:image" content="<?= SITE_URL ?>build/img/social.png">
     <title><?= $title ?> &middot; <?= $description ?></title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="build/img/apple-touch-icon.png">
