@@ -12,7 +12,7 @@ require 'include/header-secundar.php';
 $persoane = [];
 
 
-$persoane [] = ["nume" => "Mihai Badea", "key" => "Mihai-Badea", "descriere" => "Avocat și membru USR. Președintele grupului de inițiativă cetățenească \"Fără penali în funcții publice\"."];
+$persoane [] = ["nume" => "Mihai Badea", "key" => "Mihai-Badea", "descriere" => "Avocat și Președintele grupului de inițiativă cetățenească \"Fără penali în funcții publice\"."];
 $persoane [] = ["nume" => "Mihai Șora", "key" => "Mihai-Sora", "descriere" => "Filosof și eseist. Membru fondator al Grupului de Dialog Social, al Alianței Civice și al Societății Române de Fenomenologie."];
 $persoane [] = ["nume" => "Gabriel Liiceanu", "key" => "Gabriel-Liiceanu", "descriere" => "Filosof, scriitor și membru al Grupului de Dialog Social."];
 $persoane [] = ["nume" => "Eugen Vasiliu", "key" => "Eugen-Vasiliu", "descriere" => "Jurist și membru al Grupului de Dialog Social."];
@@ -22,16 +22,16 @@ $persoane [] = ["nume" => "Eugen Iancu", "key" => "Eugen-Iancu", "descriere" => 
 $persoane [] = ["nume" => "Oana Negru", "key" => "Oana-Negru", "descriere" => "Membru și manager juridic al grupului \"Rezistența\"."];
 $persoane [] = ["nume" => "Mihai Nicolae Tudorică", "key" => "Mihai-Nicolae-Tudorica", "descriere" => "Fondatorul  platformei \"Rezistența\", platforma care a apărut ca reacție civică de protest împotriva OUG 13 din februarie 2017."];
 $persoane [] = ["nume" => "Andrei Caramitru", "key" => "Andrei-Caramitru", "descriere" => "Consultant în afaceri, Partener și Director general la Boston Consulting Group, Viena."];
-$persoane [] = ["nume" => "Klaus Fabrițius", "key" => "Klaus-Fabritius", "descriere" => "Membru al Formului Democrat al Germanilor din România."];
-$persoane [] = ["nume" => "Liliana Chivu", "key" => "Liliana-Chivu", "descriere" => "Membru USR, Sector 3. Inginer de construcții hidrotehnice."];
-$persoane [] = ["nume" => "Diana Punga", "key" => "Diana-Punga", "descriere" => "Membru USR, Sector 3."];
-$persoane [] = ["nume" => "Costin Dobrescu", "key" => "Costin-Dobrescu", "descriere" => "Membru USR, Sector 6. Inginer de calculatoare."];
-$persoane [] = ["nume" => "Adrian Clopotari", "key" => "Adrian-Clopotari", "descriere" => "Membru USR, Sector 1. Avocat și statistician în insolvență."];
-$persoane [] = ["nume" => "George Oancea", "key" => "George-Oancea", "descriere" => "Membru USR, Sector 2. Analist programator."];
-$persoane [] = ["nume" => "Marius Petrișor Petcu", "key" => "Marius-Petrisor-Petcu", "descriere" => "Membru USR, filiala Călărași."];
-$persoane [] = ["nume" => "Anton Cupcea", "key" => "Anton-Cupcea", "descriere" => "Membru USR, Sector 1. Inginer de calculatoare."];
-$persoane [] = ["nume" => "Adrian Bogdan", "key" => "Adrian-Bogdan", "descriere" => "Membru USR Corbeanca, Ilfov. Statistician."];
-$persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "descriere" => "Membru USR, Sector 5. Economist."];
+$persoane [] = ["nume" => "Klaus Fabrițius", "key" => "Klaus-Fabritius", "descriere" => "Membru al Formului Democrat al Germanilor din România"];
+$persoane [] = ["nume" => "Liliana Chivu", "key" => "Liliana-Chivu", "descriere" => "Inginer de construcții hidrotehnice"];
+$persoane [] = ["nume" => "Diana Punga", "key" => "Diana-Punga", "descriere" => "Specialist în Marketing & Comunicare"];
+$persoane [] = ["nume" => "Costin Dobrescu", "key" => "Costin-Dobrescu", "descriere" => "Inginer de calculatoare"];
+$persoane [] = ["nume" => "Adrian Clopotari", "key" => "Adrian-Clopotari", "descriere" => "Avocat și statistician în insolvență"];
+$persoane [] = ["nume" => "George Oancea", "key" => "George-Oancea", "descriere" => "Analist programator"];
+$persoane [] = ["nume" => "Marius Petrișor Petcu", "key" => "Marius-Petrisor-Petcu", "descriere" => "Inginer geodez, antreprenor în domeniul măsurătorilor geodezice terestre"];
+$persoane [] = ["nume" => "Anton Cupcea", "key" => "Anton-Cupcea", "descriere" => "Inginer de IT"];
+$persoane [] = ["nume" => "Adrian Bogdan", "key" => "Adrian-Bogdan", "descriere" => "Statistician"];
+$persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "descriere" => "Economist"];
 
 ?>
 <div class="container grupul-de-initiativa">

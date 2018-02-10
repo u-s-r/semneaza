@@ -1,5 +1,6 @@
 input {
   border: 1px solid @light-grey;
+  border-radius: 2px;
 }
 
 .media {
@@ -53,6 +54,7 @@ input {
 
   .container {
     padding: 0;
+    overflow: hidden;
     background-color: #fff;
   }
 
@@ -202,7 +204,7 @@ input {
   z-index: 10;
   background: #fff;
   border: none;
-  border-radius: 0;
+  border-radius: 2px;
   color: @dark-text;
 
   p {
@@ -245,6 +247,7 @@ input {
 
 .comunicat {
   background-color: #fff;
+  border-radius: 2px;
   margin: 0;
   padding: 0;
 
@@ -465,7 +468,7 @@ footer {
   padding: 40px 0 100px 0;
 
   @media (max-width: @screen-sm-max) {
-    padding-bottom: 50px;   
+    padding-bottom: 50px;
   }
 
   h4 {
@@ -482,6 +485,11 @@ footer {
     ul {
       list-style: none;
       padding-left: 0;
+      margin-bottom: 0;
+      span {
+        font-size: 10px;
+        color: @blue;
+      }
 
       a {
         color: @dark-text;
@@ -492,11 +500,20 @@ footer {
   .final {
       border-top: 1px solid @blue-dull;
       margin-top: 20px;
-      padding-top: 20px;
+      padding-top: 40px;
       display: table;
       color: #a5a5a5;
-      text-transform: uppercase;
       font-weight: 500;
+
+      .usr, .rezistenta {
+        margin-top: 5px;
+      }
+
+      .usr img {
+        height: 44px;
+        margin-top: -35px;
+
+      }
 
       .rezistenta {
         @media (min-width: @screen-sm) {
@@ -504,9 +521,13 @@ footer {
         }
 
         a {
-            display: inline-block;
+          display: inline-block;
+
+          img {
+            height: 22px;
+          }
         }
-      }
+     }
   }
 }
 

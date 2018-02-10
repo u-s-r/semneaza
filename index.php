@@ -4,8 +4,6 @@ $page = "acasa";
 $title="Fără penali în funcții publice";
 $description="Inițiativa cetățenească de modificare a Constituției";
 
-ini_set('display_errors', 'On');
-
 require 'include/header.php';
 ?>
     <div class="jumbotron jumbotron-primary">
@@ -265,7 +263,7 @@ require 'include/header.php';
                 </a>
                 <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                  <span class="sr-only">Urmator</span>
+                  <span class="sr-only">Următor</span>
                 </a>
             </div>
           </div>
