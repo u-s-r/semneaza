@@ -28,9 +28,14 @@
       </ul>
   </div>
   <div class="col-md-3 col-md-push-4 distribuie">
-      <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
-        <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
-        Distribuie
+      <a class="social-media-links" href="https://www.facebook.com/USRNational/" target="_blank">
+        <img src="build/img/logo-facebook-small.png" alt="Facebook">
+      </a>
+      <a class="social-media-links" href="https://www.youtube.com/channel/UCe0NmPCTlXzTdAAROfWYBNw" target="_blank">
+        <img src="build/img/logo-youtube-small.png" alt="Youtube">
+      </a>
+      <a class="social-media-links" href="https://twitter.com/usr_romania" target="_blank">
+        <img src="build/img/logo-twitter-small.png" alt="Twitter">
       </a>
   </div>
   <div class="col-xs-12 final row">
@@ -50,8 +55,12 @@
 
 </footer>
 <div class="social-media">
-  <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
+  <a class="facebook social-media-box" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
     <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
+    Distribuie
+  </a>
+  <a class="twitter social-media-box" href="http://www.twitter.com/share?url=<?= SITE_URL ?>" target="_blank">
+    <img src="build/img/logo-twitter-inverted.png" alt="Twitter">
     Distribuie
   </a>
 </div>
