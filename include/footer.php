@@ -20,6 +20,7 @@
       <h4>Navigare</h4>
       <ul>
         <li><a href="#despre">Despre</a></li>
+        <li><a href="grupul-de-initiativa.php">Grupul de inițiativă</a></li>
         <li><a href="#semneaza">Semnează inițativa</a></li>
         <li><a href="#harta">Situația pe regiuni</a></li>
         <li><a href="#media">Media</a></li>
