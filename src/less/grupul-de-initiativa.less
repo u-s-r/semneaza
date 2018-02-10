@@ -48,14 +48,16 @@
             }
           }
 
-          &.active a {
+          &.active a, &:hover a {
             color: @blue;
             font-weight: 700;
 
             div {
               border: 2px solid @blue;
             }
+          }
 
+          &.active a {
             span {
               display: inline-block;
               position: absolute;
