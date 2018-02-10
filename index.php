@@ -1,6 +1,9 @@
 <?php
 $page = "acasa";
 
+$title="Fără penali în funcții publice";
+$description="Inițiativa cetățenească de modificare a Constituției";
+
 require 'include/header.php';
 ?>
     <div class="jumbotron jumbotron-primary">

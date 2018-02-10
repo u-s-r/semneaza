@@ -1,6 +1,8 @@
 <?php
 require 'functions.php';
 
+$PAGE_URL = SITE_URL.substr($_SERVER["REQUEST_URI"], 1) ;
+
 $data = get_data();
 ?>
 <!DOCTYPE html>
@@ -11,11 +13,11 @@ $data = get_data();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Inițiativa cetățenească de modificare a Constituției">
     <meta name="author" content="USR">
-    <meta property="og:url" content="<?= SITE_URL ?>">
-    <meta property="og:title" content="Fără penali în funcții publice">
-    <meta property="og:description" content="Inițiativa cetățenească de modificare a Constituției">
+    <meta property="og:url" content="<?= $PAGE_URL ?>">
+    <meta property="og:title" content="<?= $title ?>">
+    <meta property="og:description" content="<?= $description ?>">
     <meta property="og:image" content="<?= SITE_URL ?>build/img/facebook.png">
-    <title>Fără penali în funcții publice &middot; Inițiativa cetățenească de modificare a Constituției</title>
+    <title><?= $title ?> &middot; <?= $description ?></title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="build/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="build/img/favicon-32x32.png">
