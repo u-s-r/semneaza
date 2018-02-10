@@ -1,16 +1,20 @@
 <?php
 $page = "acasa";
 
+ini_set('display_errors', 'On');
+
 require 'include/header.php';
 ?>
     <div class="jumbotron jumbotron-primary">
       <div class="container">
         <div class="row">
           <div class="col-md-6 banner">
-            <div>
-                <h1>Fără penali în funcții publice!</h1>
+            <div class="prima-linie">
+              <h1>Fără Penali în funcții publice!</h1>
             </div>
-            <h2>Inițiativa cetățenească de modificare a Constituției</h2>
+            <div class="a-doua-linie">
+              <h2>Inițiativa cetățenească de modificare a Constituției</h2>
+            </div>
             <?php if(CAMPANIE_DE_SEMNATURI) { ?>
                 <div class="countdown">
                   <h3>Numărul de zile până la strângerea semnăturilor:</h3>
@@ -60,7 +64,7 @@ require 'include/header.php';
                 <div class="panel-body">
                   <a name="formular"></a>
                   <h1>Alătură-te inițiativei</h1>
-                  <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
+                  <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul de la Consiliul Legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
                   <div>
                     <h4>Numele și prenume</h4>
                     <input type="text" name="nume">
@@ -99,8 +103,8 @@ require 'include/header.php';
           <div class="col-md-6">
             <h1>Inițiativa</h1>
             <h3>Expunere de motive</h3>
+            <strong>Lege de revizuire a Constituției României</strong>
             <p>
-              Lege de revizuire a Constituției României<br>
               Importanța deosebit de mare a relațiilor sociale care privesc alegerea prin vot a autorităților locale, deputaților, senatorilor, Președintelui României și europarlamentarilor, precum și incidența lor în procesul de instaurare, menținere și exercitare a puterii de stat, reprezintă principalele motive pentru care acestea sunt reglementate atât prin Constituție, legea fundamentală a statului român, cât și prin legile electorale, în număr de patru.
              </p>
              <a href="expunere-de-motive.php">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>

@@ -12,6 +12,10 @@ input {
 
     .btn {
       border: none;
+
+      &[disabled] {
+        color: #ccc;
+      }
     }
   }
 
@@ -29,12 +33,13 @@ input {
     color: @blue;
   }
 
-  h3 {
-    text-transform: uppercase;
-  }
-
   a {
     color: @red;
+    font-weight: 500;
+
+    span {
+      font-size: 10px;
+    }
   }
 
   img {
@@ -44,15 +49,11 @@ input {
 }
 
 .descriere {
-  padding: 60px 0;
-
-  @media (max-width: @screen-xs-max) {
-      padding-bottom: 0;
-  }
+  padding: 60px 15px;
 
   .container {
-    background-color: #fff;
     padding: 0;
+    background-color: #fff;
   }
 
   .detalii, .pasi {
@@ -216,7 +217,11 @@ input {
 }
 
 .comunicate {
-  padding: 20px 0;
+  padding: 40px 0;
+
+  h2 {
+    margin-top: 0;
+  }
 
   .comunicat {
     > a {
@@ -262,7 +267,7 @@ input {
     }
 
     span {
-      font-size: 0.9em;
+      font-size: 12px;
     }
 
     > a {
@@ -279,7 +284,7 @@ input {
 }
 
 .implica-te {
-  padding: 20px 0;
+  padding: 50px 0;
   background-color: @blue;
   background-image: url('../img/overlay-implica-te.png');
   background-position: center bottom;
@@ -289,11 +294,27 @@ input {
   color: #fff;
 
   h1 {
-    margin-top: 40px;
+    margin-top: 20px;
 
     @media (min-width: @screen-sm) {
-      margin-top: 80px;
+      margin-top: 0;
     }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    .grafica {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-wrap {
+      text-align: center;
+    }
+  }
+  
+  p {
+    margin-top: 40px;
+    margin-bottom: 50px;
   }
 
   img {

@@ -8,7 +8,7 @@ require 'include/header.php';
     <div class="row">
       <div class="col-md-6 banner">
         <div>
-            <h1>Fără penali în funcții publice!</h1>
+            <h1>Fără Penali în funcții publice!</h1>
         </div>
         <h2>Inițiativa cetățenească de modificare a Constituției</h2>
     </div>

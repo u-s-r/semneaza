@@ -45,7 +45,7 @@ $data = get_data();
           <li class="dropdown">
             <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="<?= $page != "grupul-de-initiativa" ? SITE_URL . "/grupul-de-initiativa.php" : "" ?>">Grupul de initiativa</a></li>
+              <li><a href="<?= SITE_URL . "grupul-de-initiativa.php" ?>">Grupul de initiativa</a></li>
             </ul>
           </li>
           <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițiativa</a></li>
