@@ -45,6 +45,9 @@
         //var offset = $('#map-ro').offset();
         mouseX = e.pageX - tooltip.width() - 60;
         mouseY = e.pageY - tooltip.height() - 60;
+        if(mouseX < 0) {
+          mouseX = tooltip.width();
+        }
         tooltip.css({'top': mouseY, 'left': mouseX});
       }));
 
