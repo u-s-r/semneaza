@@ -43,6 +43,13 @@
         În parteneriat cu <a href="https://www.rezist.ro/" title="Rezistența"><img src="build/img/rezistenta.png" alt="Rezistența"></a>
       </div>
   </div>
+
+  <div class="scroll-to-top-button">
+    <a href="#top">
+    <img src="build/img/button_spring.png" />
+    </a>
+  </div>
+
 </footer>
 <div class="social-media">
   <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
