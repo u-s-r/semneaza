@@ -15,19 +15,33 @@
   </div>
 </div>
 <footer class="container">
-  <div class="col-md-2 col-md-push-2 navigare">
-      <h4>Navigare</h4>
-      <ul>
-        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#initiativa">Inițiativa</a></li>
-        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a></li>
-        <li><a href="<?= SITE_URL . "grupul-de-initiativa.php" ?>">Grupul de inițiativă</a></li>
-        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițativa</a></li>
-        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta">Situația pe regiuni</a></li>
-        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#media">Media</a></li>
-        <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#comunicate">Comunicate de presă</a></li>
-      </ul>
+  <div class="col-md-3 contact">
+    <h4>Contact</h4>
+    <div>Bulevardul Aviatorilor Nr. 9,<br>Sector 1, Bucureşti</div>
   </div>
-  <div class="col-md-3 col-md-push-4 distribuie">
+  <div class="col-md-6 navigare">
+      <h4>Navigare</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#initiativa">Inițiativa</a></li>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a></li>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= SITE_URL . "grupul-de-initiativa.php" ?>">Grupul de inițiativă</a></li>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițativa</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta">Situația pe regiuni</a></li>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#media">Media</a></li>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#comunicate">Comunicate de presă</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+  </div>
+  <div class="col-md-3 distribuie">
       <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
         <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
         Distribuie
@@ -35,7 +49,7 @@
   </div>
   <div class="col-xs-12 final row">
       <div class="usr col-sm-6">
-        Uniunea Salvați România &copy; 2018
+        Inițiativa <span class="hidden-xs">cetățenească</span> sprijinită de <a href="https://www.usr.ro/" title="Uniunea Salvați România"><img src="build/img/usr.png" alt="Uniunea Salvați România"></a>
       </div>
       <div class="rezistenta col-sm-6">
         În parteneriat cu <a href="https://www.rezist.ro/" title="Rezistența"><img src="build/img/rezistenta.png" alt="Rezistența"></a>

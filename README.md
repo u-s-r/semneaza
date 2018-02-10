@@ -3,10 +3,10 @@ Site USR
 
 
 
-Cerinte: `apt-get install vagrant npm`
+Cerinte: `composer npm`
 
-Deasemenea pentru node: `npm install -g grunt`
+Deasemenea pentru node: `sudo npm install -g grunt`
 
 Instalare pachete: `composer install && npm install`
 
-Rulat proiect: `vagrant up`, dupa aceea, `grunt --force && grunt --force watch`
+`grunt --force && grunt --force watch`
