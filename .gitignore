@@ -3,7 +3,7 @@
 config.php
 
 # Cached files
-/cache
+/cache/*.cache
 
 # OS generated files
 ._*
