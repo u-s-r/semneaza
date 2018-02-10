@@ -2,7 +2,7 @@
 <div class="formular">
     <div class="container">
         <form id="date-contact" method="post" action="date-contact.php">
-            <h2>Alătură-te inițiativei</h2>
+            <h1>Alătură-te inițiativei</h1>
             <div class="row">
                 <p class="col-md-9">Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
             </div>

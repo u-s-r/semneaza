@@ -275,7 +275,7 @@ require 'include/header.php';
     <div class="comunicate">
       <div class="container">
         <div class="col-md-12">
-          <h2>Comunicate de presă</h2>
+          <h1>Comunicate de presă</h1>
           <div class="row">
             <div class="col-md-12">
               <div class="comunicat row">
