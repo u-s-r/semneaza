@@ -42,12 +42,13 @@
     var mouseY;
 
     $('path.jvectormap-region.jvectormap-element').mousemove($.debounce(5, function(e) {
-        //var offset = $('#map-ro').offset();
         mouseX = e.pageX - tooltip.width() - 60;
         mouseY = e.pageY - tooltip.height() - 60;
-        if(mouseX < 0) {
-          mouseX = tooltip.width();
+
+        if (mouseX < 0) {
+          mouseX = tooltip.offset().left;
         }
+
         tooltip.css({'top': mouseY, 'left': mouseX});
       }));
 
