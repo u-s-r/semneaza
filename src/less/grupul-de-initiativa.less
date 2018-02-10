@@ -4,19 +4,31 @@
         color: @blue;
       }
 
-      .membri {
+      .membri ul {
+        padding-left: 0;
         list-style: none;
+        overflow: hidden;
+
+        @media (max-width: @screen-sm-max) {
+          height: 300px;
+        }
+
+        @media (min-width: @screen-md) {
+          height: 500px;
+        }
 
         li {
           width: 100%;
           overflow: hidden;
           border-bottom: 1px solid @blue-dull;
 
-          &:last-child, &:first-child {
+          &:last-child {
             border-bottom: none;
           }
 
           a {
+            display: block;
+            width: 100%;
             text-align: left;
             color: @dark-text;
 
@@ -29,16 +41,30 @@
             color: @blue;
             font-weight: 700;
 
+            div {
+              border: 2px solid @blue;
+            }
+
             span {
               display: inline-block;
+              position: absolute;
+              right: 0;
+              top: 8px;
+              bottom: 0;
+              background: #fff;
             }
           }
 
-          img {
+          div.imagine {
+            display: inline-block;
             height: 43px;
             width: 43px;
             max-height: 100%;
             vertical-align: middle;
+            background-size: cover;
+            background-origin: border-box;
+            background-position: center;
+            border-radius: 22px;
           }
 
           span {
@@ -50,7 +76,16 @@
 
     .tab-content {
       padding-left: 15px;
-      border-left: 1px solid @blue-dull;
     }
+  }
+}
+
+.mCS-light.mCSB_scrollTools {
+  .mCSB_dragger .mCSB_dragger_bar {
+    background-color: @blue;
+  }
+
+  .mCSB_draggerRail {
+    background-color: #ccc;
   }
 }

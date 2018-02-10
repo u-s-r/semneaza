@@ -22,7 +22,9 @@ module.exports = function (grunt) {
         files: {
           'build/css/style.css': [
               'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+              'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css',
               'node_modules/jvectormap/jquery-jvectormap.css',
+              'src/vendor/custom-scrollbar/jquery.custom-scrollbar.css',
               'src/less/style.less'
           ]
         }
@@ -106,6 +108,8 @@ module.exports = function (grunt) {
           'node_modules/jvectormap/jquery-jvectormap.min.js',
           'node_modules/jquery-form/dist/jquery.form.min.js',
           'node_modules/slick-carousel/slick/slick.min.js',
+          'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+          'src/vendor/custom-scrollbar/jquery.custom-scrollbar.js',
           'src/vendor/debounce/jquery.ba-throttle-debounce.min.js',
           'src/js/usr.js',
           'src/js/countdown.js',

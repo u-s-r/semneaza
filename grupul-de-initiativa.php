@@ -15,56 +15,59 @@ require 'include/header.php';
     </div>
   </div>
 </div>
+<?php
+
+$persoane = [];
+
+
+$persoane [] = ["nume" => "Mihai Badea", "key" => "Mihai-Badea", "descriere" => "Avocat și membru USR. Președintele grupului de inițiativă cetățenească \"Fără penali în funcții publice\"."];
+$persoane [] = ["nume" => "Mihai Șora", "key" => "Mihai-Sora", "descriere" => "Filosof și eseist. Membru fondator al Grupului de Dialog Social, al Alianței Civice și al Societății Române de Fenomenologie."];
+$persoane [] = ["nume" => "Gabriel Liiceanu", "key" => "Gabriel-Liiceanu", "descriere" => "Filosof, scriitor și membru al Grupului de Dialog Social."];
+$persoane [] = ["nume" => "Eugen Vasiliu", "key" => "Eugen-Vasiliu", "descriere" => "Jurist și membru al Grupului de Dialog Social."];
+$persoane [] = ["nume" => "Dan Grigore", "key" => "Dan-Grigore", "descriere" => "Pianist și membru al Grupului de Dialog Social."];
+$persoane [] = ["nume" => "Valeriu Nicolae", "key" => "Valeriu-Nicolae", "descriere" => "Fondatorul ONG-ului Policy Center for Roma and Minorities."];
+$persoane [] = ["nume" => "Eugen Iancu", "key" => "Eugen-Iancu", "descriere" => "Președintele Asociației Colectiv GTG 3010."];
+$persoane [] = ["nume" => "Oana Negru", "key" => "Oana-Negru", "descriere" => "Membru și manager juridic al grupului \"Rezistența\"."];
+$persoane [] = ["nume" => "Mihai Nicolae Tudorică", "key" => "Mihai-Nicolae-Tudorica", "descriere" => "Fondatorul  platformei \"Rezistența\", platforma care a apărut ca reacție civică de protest împotriva OUG 13 din februarie 2017."];
+$persoane [] = ["nume" => "Andrei Caramitru", "key" => "Andrei-Caramitru", "descriere" => "Consultant în afaceri, Partener și Director general la Boston Consulting Group, Viena."];
+$persoane [] = ["nume" => "Klaus Fabrițius", "key" => "Klaus-Fabritius", "descriere" => "Membru al Formului Democrat al Germanilor din România."];
+$persoane [] = ["nume" => "Liliana Chivu", "key" => "Liliana-Chivu", "descriere" => "Membru USR, Sector 3. Inginer de construcții hidrotehnice."];
+$persoane [] = ["nume" => "Diana Punga", "key" => "Diana-Punga", "descriere" => "Membru USR, Sector 3."];
+$persoane [] = ["nume" => "Costin Dobrescu", "key" => "Costin-Dobrescu", "descriere" => "Membru USR, Sector 6. Inginer de calculatoare."];
+$persoane [] = ["nume" => "Adrian Clopotari", "key" => "Adrian-Clopotari", "descriere" => "Membru USR, Sector 1. Avocat și statistician în insolvență."];
+$persoane [] = ["nume" => "George Oancea", "key" => "George-Oancea", "descriere" => "Membru USR, Sector 2. Analist programator."];
+$persoane [] = ["nume" => "Marius Petrișor Petcu", "key" => "Marius-Petrisor-Petcu", "descriere" => "Membru USR, filiala Călărași."];
+$persoane [] = ["nume" => "Anton Cupcea", "key" => "Anton-Cupcea", "descriere" => "Membru USR, Sector 1. Inginer de calculatoare."];
+$persoane [] = ["nume" => "Adrian Bogdan", "key" => "Adrian-Bogdan", "descriere" => "Membru USR Corbeanca, Ilfov. Statistician."];
+$persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "descriere" => "Membru USR, Sector 5. Economist."];
+
+?>
 <div class="container grupul-de-initiativa">
     <h1>Grupul de inițiativă</h1>
     <h4>Ajută la strângerea semnăturilor. Fiecare semnătură contează. <a href="#formular">Înscrie-te aici <span class="glyphicon glyphicon-menu-right"><span></a></h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget tristique massa. Fusce dictum odio a rhoncus scelerisque. Proin rutrum lacus in nisi tempus placerat. Aliquam a cursus nisi, id mollis neque. Duis eu libero euismod, ullamcorper nibh aliquet, tempus erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis molestie rutrum. Duis dignissim, libero non varius mattis, nibh ante egestas tellus, quis semper metus enim eu ligula. Aliquam sed nunc sit amet nisl consectetur placerat.</p>
-    <p>Aliquam id ex ac augue lacinia mattis. Nam mollis non arcu sed malesuada. Donec tincidunt mi sed ante bibendum mattis. Vivamus bibendum convallis quam, in suscipit elit cursus et.</p>
-    <ul class="col-md-3 membri" role="tablist" aria-orientation="vertical">
-      <li><h3>Membri</h3></li>
-      <li class="active">
-        <a class="btn col-xs-6 col-sm-6 col-md-12" id="mihai-vasile-tab" href="#mihai-vasile" role="pill" data-toggle="pill" aria-controls="media-tabs-video" aria-selected="true">
-          <img src="build/img/grupul-de-initiativa/some-dude.png" alt="">
-          Mihai Vasile
-          <span class="glyphicon glyphicon-menu-right"></span>
-        </a>
-      </li>
-      <li>
-        <a class="btn col-xs-6 col-sm-6 col-md-12" id="georgeta-ionescu-tab" href="#georgeta-ionescu" role="pill" data-toggle="pill" aria-controls="media-tabs-photo" aria-selected="false">
-          <img src="build/img/grupul-de-initiativa/some-lady.png" alt="">
-          Georgeta Ionescu
-          <span class="glyphicon glyphicon-menu-right"></span>
-        </a>
-      </li>
-    </ul>
-    <div class="col-md-9">
+    <p>Toți membrii Grupului de inițiativă respectă caracteristicile impuse de lege, de a nu fi alese în funcții prin vot universal, nici membri de Guvern, ori persoane numite de primul-ministru și nici persoane care nu pot face parte, potrivit legii, din partide politice.</p>
+    <div class="col-md-4 membri">
+      <h3>Membri</h3>
+      <ul role="tablist" aria-orientation="vertical">
+        <?php foreach($persoane as $index => $persoana) {?>
+          <li class="<?= $index == 0 ? 'active' : '' ?>">
+            <a class="btn col-xs-6 col-sm-6 col-md-12 no-scroll" id="<?= $persoana['key'] ?>-tab" href="#<?= $persoana['key'] ?>" role="pill" data-toggle="pill" aria-controls="media-tabs-<?= $persoana['key'] ?>" <?= $index == 0 ? 'aria-selected="true"' : '' ?>>
+              <div class="imagine" style="background-image: url('build/img/grupul-de-initiativa/<?= $persoana['key'] ?>.jpg')"></div>
+              <?= $persoana['nume'] ?>
+              <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+          </li>
+        <?php } ?>
+      </ul>
+    </div>
+    <div class="col-md-8">
       <div class="tab-content">
-        <div class="tab-pane fade active in" id="mihai-vasile" role="tabpanel" aria-labelledby="mihai-vasile-tab">
-            <h3>Despre</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque ligula vitae tempus maximus. Cras tempor maximus arcu. Mauris molestie ligula non blandit varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. In semper consectetur turpis, sed laoreet mauris fermentum at. Donec sollicitudin urna faucibus, placerat mi sit amet, pulvinar urna. Curabitur et enim ante. Etiam bibendum leo dolor, efficitur molestie ex pulvinar ut. Maecenas pulvinar viverra justo sed finibus. Aenean ac euismod lacus. Maecenas et luctus velit, ac cursus dolor.
-            </p>
-            <p>
-                Ut risus diam, faucibus a ipsum vitae, tempus iaculis orci. Phasellus tristique tempus euismod. Curabitur et convallis ipsum. Aenean lobortis orci magna, eget porttitor dolor malesuada quis. Donec scelerisque laoreet nulla. Donec sed ornare felis. Cras accumsan sem nec pretium maximus. Cras sit amet elit eros. In et mi quis tellus auctor tristique. Nunc vitae libero a purus faucibus mollis posuere sed leo. Morbi at dolor accumsan, gravida mauris sed, faucibus est. Vivamus molestie est eget felis pellentesque interdum.
-                Etiam bibendum leo dolor, efficitur molestie ex pulvinar ut. Maecenas pulvinar viverra justo sed finibus. Aenean ac euismod lacus. Maecenas et luctus velit, ac cursus dolor.
-            </p>
-            <p>
-                Nam quis tempor dolor. Aliquam ac finibus nibh. Pellentesque at porttitor velit. Fusce tincidunt sapien nisi, ac fermentum ex hendrerit vel. Fusce vehicula velit vitae nibh congue cursus. Praesent congue tellus eu mi consectetur, vitae tincidunt orci tincidunt. Mauris diam lacus, bibendum id augue id, laoreet tincidunt felis.
-            </p>
-        </div>
-        <div class="tab-pane fade" id="georgeta-ionescu" role="tabpanel" aria-labelledby="georgeta-ionescu-tab">
-            <h3>Despre</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque ligula vitae tempus maximus. Cras tempor maximus arcu. Mauris molestie ligula non blandit varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. In semper consectetur turpis, sed laoreet mauris fermentum at. Donec sollicitudin urna faucibus, placerat mi sit amet, pulvinar urna. Curabitur et enim ante. Etiam bibendum leo dolor, efficitur molestie ex pulvinar ut. Maecenas pulvinar viverra justo sed finibus. Aenean ac euismod lacus. Maecenas et luctus velit, ac cursus dolor.
-            </p>
-            <p>
-                Ut risus diam, faucibus a ipsum vitae, tempus iaculis orci. Phasellus tristique tempus euismod. Curabitur et convallis ipsum. Aenean lobortis orci magna, eget porttitor dolor malesuada quis. Donec scelerisque laoreet nulla. Donec sed ornare felis. Cras accumsan sem nec pretium maximus. Cras sit amet elit eros. In et mi quis tellus auctor tristique. Nunc vitae libero a purus faucibus mollis posuere sed leo. Morbi at dolor accumsan, gravida mauris sed, faucibus est. Vivamus molestie est eget felis pellentesque interdum.
-                Etiam bibendum leo dolor, efficitur molestie ex pulvinar ut. Maecenas pulvinar viverra justo sed finibus. Aenean ac euismod lacus. Maecenas et luctus velit, ac cursus dolor.
-            </p>
-            <p>
-                Nam quis tempor dolor. Aliquam ac finibus nibh. Pellentesque at porttitor velit. Fusce tincidunt sapien nisi, ac fermentum ex hendrerit vel. Fusce vehicula velit vitae nibh congue cursus. Praesent congue tellus eu mi consectetur, vitae tincidunt orci tincidunt. Mauris diam lacus, bibendum id augue id, laoreet tincidunt felis.
-            </p>
-        </div>
+        <?php foreach($persoane as $index => $persoana) {?>
+          <div class="tab-pane fade <?= $index == 0 ? 'active in' : '' ?>" id="<?= $persoana['key'] ?>" role="tabpanel" aria-labelledby="<?= $persoana['key'] ?>-tab">
+            <h3><?= $persoana['nume'] ?></h3>
+            <p><?= $persoana['descriere'] ?></p>
+          </div>
+        <?php } ?>
       </div>
 
     </div>

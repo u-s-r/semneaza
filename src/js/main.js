@@ -7,6 +7,15 @@
     'data': window.remoteData
   };
 
+  $('.page-grupul-de-initiativa .membri ul').mCustomScrollbar({
+    theme: 'light'
+  });
+
+  // This is a hacky workaround because bootstrap tabs seem to not play very nice with mCustomScrollbar
+  $('.page-grupul-de-initiativa .membri ul a').on('show.bs.tab', function( ) {
+    $('.page-grupul-de-initiativa .membri ul .active').removeClass('active');
+  });
+
   $('.descriere .detalii .slick-slider').slick({
     dots: true,
     arrows: false,
