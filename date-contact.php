@@ -18,7 +18,7 @@ try {
 
   // Not gonna do any encoding here, leaving it to the Google library
   $requestBody->setValues([
-      [$_POST['name'], $_POST['tel'], $_POST['email']]
+      [$_POST['name'], $_POST['tel'], $_POST['email'], $_POST['address']]
   ]);
 
   $response = $service->spreadsheets_values->append(SPREADSHEET_ID, SPREADSHEET_RANGE_FOR_FORM, $requestBody, ['valueInputOption' => 'RAW']);

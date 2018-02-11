@@ -111,6 +111,10 @@ require 'include/header.php';
                   <label for="email"><h4>E-mail</h4></label>
                     <input type="email" name="email" autocomplete="email"/>
                   </div>
+                  <div>
+                  <label for="address"><h4>Adresă</h4></label>
+                    <input type="text" name="address" autocomplete="address"/>
+                  </div>
                   <div class="validation-error-message hidden">
                     <p>Te rugăm completează cel putin unul din câmpurile Telefon sau E-mail.</p>
                   </div>

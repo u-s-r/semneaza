@@ -41,17 +41,21 @@
                     <p class="col-md-9">Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <h4>Nume și prenume</h4>
                       <input type="text" name="name" required autocomplete="name">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <h4>Telefon</h4>
                       <input type="tel" name="tel" autocomplete="tel">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <h4>E-mail</h4>
                       <input type="email" name="email" autocomplete="email">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Adresă</h4>
+                      <input type="text" name="address" autocomplete="address">
                     </div>
                 </div>
                 <div class="validation-error-message hidden">
