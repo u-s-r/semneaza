@@ -1,7 +1,7 @@
 {
-  "name": "usr",
+  "name": "fara-penali",
   "version": "1.0.0",
-  "description": "Începe curățenia Parlamentului cu o semnătură!",
+  "description": "Site pentru campania 'Fără Penali în funcții publice'",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/u-s-r/semneaza/issues"
   },
-  "homepage": "https://semneaza.usr.ro/",
+  "homepage": "https://farapenali.usr.ro/",
   "dependencies": {
     "bootstrap-less": "^3.3.8",
     "countdown": "^2.6.0",

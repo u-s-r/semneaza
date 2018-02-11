@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "57b61a99923c77380d396a8885ee32d3",
-    "content-hash": "ebd6b4d1d6df22f06c8651a413e074ac",
+    "hash": "cacbf7dfbc248d50483ad1e93a4e5d53",
+    "content-hash": "dd5211ab167c06b4b6837528595038f7",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -52,48 +52,6 @@
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
             "time": "2017-06-27 22:17:23"
-        },
-        {
-            "name": "gilbitron/php-simplecache",
-            "version": "1.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gilbitron/PHP-SimpleCache.git",
-                "reference": "eb43b12945955428ced0b55d711d57afc6c4c9b3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gilbitron/PHP-SimpleCache/zipball/eb43b12945955428ced0b55d711d57afc6c4c9b3",
-                "reference": "eb43b12945955428ced0b55d711d57afc6c4c9b3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Gilbitron\\Util\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gilbert Pellegrom",
-                    "email": "gilbert@pellegrom.me",
-                    "homepage": "http://gilbert.pellegrom.me"
-                }
-            ],
-            "description": "A simple script for caching 3rd party API calls in PHP.",
-            "homepage": "https://github.com/gilbitron/PHP-SimpleCache",
-            "keywords": [
-                "cache",
-                "simplecache"
-            ],
-            "time": "2014-07-15 09:37:49"
         },
         {
             "name": "google/apiclient",
@@ -156,16 +114,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.44",
+            "version": "v0.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/google-api-php-client-services.git",
-                "reference": "7f1b3a3f387fc3435f27003977ebf5989f8bcca2"
+                "reference": "35909fbc909bf9f9e0d36dd05b62f4b1d5ffe3ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/7f1b3a3f387fc3435f27003977ebf5989f8bcca2",
-                "reference": "7f1b3a3f387fc3435f27003977ebf5989f8bcca2",
+                "url": "https://api.github.com/repos/google/google-api-php-client-services/zipball/35909fbc909bf9f9e0d36dd05b62f4b1d5ffe3ae",
+                "reference": "35909fbc909bf9f9e0d36dd05b62f4b1d5ffe3ae",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +147,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2018-01-28 00:23:18"
+            "time": "2018-02-03 00:23:12"
         },
         {
             "name": "google/auth",
