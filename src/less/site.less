@@ -451,6 +451,7 @@ textarea, input {
 
 .social-media-links {
   display: inline-block;
+  margin-right: 5px;
 }
 
 .hidden {
@@ -500,11 +501,23 @@ footer {
     background: url('../img/pin.png') no-repeat top left;
   }
 
+  .navigare, .contact {
+    margin-top: 15px;
+  }
+
   .navigare {
     ul {
       list-style: none;
       padding-left: 0;
       margin-bottom: 0;
+
+
+      @media (max-width: @screen-sm-max) {
+        li {
+          margin-bottom: 3px;
+        }
+
+      }
       span {
         font-size: 10px;
         color: @blue;
@@ -612,7 +625,6 @@ footer {
 .page-grupul-de-initiativa,
 .page-expunere-de-motive,
 .page-comunicate-de-presa {
-
   @media (max-width: @screen-md-max) {
     h1 {
       font-size: 25px;

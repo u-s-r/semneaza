@@ -212,7 +212,7 @@ require 'include/header.php';
             <img src="<?= asset_url('img/icon-semneaza.png') ?>" alt="Semnează">
             <div>
                 <h3>Semnează</h3>
-                <p>Încă nu am început strângerea de semnături, inițiativa așteaptă avizul legislativ. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
+                <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
             </div>
           </li>
           <?php if (CAMPANIE_DE_SEMNATURI) { ?>
