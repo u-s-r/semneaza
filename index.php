@@ -114,7 +114,7 @@ require 'include/header.php';
                   <div class="validation-error-message hidden">
                     <p>Te rugăm completează cel putin unul din câmpurile Telefon sau E-mail.</p>
                   </div>
-                  <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+                  <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'formular_jumbotron', 'submit')">
                     Înscrie-te acum!
                   </button>
                 </div>

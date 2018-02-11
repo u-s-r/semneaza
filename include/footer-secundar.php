@@ -20,7 +20,7 @@
                   <input type="text" name="email">
                 </div>
             </div>
-            <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
+            <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'formular_<?= $page ?>', 'submit')">
               Înscrie-te acum!
             </button>
         </form>
