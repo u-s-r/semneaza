@@ -43,13 +43,15 @@ function get_data() {
 
   $data = array();
 
-  $cache     = new Gilbitron\Util\SimpleCache();
+  $cache = new Gilbitron\Util\SimpleCache();
+  $cache->cache_path = __DIR__ . '/../cache/';
+
   $tabel = $cache->get_data('semnaturi', $url);
   $tabel = json_decode($tabel);
 
   $total = 0;
-  $min   = 0;
-  $max   = 0;
+  $min = 0;
+  $max = 0;
 
   $nume_coloane = [
     'semnaturi' => SEMNATURI_COLUMN_KEY,
