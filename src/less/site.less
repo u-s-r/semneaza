@@ -388,6 +388,65 @@ textarea, input {
   ul {
     list-style: none;
   }
+
+  ul.container-media {
+    padding: 0;
+    list-style-type: none;
+    clear: both;
+    margin: 0;
+
+    .media-element {
+      padding: 20px 0;
+
+      &:last-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      > img {
+        float: left;
+        margin-top: 10px;
+      }
+      div {
+        padding-top: 10px;
+        padding-left: 150px;
+
+        h3 {
+          margin-top: 0;
+        }
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: @screen-xs-max) {
+        > img {
+          width: 60px;
+        }
+        div {
+          padding-left: 75px;
+        }
+      }
+    }
+  }
+ }
+
+
+
+.list-checkbox {
+  margin-bottom: 20px;
+  @media all and (max-device-width: 420px) {
+      padding:0;
+      margin:0;
+    }
+  li {
+    padding-left:0;
+    margin-bottom:10px;
+  }
 }
 
 .social-media-links {
