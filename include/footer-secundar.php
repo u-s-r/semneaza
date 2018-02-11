@@ -16,11 +16,10 @@
                   <input type="text" name="telefon">
                 </div>
                 <div class="col-md-4">
-                  <h4>Email</h4>
+                  <h4>E-mail</h4>
                   <input type="text" name="email">
                 </div>
             </div>
-
             <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
               Înscrie-te acum!
             </button>

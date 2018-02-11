@@ -1,8 +1,6 @@
 <?php
 $page = "acasa";
 
-ini_set('display_errors', 'On');
-
 require 'include/header.php';
 ?>
     <div class="jumbotron jumbotron-primary">
@@ -58,7 +56,7 @@ require 'include/header.php';
               </p>
             <?php } ?>
           </div>
-         
+
           <div class="col-md-6 panel-host">
             <div class="panel panel-default">
               <div class="form-loading-circle-container hidden">
@@ -85,8 +83,8 @@ require 'include/header.php';
                   </div>
                   </div>
                 <div class="panel-body success-message hidden">
-                    <h1>Mulțumim! </h1>
-                    <p>Informațiile tale au fost înregistrate. </p>
+                    <h1>Mulțumim!</h1>
+                    <p>Informațiile tale au fost înregistrate.</p>
                     <div class="svg-success-wrapper">
                       <svg id="successAnimation" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
                         <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
@@ -111,7 +109,7 @@ require 'include/header.php';
                     <input type="email" name="email" autocomplete="email"/>
                   </div>
                   <div class="validation-error-message hidden">
-                    <p>Te rugam completeaza cel putin unul din campurile Telefon sau E-mail</p>
+                    <p>Te rugăm completeaza cel putin unul din câmpurile Telefon sau E-mail</p>
                   </div>
                   <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'pagina_semnaturi', 'buton', 'trimite_date_contact')">
                     Înscrie-te acum!
@@ -120,7 +118,6 @@ require 'include/header.php';
               </form>
             </div>
           </div>
-
         </div>
       </div>
     </div>

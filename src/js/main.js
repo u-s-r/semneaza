@@ -72,7 +72,7 @@
         }
       }
     }
-    html += '<br>Contact: ';
+    html += 'Contact: ';
 
     if ('' !== contacte) {
       html += '<dl>' + contacte + '</dl>';
