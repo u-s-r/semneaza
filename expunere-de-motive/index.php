@@ -2,7 +2,7 @@
 $page = "expunere-de-motive";
 
 $title="Expunere de motive";
-$description="Fără penali în funcții publice";
+$description="Fără Penali în funcții publice";
 
 require __DIR__ . '/../include/header-secundar.php';
 ?>

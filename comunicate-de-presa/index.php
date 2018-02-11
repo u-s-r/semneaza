@@ -2,7 +2,7 @@
 $page = "comunicate-de-presa";
 
 $title="Comunicate de presă";
-$description="Fără penali în funcții publice";
+$description="Fără Penali în funcții publice";
 
 require __DIR__ . '/../include/header-secundar.php';
 ?>

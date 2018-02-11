@@ -3,7 +3,7 @@
 $page = "grupul-de-initiativa";
 
 $title="Grupul de inițiativă";
-$description="Fără penali în funcții publice";
+$description="Fără Penali în funcții publice";
 
 require __DIR__ . '/../include/header-secundar.php';
 

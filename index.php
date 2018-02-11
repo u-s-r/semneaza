@@ -1,7 +1,7 @@
 <?php
 $page = "acasa";
 
-$title="Fără penali în funcții publice";
+$title="Fără Penali în funcții publice";
 $description="Inițiativa cetățenească de modificare a Constituției";
 
 require 'include/header.php';
@@ -11,7 +11,7 @@ require 'include/header.php';
         <div class="row">
           <div class="col-md-6 banner">
             <div class="prima-linie">
-              <h1>Fără Penali în funcții publice!</h1>
+              <h1>Fără Penali în funcții publice</h1>
             </div>
             <div class="a-doua-linie">
               <h2>Inițiativa cetățenească de modificare a Constituției</h2>
@@ -162,7 +162,7 @@ require 'include/header.php';
             </div>
             <div>
               <p>Din cauza corupției, 2 din 5 români trăiesc în sărăcie sau la un pas să ajungă în această situație, județele cele mai mai sărace din țară sunt și cele conduse de baronii locali ai PSD: Teleorman, Buzău, Vaslui. Fără penali în funcții publice ar însemna că cei care au condus România în ultimii 29 de ani să se apropie mai greu de funcțiile publice.</p>
-              <p>Realitatea din România anului 2018 înseamnă toate cele de mai sus. Numai societatea civilă poate determina o schimbare. Căci nu este de ajuns să-i schimbăm pe cei de la putere, ci trebuie schimbat modul în care acționează poporul român. Urgența situației vine din schimbarea modului de a face politică cu unul moral și îndreptat către realitatea pe care o vedem zilnic în jurul nostru. Propunerea de schimbare a Constituției este una care are la bază inițiativa cetățenească mult strigată de românii care au ieșit în stradă în 2017 și 2018.</p>
+              <p>Realitatea din România anului 2018 înseamnă toate cele de mai sus. Numai societatea civilă poate determina o schimbare. Nu este de ajuns să-i schimbăm pe cei de la putere, trebuie schimbat modul în care acționează poporul român. Urgența situației vine din necesitatea schimbării modului de a face politică cu unul moral și îndreptat către realitatea pe care o vedem zilnic în jurul nostru. Propunerea de schimbare a Constituției este una care are la bază inițiativa cetățenească mult strigată de românii care au ieșit în stradă în 2017 și 2018.</p>
               <p>Demersul are nevoie de cel puțin 500.000 de semnături strânse în 6 luni. Semnătura ta poate schimba modul în care funcționează și arată România.</p>
               <p>Alătură-te inițiativei!</p>
             </div>
