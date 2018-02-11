@@ -8,7 +8,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                  <h4>Numele și prenume</h4>
+                  <h4>Nume și prenume</h4>
                   <input type="text" name="nume">
                 </div>
                 <div class="col-md-4">

@@ -42,10 +42,18 @@
     var mouseY;
 
     $('path.jvectormap-region.jvectormap-element').mousemove($.debounce(5, function(e) {
-        mouseX = e.pageX - tooltip.width() - 60;
-        mouseY = e.pageY - tooltip.height() - 80;
+        var tooltipWidth = tooltip.outerWidth();
+        var tooltipHeight = tooltip.outerHeight();
+        var outerBodyWidth = $(document.body).outerWidth();
+
+        mouseX = e.pageX - tooltipWidth / 2;
+        mouseY = e.pageY - tooltipHeight - 80;
         if (mouseX < 0) {
           mouseX = 0;
+        }
+
+        if (mouseX + tooltipWidth > outerBodyWidth) {
+          mouseX = outerBodyWidth - tooltipWidth;
         }
 
         tooltip.css({'top': mouseY, 'left': mouseX});
