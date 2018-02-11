@@ -151,6 +151,12 @@ module.exports = function (grunt) {
             cwd: 'node_modules/bootstrap-less/fonts',
             src: ['*'],
             dest: 'build/fonts'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/slick-carousel/slick/a',
+            src: ['ajax-loader.gif'],
+            dest: 'build/img/'
           }
         ]
       }
