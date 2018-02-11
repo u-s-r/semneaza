@@ -12,7 +12,7 @@
   });
 
   // This is a hacky workaround because bootstrap tabs seem to not play very nice with mCustomScrollbar
-  $('.page-grupul-de-initiativa .membri ul a').on('show.bs.tab', function( ) {
+  $('.page-grupul-de-initiativa .membri ul a').on('show.bs.tab', function() {
     $('.page-grupul-de-initiativa .membri ul .active').removeClass('active');
   });
 
@@ -44,9 +44,8 @@
     $('path.jvectormap-region.jvectormap-element').mousemove($.debounce(5, function(e) {
         mouseX = e.pageX - tooltip.width() - 60;
         mouseY = e.pageY - tooltip.height() - 80;
-
         if (mouseX < 0) {
-          mouseX = tooltip.offset().left;
+          mouseX = 0;
         }
 
         tooltip.css({'top': mouseY, 'left': mouseX});
@@ -62,16 +61,17 @@
         USR.data.semnaturi[code].toString() + '<br>';
     }
 
-    for (var i = 0; i < USR.data.contacte[code].length; i++) {
-      contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
-
-      for (var j = 0; j < USR.data.contacte[code][i].intrari.length; j++) {
-        contacte += '<li>' + USR.data.contacte[code][i].intrari[j] + '</li>';
+    if (USR.data.contacte[code] != null) {
+      for (var i = 0; i < USR.data.contacte[code].length; i++) {
+        if (USR.data.contacte[code][i] != null) {
+          contacte += '<dt>' + USR.data.contacte[code][i].locatie + '</dt><dd><ul class="list-unstyled">';
+          for (var j = 0; j < USR.data.contacte[code][i].intrari.length; j++) {
+            contacte += '<li>' + USR.data.contacte[code][i].intrari[j] + '</li>';
+          }
+          contacte += '</ul></dd>';
+        }
       }
-
-      contacte += '</ul></dd>';
     }
-
     html += 'Contact: ';
 
     if ('' !== contacte) {
