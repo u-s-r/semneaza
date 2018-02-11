@@ -20,7 +20,7 @@ require __DIR__ . '/../include/header-secundar.php';
     <p>USR își respectă promisiunea de a prelua mesajele oamenilor din stradă și a le aduce în Parlament pentru a deveni propuneri legislative. Obiectivul USR rămâne acela de a schimba modul de a face politică în România, în colaborare cu societatea civilă, pentru binele și interesele cetățenilor și nu pentru interesele personale și de partid, așa cum ne-au obișnuit partidele tradiționale.</p>
     <div class="footer">
         <span class="date">8 Noiembrie 2017</span>
-        <a href="<?= SITE_URL ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a>
+        <a href="<?= link_url('') ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a>
     </div>
   </div>
   <div class="col-md-4 sidebar-comunicate-de-presa">

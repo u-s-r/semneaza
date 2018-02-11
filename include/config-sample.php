@@ -1,5 +1,4 @@
 <?php
-define('SITE_URL', '');
 define('SPREADSHEET_ID', '');
 define('SPREADSHEET_RANGE_FOR_DISPLAY', 'Afisare Site');
 define('SPREADSHEET_RANGE_FOR_FORM', 'Date Formular Contact');

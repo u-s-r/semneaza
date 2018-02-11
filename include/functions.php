@@ -108,9 +108,17 @@ function get_data() {
 }
 
 function asset_url($relative_path) {
-  return SITE_URL . "build/" . $relative_path;
+  if (defined("ASSET_URL")) {
+    return ASSET_URL . $relative_path;
+  } else {
+    return "/build/" . $relative_path;
+  }
 }
 
 function link_url($relative_path) {
-  return SITE_URL . $relative_path;
+  if (defined("SITE_URL")) {
+    return SITE_URL . $relative_path;
+  } else {
+    return "/" . $relative_path;
+  }
 }

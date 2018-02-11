@@ -43,7 +43,7 @@ $data = get_data();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?= SITE_URL ?>">
+        <a class="navbar-brand" href="<?= link_url('') ?>">
           <img src="<?= asset_url('img/logo.png') ?>" class="hidden-xs hidden-sm">
           <img src="<?= asset_url('img/logo-30.png') ?>" class="hidden-lg hidden-md">
         </a>
