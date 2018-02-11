@@ -5,21 +5,9 @@ if(defined('DEBUG')) {
 }
 
 try {
-  require_once __DIR__ . '/vendor/autoload.php';
-  require_once __DIR__ . '/include/config.php';
+  require_once __DIR__ . '/include/functions.php';
 
-  $client = new Google_Client();
-
-  // Below is the credential setup for a Gooogle service account setup like here:
-  // http://ajaxray.com/blog/store-data-to-google-sheets-using-php/
-  $client->useApplicationDefaultCredentials();
-  $client->setClientId(GOOGLE_CLIENT_ID);
-  $client->setConfig('client_email', GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL);
-  $client->setConfig('signing_key', GOOGLE_SERVICE_ACCOUNT_SIGNING_KEY);
-  $client->setConfig('signing_algorithm', 'HS256');
-  $client->setScopes(Google_Service_Sheets::SPREADSHEETS);
-
-  $service = new Google_Service_Sheets($client);
+  $service = get_spreadsheets_service();
 
   $requestBody = new Google_Service_Sheets_ValueRange();
 

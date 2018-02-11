@@ -3,6 +3,12 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/config.php';
 
+use phpFastCache\CacheManager;
+
+CacheManager::setDefaultConfig([
+    "path" => __DIR__ . "/../cache/"
+]);
+
 function get_locatii($data) {
   $linii = explode("\n", $data);
   $locatii_judet = [];
@@ -39,15 +45,23 @@ function get_locatii($data) {
 }
 
 function get_data() {
-  $url = sprintf('https://sheets.googleapis.com/v4/spreadsheets/%s/values/%s?key=%s', SPREADSHEET_ID, urlencode(SPREADSHEET_RANGE_FOR_DISPLAY), GOOGLE_API_KEY);
-
   $data = array();
 
-  $cache = new Gilbitron\Util\SimpleCache();
-  $cache->cache_path = __DIR__ . '/../cache/';
+  $instance_cache = CacheManager::getInstance('files');
 
-  $tabel = $cache->get_data('semnaturi', $url);
-  $tabel = json_decode($tabel);
+  $statistici_judete = $instance_cache->getItem('statistici_judete');
+
+  if (is_null($statistici_judete->get())) {
+    $service = get_spreadsheets_service ();
+
+    $tabel = $service->spreadsheets_values->get(SPREADSHEET_ID, SPREADSHEET_RANGE_FOR_DISPLAY);
+
+    $statistici_judete->set($tabel)->expiresAfter(10*60);
+
+    $instance_cache->save($statistici_judete);
+  } else {
+    $tabel = $statistici_judete->get();
+  }
 
   $total = 0;
   $min = 0;
@@ -105,6 +119,21 @@ function get_data() {
   $data['campanieSemnaturi'] = CAMPANIE_DE_SEMNATURI;
 
   return $data;
+}
+
+function get_spreadsheets_service() {
+  $client = new Google_Client();
+
+  // Below is the credential setup for a Gooogle service account setup like here:
+  // http://ajaxray.com/blog/store-data-to-google-sheets-using-php/
+  $client->useApplicationDefaultCredentials();
+  $client->setClientId(GOOGLE_CLIENT_ID);
+  $client->setConfig('client_email', GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL);
+  $client->setConfig('signing_key', GOOGLE_SERVICE_ACCOUNT_SIGNING_KEY);
+  $client->setConfig('signing_algorithm', 'HS256');
+  $client->setScopes(Google_Service_Sheets::SPREADSHEETS);
+
+  return new Google_Service_Sheets($client);
 }
 
 function asset_url($relative_path) {

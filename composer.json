@@ -1,6 +1,7 @@
 {
   "require": {
     "gilbitron/php-simplecache": "~1.4",
-    "google/apiclient": "^2.0"
+    "google/apiclient": "^2.0",
+    "phpFastCache/phpFastCache": "^6.1"
   }
 }

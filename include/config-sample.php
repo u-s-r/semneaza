@@ -2,7 +2,6 @@
 define('SPREADSHEET_ID', '');
 define('SPREADSHEET_RANGE_FOR_DISPLAY', 'Afisare Site');
 define('SPREADSHEET_RANGE_FOR_FORM', 'Date Formular Contact');
-define('GOOGLE_API_KEY', '');
 define('GOOGLE_CLIENT_ID', '');
 define('GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL', '');
 define('GOOGLE_SERVICE_ACCOUNT_SIGNING_KEY', ''); // If this has new line characters, it might need double quotes
