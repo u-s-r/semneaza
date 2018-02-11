@@ -54,13 +54,13 @@ require 'include/header.php';
                 </div>
             <?php } else { ?>
               <p>
-                <img src="build/img/bec-creion.png" alt="">
+                <img src="<?= asset_url('img/bec-creion.png') ?>" alt="">
                 “Nu pot fi aleși în organele administrației publice locale, în Camera Deputaților, în Senat și în funcția de Președinte al României <strong>cetățenii condamnați definitiv la pedepse privative de libertate</strong> pentru infracțiuni săvârșite cu intenție, până la intervenirea unei situații care înlătură consecințele condamnării."
               </p>
             <?php } ?>
           </div>
 
-          <div class="col-md-6 panel-host">
+          <div class="col-md-6 panel-host" name="formular">
             <div class="panel panel-default">
               <div class="form-loading-circle-container hidden">
                 <div class="loading-circle">
@@ -145,7 +145,7 @@ require 'include/header.php';
              </p>
              <a href="expunere-de-motive.php">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
            </div>
-           <a href="expunere-de-motive.php"><img src="build/img/expunere-de-motive.png" alt="" class="col-md-6"></a>
+           <a href="expunere-de-motive.php"><img src="<?= asset_url('img/expunere-de-motive.png') ?>" alt="" class="col-md-6"></a>
         </div>
       </div>
     </div>
@@ -205,7 +205,7 @@ require 'include/header.php';
     <div class="container semneaza">
         <ul class="container-media col-md-10 col-md-push-1">
           <li class="media-element">
-            <img src="build/img/icon-semneaza.png" alt="Semnează">
+            <img src="<?= asset_url('img/icon-semneaza.png') ?>" alt="Semnează">
             <div>
                 <h3>Semnează</h3>
                 <p>Încă nu am început strângerea de semnături, inițiativa așteaptă avizul legislativ. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
@@ -213,20 +213,20 @@ require 'include/header.php';
           </li>
           <?php if (CAMPANIE_DE_SEMNATURI) { ?>
             <li class="media-element">
-              <img src="build/img/icon-spune-prietenilor.png" alt="Semnează">
+              <img src="<?= asset_url('img/icon-spune-prietenilor.png') ?>" alt="Semnează">
               <div>
                 <h3>Spune-le familiei și prietenilor!</h3>
                 <p>Ne trebuie cât mai multe semnături, aşa că te rugăm să vorbeşti cu prietenii, familia şi vecinii tăi să completeze şi ei formularul. Semnăturile lor trebuie să fie originale; nu semnaţi în locul altei persoane.</p>
                 <p>
                   <a class="btn btn-facebook" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
-                    <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
+                    <img src="<?= asset_url('img/logo-facebook-inverted.png') ?>" alt="Facebook">
                     Distribuie
                   </a>
                 </p>
               </div>
             </li>
             <li class="media-element">
-              <img src="build/img/icon-trimite.png" alt="Semnează">
+              <img src="<?= asset_url('img/icon-trimite.png') ?>" alt="Semnează">
               <div>
                 <h3 class="media-heading">Trimite</h3>
                 <p>Formularele completate trebuie să ajungă în posesia noastră <strong>până pe 20 octombrie </strong> (ghidul pentru <a href="http://usb.ro/wp-content/uploads/2016/10/Ghid-strangere-semnaturi-diaspora.pdf" target="_blank">diaspora aici</a>). Poţi face asta în două feluri:</p>
@@ -313,7 +313,7 @@ require 'include/header.php';
           <div class="row">
             <div class="col-md-12">
               <div class="comunicat row">
-                <a href="comunicate-de-presa.php" class="col-md-4" style="background-image: url('build/img/comunicate/conferinta-de-presa.png')"></a>
+                <a href="comunicate-de-presa.php" class="col-md-4" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.png')?>')"></a>
                 <div class="corp col-md-8">
                   <span>8 Noiembrie 2017</span>
                   <h3><a href="comunicate-de-presa.php">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>

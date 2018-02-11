@@ -104,3 +104,7 @@ function get_data() {
 
   return $data;
 }
+
+function asset_url($relative_path) {
+  return SITE_URL . "build/" . $relative_path;
+}

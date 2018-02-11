@@ -44,7 +44,7 @@ $persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "
             <?php foreach($persoane as $index => $persoana) {?>
               <li class="<?= $index == 0 ? 'active' : '' ?>">
                 <a class="btn col-xs-6 col-sm-6 col-md-12 no-scroll" id="<?= $persoana['key'] ?>-tab" href="#<?= $persoana['key'] ?>" role="pill" data-toggle="pill" aria-controls="media-tabs-<?= $persoana['key'] ?>" <?= $index == 0 ? 'aria-selected="true"' : '' ?>>
-                  <div class="imagine" style="background-image: url('build/img/grupul-de-initiativa/<?= $persoana['key'] ?>.jpg')"></div>
+                  <div class="imagine" style="background-image: url('<?= asset_url('img/grupul-de-initiativa/'. $persoana['key'] .'.jpg') ?>')"></div>
                   <?= $persoana['nume'] ?>
                   <span class="glyphicon glyphicon-menu-right"></span>
                 </a>
@@ -58,7 +58,7 @@ $persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "
               <div class="tab-pane fade <?= $index == 0 ? 'active in' : '' ?>" id="<?= $persoana['key'] ?>" role="tabpanel" aria-labelledby="<?= $persoana['key'] ?>-tab">
                 <h3><?= $persoana['nume'] ?></h3>
                 <p><?= $persoana['descriere'] ?></p>
-                <img src="build/img/cover.png" alt="">
+                <img src="<?= asset_url('img/cover.png') ?>" alt="">
               </div>
             <?php } ?>
           </div>

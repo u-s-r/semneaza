@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="col-md-4 col-sm-4 grafica">
-        <img src="build/img/balanta.png" alt="" title="Implică-te și tu!">
+        <img src="<?= asset_url('img/balanta.png') ?>" alt="" title="Implică-te și tu!">
       </div>
     </div>
   </div>
@@ -39,13 +39,13 @@
         </div>
         <div class="col-md-4 distribuie">
             <a class="social-media-links" href="https://www.facebook.com/USRNational/" target="_blank">
-              <img src="build/img/logo-facebook-small.png" alt="Facebook">
+              <img src="<?= asset_url('img/logo-facebook-small.png') ?>" alt="Facebook">
             </a>
             <a class="social-media-links" href="https://www.youtube.com/channel/UCe0NmPCTlXzTdAAROfWYBNw" target="_blank">
-              <img src="build/img/logo-youtube-small.png" alt="Youtube">
+              <img src="<?= asset_url('img/logo-youtube-small.png') ?>" alt="Youtube">
             </a>
             <a class="social-media-links" href="https://twitter.com/usr_romania" target="_blank">
-              <img src="build/img/logo-twitter-small.png" alt="Twitter">
+              <img src="<?= asset_url('img/logo-twitter-small.png') ?>" alt="Twitter">
             </a>
         </div>
       </div>
@@ -53,27 +53,27 @@
   </div>
   <div class="col-xs-12 final row">
       <div class="usr col-sm-6">
-        Inițiativa <span class="hidden-xs">cetățenească</span> sprijinită de <a href="https://www.usr.ro/" title="Uniunea Salvați România"><img src="build/img/usr.png" alt="Uniunea Salvați România"></a>
+        Inițiativa <span class="hidden-xs">cetățenească</span> sprijinită de <a href="https://www.usr.ro/" title="Uniunea Salvați România"><img src="<?= asset_url('img/usr.png') ?>" alt="Uniunea Salvați România"></a>
       </div>
       <div class="rezistenta col-sm-6">
-        În parteneriat cu <a href="https://www.rezist.ro/" title="Rezistența"><img src="build/img/rezistenta.png" alt="Rezistența"></a>
+        În parteneriat cu <a href="https://www.rezist.ro/" title="Rezistența"><img src="<?= asset_url('img/rezistenta.png') ?>" alt="Rezistența"></a>
       </div>
   </div>
 
   <div class="scroll-to-top-button">
     <a href="#top">
-    <img src="build/img/button_spring.png" />
+    <img src="<?= asset_url('img/button_spring.png') ?>" />
     </a>
   </div>
 
 </footer>
 <div class="social-media">
   <a class="facebook social-media-box" href="https://www.facebook.com/sharer.php?u=<?= SITE_URL ?>" target="_blank">
-    <img src="build/img/logo-facebook-inverted.png" alt="Facebook">
+    <img src="<?= asset_url('img/logo-facebook-inverted.png') ?>" alt="Facebook">
     Distribuie
   </a>
   <a class="twitter social-media-box" href="http://www.twitter.com/share?url=<?= SITE_URL ?>" target="_blank">
-    <img src="build/img/logo-twitter-inverted.png" alt="Twitter">
+    <img src="<?= asset_url('img/logo-twitter-inverted.png') ?>" alt="Twitter">
     Distribuie
   </a>
 </div>
@@ -122,7 +122,7 @@ modal_locatii('contact', 'Persoane de contact', $data['contacte']);
 modal_locatii('corturi', 'Corturile de campanie ale USR', $data['corturi']);
 ?>
 <script><?php printf('remoteData = %s;', json_encode($data)); ?></script>
-<script src="build/js/application.min.js"></script>
+<script src="<?= asset_url('js/application.min.js') ?>"></script>
 <script>
 !function(f,b,e,v,n,t,s)
 { if(f.fbq)return;n=f.fbq=function(){ n.callMethod?

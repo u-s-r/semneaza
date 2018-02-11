@@ -16,19 +16,19 @@ $data = get_data();
     <meta property="og:url" content="<?= $PAGE_URL ?>">
     <meta property="og:title" content="<?= $title ?>">
     <meta property="og:description" content="<?= $description ?>">
-    <meta property="og:image" content="<?= SITE_URL ?>build/img/social.png">
+    <meta property="og:image" content="<?= asset_url('img/social.png') ?>">
     <title><?= $title ?> &middot; <?= $description ?></title>
     <link href="https://code.cdn.mozilla.net/fonts/fira.css" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="build/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="build/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="build/img/favicon-16x16.png">
-    <link rel="manifest" href="build/img/site.webmanifest">
-    <link rel="mask-icon" href="build/img/safari-pinned-tab.svg" color="#00aae7">
-    <link rel="shortcut icon" href="build/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= asset_url('img/apple-touch-icon.png') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= asset_url('img/favicon-32x32.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= asset_url('img/favicon-16x16.png') ?>">
+    <link rel="manifest" href="<?= asset_url('img/site.webmanifest') ?>">
+    <link rel="mask-icon" href="<?= asset_url('img/safari-pinned-tab.svg') ?>" color="#00aae7">
+    <link rel="shortcut icon" href="<?= asset_url('img/favicon.ico') ?>">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="build/img/browserconfig.xml">
+    <meta name="msapplication-config" content="<?= asset_url('img/browserconfig.xml') ?>">
     <meta name="theme-color" content="#ffffff">
-    <link href="build/css/style.min.css" rel="stylesheet">
+    <link href="<?= asset_url('css/style.min.css') ?>" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -45,8 +45,8 @@ $data = get_data();
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="<?= SITE_URL ?>">
-          <img src="build/img/logo.png" class="hidden-xs hidden-sm">
-          <img src="build/img/logo-30.png" class="hidden-lg hidden-md">
+          <img src="<?= asset_url('img/logo.png') ?>" class="hidden-xs hidden-sm">
+          <img src="<?= asset_url('img/logo-30.png') ?>" class="hidden-lg hidden-md">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
