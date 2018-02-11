@@ -61,7 +61,7 @@ require 'include/header.php';
           </div>
 
           <div class="col-md-6 panel-host" name="formular">
-            <div class="panel panel-default">
+            <div class="panel panel-default form-wrapper">
               <div class="form-loading-circle-container hidden">
                 <div class="loading-circle">
                   <div class="outer-circle">
@@ -71,7 +71,7 @@ require 'include/header.php';
                 </div>
               </div>
               <form id="date-contact" method="post" action="<?= link_url('date-contact.php') ?>" autocomplete="on">
-                <div class="panel-body error-message hidden">
+                <div class="panel-body form-panel-body error-message hidden">
                     <h1>Whoops!</h1>
                     <p>Ceva nu a mers bine. Te rugăm reîncarcă pagina și mai încearcă o dată sau trimite un e-mail la contact@usr.ro </p>
                     <div class="svg-error-wrapper">
@@ -85,7 +85,7 @@ require 'include/header.php';
                       </svg>
                   </div>
                   </div>
-                <div class="panel-body success-message hidden">
+                <div class="panel-body form-panel-body success-message hidden">
                     <h1>Mulțumim!</h1>
                     <p>Informațiile tale au fost înregistrate. Te vom contacta noi când începem să strângem semnăturile.</p>
                     <div class="svg-success-wrapper">
@@ -96,7 +96,7 @@ require 'include/header.php';
                       </svg>
                   </div>
                 </div>
-                <div class="panel-body info-message">
+                <div class="panel-body form-panel-body info-message">
                   <h1>Alătură-te inițiativei</h1>
                   <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul de la Consiliul Legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile.</p>
                   <div>
