@@ -43,11 +43,11 @@
                 <div class="row">
                     <div class="col-md-6">
                       <h4>Nume și prenume</h4>
-                      <input type="text" name="name" required autocomplete="name">
+                      <input type="text" name="nume" required autocomplete="name">
                     </div>
                     <div class="col-md-6">
                       <h4>Telefon</h4>
-                      <input type="tel" name="tel" autocomplete="tel">
+                      <input type="tel" name="telefon" autocomplete="tel">
                     </div>
                     <div class="col-md-6">
                       <h4>E-mail</h4>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-md-6">
                       <h4>Adresă</h4>
-                      <input type="text" name="address" autocomplete="address">
+                      <input name="adresa" autocomplete="adress">
                     </div>
                 </div>
                 <div class="validation-error-message hidden">

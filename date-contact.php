@@ -11,14 +11,14 @@ try {
 
   $requestBody = new Google_Service_Sheets_ValueRange();
 
-  if (empty(trim($_POST['tel'])) && empty(trim($_POST['email']))) {
+  if (empty(trim($_POST['telefon'])) && empty(trim($_POST['email']))) {
     echo (json_encode(['success' => false, 'message' => 'both_empty']));
     die();
   }
 
   // Not gonna do any encoding here, leaving it to the Google library
   $requestBody->setValues([
-      [$_POST['name'], $_POST['tel'], $_POST['email'], $_POST['address']]
+      [$_POST['nume'], $_POST['telefon'], $_POST['email'], $_POST['adresa']]
   ]);
 
   $response = $service->spreadsheets_values->append(SPREADSHEET_ID, SPREADSHEET_RANGE_FOR_FORM, $requestBody, ['valueInputOption' => 'RAW']);

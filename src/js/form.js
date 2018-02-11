@@ -10,7 +10,7 @@ $(function($) {
 function showRequest(arr, $form) {
   var form = $form[0];
 
-  if ((form.email.value != null && form.email.value != '') || (form.tel.value != null && form.tel.value != '')) {
+  if ((form.email.value != null && form.email.value != '') || (form.telefon.value != null && form.telefon.value != '')) {
     $('.form-loading-circle-container').removeClass('hidden');
     $('.validation-error-message').addClass('hidden');
     return true;

@@ -100,20 +100,20 @@ require 'include/header.php';
                   <h1>Alătură-te inițiativei</h1>
                   <p>Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul de la Consiliul Legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile.</p>
                   <div>
-                    <label for="name"><h4>Nume și prenume</h4></label>
-                    <input type="text" name="name" required autocomplete="name"/>
+                    <label for="nume"><h4>Nume și prenume</h4></label>
+                    <input type="text" name="nume" required autocomplete="name"/>
                   </div>
                   <div>
-                    <label for="tel"><h4>Telefon</h4></label>
-                    <input type="tel" name="tel" autocomplete="tel"/>
+                    <label for="telefon"><h4>Telefon</h4></label>
+                    <input type="tel" name="telefon" autocomplete="tel"/>
                   </div>
                   <div>
                   <label for="email"><h4>E-mail</h4></label>
                     <input type="email" name="email" autocomplete="email"/>
                   </div>
                   <div>
-                  <label for="address"><h4>Adresă</h4></label>
-                    <input type="text" name="address" autocomplete="address"/>
+                  <label for="adresa"><h4>Adresă</h4></label>
+                    <textarea name="adresa" autocomplete="address"></textarea>
                   </div>
                   <div class="validation-error-message hidden">
                     <p>Te rugăm completează cel putin unul din câmpurile Telefon sau E-mail.</p>
