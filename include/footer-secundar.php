@@ -1,7 +1,7 @@
 <a name="formular"></a>
 <div class="formular">
     <div class="container">
-        <form id="date-contact" method="post" action="date-contact.php">
+        <form id="date-contact" method="post" action="<?= link_url('date-contact.php') ?>">
             <h1>Alătură-te inițiativei</h1>
             <div class="row">
                 <p class="col-md-9">Încă nu am început strângerea de semnături, <strong>inițiativa așteaptă avizul legislativ</strong>. Lasă-ne aici datele și te vom contacta noi când începem să strângem semnăturile. </p>
@@ -27,5 +27,5 @@
     </div>
 </div>
 <?php
-require_once 'include/footer.php';
+require_once __DIR__ . '/footer.php';
 ?>

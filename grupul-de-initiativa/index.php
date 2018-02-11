@@ -1,15 +1,13 @@
 <?php
+
 $page = "grupul-de-initiativa";
 
 $title="Grupul de inițiativă";
 $description="Fără penali în funcții publice";
 
-require 'include/header-secundar.php';
-?>
-<?php
+require __DIR__ . '/../include/header-secundar.php';
 
 $persoane = [];
-
 
 $persoane [] = ["nume" => "Mihai Badea", "key" => "Mihai-Badea", "descriere" => "Avocat și Președintele grupului de inițiativă cetățenească \"Fără penali în funcții publice\"."];
 $persoane [] = ["nume" => "Mihai Șora", "key" => "Mihai-Sora", "descriere" => "Filosof și eseist. Membru fondator al Grupului de Dialog Social, al Alianței Civice și al Societății Române de Fenomenologie."];
@@ -64,8 +62,8 @@ $persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "
           </div>
         </div>
     </div>
-    <div class="footer col-xs-12"><a href="<?= SITE_URL ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
+    <div class="footer col-xs-12"><a href="<?= link_url('') ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
 </div>
 <?php
-require_once 'include/footer-secundar.php';
+require_once __DIR__ . '/../include/footer-secundar.php';
 ?>

@@ -108,3 +108,7 @@ function get_data() {
 function asset_url($relative_path) {
   return SITE_URL . "build/" . $relative_path;
 }
+
+function link_url($relative_path) {
+  return SITE_URL . $relative_path;
+}

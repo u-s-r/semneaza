@@ -70,7 +70,7 @@ require 'include/header.php';
                   <div class="loading-text">Se încarcă...</div>
                 </div>
               </div>
-              <form id="date-contact" method="post" action="date-contact.php" autocomplete="on">
+              <form id="date-contact" method="post" action="<?= link_url('date-contact.php') ?>" autocomplete="on">
                 <div class="panel-body error-message hidden">
                     <h1>Whoops!</h1>
                     <p>Ceva nu a mers bine. Te rugăm reîncarcă pagina și mai încearcă o dată sau trimite un e-mail la contact@usr.ro </p>
@@ -143,9 +143,9 @@ require 'include/header.php';
             <p>
               Importanța deosebit de mare a relațiilor sociale care privesc alegerea prin vot a autorităților locale, deputaților, senatorilor, Președintelui României și europarlamentarilor, precum și incidența lor în procesul de instaurare, menținere și exercitare a puterii de stat, reprezintă principalele motive pentru care acestea sunt reglementate atât prin Constituție, legea fundamentală a statului român, cât și prin legile electorale, în număr de patru.
              </p>
-             <a href="expunere-de-motive.php">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
+             <a href="<?= link_url('expunere-de-motive/') ?>">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
            </div>
-           <a href="expunere-de-motive.php"><img src="<?= asset_url('img/expunere-de-motive.png') ?>" alt="" class="col-md-6"></a>
+           <a href="<?= link_url('expunere-de-motive/') ?>"><img src="<?= asset_url('img/expunere-de-motive.png') ?>" alt="" class="col-md-6"></a>
         </div>
       </div>
     </div>
@@ -313,12 +313,12 @@ require 'include/header.php';
           <div class="row">
             <div class="col-md-12">
               <div class="comunicat row">
-                <a href="comunicate-de-presa.php" class="col-md-4" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.png')?>')"></a>
+                <a href="<?= link_url('comunicate-de-presa/') ?>" class="col-md-4" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.png')?>')"></a>
                 <div class="corp col-md-8">
                   <span>8 Noiembrie 2017</span>
-                  <h3><a href="comunicate-de-presa.php">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
+                  <h3><a href="<?= link_url('comunicate-de-presa/') ?>">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
                   <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
-                  <a href="comunicate-de-presa.php">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+                  <a href="<?= link_url('comunicate-de-presa/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
                 </div>
               </div>
             </div>

@@ -1,7 +1,8 @@
 <?php
-require 'functions.php';
+require  __DIR__ . '/functions.php';
 
-$PAGE_URL = SITE_URL.substr($_SERVER["REQUEST_URI"], 1) ;
+$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$actual_link = str_replace("index.php", "", $actual_link);
 
 $data = get_data();
 ?>
@@ -13,7 +14,7 @@ $data = get_data();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Inițiativa cetățenească de modificare a Constituției">
     <meta name="author" content="USR">
-    <meta property="og:url" content="<?= $PAGE_URL ?>">
+    <meta property="og:url" content="<?= $actual_link ?>">
     <meta property="og:title" content="<?= $title ?>">
     <meta property="og:description" content="<?= $description ?>">
     <meta property="og:image" content="<?= asset_url('img/social.png') ?>">
@@ -22,11 +23,9 @@ $data = get_data();
     <link rel="apple-touch-icon" sizes="180x180" href="<?= asset_url('img/apple-touch-icon.png') ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= asset_url('img/favicon-32x32.png') ?>">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= asset_url('img/favicon-16x16.png') ?>">
-    <link rel="manifest" href="<?= asset_url('img/site.webmanifest') ?>">
     <link rel="mask-icon" href="<?= asset_url('img/safari-pinned-tab.svg') ?>" color="#00aae7">
     <link rel="shortcut icon" href="<?= asset_url('img/favicon.ico') ?>">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="<?= asset_url('img/browserconfig.xml') ?>">
     <meta name="theme-color" content="#ffffff">
     <link href="<?= asset_url('css/style.min.css') ?>" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -51,19 +50,19 @@ $data = get_data();
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#initiativa">Inițiativa</a></li>
+          <li><a href="<?= $page != "acasa" ? link_url('') : "" ?>#initiativa">Inițiativa</a></li>
           <li class="hidden-xs hidden-sm dropdown">
-            <a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down"></span></a>
+            <a href="<?= $page != "acasa" ? link_url('') : "" ?>#despre">Despre</a><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="<?= SITE_URL . "grupul-de-initiativa.php" ?>">Grupul de initiativa</a></li>
+              <li><a href="<?= link_url('grupul-de-initiativa/') ?>">Grupul de initiativa</a></li>
             </ul>
           </li>
-          <li class="hidden-md hidden-lg"><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#despre">Despre</a></li>
-          <li class="hidden-md hidden-lg"><a href="<?= SITE_URL . "grupul-de-initiativa.php" ?>">Grupul de inițiativă</a></li>
-          <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#semneaza">Semnează inițiativa</a></li>
-          <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#harta"><?= CAMPANIE_DE_SEMNATURI ? "Situația pe regiuni" : "Puncte de contact" ?></a></li>
-          <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#media">Media</a></li>
-          <li><a href="<?= $page != "acasa" ? SITE_URL : "" ?>#comunicate">Comunicate de presă</a></li>
+          <li class="hidden-md hidden-lg"><a href="<?= $page != "acasa" ? link_url('') : "" ?>#despre">Despre</a></li>
+          <li class="hidden-md hidden-lg"><a href="<?= link_url('grupul-de-initiativa/') ?>">Grupul de inițiativă</a></li>
+          <li><a href="<?= $page != "acasa" ? link_url('') : "" ?>#semneaza">Semnează inițiativa</a></li>
+          <li><a href="<?= $page != "acasa" ? link_url('') : "" ?>#harta"><?= CAMPANIE_DE_SEMNATURI ? "Situația pe regiuni" : "Puncte de contact" ?></a></li>
+          <li><a href="<?= $page != "acasa" ? link_url('') : "" ?>#media">Media</a></li>
+          <li><a href="<?= $page != "acasa" ? link_url('') : "" ?>#comunicate">Comunicate de presă</a></li>
         </ul>
       </div>
     </div>

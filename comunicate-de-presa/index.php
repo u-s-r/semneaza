@@ -4,7 +4,7 @@ $page = "comunicate-de-presa";
 $title="Comunicate de presă";
 $description="Fără penali în funcții publice";
 
-require 'include/header-secundar.php';
+require __DIR__ . '/../include/header-secundar.php';
 ?>
 <div class="container comunicate-de-presa">
   <div class="col-md-8 main-content">
@@ -24,31 +24,31 @@ require 'include/header-secundar.php';
     </div>
   </div>
   <div class="col-md-4 sidebar-comunicate-de-presa">
-    <?php if(false) { ?><a href="expunere-de-motive.php">
+    <?php if(false) { ?>
       <!-- Deocamdata partea asta este dezactivata pentru ca nu avem decat un singur comunicat de presa, asa ca afisam initiativa in loc. Cand va fi mai mult de un comunicat, vom afisa doar comunicatele -->
       <h4>Alte comunicate de presă</h4>
       <div class="comunicat row">
-        <a href="comunicate-de-motive.php" class="col-md-12" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.png') ?>')"></a>
+        <a href="<?= link_url('comunicate-de-presa/') ?>" class="col-md-12" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.png') ?>')"></a>
         <div class="corp col-md-12">
           <span>8 Noiembrie 2017</span>
-          <h4><a href="comunicate-de-presa.php">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
+          <h4><a href="<?= link_url('comunicate-de-presa/') ?>">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
           <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
-          <a href="comunicate-de-presa.php">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+          <a href="<?= link_url('comunicate-de-presa/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
         </div>
       </div>
     <?php } else { ?>
       <h4>Inițiativa</h4>
       <div class="comunicat row">
-        <a href="expunere-de-motive.php" class="col-md-12" style="background-image: url('<?= asset_url('img/expunere-de-motive.png') ?>')"></a>
+        <a href="<?= link_url('expunere-de-motive/') ?>" class="col-md-12" style="background-image: url('<?= asset_url('img/expunere-de-motive.png') ?>')"></a>
         <div class="corp col-md-12">
-          <h4><a href="expunere-de-motive.php">Expunere de motive</a></h3>
+          <h4><a href="<?= link_url('expunere-de-motive/') ?>">Expunere de motive</a></h3>
           <p>Lege de revizuire a Constituției României. Importanța deosebit de mare a relațiilor sociale care privesc alegerea...</p>
-          <a href="expunere-de-motive.php">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
+          <a href="<?= link_url('expunere-de-motive/') ?>">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
         </div>
     <?php } ?>
     </div>
   </div>
 </div>
 <?php
-require_once 'include/footer-secundar.php';
+require_once __DIR__ . '/../include/footer-secundar.php';
 ?>

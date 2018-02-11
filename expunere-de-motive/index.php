@@ -4,7 +4,7 @@ $page = "expunere-de-motive";
 $title="Expunere de motive";
 $description="Fără penali în funcții publice";
 
-require 'include/header-secundar.php';
+require __DIR__ . '/../include/header-secundar.php';
 ?>
 
 <div class="container expunere-de-motive">
@@ -68,21 +68,21 @@ require 'include/header-secundar.php';
 <li>măsura nu se aplică pentru întreaga durată a vieții condamnaților, fiind în mod expres limitată până la intervenirea unei situații care, potrivit legii organice, înlătură această consecință extrapenală a condamnării; aceste situații sunt în prezent dezincriminarea faptei, amnistia postcondamnatorie și reabilitarea, aceasta din urmă putând fi de drept (care operează în temeiul legii, dacă persoana condamnată la pedeapsa amenzii sau a închisorii de până la 2 ani nu săvârșește o altă infracțiune în decurs de 3 ani de la data executării pedepsei) și judecătorească (care se dispune la cerere, prin hotărâre judecătorească, dacă persoana condamnată la pedeapsa închisorii cuprinse între 2 ani și 25 de ani nu săvârșește o altă infracțiune în decurs de 4 până la 10 ani de la data executării pedepsei).</li>
 </ul>
 <img src="<?= asset_url('img/lege.png') ?>" alt="Lege de revizuire">
-<div class="footer"><a href="<?= SITE_URL ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
+<div class="footer"><a href="<?= link_url('') ?>" class="back"><span class="glyphicon glyphicon-menu-left"></span> Înapoi</a></div>
 </div>
 <div class="col-md-4 sidebar-comunicate-de-presa">
 <h4>Comunicate de presă</h4>
 <div class="comunicat row">
-  <a href="comunicate-de-presa.php" class="col-md-12" style="background-image: url('<?= asset_url('/img/comunicate/conferinta-de-presa.png') ?>')"></a>
+  <a href="<?= link_url('comunicate-de-presa/') ?>" class="col-md-12" style="background-image: url('<?= asset_url('/img/comunicate/conferinta-de-presa.png') ?>')"></a>
   <div class="corp col-md-12">
     <span>8 Noiembrie 2017</span>
-    <h4><a href="comunicate-de-presa.php">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
+    <h4><a href="<?= link_url('comunicate-de-presa/') ?>">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
     <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
-    <a href="comunicate-de-presa.php">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+    <a href="<?= link_url('comunicate-de-presa/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
   </div>
 </div>
 </div>
 </div>
 <?php
-require_once 'include/footer-secundar.php';
+require_once __DIR__ . '/../include/footer-secundar.php';
 ?>
