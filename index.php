@@ -178,7 +178,7 @@ require 'include/header.php';
           $lista_pasi[] = "Se formează un grup de inițiativă din <strong>cel puțin zece cetățeni</strong>";
           $lista_pasi[] = "Proiectul de modificare a Constituției este trimis pentru <strong>aviz</strong> la Consiliul Legislativ";
           $lista_pasi[] = "Proiectul și avizul consultativ sunt publicate în <strong>Monitorul Oficial</strong>";
-          $lista_pasi[] = "Începe strângerea a <strong>1.000.000</strong> de semnături în <strong>6 luni</strong>, din cel puțin 21 de județe";
+          $lista_pasi[] = "Începe strângerea a cel puțin <strong>500.000</strong> de semnături în <strong>6 luni</strong>, din cel puțin 21 de județe";
           $lista_pasi[] = "Listele de semnături împreună cu proiectul și expunerea de motive <strong>se înregistrează la Parlament</strong>";
           $lista_pasi[] = "Parlamentul înaintează propunerea către <strong>CCR</strong> pentru controlul de constituționalitate";
           $lista_pasi[] = "Începe <strong>procedura parlamentară</strong>, cu dezbateri în comisii și vot în plenul Camerei Deputaților și Senat";

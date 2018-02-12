@@ -18,16 +18,16 @@ $persoane [] = ["nume" => "Valeriu Nicolae", "key" => "Valeriu-Nicolae", "descri
 $persoane [] = ["nume" => "Eugen Iancu", "key" => "Eugen-Iancu", "descriere" => "Președintele Asociației Colectiv GTG 3010."];
 $persoane [] = ["nume" => "Oana Negru", "key" => "Oana-Negru", "descriere" => "Membru și manager juridic al grupului \"Rezistența\"."];
 $persoane [] = ["nume" => "Mihai Nicolae Tudorică", "key" => "Mihai-Nicolae-Tudorica", "descriere" => "Fondatorul  platformei \"Rezistența\", platforma care a apărut ca reacție civică de protest împotriva OUG 13 din februarie 2017."];
-$persoane [] = ["nume" => "Klaus Fabrițius", "key" => "Klaus-Fabritius", "descriere" => "Membru al Formului Democrat al Germanilor din România"];
-$persoane [] = ["nume" => "Liliana Chivu", "key" => "Liliana-Chivu", "descriere" => "Inginer de construcții hidrotehnice"];
-$persoane [] = ["nume" => "Diana Punga", "key" => "Diana-Punga", "descriere" => "Specialist în Marketing & Comunicare"];
-$persoane [] = ["nume" => "Costin Dobrescu", "key" => "Costin-Dobrescu", "descriere" => "Inginer de calculatoare"];
-$persoane [] = ["nume" => "Adrian Clopotari", "key" => "Adrian-Clopotari", "descriere" => "Avocat și statistician în insolvență"];
-$persoane [] = ["nume" => "George Oancea", "key" => "George-Oancea", "descriere" => "Analist programator"];
-$persoane [] = ["nume" => "Marius Petrișor Petcu", "key" => "Marius-Petrisor-Petcu", "descriere" => "Inginer geodez, antreprenor în domeniul măsurătorilor geodezice terestre"];
-$persoane [] = ["nume" => "Anton Cupcea", "key" => "Anton-Cupcea", "descriere" => "Inginer de IT"];
-$persoane [] = ["nume" => "Adrian Bogdan", "key" => "Adrian-Bogdan", "descriere" => "Statistician"];
-$persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "descriere" => "Economist"];
+$persoane [] = ["nume" => "Klaus Fabrițius", "key" => "Klaus-Fabritius", "descriere" => "Membru al Formului Democrat al Germanilor din România."];
+$persoane [] = ["nume" => "Liliana Chivu", "key" => "Liliana-Chivu", "descriere" => "Inginer de construcții hidrotehnice."];
+$persoane [] = ["nume" => "Diana Punga", "key" => "Diana-Punga", "descriere" => "Specialist în Marketing & Comunicare."];
+$persoane [] = ["nume" => "Costin Dobrescu", "key" => "Costin-Dobrescu", "descriere" => "Inginer de calculatoare."];
+$persoane [] = ["nume" => "Adrian Clopotari", "key" => "Adrian-Clopotari", "descriere" => "Avocat și statistician în insolvență."];
+$persoane [] = ["nume" => "George Oancea", "key" => "George-Oancea", "descriere" => "Analist programator."];
+$persoane [] = ["nume" => "Marius Petrișor Petcu", "key" => "Marius-Petrisor-Petcu", "descriere" => "Inginer geodez, antreprenor în domeniul măsurătorilor geodezice terestre."];
+$persoane [] = ["nume" => "Anton Cupcea", "key" => "Anton-Cupcea", "descriere" => "Inginer de IT."];
+$persoane [] = ["nume" => "Adrian Bogdan", "key" => "Adrian-Bogdan", "descriere" => "Statistician."];
+$persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "descriere" => "Economist."];
 
 ?>
 <div class="container grupul-de-initiativa">
