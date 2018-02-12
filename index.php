@@ -315,14 +315,25 @@ require 'include/header.php';
       <div class="container">
           <h1>Comunicate de presă</h1>
           <div class="row">
-            <div class="col-md-12">
-              <div class="comunicat row">
-                <a href="<?= link_url('comunicate-de-presa/') ?>" class="col-md-4" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.png')?>')"></a>
-                <div class="corp col-md-8">
+            <div class="col-md-6">
+              <div class="comunicat">
+              <a href="<?= link_url('comunicate-de-presa/usr-anunta-crearea-grupului-de-initiativa/') ?>" style="background-image: url('<?= asset_url('img/comunicate/lansare-initiativa.jpg') ?>')"></a>
+              <div class="corp">
+                <span>12 Februarie 2018</span>
+                <h4><a href="<?= link_url('comunicate-de-presa/usr-anunta-crearea-grupului-de-initiativa/') ?>">USR anunță crearea Grupului de inițiativă al campaniei "Fără penali în funcții publice"</a></h4>
+                <p>În cursul acestei zile, comitetul de inițiativă al campaniei "Fără penali în funcții publice" a fost înființat...</p>
+                <a href="<?= link_url('comunicate-de-presa/usr-anunta-crearea-grupului-de-initiativa/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="comunicat">
+                <a href="<?= link_url('comunicate-de-presa/usr-strange-semnaturi-pentru-a-interzice-penalii-in-functii-publice/') ?>" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.jpg')?>')"></a>
+                <div class="corp">
                   <span>8 Noiembrie 2017</span>
-                  <h3><a href="<?= link_url('comunicate-de-presa/') ?>">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
+                  <h4><a href="<?= link_url('comunicate-de-presa/usr-strange-semnaturi-pentru-a-interzice-penalii-in-functii-publice/') ?>">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h4>
                   <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
-                  <a href="<?= link_url('comunicate-de-presa/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+                  <a href="<?= link_url('comunicate-de-presa/usr-strange-semnaturi-pentru-a-interzice-penalii-in-functii-publice/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
                 </div>
               </div>
             </div>

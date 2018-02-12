@@ -73,12 +73,21 @@ require __DIR__ . '/../include/header-secundar.php';
 <div class="col-md-4 sidebar-comunicate-de-presa">
 <h4>Comunicate de presă</h4>
 <div class="comunicat row">
-  <a href="<?= link_url('comunicate-de-presa/') ?>" class="col-md-12" style="background-image: url('<?= asset_url('/img/comunicate/conferinta-de-presa.png') ?>')"></a>
+  <a href="<?= link_url('comunicate-de-presa/usr-anunta-crearea-grupului-de-initiativa/') ?>" class="col-md-12" style="background-image: url('<?= asset_url('img/comunicate/lansare-initiativa.jpg') ?>')"></a>
+  <div class="corp col-md-12">
+    <span>12 Februarie 2018</span>
+    <h4><a href="<?= link_url('comunicate-de-presa/usr-anunta-crearea-grupului-de-initiativa/') ?>">USR anunță crearea Grupului de inițiativă al campaniei "Fără penali în funcții publice"</a></h4>
+        <p>În cursul acestei zile, comitetul de inițiativă al campaniei "Fără penali în funcții publice" a fost înființat...</p>
+    <a href="<?= link_url('comunicate-de-presa/usr-anunta-crearea-grupului-de-initiativa/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+  </div>
+</div>
+<div class="comunicat row">
+  <a href="<?= link_url('comunicate-de-presa/usr-strange-semnaturi-pentru-a-interzice-penalii-in-functii-publice/') ?>" class="col-md-12" style="background-image: url('<?= asset_url('img/comunicate/conferinta-de-presa.jpg') ?>')"></a>
   <div class="corp col-md-12">
     <span>8 Noiembrie 2017</span>
-    <h4><a href="<?= link_url('comunicate-de-presa/') ?>">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h3>
+    <h4><a href="<?= link_url('comunicate-de-presa/usr-strange-semnaturi-pentru-a-interzice-penalii-in-functii-publice/') ?>">USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice</a></h4>
     <p>Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească ce transpune...</p>
-    <a href="<?= link_url('comunicate-de-presa/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
+    <a href="<?= link_url('comunicate-de-presa/usr-strange-semnaturi-pentru-a-interzice-penalii-in-functii-publice/') ?>">Articolul complet <span class="glyphicon glyphicon-menu-right"></span></a>
   </div>
 </div>
 </div>
