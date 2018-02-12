@@ -61,7 +61,7 @@
                 <div class="validation-error-message hidden">
                   <p>Te rugăm completează cel putin unul din câmpurile Telefon sau E-mail.</p>
                 </div>
-                <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'formular_<?= $page ?>', 'submit')">
+                <button type="submit" class="btn btn-default" onclick="ga('send', 'event', 'formular_<?= $page ?>', 'submit'); fbq('trackCustom', 'fp_formular_<?= $page ?>')">
                   Înscrie-te acum!
                 </button>
             </div>
