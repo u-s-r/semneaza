@@ -271,42 +271,75 @@ require 'include/header.php';
     <a name="media"></a>
     <div class="media container">
       <div class="row">
-        <ul class="col-md-3" role="tablist" aria-orientation="vertical">
-          <li class="active"><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12" id="media-tabs-video-tab" href="#media-tabs-video" role="pill" data-toggle="pill" aria-controls="media-tabs-video" aria-selected="true">Video</a></li>
-          <li><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12" id="media-tabs-photo-tab" href="#media-tabs-photo" role="pill" data-toggle="pill" disabled aria-controls="media-tabs-photo" aria-selected="false">Foto</a></li>
+        <ul class="col-md-3 media-tab-nav-list" role="tablist" aria-orientation="vertical">
+          <li class="active"><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12 no-scroll" id="media-tabs-video-tab" href="#media-tabs-video" role="pill" data-toggle="pill" aria-controls="media-tabs-video" aria-selected="true">Video</a></li>
+          <li><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12 no-scroll" id="media-tabs-photo-tab" href="#media-tabs-photo" role="pill" data-toggle="pill" aria-controls="media-tabs-photo" aria-selected="false">Foto</a></li>
         </ul>
         <div class="col-md-9">
           <div class="tab-content">
             <div class="tab-pane fade active in" id="media-tabs-video" role="tabpanel" aria-labelledby="media-tabs-video-tab">
-                <div class="carousel slide" id="carousel-videos" data-ride="carousel" data-interval="false">
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
+                <div class="media-video-carousel-wrapper">
+                  <div class="media-video-carousel-item">
+                    <div class="laptop-frame">
+                      <div class="laptop-frame-content item active embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <?php if (false) { ?>
+                    <section class="media-slide-info">
+                      <h3>Semnează</h3>
+                      <p>Încă nu am început strângerea de semnături, inițiativa așteaptă avizul legislativ. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
+                    </section>
+                    <?php } ?>
+                  </div>
+                  <?php if (false) { ?>
+                  <!-- Disabled fiindca a fost facuta ca demo pt mai multe slideuri -->
+                  <!-- <div class="media-video-carousel-item">
+                    <div class="laptop-frame">
+                      <div class="laptop-frame-content item active embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/t8nTTWd1lpk?rel=0" allowfullscreen></iframe>
+                    </div>href
+                    </div>
+                    <section class="media-slide-info">
+                      <h3>5 prioritati ale USR</h3>
+                      <p>Încă nu am început strângerea de semnături, inițiativa așteaptă avizul legislativ. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
+                    </section>
+                  </div> -->
+                  <?php } ?>
+                </div>
+            </div>
+            <?php
+
+
+            $imagini = [];
+            $imagini[] = ["src" => "lansare-initiativa/0.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
+            $imagini[] = ["src" => "lansare-initiativa/1.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
+            $imagini[] = ["src" => "lansare-initiativa/2.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
+            $imagini[] = ["src" => "lansare-initiativa/3.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
+            $imagini[] = ["src" => "lansare-initiativa/4.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
+
+            ?>
+            <div class="tab-pane fade" id="media-tabs-photo" role="tabpanel" aria-labelledby="media-tabs-photo-tab">
+              <div class="media-images-carousel-wrapper">
+                <?php foreach ($imagini as $imagine) { ?>
+                <div class="media-images-carousel-item">
+                  <div class="laptop-frame">
+                    <div class="laptop-frame-content item active embed-responsive embed-responsive-16by9">
+                      <a class="media-images-link no-scroll" href="<?= asset_url('img/galerie-foto/'. $imagine['src']) ?>" target="_blank">
+                        <img class="media-images-image" data-lazy="<?= asset_url('img/galerie-foto/'. $imagine['src']) ?>" alt=""/>
+                      </a>
                     </div>
                   </div>
+                  <section class="media-slide-info">
+                    <?php if (false) { ?><h3>Semnează</h3><?php } ?>
+                    <h3><?= $imagine["titlu"] ?></h3>
+                    <p><?= $imagine["descriere"] ?></p>
+                  </section>
                 </div>
-            </div>
-            <div class="tab-pane fade" id="media-tabs-photo" role="tabpanel" aria-labelledby="media-tabs-photo-tab">
-                <div class="carousel slide">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-videos" data-slide-to="0" class="active"></li>
-                  </ol>
-                  <div class="carousel-inner" role="listbox">
-                    <img data-lazy="bla">
-                    <img data-lazy="bla">
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                  <span class="sr-only">Precedent</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                  <span class="sr-only">Următor</span>
-                </a>
+                <?php } ?>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

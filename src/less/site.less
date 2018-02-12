@@ -235,6 +235,8 @@ textarea, input {
   }
 
   .comunicat {
+    margin-bottom: 20px;
+
     > a {
       height: 230px;
     }
@@ -697,5 +699,103 @@ footer {
 @media (min-width: @screen-sm-max) {
   .nav > li > a {
     display: inline-block;
+  }
+}
+
+.laptop-frame {
+  width:100%; padding-top:61.264%; position:relative; background-image:url('../img/laptop-frame.png'); background-repeat:no-repeat; background-size:cover;
+
+  .laptop-frame-content {
+    width:81.84%; position:absolute; left:0; right:0; top:5.44%; margin:auto; padding-bottom:51.724%;
+
+    .media-images-link {
+      display:block; position:absolute; top:0; left:0; width:100%; height:100%;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        transition:background-color .35s;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/magnify-glass.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scale(.8);
+        transition:transform .35s;
+      }
+
+      &:hover:before {
+        background-color: rgba(0, 0, 0, 0.35);
+      }
+      &:hover:after {
+        transform: scale(1);
+      }
+
+      .media-images-image {
+        display:block; width:100%; height:100%; object-fit:cover; object-position:center;
+      }
+    }
+  }
+}
+
+.media-slide-info {
+  width:81%; margin:auto;
+
+  h3 {
+    color: #00aae7;
+  }
+}
+
+.media-video-carousel-wrapper,
+.media-images-carousel-wrapper {
+
+  padding-bottom: 40px;
+
+  .slick-prev,
+  .slick-next {
+    position:absolute; top:initial; bottom:0; left:initial; width:40px; height:40px; background-image:url('../img/arrow-next.png'); background-repeat:no-repeat; background-size: contain; opacity: .5; transition:opacity .35s; transform:none; background-size:43.333%; background-position:center;
+
+    &:before,
+    &:after {
+      content:none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .slick-prev {
+    right: 60px;
+    transform: rotate(180deg);
+  }
+
+  .slick-next {
+    right: 0px;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    .slick-prev {
+      right: 130px;
+    }
+
+    .slick-next {
+      right: 70px;
+    }
   }
 }

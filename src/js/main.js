@@ -23,6 +23,44 @@
     autoplaySpeed: 5000
   });
 
+  // This is a hacky fix, because bootstrap tabs don't get along well with slick either (god darn bootstrap!)
+  $('.media-tab-nav-list a').click(function (e) {
+    e.preventDefault();
+    var $tabLink = $(this);
+    $(this).tab('show');
+    setTimeout(function() {
+      if ($tabLink.attr('href').indexOf('photo') > 0) {
+        $('.media-video-carousel-wrapper').slick('unslick');
+
+        $('.media-images-carousel-wrapper').slick({
+          arrows: true,
+          autoplay: false,
+          autoplaySpeed: 5000,
+          fade: true,
+          cssEase: 'linear',
+          lazyLoad: 'ondemand'
+        });
+      } else {
+        $('.media-images-carousel-wrapper').slick('unslick');
+
+        $('.media-video-carousel-wrapper').slick({
+          arrows: true,
+          autoplay: false,
+          fade: true,
+          cssEase: 'linear'
+        });
+      }
+    }, 150);
+  });
+
+  $('.media-video-carousel-wrapper').slick({
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    cssEase: 'linear'
+  });
+
   $('#progres-semnaturi').ionRangeSlider({
     force_edges: true,
     from: USR.data.semnaturiStranse,
