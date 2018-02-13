@@ -35,6 +35,7 @@
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? link_url('') : "" ?>#harta">Situația pe regiuni</a></li>
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? link_url('') : "" ?>#media">Media</a></li>
             <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= $page != "acasa" ? link_url('') : "" ?>#comunicate">Comunicate de presă</a></li>
+            <li><span class="glyphicon glyphicon-menu-right"></span> <a href="<?= link_url('politica-de-confidentialitate/') ?>#comunicate">Politica de confidențialitate</a></li>
           </ul>
         </div>
         <div class="col-sm-4 col-md-4 distribuie">

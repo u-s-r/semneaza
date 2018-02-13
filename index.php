@@ -149,7 +149,7 @@ require 'include/header.php';
              </p>
              <a href="<?= link_url('expunere-de-motive/') ?>">Vezi întreaga expunere de motive <span class="glyphicon glyphicon-menu-right"></span></a>
            </div>
-           <a href="<?= link_url('expunere-de-motive/') ?>"><img src="<?= asset_url('img/expunere-de-motive.png') ?>" alt="" class="col-md-6"></a>
+           <a href="<?= link_url('expunere-de-motive/') ?>"><img src="<?= asset_url('img/expunere-de-motive.jpg') ?>" alt="" class="col-md-6"></a>
         </div>
       </div>
     </div>
@@ -276,40 +276,34 @@ require 'include/header.php';
           <li><a class="btn btn-inverted col-xs-6 col-sm-6 col-md-12 no-scroll" id="media-tabs-photo-tab" href="#media-tabs-photo" role="pill" data-toggle="pill" aria-controls="media-tabs-photo" aria-selected="false">Foto</a></li>
         </ul>
         <div class="col-md-9">
+
+            <?php
+
+
+            $videos = [];
+            $videos[] = ["src" => "https://www.youtube.com/embed/gEFbXFc3vwo?rel=0", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
+            $videos[] = ["src" => "https://www.youtube.com/embed/vO5MLwuTgeo?rel=0", "titlu" => "USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice", "descriere" => "Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească."];
+
+            ?>
           <div class="tab-content">
             <div class="tab-pane fade active in" id="media-tabs-video" role="tabpanel" aria-labelledby="media-tabs-video-tab">
                 <div class="media-video-carousel-wrapper">
+                <?php foreach ($videos as $video) { ?>
                   <div class="media-video-carousel-item">
                     <div class="laptop-frame">
                       <div class="laptop-frame-content item active embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vO5MLwuTgeo?rel=0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="<?= $video['src'] ?>" allowfullscreen></iframe>
                       </div>
                     </div>
-                    <?php if (false) { ?>
                     <section class="media-slide-info">
-                      <h3>Semnează</h3>
-                      <p>Încă nu am început strângerea de semnături, inițiativa așteaptă avizul legislativ. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
+                      <h3><?= $video['titlu'] ?></h3>
+                      <p><?= $video['descriere'] ?></p>
                     </section>
-                    <?php } ?>
                   </div>
-                  <?php if (false) { ?>
-                  <!-- Disabled fiindca a fost facuta ca demo pt mai multe slideuri -->
-                  <!-- <div class="media-video-carousel-item">
-                    <div class="laptop-frame">
-                      <div class="laptop-frame-content item active embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/t8nTTWd1lpk?rel=0" allowfullscreen></iframe>
-                    </div>href
-                    </div>
-                    <section class="media-slide-info">
-                      <h3>5 prioritati ale USR</h3>
-                      <p>Încă nu am început strângerea de semnături, inițiativa așteaptă avizul legislativ. Lasă-ne <a href="#formular">aici</a> datele și te vom contacta noi când începem să strângem semnăturile.</p>
-                    </section>
-                  </div> -->
-                  <?php } ?>
+              <?php } ?>
                 </div>
             </div>
             <?php
-
 
             $imagini = [];
             $imagini[] = ["src" => "lansare-initiativa/0.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];

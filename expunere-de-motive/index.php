@@ -11,7 +11,7 @@ require __DIR__ . '/../include/header-secundar.php';
 <div class="col-md-8 main-content">
     <h1>Inițiativa</h1>
     <h4>Ajută la strângerea semnăturilor. Fiecare semnătură contează. <a href="#formular">Înscrie-te aici <span class="glyphicon glyphicon-menu-right"><span></a></h4>
-<img src="<?= asset_url('img/expunere-de-motive.png') ?>" alt="" title="Fără penali în funcții publice! Inițiativa cetățenească de modificare a Constituției">
+<img src="<?= asset_url('img/expunere-de-motive.jpg') ?>" alt="" title="Fără penali în funcții publice! Inițiativa cetățenească de modificare a Constituției">
 <h2>Expunere de motive</h2>
 <h5>Lege de revizuire a Constituției României</h5>
 <p>Importanța deosebit de mare a relațiilor sociale care privesc alegerea prin vot a autorităților locale, deputaților, senatorilor, Președintelui României și europarlamentarilor, precum și incidența lor în procesul de instaurare, menținere și exercitare a puterii de stat, reprezintă principalele motive pentru care acestea sunt reglementate atât prin Constituție, legea fundamentală a statului român, cât și prin legile electorale, în număr de patru. Dintre toate categoriile de norme juridice, trăsătura esențială a normelor electorale este aceea că indică în modul cel mai direct și mai eficient caracterul democratic sau, dimpotrivă, nedemocratic, al unui sistem constituțional.</p>

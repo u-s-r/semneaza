@@ -1,18 +1,24 @@
-.page-expunere-de-motive, .page-comunicate-de-presa {
+.page-expunere-de-motive, .page-comunicate-de-presa, .page-politica-de-confidentialitate {
   .container.comunicate-de-presa, .container.expunere-de-motive {
+    .main-content {
+        @media(max-width: @screen-sm-max) {
+          border-bottom: 1px solid @blue-dull;
+        }
+        @media(min-width: @screen-md) {
+          padding-right: 35px;
+          border-right: 1px solid @blue-dull;
+        }
+    }
+}}
+
+
+.page-expunere-de-motive, .page-comunicate-de-presa, .page-politica-de-confidentialitate {
+  .container.comunicate-de-presa, .container.expunere-de-motive, .container.politica-de-confidentialitate {
     padding: 0 15px 30px 15px;
   }
 
   .main-content {
     line-height: 2em;
-
-    @media(max-width: @screen-sm-max) {
-      border-bottom: 1px solid @blue-dull;
-    }
-    @media(min-width: @screen-md) {
-      padding-right: 35px;
-      border-right: 1px solid @blue-dull;
-    }
 
     img {
       max-width: 100%;
