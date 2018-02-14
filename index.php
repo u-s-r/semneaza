@@ -306,6 +306,7 @@ require 'include/header.php';
             <?php
 
             $imagini = [];
+            $imagini[] = ["src" => "lansare-initiativa/-1.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
             $imagini[] = ["src" => "lansare-initiativa/0.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
             $imagini[] = ["src" => "lansare-initiativa/1.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
             $imagini[] = ["src" => "lansare-initiativa/2.jpg", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];

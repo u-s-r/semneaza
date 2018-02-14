@@ -55,7 +55,7 @@ $persoane [] = ["nume" => "Daniela Timoficiuc", "key" => "Daniela-Timoficiuc", "
               <div class="tab-pane fade <?= $index == 0 ? 'active in' : '' ?>" id="<?= $persoana['key'] ?>" role="tabpanel" aria-labelledby="<?= $persoana['key'] ?>-tab">
                 <h3><?= $persoana['nume'] ?></h3>
                 <p><?= $persoana['descriere'] ?></p>
-                <img src="<?= asset_url('img/cover.png') ?>" alt="">
+                <img src="<?= asset_url('img/cover.jpg') ?>" alt="">
               </div>
             <?php } ?>
           </div>
