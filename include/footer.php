@@ -126,7 +126,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s) }(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
  fbq('init', '105697533557302');
-fbq('track', 'PageView');
+fbq('trackCustom', 'fpPageView');
 </script>
 <noscript>
   <img height="1" width="1"
