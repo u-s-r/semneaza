@@ -128,6 +128,7 @@ require 'include/header.php';
         </div>
       </div>
     </div>
+    <?php if (CAMPANIE_DE_SEMNATURI) { ?>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -136,6 +137,7 @@ require 'include/header.php';
         </div>
       </div>
     </div>
+    <?php } ?>
     <a name="initiativa"></a>
     <div class="initiativa">
       <div class="container">
