@@ -22,7 +22,7 @@ $persoane [] = ["nume" => "Klaus Fabritius", "key" => "Klaus-Fabritius", "descri
 $persoane [] = ["nume" => "Liliana Chivu", "key" => "Liliana-Chivu", "descriere" => "Inginer de construcții hidrotehnice."];
 $persoane [] = ["nume" => "Diana Punga", "key" => "Diana-Punga", "descriere" => "Specialist în Marketing & Comunicare."];
 $persoane [] = ["nume" => "Costin Dobrescu", "key" => "Costin-Dobrescu", "descriere" => "Inginer de calculatoare."];
-$persoane [] = ["nume" => "Adrian Clopotari", "key" => "Adrian-Clopotari", "descriere" => "Avocat și statistician în insolvență."];
+$persoane [] = ["nume" => "Adrian Clopotari", "key" => "Adrian-Clopotari", "descriere" => "Avocat și practician în insolvență."];
 $persoane [] = ["nume" => "George Oancea", "key" => "George-Oancea", "descriere" => "Analist programator."];
 $persoane [] = ["nume" => "Marius Petrișor Petcu", "key" => "Marius-Petrisor-Petcu", "descriere" => "Inginer geodez, antreprenor în domeniul măsurătorilor geodezice terestre."];
 $persoane [] = ["nume" => "Anton Cupcea", "key" => "Anton-Cupcea", "descriere" => "Inginer de IT."];
