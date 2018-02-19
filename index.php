@@ -283,6 +283,7 @@ require 'include/header.php';
 
 
             $videos = [];
+            $videos[] = ["src" => "https://www.youtube.com/embed/TuW7a3ysf54?rel=0", "titlu" => "Interviu Mihai Tudorică", "descriere" => "Mihai N. Tudorică, fondatorul platformei Rezistenta, este unul dintre membrii Grupului de Inițiativă cetățenească \"Fără penali în funcții publice\". L-am întrebat de ce s-a alăturat inițiativei, dar mai ales, de ce o susține."];
             $videos[] = ["src" => "https://www.youtube.com/embed/gEFbXFc3vwo?rel=0", "titlu" => "USR anunță crearea Grupului de inițiativă", "descriere" => "În cursul acestei zile, comitetul de inițiativă al campaniei \"Fără penali în funcții publice\" a fost înființat în mod oficial."];
             $videos[] = ["src" => "https://www.youtube.com/embed/vO5MLwuTgeo?rel=0", "titlu" => "USR strânge semnături pentru a interzice prin Constituție penalii în funcții publice", "descriere" => "Uniunea Salvați România inițiază strângerea de semnături pentru o inițiativă cetățenească."];
 

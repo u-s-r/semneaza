@@ -39,7 +39,7 @@
           </ul>
         </div>
         <div class="col-sm-4 col-md-4 distribuie">
-            <a class="social-media-links" href="https://www.facebook.com/USRNational/" target="_blank"><img src="<?= asset_url('img/logo-facebook-small.png') ?>" alt="Facebook"></a><a class="social-media-links" href="https://www.youtube.com/channel/UCe0NmPCTlXzTdAAROfWYBNw" target="_blank"><img src="<?= asset_url('img/logo-youtube-small.png') ?>" alt="Youtube"></a><a class="social-media-links" href="https://twitter.com/usr_romania" target="_blank"><img src="<?= asset_url('img/logo-twitter-small.png') ?>" alt="Twitter"></a>
+            <a class="social-media-links" href="https://www.facebook.com/InitiativaFaraPenali/" target="_blank"><img src="<?= asset_url('img/logo-facebook-small.png') ?>" alt="Facebook"></a><a class="social-media-links" href="https://www.youtube.com/channel/UCe0NmPCTlXzTdAAROfWYBNw" target="_blank"><img src="<?= asset_url('img/logo-youtube-small.png') ?>" alt="Youtube"></a><a class="social-media-links" href="https://twitter.com/usr_romania" target="_blank"><img src="<?= asset_url('img/logo-twitter-small.png') ?>" alt="Twitter"></a>
         </div>
       </div>
 
