@@ -23,7 +23,7 @@
   "dependencies": {
     "countdown": "^2.6.0",
     "ion-rangeslider": "^2.1.4",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "jvectormap": "^2.0.4"
   },
   "devDependencies": {
